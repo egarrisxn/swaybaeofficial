@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import Foot from '@/components/Foot'
 
+
 export const metadata = {
   title: 'Swaybae9000',
   description: 'This is the official website of Swaybae9000',
@@ -17,7 +18,6 @@ const RootLayout = ({ children }) => {
           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
       </head>
-
       <body>
         <main className='app relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6'>
           <Nav />
@@ -26,7 +26,6 @@ const RootLayout = ({ children }) => {
         </main>
         <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
-
     </html>
   )
 }

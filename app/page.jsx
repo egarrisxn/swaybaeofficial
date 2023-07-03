@@ -5,14 +5,14 @@ const Home = () => {
 
         <section className='w-full flex-center flex-col'>
           <h1 className='text-center mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl'>
-            Hey there.
+            Hello Friends!
             <br className='max-md:hidden' />
             <span className='text-center bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent'>
               It's Swaybae!
             </span>
           </h1>
           <p className='text-center mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl'>
-            This is the official site for the one and only Swaybae! We are so excited you are with us right now. Take a look around and enjoy!
+            This is my official site! Take a look around and get to know me better! I hope you enjoy your visit and thank you for stopping by!
           </p>
         </section>
       </div>
