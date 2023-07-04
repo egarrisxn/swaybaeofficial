@@ -2,40 +2,42 @@ module.exports = {
   darkMode: 'class',
 
   content: [
-    './node_modules/flowbite-react/**/*.js',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
 
-  plugins: [
-    require('flowbite/plugin')
+  plugins: [require('daisyui')
   ],
 
-  theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          'primary': '#f9fafb',
+          'primary-focus': '#d1d5db',
+          'primary-content': '#1f2937',
+          'secondary': '#f9fafb',
+          'secondary-focus': '#d1d5db',
+          'secondary-content': '#1f2937',
+          'accent': '#f9fafb',
+          'accent-focus': '#d1d5db',
+          'accent-content': '#1f2937',
+          'neutral': '#f9fafb',
+          'neutral-focus': '#d1d5db',
+          'neutral-content': '#1f2937',
+          'base-100': '#f9fafb',
+          'base-200': '#d1d5db',
+          'base-300': '#1f2937',
+          'base-content': '#f9fafb',
+          'info': '#f9fafb',
+          'success': '#f9fafb',
+          'warning': '#f9fafb',
+          'error': '#f9fafb',
+        },
       },
-      fontFamily: {
-        satoshi: ['Satoshi', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-      },
-      spacing: {
-        '128': '32rem',
-        '144': '36rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-      }
-    }
+      'dark',
+      'light'
+    ]
   }
 }

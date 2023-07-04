@@ -10,7 +10,7 @@ export const metadata = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang='en'>
+    <html lang='en' data-theme='mytheme'>
 
       <head>
           <link rel="shortcut icon" href="/images/favicon.ico" />
@@ -24,7 +24,6 @@ const RootLayout = ({ children }) => {
           {children}
           <Foot />
         </main>
-        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   )
