@@ -12,6 +12,7 @@ const Nav = () => {
                 <li><a>About Me!</a></li>
                 <li><a>Where To Find Me</a></li>
                 <li><a>Merch</a></li>
+                <li><a>Media Package</a></li>
                 <li><a>Business Inquiries</a></li>
             </ul>
             </div>
@@ -22,7 +23,9 @@ const Nav = () => {
                 <li><a className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">About Me!</a></li>
                 <li><a className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">Where To Find Me</a></li>
                 <li><a className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">Merch</a></li>
+                <li><a className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">Media Package</a></li>
                 <li><a className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">Business Inquiries</a></li>
+                <li><a className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">Login / Signup</a></li>
             </ul>
         </div>
         <div className="navbar-end text-primary">
