@@ -1,4 +1,7 @@
+"use client";
 import "@/styles/globals.css";
+import ThemeChanger from "@/components/ThemeChanger";
+import ThemeToggler from "@/components/ThemeToggler";
 import Nav from "@/components/Nav";
 import Foot from "@/components/Foot";
 
@@ -43,9 +46,15 @@ const RootLayout = ({ children }) => {
           backgroundColor: "#008080",
         }}
       >
-        <main className="app relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6">
+        <main className="app relative z-10 flex justify-center items-center justify-content-center flex-col w-screen min-h-screen max-w-7xl mx-auto sm:px-16 px-6">
           <Nav />
+
+          <ThemeToggler />
+
+          <ThemeChanger />
+
           {children}
+
           <Foot />
         </main>
       </body>

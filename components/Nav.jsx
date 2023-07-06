@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import SwapIcon from "./SwapIcon";
+import React, { useState } from "react";
 
 const Nav = () => {
+  const [navbar, setNavbar] = useState(false);
   return (
     <navbar className="navbar bg-base-300 rounded-lg shadow-lg py-2 px-6">
       <div className="navbar-start text-primary">
