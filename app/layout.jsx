@@ -1,20 +1,22 @@
 "use client";
 import "@/styles/globals.css";
-import ThemeChanger from "@/components/ThemeChanger";
-import ThemeToggler from "@/components/ThemeToggler";
+import { ThemeProvider } from "next-themes";
+import { Providers } from "./providers";
+import { Suspense } from "react";
+import Loading from "./loading";
 import Nav from "@/components/Nav";
 import Foot from "@/components/Foot";
 
 export const metadata = {
-  title: "Swaybae9000",
-  description: "This is the official website of Swaybae9000",
+  title: "Swaybae",
+  description: "This is the official site for Swaybae!",
 };
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="en" data-theme="mytheme">
+    <html lang="en" data-theme="mytheme" suppressHydrationWarning>
       <head>
-        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link rel="shortcut-icon" href="/images/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -35,27 +37,26 @@ const RootLayout = ({ children }) => {
       </head>
 
       <body
-        style={{
-          backgroundImage: `url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)`,
-          height: "100%",
-          width: "100%",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          backgroundColor: "#008080",
-        }}
+        className="transition-colors duration-300 ease-in-out"
+        // style={{
+        //   backgroundImage: `url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)`,
+        //   height: "100%",
+        //   width: "100%",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        //   backgroundAttachment: "fixed",
+        //   backgroundColor: "#008080",
+        // }}
       >
-        <main className="app relative z-10 flex justify-center items-center justify-content-center flex-col w-screen min-h-screen max-w-7xl mx-auto sm:px-16 px-6">
-          <Nav />
-
-          <ThemeToggler />
-
-          <ThemeChanger />
-
-          {children}
-
-          <Foot />
+        <main className=" app relative z-10 flex justify-center items-center justify-content-center flex-col w-screen min-h-screen max-w-7xl mx-auto sm:px-16 px-6">
+          <ThemeProvider defaultTheme="mytheme">
+            <Nav />
+            <Providers>
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+            </Providers>
+            <Foot />
+          </ThemeProvider>
         </main>
       </body>
     </html>

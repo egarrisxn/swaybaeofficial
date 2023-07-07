@@ -1,13 +1,10 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import SwapIcon from "./SwapIcon";
-import React, { useState } from "react";
 
 const Nav = () => {
-  const [navbar, setNavbar] = useState(false);
   return (
-    <navbar className="navbar bg-base-300 rounded-lg shadow-lg py-2 px-6">
+    <navbar className="navbar rounded-lg shadow-lg py-2 px-6">
       <div className="navbar-start text-primary">
         <div className="dropdown">
           <label
@@ -53,14 +50,14 @@ const Nav = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden lg:flex">
+        <div className="animate-pulse hidden lg:flex">
           <Link href="/">
             <Image
-              src="/images/Swaybae-1.png"
-              width={100}
-              height={50}
+              src="/images/logowhite.png"
+              width={80}
+              height={40}
               alt="Swaybae Logo"
-              className="pb-2"
+              className=""
             />
           </Link>
         </div>
@@ -120,11 +117,11 @@ const Nav = () => {
       <div className="flex items-center justify-center lg:hidden">
         <Link href="/">
           <Image
-            src="/images/Swaybae-1.png"
-            width={150}
-            height={75}
+            src="/images/logoyellow.png"
+            width={100}
+            height={50}
             alt="Swaybae Logo"
-            className="pb-1"
+            className=""
           />
         </Link>
       </div>

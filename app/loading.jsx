@@ -1,5 +1,5 @@
 import React from "react";
-function Loading() {
+export default function Loading() {
   return (
     <>
       <div className="bg-gray-100">
@@ -19,5 +19,3 @@ function Loading() {
     </>
   );
 }
-
-export default iLoading;

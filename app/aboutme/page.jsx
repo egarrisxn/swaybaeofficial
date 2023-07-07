@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <div className="hero  min-h-screen">
-      <div className="hero-content  flex-col lg:flex-row">
+    <div className="hero min-h-screen">
+      <div className="hero-content flex-col lg:flex-row">
         <img
           src="/images/stonecold.jpg"
           className=" max-w-sm rounded-lg shadow-2xl"
