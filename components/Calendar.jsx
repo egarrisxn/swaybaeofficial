@@ -5,13 +5,11 @@ export default function Calendar() {
   return (
     <>
       <div className="flex items-center justify-center py-8 px-4">
-        <div className="2xl:w-1/3 xl:w-1/2 lg:w-3/5 sm:w-4/5 w-full shadow-lg">
-          <div className="md:p-16 md:pb-12 p-5 dark:bg-gray-800 bg-white rounded-t">
+        <div className="w-full rounded-lg shadow-lg">
+          <div className="md:p-16 md:pb-12 p-5 rounded-lg shadow-lg">
             <div className="px-4 flex items-center justify-between">
-              <h1 className="text-2xl font-bold dark:text-gray-100 text-gray-800">
-                October 2020
-              </h1>
-              <div className="flex items-center text-gray-800 dark:text-gray-100">
+              <h1 className="text-2xl font-bold">October 2020</h1>
+              <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="icon icon-tabler icon-tabler-chevron-left"
@@ -50,51 +48,37 @@ export default function Calendar() {
                   <tr>
                     <th>
                       <div className="w-full flex justify-center">
-                        <p className="text-2xl font-medium text-center text-gray-800 dark:text-gray-100">
-                          Mo
-                        </p>
+                        <p className="text-2xl font-medium text-center">Mo</p>
                       </div>
                     </th>
                     <th>
                       <div className="w-full flex justify-center">
-                        <p className="text-2xl font-medium text-center text-gray-800 dark:text-gray-100">
-                          Tu
-                        </p>
+                        <p className="text-2xl font-medium text-center">Tu</p>
                       </div>
                     </th>
                     <th>
                       <div className="w-full flex justify-center">
-                        <p className="text-2xl font-medium text-center text-gray-800 dark:text-gray-100">
-                          We
-                        </p>
+                        <p className="text-2xl font-medium text-center">We</p>
                       </div>
                     </th>
                     <th>
                       <div className="w-full flex justify-center">
-                        <p className="text-2xl font-medium text-center text-gray-800 dark:text-gray-100">
-                          Th
-                        </p>
+                        <p className="text-2xl font-medium text-center">Th</p>
                       </div>
                     </th>
                     <th>
                       <div className="w-full flex justify-center">
-                        <p className="text-2xl font-medium text-center text-gray-800 dark:text-gray-100">
-                          Fr
-                        </p>
+                        <p className="text-2xl font-medium text-center">Fr</p>
                       </div>
                     </th>
                     <th>
                       <div className="w-full flex justify-center">
-                        <p className="text-2xl font-medium text-center text-gray-800 dark:text-gray-100">
-                          Sa
-                        </p>
+                        <p className="text-2xl font-medium text-center">Sa</p>
                       </div>
                     </th>
                     <th>
                       <div className="w-full flex justify-center">
-                        <p className="text-2xl font-medium text-center text-gray-800 dark:text-gray-100">
-                          Su
-                        </p>
+                        <p className="text-2xl font-medium text-center">Su</p>
                       </div>
                     </th>
                   </tr>
@@ -112,53 +96,39 @@ export default function Calendar() {
                     </td>
                     <td className="pt-6">
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          1
-                        </p>
+                        <p className="text-2xl font-medium">1</p>
                       </div>
                     </td>
                     <td className="pt-6">
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          2
-                        </p>
+                        <p className="text-2xl font-medium">2</p>
                       </div>
                     </td>
                     <td className="pt-6">
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          3
-                        </p>
+                        <p className="text-2xl">3</p>
                       </div>
                     </td>
                     <td className="pt-6">
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          4
-                        </p>
+                        <p className="text-2xl">4</p>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          5
-                        </p>
+                        <p className="text-2xl font-medium">5</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          6
-                        </p>
+                        <p className="text-2xl font-medium">6</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          7
-                        </p>
+                        <p className="text-2xl font-medium">7</p>
                       </div>
                     </td>
                     <td>
@@ -172,162 +142,118 @@ export default function Calendar() {
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          9
-                        </p>
+                        <p className="text-2xl font-medium">9</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          10
-                        </p>
+                        <p className="text-2xl">10</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          11
-                        </p>
+                        <p className="text-2xl">11</p>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          12
-                        </p>
+                        <p className="text-2xl font-medium">12</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          13
-                        </p>
+                        <p className="text-2xl font-medium">13</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          14
-                        </p>
+                        <p className="text-2xl font-medium">14</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          15
-                        </p>
+                        <p className="text-2xl font-medium">15</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          16
-                        </p>
+                        <p className="text-2xl font-medium">16</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          17
-                        </p>
+                        <p className="text-2xl">17</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          18
-                        </p>
+                        <p className="text-2xl">18</p>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          19
-                        </p>
+                        <p className="text-2xl font-medium">19</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          20
-                        </p>
+                        <p className="text-2xl font-medium">20</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          21
-                        </p>
+                        <p className="text-2xl font-medium">21</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          22
-                        </p>
+                        <p className="text-2xl font-medium">22</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          23
-                        </p>
+                        <p className="text-2xl font-medium">23</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          24
-                        </p>
+                        <p className="text-2xl">24</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100">
-                          25
-                        </p>
+                        <p className="text-2xl">25</p>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          26
-                        </p>
+                        <p className="text-2xl font-medium">26</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          27
-                        </p>
+                        <p className="text-2xl font-medium">27</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          28
-                        </p>
+                        <p className="text-2xl font-medium">28</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          29
-                        </p>
+                        <p className="text-2xl font-medium">29</p>
                       </div>
                     </td>
                     <td>
                       <div className="px-4 py-4 cursor-pointer flex w-full justify-center">
-                        <p className="text-2xl text-gray-500 dark:text-gray-100 font-medium">
-                          30
-                        </p>
+                        <p className="text-2xl font-medium">30</p>
                       </div>
                     </td>
                   </tr>
@@ -335,35 +261,35 @@ export default function Calendar() {
               </table>
             </div>
           </div>
-          <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-50 rounded-b">
+          <div className="md:py-8 py-5 md:px-16 px-5 bg-gray-50 rounded-b">
             <div className="px-4">
               <div className="border-b pb-4 border-gray-400 border-dashed">
-                <p className="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">
+                <p className="text-xs font-light leading-3 text-gray-500">
                   9:00 AM
                 </p>
-                <p className="text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 pt-2">
+                <p className="text-lg font-medium leading-5 pt-2">
                   Zoom call with design team
                 </p>
-                <p className="text-sm pt-2 leading-4 text-gray-600 dark:text-gray-300">
+                <p className="text-sm pt-2 leading-4 text-gray-600">
                   Discussion on UX sprint and Wireframe review
                 </p>
               </div>
               <div className="border-b pb-4 border-gray-400 border-dashed pt-5">
-                <p className="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">
+                <p className="text-xs font-light leading-3 text-gray-500">
                   10:00 AM
                 </p>
-                <p className="text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 pt-2">
+                <p className="text-lg font-medium leading-5 pt-2">
                   Orientation session with new hires
                 </p>
               </div>
               <div className="border-b pb-4 border-gray-400 border-dashed pt-5">
-                <p className="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">
+                <p className="text-xs font-light leading-3 text-gray-500 ">
                   9:00 AM
                 </p>
-                <p className="text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 pt-2">
+                <p className="text-lg font-medium leading-5 pt-2">
                   Zoom call with design team
                 </p>
-                <p className="text-sm pt-2 leading-4 text-gray-600 dark:text-gray-300">
+                <p className="text-sm pt-2 leading-4 text-gray-600 ">
                   Discussion on UX sprint and Wireframe review
                 </p>
               </div>

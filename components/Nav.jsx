@@ -1,34 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
+import HamburgerButton from "./HamburgerButton";
 import SwapIcon from "./SwapIcon";
 
 const Nav = () => {
   return (
     <navbar className="navbar rounded-lg shadow-lg py-2 px-6">
-      <div className="navbar-start text-primary">
+      <div className="navbar-start text-secondary">
         <div className="dropdown">
           <label
             tabIndex={0}
             className="btn btn-ghost rounded-lg shadow-lg lg:hidden"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-secondary"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+            <HamburgerButton />
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-lg shadow-lg w-52 text-secondary bg-base-300"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-lg shadow-lg w-52 text-secondary bg-base-100"
           >
             <li>
               <a>About Me!</a>
@@ -114,7 +102,7 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-      <div className="flex items-center justify-center lg:hidden">
+      <div className="animate-pulse flex items-center justify-center lg:hidden">
         <Link href="/">
           <Image
             src="/images/logoyellow.png"
@@ -126,7 +114,7 @@ const Nav = () => {
         </Link>
       </div>
       <div className="navbar-end justify-items-center text-primary ">
-        <div className=" rounded-lg shadow-lg sm:rounded-none sm:shadow-none">
+        <div className="rounded-lg shadow-lg md:rounded-none md:shadow-none">
           <SwapIcon />
         </div>
       </div>

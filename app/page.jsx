@@ -3,7 +3,7 @@ const Home = () => {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="relative flex place-items-center">
         <section className="w-full flex-center flex-col">
-          <h1 className=" text-center mt-10 text-5xl font-extrabold sm:text-6xl">
+          <h1 className="text-center mt-10 text-5xl font-extrabold sm:text-6xl">
             Hello Friends!
             <br />
             <span className="animate-pulse text-center bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">

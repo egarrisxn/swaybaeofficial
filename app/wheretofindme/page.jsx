@@ -3,9 +3,8 @@ import Calendar from "@/components/Calendar";
 
 const WhereToFindMe = () => {
   return (
-    <div className="mx-auto container gap-4">
-      <div className="container" style={{ display: "flex" }}>
-        <Calendar />
+    <div className="h-full w-full bg-gradient-to-tl from-base-100 to-base-200">
+      <div className="flex flex-row items-center justify-center">
         <Calendar />
       </div>
     </div>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 function Login() {
   const [sidebar, setsidebar] = useState();
   return (
-    <div className="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
+    <div className="h-full w-full bg-gradient-to-tl from-base-100 to-base-200">
       <div className="flex flex-col items-center justify-center">
         <div className="bg-white shadow rounded lg:w-1/3  md:w-1/2 w-full p-10 mt-16">
           <p

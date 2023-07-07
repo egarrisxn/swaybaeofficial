@@ -4,7 +4,7 @@ const Foot = () => {
   return (
     <footer className="footer-center container rounded-lg shadow-lg xl:px-20 lg:px-12 sm:px-6 px-4 py-4 ">
       <div className="flex flex-col items-center justify-center">
-        <div className="flex items-center gap-x-6">
+        <div className="animate-bounce flex items-center gap-x-6">
           <div className="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
