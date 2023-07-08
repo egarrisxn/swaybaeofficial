@@ -19,6 +19,9 @@ module.exports = {
       },
     },
   },
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 
   plugins: [require("daisyui")
   ],

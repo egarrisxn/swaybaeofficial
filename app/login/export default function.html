@@ -1,0 +1,189 @@
+export default function Foot() {
+  return (
+    <footer className="footer-center container rounded-lg shadow-lg xl:px-20 lg:px-12 sm:px-6 px-4 py-4 ">
+      <div className="flex flex-col items-center justify-center">
+        <div className="animate-bounce flex items-center gap-x-6">
+          <Link href="https://www.twitch.com" className="cursor-pointer">
+            <TwitchLogo />
+          </Link>
+          <Link href="https://www.discord.com" className="cursor-pointer">
+            <DiscordLogo />
+          </Link>
+          <Link href="https://www.instagram.com" className="cursor-pointer">
+            <InstagramLogo />
+          </Link>
+          <Link href="https://www.youtube.com" className="cursor-pointer">
+            <YoutubeLogo />
+          </Link>
+          <Link href="https://www.tiktok.com" className="cursor-pointer">
+            <TiktokLogo />
+          </Link>
+          <Link href="https://www.twitter.com" className="cursor-pointer">
+            <TwitterLogo />
+          </Link>
+          <Link href="https://www.spotify.com" className="cursor-pointer">
+            <SpotifyLogo />
+          </Link>
+          <Link href="https://www.patreon.com" className="cursor-pointer">
+            <PatreonLogo />
+          </Link>
+        </div>
+        <div className="flex items-center mt-4">
+          <p className="text-base leading-4 text-gray-800">
+            2023 <span className="font-semibold">Swaybae</span>
+          </p>
+          <div className=" border-l border-gray-800 pl-2 ml-2">
+            <p className=" text-base leading-4 text-gray-800">
+              Inc. All rights reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+
+
+
+
+
+
+
+export default function Nav() {
+    return (
+      <navbar className="navbar rounded-lg shadow-lg py-2 px-6">
+        <div className="navbar-start text-secondary">
+          <div className="dropdown">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost rounded-lg shadow-lg lg:hidden"
+            >
+              <HamburgerButton />
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-lg shadow-lg w-52 text-secondary bg-base-100"
+            >
+              <li>
+                <Link href="/aboutme">About Me!</Link>
+              </li>
+              <li>
+                <Link href="/wheretofindme">Where To Find Me</Link>
+              </li>
+              <li>
+                <Link href="/merch">Merch</Link>
+              </li>
+              <li>
+                <Link href="/mediakit">Media Kit</Link>
+              </li>
+              <li>
+                <Link href="/businessinquiries">Business Inquiries</Link>
+              </li>
+              <li>
+                <Link href="/login">Login</Link>
+              </li>
+            </ul>
+          </div>
+          <div className=" animate-pulse hidden lg:flex">
+            <Link href="/">
+              <Image src={LogoWhite} width={80} height={40} alt="Logo White" />
+            </Link>
+          </div>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal space-x-4 px-1 ">
+            <li>
+              <Link
+                href="/aboutme"
+                className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
+              >
+                About Me!
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/wheretofindme"
+                className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              >
+                Where To Find Me
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/merch"
+                className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              >
+                Merch
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/mediakit"
+                className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              >
+                Media Kit
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/businessinquiries"
+                className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              >
+                Business Inquiries
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/login"
+                className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              >
+                Login
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="animate-pulse flex items-center justify-center lg:hidden">
+          <Link href="/">
+            <Image src={LogoYellow} width={100} height={50} alt="Logo Yellow" />
+          </Link>
+        </div>
+        <div className="navbar-end justify-items-center text-primary ">
+          <div className="rounded-lg shadow-lg md:rounded-none md:shadow-none">
+            <SwapIcon />
+          </div>
+        </div>
+      </navbar>
+    );
+  }
+  
+
+
+
+
+
+
+
+
+  export default function Home() {
+    return (
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <div className="relative flex place-items-center">
+          <section className="w-full flex-center flex-col">
+            <h1 className="text-center mt-10 text-5xl font-extrabold sm:text-6xl">
+              Hello Friends!
+              <br />
+              <span className="animate-pulse text-center bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">
+                It&apos;s Swaybae!
+              </span>
+            </h1>
+            <p className="text-center mt-5 text-lg sm:text-xl max-w-2xl">
+              This is my official site! Take a look around and get to know me
+              better! I hope you enjoy your visit and thank you for stopping by!
+            </p>
+          </section>
+        </div>
+      </main>
+    );
+  }
+  

@@ -10,7 +10,6 @@ export default function AboutMe() {
         <Image
           src={StoneCold}
           alt="stonecold"
-
           // className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
