@@ -1,4 +1,4 @@
-const Home = () => {
+export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="relative flex place-items-center">
@@ -7,7 +7,7 @@ const Home = () => {
             Hello Friends!
             <br />
             <span className="animate-pulse text-center bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent">
-              It's Swaybae!
+              It&apos;s Swaybae!
             </span>
           </h1>
           <p className="text-center mt-5 text-lg sm:text-xl max-w-2xl">
@@ -18,6 +18,4 @@ const Home = () => {
       </div>
     </main>
   );
-};
-
-export default Home;
+}

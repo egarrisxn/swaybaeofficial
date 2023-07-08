@@ -1,16 +1,16 @@
 "use client";
 import React, { useState } from "react";
 
-function Login() {
-  const [sidebar, setsidebar] = useState();
+export default function Login() {
+  useState();
   return (
     <div className="h-full w-full bg-gradient-to-tl from-base-100 to-base-200">
       <div className="flex flex-col items-center justify-center">
         <div className="bg-white shadow rounded lg:w-1/3  md:w-1/2 w-full p-10 mt-16">
           <p
             tabIndex={0}
-            role="heading"
-            aria-label="Login to your account"
+            aria-label="1"
+            role="head"
             className="text-2xl font-extrabold leading-6 text-gray-800"
           >
             Login to your account
@@ -19,8 +19,8 @@ function Login() {
             Dont have account?{" "}
             <span
               tabIndex={0}
+              aria-label="2"
               role="link"
-              aria-label="Sign up here"
               className="text-sm font-medium leading-none underline text-gray-800 cursor-pointer"
             >
               {" "}
@@ -28,7 +28,7 @@ function Login() {
             </span>
           </p>
           <button
-            aria-label="Continue with google"
+            aria-label="3"
             role="button"
             className="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-10"
           >
@@ -61,7 +61,7 @@ function Login() {
             </p>
           </button>
           <button
-            aria-label="Continue with github"
+            aria-label="4"
             role="button"
             className="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"
           >
@@ -82,7 +82,7 @@ function Login() {
             </p>
           </button>
           <button
-            aria-label="Continue with twitter"
+            aria-label="5"
             role="button"
             className="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"
           >
@@ -114,7 +114,7 @@ function Login() {
               Email
             </lable>
             <input
-              aria-label="enter email adress"
+              aria-label="6"
               role="input"
               type="email"
               className="bg-gray-200 border rounded focus:outline-none text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
@@ -126,7 +126,7 @@ function Login() {
             </lable>
             <div className="relative flex items-center justify-center">
               <input
-                aria-label="enter Password"
+                aria-label="7"
                 role="input"
                 type="password"
                 className="bg-gray-200 border rounded focus:outline-none text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
@@ -149,8 +149,8 @@ function Login() {
           </div>
           <div className="mt-8">
             <button
+              aria-label="8"
               role="button"
-              aria-label="create my account"
               className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full"
             >
               Create my account
@@ -161,5 +161,3 @@ function Login() {
     </div>
   );
 }
-
-export default Login;

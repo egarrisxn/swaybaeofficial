@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import HamburgerButton from "./HamburgerButton";
 import SwapIcon from "./SwapIcon";
+import LogoWhite from "../public/images/LogoWhite.png";
 
-const Nav = () => {
+export default function Nav() {
   return (
-    <navbar className="navbar rounded-lg shadow-lg py-2 px-6">
+    <navbar className="navbar bg-base-200 rounded-lg shadow-lg py-2 px-6">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <label
@@ -19,86 +20,80 @@ const Nav = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-lg shadow-lg w-52 text-secondary bg-base-100"
           >
             <li>
-              <a>About Me!</a>
+              <Link href="/aboutme">About Me!</Link>
             </li>
             <li>
-              <a>Where To Find Me</a>
+              <Link href="/wheretofindme">Where To Find Me</Link>
             </li>
             <li>
-              <a>Merch</a>
+              <Link href="/merch">Merch</Link>
             </li>
             <li>
-              <a>Media Kit</a>
+              <Link href="/mediakit">Media Kit</Link>
             </li>
             <li>
-              <a>Business Inquiries</a>
+              <Link href="/businessinquiries">Business Inquiries</Link>
             </li>
             <li>
-              <a>Login</a>
+              <Link href="/login">Login</Link>
             </li>
           </ul>
         </div>
-        <div className="animate-pulse hidden lg:flex">
+        <div className=" animate-pulse hidden lg:flex">
           <Link href="/">
-            <Image
-              src="/images/logowhite.png"
-              width={80}
-              height={40}
-              alt="Swaybae Logo"
-              className=""
-            />
+            <Image src={LogoWhite} width={80} height={40} alt="Swaybae Logo" />
           </Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal space-x-4 px-1 ">
           <li>
-            <a
+            <Link
               href="/aboutme"
               className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
             >
               About Me!
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/wheretofindme"
               className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Where To Find Me
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/merch"
               className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Merch
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/mediakit"
               className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Media Kit
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/businessinquiries"
               className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Business Inquiries
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/login"
               className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Login
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -120,6 +115,4 @@ const Nav = () => {
       </div>
     </navbar>
   );
-};
-
-export default Nav;
+}

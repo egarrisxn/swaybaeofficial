@@ -1,6 +1,6 @@
 import React from "react";
 
-const Foot = () => {
+export default function Foot() {
   return (
     <footer className="footer-center container rounded-lg shadow-lg xl:px-20 lg:px-12 sm:px-6 px-4 py-4 ">
       <div className="flex flex-col items-center justify-center">
@@ -149,6 +149,4 @@ const Foot = () => {
       </div>
     </footer>
   );
-};
-
-export default Foot;
+}

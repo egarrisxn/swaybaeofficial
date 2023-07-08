@@ -1,4 +1,4 @@
-const HamburgerButton = () => {
+export default function HamburgerButton() {
   return (
     <label className="swap swap-rotate">
       {/* this hidden checkbox controls the state */}
@@ -27,6 +27,4 @@ const HamburgerButton = () => {
       </svg>
     </label>
   );
-};
-
-export default HamburgerButton;
+}

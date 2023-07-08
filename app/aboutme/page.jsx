@@ -1,12 +1,17 @@
 import React from "react";
+import Image from "next/image";
+import StoneCold from "../../public/images/StoneCold.jpg";
 
-const AboutMe = () => {
+export default function AboutMe() {
   return (
     <div className="hero min-h-screen">
-      <div className="hero-content flex-col lg:flex-row">
-        <img
-          src="/images/stonecold.jpg"
-          className=" max-w-sm rounded-lg shadow-2xl"
+      {/* <div className="hero-content flex-col lg:flex-row"> */}
+      <div>
+        <Image
+          src={StoneCold}
+          alt="stonecold"
+
+          // className="max-w-sm rounded-lg shadow-2xl"
         />
         <div>
           <h1 className=" text-9xl font-bold">Sway!</h1>
@@ -28,6 +33,4 @@ const AboutMe = () => {
       </div>
     </div>
   );
-};
-
-export default AboutMe;
+}
