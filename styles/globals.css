@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.tailwind base
-.tailwind components
-.tailwind utilities
-
+main {
+  min-height: calc(100vh - 4rem);
+  width: 100%;
+}
 
 .cursor-pointer svg {
   transition: fill 0.5s;

@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { Providers } from "./providers";
 import Loading from "./loading";
 import Nav from "../components/Nav";
-import Foot from "../components/Foot";
+import Footer from "../components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,18 +29,18 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body
-        className="h-screen pb-14 bg-cover bg-right"
+        className="container h-screen bg-cover place-content-center"
         style={{ backgroundImage: "url('/images/bg.svg')" }}
       >
-        <main className="h-full">
+        <>
           <ThemeProvider defaultTheme="mytheme">
             <Nav />
             <Providers>
               <Suspense fallback={<Loading />}>{children}</Suspense>
             </Providers>
-            <Foot />
+            <Footer />
           </ThemeProvider>
-        </main>
+        </>
       </body>
     </html>
   );
