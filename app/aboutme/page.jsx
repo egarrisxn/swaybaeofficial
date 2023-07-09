@@ -4,32 +4,32 @@ import StoneCold from "../../public/images/StoneCold.jpg";
 
 export default function AboutMe() {
   return (
-    <div className="hero min-h-screen">
+    <main className="container border-dashed border-4 border-green-500">
       {/* <div className="hero-content flex-col lg:flex-row"> */}
-      <div>
+      <section className="container">
         <Image
           src={StoneCold}
           alt="stonecold"
-          // className="max-w-sm rounded-lg shadow-2xl"
+          width={100}
+          height={100}
+          className="float-left"
         />
-        <div>
-          <h1 className=" text-9xl font-bold">Sway!</h1>
-          <p className=" text-lg py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-            <br />
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-            <br />
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-secondary  ">Get Started</button>
-        </div>
-      </div>
-    </div>
+        <h1 className="">Sway!</h1>
+        <p className="">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+          id nisi.
+          <br />
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+          id nisi.
+          <br />
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
+          id nisi.
+        </p>
+        <button className="">Get Started</button>
+      </section>
+    </main>
   );
 }

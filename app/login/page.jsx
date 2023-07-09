@@ -4,8 +4,8 @@ import React, { useState } from "react";
 export default function Login() {
   useState();
   return (
-    <div className="h-full w-full bg-gradient-to-tl from-base-100 to-base-200">
-      <div className="flex flex-col items-center justify-center">
+    <main className="">
+      <section className="">
         <div className="bg-white shadow rounded lg:w-1/3  md:w-1/2 w-full p-10 mt-16">
           <p
             tabIndex={0}
@@ -157,7 +157,7 @@ export default function Login() {
             </button>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

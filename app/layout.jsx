@@ -4,41 +4,23 @@ import { Suspense } from "react";
 import { ThemeProvider } from "next-themes";
 import { Providers } from "./providers";
 import Loading from "./loading";
-// import Nav from "../components/Nav";
-// import Foot from "../components/Foot";
-
-export const metadata = {
-  title: "Swaybae",
-  description: "This is the official site for Swaybae!",
-};
+import Nav from "../components/Nav";
+import Foot from "../components/Foot";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="mytheme" suppressHydrationWarning>
-      <head>
-        <link rel="shortcut icon" href="/images/favicon.ico" />
-      </head>
-
       <body
-      // className="grid transition-colors duration-300 ease-in-out"
-      // style={{
-      //   backgroundImage: `url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)`,
-      //   height: "100%",
-      //   width: "100%",
-      //   backgroundPosition: "center",
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundSize: "cover",
-      //   backgroundAttachment: "fixed",
-      //   backgroundColor: "#008080",
-      // }}
+        className="bg-cover bg-fixed"
+        style={{ backgroundImage: "url('/images/header.png')" }}
       >
-        <main className="">
+        <main className="h-full">
           <ThemeProvider defaultTheme="mytheme">
-            {/* <Nav /> */}
+            <Nav />
             <Providers>
               <Suspense fallback={<Loading />}>{children}</Suspense>
             </Providers>
-            {/* <Foot /> */}
+            <Foot />
           </ThemeProvider>
         </main>
       </body>
@@ -52,12 +34,12 @@ export default function RootLayout({ children }) {
 
 // style={{
 //   backgroundImage: `url("https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)`,
-//   height: "100%",
-//   width: "100%",
-//   backgroundPosition: "center",
-//   backgroundRepeat: "no-repeat",
-//   backgroundSize: "cover",
-//   backgroundAttachment: "fixed",
+// height: "100%",
+// width: "100%",
+// backgroundPosition: "center",
+// backgroundRepeat: "no-repeat",
+// backgroundSize: "cover",
+// backgroundAttachment: "fixed",
 //   backgroundColor: "#008080",
 // }}
 
