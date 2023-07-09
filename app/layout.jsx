@@ -1,5 +1,6 @@
 "use client";
 import "../styles/globals.css";
+import { Inter, Roboto_Mono } from "next/font/google";
 import { Suspense } from "react";
 import { ThemeProvider } from "next-themes";
 import { Providers } from "./providers";
@@ -7,12 +8,29 @@ import Loading from "./loading";
 import Nav from "../components/Nav";
 import Foot from "../components/Foot";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto-mono",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="mytheme" suppressHydrationWarning>
+    <html
+      lang="en"
+      data-theme="mytheme"
+      className={`${inter.variable} ${roboto_mono.variable}`}
+      suppressHydrationWarning
+    >
       <body
-        className="bg-cover bg-fixed"
-        style={{ backgroundImage: "url('/images/header.png')" }}
+        className="h-screen pb-14 bg-cover bg-right"
+        style={{ backgroundImage: "url('/images/bg.svg')" }}
       >
         <main className="h-full">
           <ThemeProvider defaultTheme="mytheme">

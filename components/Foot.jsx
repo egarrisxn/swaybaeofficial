@@ -49,7 +49,10 @@ export default function Foot() {
           <Link href="https://www.twitter.com" className="cursor-pointer">
             <TwitterLogo />
           </Link>
-          <Link href="https://www.spotify.com" className="cursor-pointer">
+          <Link
+            href="https://www.spotify.com"
+            className="cursor-pointer fill-current"
+          >
             <SpotifyLogo />
           </Link>
           <Link href="https://www.patreon.com" className="cursor-pointer">
