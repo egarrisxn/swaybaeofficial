@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: var(--font-inter);
+}
+ 
+h1 {
+  font-family: var(--font-roboto-mono);
+}
+
 main {
   min-height: calc(100vh - 4rem);
   width: 100%;
