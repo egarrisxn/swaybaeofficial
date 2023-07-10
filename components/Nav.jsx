@@ -7,18 +7,18 @@ import LogoYellow from "../public/images/LogoYellow.png";
 
 export default function Nav() {
   return (
-    <nav className="navbar rounded-lg shadow-lg py-2 px-6">
+    <nav className="navbar rounded-xl shadow-xl py-2 px-6 fade-in">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <label
             tabIndex={0}
-            className="btn btn-ghost rounded-lg shadow-lg lg:hidden"
+            className="btn btn-ghost rounded-xl shadow-xl lg:hidden"
           >
             <HamburgerButton />
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-lg shadow-lg w-52 text-secondary bg-base-100"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-xl shadow-xl w-52 text-secondary bg-base-100"
           >
             <li>
               <Link href="/aboutme">About Me!</Link>
@@ -57,7 +57,7 @@ export default function Nav() {
           <li>
             <Link
               href="/aboutme"
-              className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
+              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
             >
               About Me!
             </Link>
@@ -65,7 +65,7 @@ export default function Nav() {
           <li>
             <Link
               href="/wheretofindme"
-              className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Where To Find Me
             </Link>
@@ -73,7 +73,7 @@ export default function Nav() {
           <li>
             <Link
               href="/merch"
-              className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Merch
             </Link>
@@ -81,7 +81,7 @@ export default function Nav() {
           <li>
             <Link
               href="/mediakit"
-              className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Media Kit
             </Link>
@@ -89,7 +89,7 @@ export default function Nav() {
           <li>
             <Link
               href="/businessinquiries"
-              className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Business Inquiries
             </Link>
@@ -97,7 +97,7 @@ export default function Nav() {
           <li>
             <Link
               href="/login"
-              className="rounded-lg shadow-lg bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Login
             </Link>
@@ -110,7 +110,7 @@ export default function Nav() {
         </Link>
       </div>
       <div className="navbar-end justify-items-center text-primary ">
-        <div className="rounded-lg shadow-lg md:rounded-none md:shadow-none">
+        <div className="rounded-xl shadow-xl md:rounded-none md:shadow-none">
           <SwapIcon />
         </div>
       </div>
