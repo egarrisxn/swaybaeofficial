@@ -11,7 +11,7 @@ h1 {
 }
 
 main {
-  min-height: calc(100vh - 4rem);
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -21,13 +21,8 @@ main {
 }
 
 .cursor-pointer:hover svg {
-  fill: #d8c056b9;
+  fill: #15ff8ab9;
 }
-
-
-
-
-
 
 .slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
 .slide-in-bottom-h1{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both}
