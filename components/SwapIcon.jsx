@@ -2,15 +2,15 @@ import { useTheme, ThemeProvider } from "next-themes";
 
 const SwapIcon = () => {
   const { resolvedTheme, setTheme } = useTheme();
-  const isDarkMode = resolvedTheme === "night";
+  const isDarkMode = resolvedTheme === "dark";
 
   const toggleTheme = () => {
-    setTheme(isDarkMode ? "mytheme" : "night");
+    setTheme(isDarkMode ? "mytheme" : "dark");
   };
 
   return (
     <label
-      className={`swap swap-rotate btn btn-ghost ${isDarkMode ? "night" : ""}`}
+      className={`swap swap-rotate btn btn-ghost ${isDarkMode ? "dark" : ""}`}
     >
       {/* this hidden checkbox controls the state */}
       <input type="checkbox" onChange={toggleTheme} />
@@ -18,7 +18,7 @@ const SwapIcon = () => {
       {/* sun icon */}
       <svg
         className={`swap-on ${
-          isDarkMode ? "night-fill" : "mytheme-fill"
+          isDarkMode ? "dark-fill" : "mytheme-fill"
         } w-6 h-6`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -32,7 +32,7 @@ const SwapIcon = () => {
       {/* moon icon */}
       <svg
         className={`swap-off ${
-          isDarkMode ? "night-fill" : "mytheme-fill"
+          isDarkMode ? "dark-fill" : "mytheme-fill"
         } w-6 h-6`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
