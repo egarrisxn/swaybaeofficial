@@ -1,6 +1,6 @@
 export default function Calendar() {
   return (
-    <div className="bg-base-100 shadow-xl rounded-xl lg:w-1/3 md:w-1/2 w-full p-10 mt-16">
+    <div className="bg-base-100 shadow-xl rounded-xl lg:w-1/2 w-full p-10 mt-16">
       <div className="md:p-16 md:pb-12 p-5 rounded-lg shadow-lg">
         <div className="px-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold">October 2020</h1>

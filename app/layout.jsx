@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
           className="absolute object-cover mix-blend-overlay"
         />
 
-        <main className="container w-full h-full place-content-center justify-center items-center backdrop-brightness-75">
+        <main className="backdrop-brightness-75">
           <ThemeProvider defaultTheme="mytheme">
             <Nav />
             <Providers>

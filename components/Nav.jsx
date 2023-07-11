@@ -7,7 +7,7 @@ import LogoYellow from "../public/images/LogoYellow.png";
 
 export default function Nav() {
   return (
-    <nav className="navbar rounded-xl shadow-xl py-2 px-6 fade-in">
+    <nav className="navbar rounded-xl shadow-xl py-2 px-6 ">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <label
@@ -21,10 +21,10 @@ export default function Nav() {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-xl shadow-xl w-52 text-secondary bg-base-100"
           >
             <li>
-              <Link href="/aboutme">About Me!</Link>
+              <Link href="/aboutme">About Me</Link>
             </li>
             <li>
-              <Link href="/wheretofindme">Where To Find Me</Link>
+              <Link href="/findme">Where To Find Me</Link>
             </li>
             <li>
               <Link href="/merch">Merch</Link>
@@ -33,7 +33,7 @@ export default function Nav() {
               <Link href="/mediakit">Media Kit</Link>
             </li>
             <li>
-              <Link href="/businessinquiries">Business Inquiries</Link>
+              <Link href="/inquire">Business Inquiries</Link>
             </li>
             <li>
               <Link href="/login">Login</Link>
@@ -64,7 +64,7 @@ export default function Nav() {
           </li>
           <li>
             <Link
-              href="/wheretofindme"
+              href="/findme"
               className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Where To Find Me
@@ -88,7 +88,7 @@ export default function Nav() {
           </li>
           <li>
             <Link
-              href="/businessinquiries"
+              href="/inquire"
               className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Business Inquiries

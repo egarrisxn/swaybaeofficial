@@ -6,7 +6,7 @@ export default function Login() {
   useState();
   return (
     <main>
-      <div className="container flex flex-col items-center content-center justify-center">
+      <div className="container flex justify-center">
         <LoginContainer />
       </div>
     </main>

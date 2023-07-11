@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <div>
+    <div className="container">
       <p>'Loading...'</p>
     </div>
   );

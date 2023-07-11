@@ -1,10 +1,9 @@
-import React from "react";
 import BusinessInquiryContainer from "@/components/BusinessInquiryContainer";
 
-export default function BusinessInquiries() {
+export default function Inquire() {
   return (
     <main>
-      <div className="container flex flex-col items-center content-center justify-center">
+      <div className="container flex justify-center">
         <BusinessInquiryContainer />
       </div>
     </main>
