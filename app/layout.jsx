@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { ThemeProvider } from "next-themes";
 import { Providers } from "./providers";
 import Loading from "./loading";
-import Nav from "../components/Nav";
+import ThemedNavbar from "../components/ThemedNavbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
 
         <main className="backdrop-brightness-75">
           <ThemeProvider defaultTheme="mytheme">
-            <Nav />
+            <ThemedNavbar />
             <Providers>
               <Suspense fallback={<Loading />}>{children}</Suspense>
             </Providers>

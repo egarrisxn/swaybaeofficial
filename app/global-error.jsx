@@ -5,7 +5,7 @@ export default function GlobalError({ error, reset }) {
     <html>
       <body>
         <main>
-          <div className="container">
+          <div className={`container ${error}`}>
             <h2>Something went wrong!</h2>
             <button onClick={() => reset()}>Try again</button>
           </div>

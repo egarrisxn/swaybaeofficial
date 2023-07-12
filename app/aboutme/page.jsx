@@ -5,12 +5,12 @@ import Sway from "../../public/images/swaybaebb.png";
 export default function AboutMe() {
   return (
     <main className="hero">
-      <div className="hero-content flex flex-col-reverse lg:flex-row">
+      <div className="container hero-content flex-col-reverse lg:flex-row">
         <div className="rounded-2xl shadow-2xl slide-in-bottom-h1 border-slate-300 border-2 p-6 m-8">
           <h1 className="text-2xl font-semibold italic text-center text-black-300">
             Hey{" "}
-            <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-secondary relative inline-block bounce-top-icons">
-              <span class="relative text-white">Swaybae </span>
+            <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-secondary relative inline-block bounce-top-icons">
+              <span className="relative text-white">Swaybae </span>
             </span>{" "}
             Here!
           </h1>
@@ -39,6 +39,7 @@ export default function AboutMe() {
             alt="Sway"
             quality={100}
             className="max-w-sm max-h-sm fade-in"
+            priority={true}
           />
         </div>
       </div>

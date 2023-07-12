@@ -15,43 +15,43 @@ export default function Foot() {
       <div className="flex flex-col items-center justify-center">
         <div className="animate-pulse flex items-center gap-x-4">
           <Link
-            href="https://www.twitch.com"
+            href="https://www.twitch.tv/sway_bae"
             className="cursor-pointer hover:text-secondary"
           >
             <TwitchLogo />
           </Link>
           <Link
-            href="https://www.discord.com"
+            href="https://discord.com/invite/7jKWvX2pfW"
             className="cursor-pointer hover:text-secondary"
           >
             <DiscordLogo />
           </Link>
           <Link
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/sway_baetv"
             className="cursor-pointer hover:text-secondary"
           >
             <InstagramLogo />
           </Link>
           <Link
-            href="https://www.youtube.com"
+            href="https://www.youtube.com/sway_baetv"
             className="cursor-pointer hover:text-secondary"
           >
             <YoutubeLogo />
           </Link>
           <Link
-            href="https://www.tiktok.com"
+            href="https://www.tiktok.com/@sway_baetv"
             className="cursor-pointer hover:text-secondary"
           >
             <TiktokLogo />
           </Link>
           <Link
-            href="https://www.twitter.com"
+            href="https://twitter.com/sway_baetv"
             className="cursor-pointer hover:text-secondary"
           >
             <TwitterLogo />
           </Link>
           <Link
-            href="https://www.spotify.com"
+            href="https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq?si=f42c980da494497d"
             className="cursor-pointer hover:text-secondary"
           >
             <SpotifyLogo />

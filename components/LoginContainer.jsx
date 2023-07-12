@@ -104,9 +104,9 @@ export default function Login() {
         <hr className="w-full bg-gray-400  " />
       </div>
       <div>
-        <lable className="text-sm font-medium leading-none text-gray-800">
+        <label className="text-sm font-medium leading-none text-gray-800">
           Email
-        </lable>
+        </label>
         <input
           aria-label="6"
           role="input"
@@ -115,9 +115,9 @@ export default function Login() {
         />
       </div>
       <div className="mt-6  w-full">
-        <lable className="text-sm font-medium leading-none text-gray-800">
+        <label className="text-sm font-medium leading-none text-gray-800">
           Password
-        </lable>
+        </label>
         <div className="relative flex items-center justify-center">
           <input
             aria-label="7"
