@@ -6,7 +6,7 @@ export default function AboutMe() {
   return (
     <main className="hero">
       <div className="hero-content flex-col-reverse lg:flex-row">
-        <div className="rounded-2xl shadow-2xl slide-in-bottom-h1 border-slate-300 border-2 p-6 m-8">
+        <div className=" rounded-2xl shadow-2xl shadow-purple-500/50 slide-in-bottom-h1 border-slate-300 border-2 p-6 m-8">
           <h1 className="text-2xl font-semibold italic text-center text-black-300">
             Hey{" "}
             <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-secondary relative inline-block bounce-top-icons">
