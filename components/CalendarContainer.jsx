@@ -1,6 +1,6 @@
 export default function Calendar() {
   return (
-    <div className="bg-base-100 shadow-xl rounded-xl lg:w-1/2 w-full p-10 mt-16">
+    <div className="bg-base-100 shadow-xl rounded-xl lg:w-1/2 w-full p-10 mt-16 flex-shrink">
       <div className="md:p-16 md:pb-12 p-5 rounded-lg shadow-lg">
         <div className="px-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold">October 2020</h1>
@@ -254,40 +254,6 @@ export default function Calendar() {
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-      <div className="md:py-8 py-5 md:px-16 px-5 bg-gray-50 rounded-b">
-        <div className="px-4">
-          <div className="border-b pb-4 border-gray-400 border-dashed">
-            <p className="text-xs font-light leading-3 text-gray-500">
-              9:00 AM
-            </p>
-            <p className="text-lg font-medium leading-5 pt-2">
-              Zoom call with design team
-            </p>
-            <p className="text-sm pt-2 leading-4 text-gray-600">
-              Discussion on UX sprint and Wireframe review
-            </p>
-          </div>
-          <div className="border-b pb-4 border-gray-400 border-dashed pt-5">
-            <p className="text-xs font-light leading-3 text-gray-500">
-              10:00 AM
-            </p>
-            <p className="text-lg font-medium leading-5 pt-2">
-              Orientation session with new hires
-            </p>
-          </div>
-          <div className="border-b pb-4 border-gray-400 border-dashed pt-5">
-            <p className="text-xs font-light leading-3 text-gray-500 ">
-              9:00 AM
-            </p>
-            <p className="text-lg font-medium leading-5 pt-2">
-              Zoom call with design team
-            </p>
-            <p className="text-sm pt-2 leading-4 text-gray-600 ">
-              Discussion on UX sprint and Wireframe review
-            </p>
-          </div>
         </div>
       </div>
     </div>

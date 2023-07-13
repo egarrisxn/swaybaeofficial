@@ -1,4 +1,17 @@
+import { useEffect } from "react";
+
 export default function InstagramEmbed() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//www.instagram.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <blockquote
@@ -289,7 +302,6 @@ export default function InstagramEmbed() {
           </p>
         </div>
       </blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
     </div>
   );
 }

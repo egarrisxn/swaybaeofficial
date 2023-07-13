@@ -30,11 +30,11 @@ export default function VideoPlayer({ vnum }) {
       <iframe
         className="latestVideoEmbed"
         width="600"
-        height="340"
-        frameborder="0"
-        allowfullscreen
+        allowFullScreen
         src={videoSrc}
       ></iframe>
     </div>
   );
 }
+
+// 'UCbpQhE5NYQ05pSp_DJJQxCA'

@@ -1,4 +1,5 @@
 "use client";
+import Spotify2 from "../../components/Spotify2";
 import DiscordEmbed from "../../components/DiscordEmbed";
 import SpotifyEmbed from "../../components/SpotifyEmbed";
 import InstagramEmbedSite from "../../components/InstagramEmbed";
@@ -15,7 +16,10 @@ export default function practice() {
   return (
     <>
       <main>
-        <div className="grid grid-row">
+        <div className="container">
+          <div className="flex justify-center">
+            <Spotify2 />
+          </div>
           <div className="flex justify-center">
             <DiscordEmbed />
           </div>
@@ -31,25 +35,25 @@ export default function practice() {
           <div className="flex justify-center">
             <VideoPlayer vnum={0} />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="flex justify-center">
             <InstagramEmbed
               url="https://www.instagram.com/p/CuZrus5L5wF"
               width={328}
             />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="flex justify-center">
             <TikTokEmbed
               url="https://www.tiktok.com/@sway_baetv/video/7216771608592141610"
               width={325}
             />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="flex justify-center">
             <TwitterEmbed
               url="https://twitter.com/sway_baeTV/status/1644803479293100034"
               width={250}
             />
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="flex justify-center">
             <YouTubeEmbed
               url="https://www.youtube.com/watch?v=mvMxPfSKx5k"
               width={325}

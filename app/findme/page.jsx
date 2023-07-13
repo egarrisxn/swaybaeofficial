@@ -1,11 +1,9 @@
-import CalendarContainer from "../../components/CalendarContainer";
+import GoogleCalendar from "../../components/GoogleCalendar";
 
 export default function FindMe() {
   return (
-    <main>
-      <div className="container flex justify-center">
-        <CalendarContainer />
-      </div>
+    <main className="container mx-auto">
+      <GoogleCalendar />
     </main>
   );
 }

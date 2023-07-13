@@ -1,4 +1,17 @@
+import { useEffect } from "react";
+
 export default function TikTokEmbed() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://www.tiktok.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <blockquote
@@ -18,7 +31,6 @@ export default function TikTokEmbed() {
           </a>
         </section>
       </blockquote>
-      <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
   );
 }
