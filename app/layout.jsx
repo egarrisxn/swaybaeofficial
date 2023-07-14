@@ -43,7 +43,7 @@ export const metadata = {
     description:
       "Here you will find everything there is to know about Swaybae!",
     keywords: [
-      "swaybae, sway_bae, sway, bae, swaybae.net, swaybae.com, baesquad, bae_squad, swaybae twitch, swaybae twitter, swaybae youtube, swaybae discord, swaybae instagram, swaybae tiktok, swaybae merch, swaybae store, swaybae shop, swaybae gamin",
+      "swaybae, sway_bae, sway, bae, swaybae.net, swaybae.com, baesquad, bae_squad, swaybae twitch, swaybae twitter, swaybae youtube, swaybae discord, swaybae instagram, swaybae tiktok, swaybae merch, swaybae store, swaybae shop, swaybae gaming",
     ],
     viewport: "width=device-width, initial-scale=1.0",
     colorScheme: "dark",

@@ -1,11 +1,11 @@
 export default function SpotifyEmbed() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="">
       <iframe
-        className="rounded-lg"
+        className="rounded-2xl box-shadow-2xl"
         src="https://open.spotify.com/embed/playlist/6am5YjtzZAOPnmvwbGHDxm?utm_source=generator"
-        width="100%"
-        height="152"
+        width="300"
+        height="352"
         allowFullScreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"

@@ -5,7 +5,7 @@ export default function VideoPlayer({ vnum }) {
 
   useEffect(() => {
     const loadVideo = async () => {
-      const cid = "UC_un3YZXBtAlCyApGu4_eSQ";
+      const cid = "UCbpQhE5NYQ05pSp_DJJQxCA";
       const channelURL = encodeURIComponent(
         `https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`
       );
@@ -26,15 +26,12 @@ export default function VideoPlayer({ vnum }) {
   }, [vnum]);
 
   return (
-    <div>
-      <iframe
-        className="latestVideoEmbed"
-        width="600"
-        allowFullScreen
-        src={videoSrc}
-      ></iframe>
-    </div>
+    <iframe
+      className="latestVideoEmbed rounded-2xl box-shadow-2xl"
+      width="300"
+      height="300"
+      allowFullScreen
+      src={videoSrc}
+    ></iframe>
   );
 }
-
-// 'UCbpQhE5NYQ05pSp_DJJQxCA'

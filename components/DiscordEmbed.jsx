@@ -1,10 +1,11 @@
 export default function DiscordEmbed() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
       <iframe
-        src="https://discord.com/widget?id=1001932991301423235&theme=dark"
-        width="350"
-        height="500"
+        className="rounded-2xl box-shadow-2xl"
+        src="https://discord.com/widget?id=530445935767978016&theme=dark"
+        width="300"
+        height="352"
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
       ></iframe>
     </div>

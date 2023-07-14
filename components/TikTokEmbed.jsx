@@ -13,13 +13,13 @@ export default function TikTokEmbed() {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="">
       <blockquote
-        className="tiktok-embed"
+        className="tiktok-embed rounded-2xl box-shadow-2xl justify-start"
         cite="https://www.tiktok.com/@sway_baetv"
         data-unique-id="sway_baetv"
         data-embed-type="creator"
-        style={{ maxWidth: "780px", minWidth: "288px" }}
+        style={{ justifyContent: "start", width: "300px", height: "352px" }}
       >
         <section>
           <a
