@@ -27,7 +27,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="navbar rounded-xl shadow-xl py-2 px-6">
+    <nav className="navbar rounded-xl lg:shadow-xl py-2 px-6">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <label tabIndex={0} className="lg:hidden" onClick={toggleDropdown}>
@@ -93,7 +93,7 @@ const Nav = () => {
           <li>
             <Link
               href="/aboutme"
-              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
+              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
             >
               About Me!
             </Link>
@@ -101,7 +101,7 @@ const Nav = () => {
           <li>
             <Link
               href="/findme"
-              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Where To Find Me
             </Link>
@@ -109,7 +109,7 @@ const Nav = () => {
           <li>
             <Link
               href="/merch"
-              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Merch
             </Link>
@@ -117,7 +117,7 @@ const Nav = () => {
           <li>
             <Link
               href="/mediakit"
-              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Media Kit
             </Link>
@@ -125,7 +125,7 @@ const Nav = () => {
           <li>
             <Link
               href="/inquire"
-              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Business Inquiries
             </Link>
@@ -133,7 +133,7 @@ const Nav = () => {
           <li>
             <Link
               href="/login"
-              className="rounded-xl shadow-xl bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Login
             </Link>
