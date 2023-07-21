@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Sway from "../../public/images/swaybaebb.png";
+import Sway from "@/public/images/tpsway.png";
 
 export default function AboutMe() {
   return (

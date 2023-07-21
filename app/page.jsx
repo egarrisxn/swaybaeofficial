@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import LogoWhite from "../public/images/LogoWhite.png";
+import LogoWhite from "@/public/images/logowhite.png";
 
 export default function Home() {
   return (
     <>
       <main className="hero">
-        <div className="hero-content flex justify-center">
+        <div className="hero-content flex justify-end">
           <div className="">
             <Link href="/">
               <Image

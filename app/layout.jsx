@@ -80,13 +80,14 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="relative w-full h-full bg-gradient-to-l from-slate-600 to-black-600 bg-no-repeat bg-fixed bg-cover bg-center">
+      <body className="relative w-full h-full bg-gradient-to-l from-slate-600 to-black-600 bg-no-repeat bg-fixed bg-cover ">
         <Image
-          src="/images/mountains.png"
+          src="/images/tpsway.png"
           alt="mountains"
           quality={100}
           fill
-          className="absolute object-cover mix-blend-overlay"
+          className="absolute object-cover mix-blend-overlay "
+          priority
         />
 
         <main className="backdrop-brightness-75">

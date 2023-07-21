@@ -5,7 +5,6 @@ import YoutubeEmbed from "../../components/YoutubeEmbed";
 export default function FindMe() {
   return (
     <main className="hero">
-      );
       <div>
         <Carousel />
         <div>
