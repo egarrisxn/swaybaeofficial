@@ -3,7 +3,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import LogoWhite from "../public/images/LogoWhite.png";
+import MyLogo from "../public/images/logowhite.png";
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
@@ -78,13 +78,7 @@ const Nav = () => {
         </div>
         <div className=" animate-pulse hidden lg:flex">
           <Link href="/">
-            <Image
-              src={LogoWhite}
-              width={80}
-              height={40}
-              alt="Logo White"
-              priority
-            />
+            <Image src={MyLogo} width={80} height={40} alt="Logo" priority />
           </Link>
         </div>
       </div>
@@ -142,7 +136,7 @@ const Nav = () => {
       </div>
       <div className="animate-pulse flex items-center justify-center lg:hidden">
         <Link href="/">
-          <Image src={LogoWhite} width={100} height={50} alt="Logo White" />
+          <Image src={MyLogo} width={100} height={50} alt="Logo" />
         </Link>
       </div>
       <div className="navbar-end">

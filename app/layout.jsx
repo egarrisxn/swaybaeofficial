@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { Providers } from "./providers";
 import Loading from "./loading";
 import ThemedNavbar from "../components/ThemedNavbar";
-import Footer from "../components/Footer";
+import MyFooter from "../components/MyFooter";
 import Image from "next/image";
 
 const inter = Inter({
@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
             <Providers>
               <Suspense fallback={<Loading />}>{children}</Suspense>
             </Providers>
-            <Footer />
+            <MyFooter />
           </ThemeProvider>
         </main>
       </body>
