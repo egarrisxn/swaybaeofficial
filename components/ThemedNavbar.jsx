@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
