@@ -68,11 +68,6 @@ const Nav = () => {
                   Business Inquiries
                 </Link>
               </li>
-              <li>
-                <Link href="/login" onClick={handleLinkClick}>
-                  Login
-                </Link>
-              </li>
             </ul>
           )}
         </div>
@@ -87,7 +82,7 @@ const Nav = () => {
           <li>
             <Link
               href="/aboutme"
-              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
             >
               About Me!
             </Link>
@@ -122,14 +117,6 @@ const Nav = () => {
               className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Business Inquiries
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/login"
-              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
-            >
-              Login
             </Link>
           </li>
         </ul>

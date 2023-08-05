@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoWhite from "../public/images/logowhite.png";
+import CustomButton from "../components/CustomButton.jsx";
 
 export default function Home() {
   return (
     <>
       <main className="hero">
-        <div className="hero-content flex justify-end">
-          <div className="">
+        <div className="hero-content flex flex-col items-center">
+          <div className="mb-4">
             <Link href="/">
               <Image
                 src={LogoWhite}
@@ -17,6 +18,10 @@ export default function Home() {
                 priority
               />
             </Link>
+          </div>
+
+          <div className="hero-button">
+            <CustomButton />
           </div>
         </div>
       </main>

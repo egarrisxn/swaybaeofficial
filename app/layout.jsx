@@ -1,11 +1,11 @@
 "use client";
 import "../styles/globals.css";
 import { Inter, Roboto_Mono } from "next/font/google";
-import { Suspense } from "react";
 import { ThemeProvider } from "next-themes";
-import { Providers } from "./providers";
-import Loading from "./loading";
 import ThemedNavbar from "../components/ThemedNavbar";
+import { Providers } from "./providers";
+import { Suspense } from "react";
+import Loading from "./loading";
 import MyFooter from "../components/MyFooter";
 import Image from "next/image";
 
@@ -80,7 +80,8 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="relative w-full h-full bg-gradient-to-l from-slate-600 to-black-600 bg-no-repeat bg-fixed bg-cover ">
+      <body className="relative w-full h-full bg-gradient-to-bl from-slate-950 to-black-500 bg-no-repeat bg-fixed bg-cover">
+        {/* <body className="relative w-full h-full bg-gradient-to-tr from-slate-700 to-black-900 bg-no-repeat bg-fixed bg-cover ">
         <Image
           src="/images/tpsway.png"
           alt="mountains"
@@ -88,7 +89,7 @@ export default function RootLayout({ children }) {
           fill
           className="absolute object-cover mix-blend-overlay "
           priority
-        />
+        /> */}
 
         <main className="backdrop-brightness-75">
           <ThemeProvider defaultTheme="mytheme">

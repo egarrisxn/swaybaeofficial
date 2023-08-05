@@ -1,0 +1,80 @@
+Add site here for Google searches
+https://search.google.com/search-console/welcome
+
+
+
+Provide a Unique Title Tag for Each Page
+
+The Title Tag is one of the strongest SEO signals, so it always must be in place. It must be unique, so there is no other page titled like that on our website and, preferably, on the whole web.
+It must be not too short nor too long (15-70 chars).
+Also, it’s a good idea to implement a way to edit the page titles separately from the document’s headline because the latter may be way longer than 70 chars, and the two shouldn’t be identical
+
+
+
+Provide a Unique Meta Description
+
+The meta description tag is not a major SEO signal, but it helps humans and bots understand better what your web page is about so they can make an informed decision to visit or not the page.
+That’s why every page must have a unique meta description between 60 and 320 characters. The content of the tag should be provided by the page’s author and not generated automatically, although there are cases where some automation is unavoidable.
+
+
+
+Viewport Tag
+
+“The browser’s viewport is the area of the window in which web content can be seen. This is often not the same size as the rendered page, in which case the browser provides scrollbars for the user to scroll around and access all the content.
+Some mobile devices and other narrow screens render pages in a virtual window or viewport, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 640px, pages might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 640px space.”
+So every web page must have a Viewport Tag if we want it to be properly served on mobile devices.
+Mobile devices generate 54% of the web traffic in 2022, which is a big reason to make our website mobile-friendly.
+
+
+
+Provide a lang attribute
+
+It’s a way to tell the machines in what language is the content on the page. Not that they can’t figure it out alone, but it’s better to help them out.
+
+
+
+Proper Char Encoding
+
+Nowadays, UTF8 encoding is the web standard for character encoding. It encompasses most alphabets and many other characters like emoticons, etc.
+
+
+
+No Meta Refresh Tags
+
+Using a meta refresh tag is an outdated way to update stale content on a web page or force the page to redirect to another URL. It’s not SEO-friendly, and it’s firmly advisable never to use it.
+
+
+
+Doctype Declaration
+There was a time when we needed to choose between several versions of HTML. There was HTML 4.2, HTML 5 and XHTML (which I really liked).
+Thank god we now have the “living standard,” and life is much easier.
+But still…
+Let’s put that Doctype declaration in place.
+
+
+
+Provide a Canonical Link
+
+“If you have a single page that’s accessible by multiple URLs, or different pages with similar content (for example, a page with both a mobile and a desktop version), Google sees these as duplicate versions of the same page. Google will choose one URL as the canonical version and crawl that, and all other URLs will be considered duplicate URLs and crawled less often.
+If you don’t explicitly tell Google which URL is canonical, Google will make the choice for you, or might consider them both of equal weight, which might lead to unwanted behavior, as explained in Reasons to choose a canonical URL.”
+
+
+
+A Unique H1 headline
+
+Each website page must have precisely one H1 headline that is unique sitewide. It must be not too short, nor too long. There are no specific recommendations for its length, but it must be long enough to communicate the page’s topic.
+
+
+
+Proper Headline Hierarchy
+
+It’s also essential for the rest of the headline tags (H2-H6) to be appropriately used for creating a hierarchical structure of topics and subtopics. (Screen readers really depend on that too).
+In the past, those tags were often used for styling purposes, which is no more advisable. If it’s not denoting a subtopic as part of the main content, it must not be used just to make the title bolder or bigger.
+
+
+
+Don’t Overdepend On The Image Component
+
+This component is so handy, and we often surrender to the idea that it can handle whatever images we pass to it.
+That’s far from the truth…
+If you don’t process your images beforehand… If you don’t normalize them and don’t persist the optimized copies, Next.Js will optimize them after every deployment on a serverless infrastructure, which will cost you lots of CPU time.
