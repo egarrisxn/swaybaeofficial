@@ -31,13 +31,30 @@ const Nav = () => {
     <nav className="navbar rounded-xl lg:shadow-xl py-2 px-6">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
-          <label tabIndex={0} className="lg:hidden" onClick={toggleDropdown}>
+          <button
+            tabIndex={0}
+            className="lg:hidden"
+            onClick={toggleDropdown}
+            aria-label="Toggle Menu"
+            style={{
+              padding: "12px", // Adjust padding for tap/click area
+            }}
+          >
             <Hamburger size={24} toggled={isOpen} toggle={toggleDropdown} />
-          </label>
+          </button>
           {isOpen && (
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 rounded-xl shadow-xl w-52 text-secondary bg-base-100"
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  closeDropdown();
+                }
+              }}
+              onBlur={() => {
+                // Close the dropdown when focus leaves
+                closeDropdown();
+              }}
             >
               <li>
                 <Link href="/" onClick={handleLinkClick}>
