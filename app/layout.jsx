@@ -1,13 +1,13 @@
-"use client";
-import "../styles/globals.css";
 import { Inter, Roboto_Mono } from "next/font/google";
-import { ThemeProvider } from "next-themes";
 import ThemedNavbar from "../components/ThemedNavbar";
 import { Providers } from "./providers";
 import { Suspense } from "react";
 import Loading from "./loading";
 import MyFooter from "../components/MyFooter";
-import Image from "next/image";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "../styles/globals.css";
+// import Image from "next/image";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,6 +21,7 @@ const roboto_mono = Roboto_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://swaybae.net"),
   title: "SwayBae | Streaming, Gaming, and More!",
   description: "Here you will find everything there is to know about Sway!",
   robots: {
@@ -81,24 +82,21 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="relative w-full h-full bg-gradient-to-bl from-slate-950 to-black-500 bg-no-repeat bg-fixed bg-cover">
-        {/* <body className="relative w-full h-full bg-gradient-to-tr from-slate-700 to-black-900 bg-no-repeat bg-fixed bg-cover ">
-        <Image
+        {/* <Image
           src="/images/tpsway.png"
-          alt="mountains"
           quality={100}
           fill
           className="absolute object-cover mix-blend-overlay "
           priority
         /> */}
 
-        <main className="backdrop-brightness-75">
-          <ThemeProvider defaultTheme="mytheme">
+        <main className="backdrop-brightness-100">
+          <Providers>
             <ThemedNavbar />
-            <Providers>
-              <Suspense fallback={<Loading />}>{children}</Suspense>
-            </Providers>
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+            <ToastContainer />
             <MyFooter />
-          </ThemeProvider>
+          </Providers>
         </main>
       </body>
     </html>
