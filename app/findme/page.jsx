@@ -1,15 +1,10 @@
-"use client";
-import Carousel from "../../components/Carousel";
-import YoutubeEmbed from "../../components/YoutubeEmbed";
+import { EmblaCarousel } from "../../components/EmblaCarousel";
 
 export default function FindMe() {
   return (
-    <main className="hero">
-      <div>
-        <Carousel />
-        <div>
-          <YoutubeEmbed vnum={0} />
-        </div>
+    <main>
+      <div className="container flex justify-center">
+        <EmblaCarousel />
       </div>
     </main>
   );

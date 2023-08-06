@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LogoWhite from "../public/images/logowhite.png";
@@ -20,7 +19,6 @@ export default function Home() {
               />
             </Link>
           </div>
-
           <CustomButton />
         </div>
       </main>

@@ -1,6 +1,4 @@
-import React from "react";
-
-function CustomButton() {
+export default function CustomButton() {
   return (
     <div className="mb-12 flex justify-center">
       <a href="https://youtu.be/dQw4w9WgXcQ">
@@ -33,5 +31,3 @@ function CustomButton() {
     </div>
   );
 }
-
-export default CustomButton;

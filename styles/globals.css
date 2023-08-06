@@ -27,6 +27,7 @@ main {
   fill: #d8c056b9;
 }
 
+
 /* ------ */
 /* Button */
 /* ------ */
@@ -57,6 +58,33 @@ main {
 }
 
 
+/* -------- */
+/* Carousel */
+/* -------- */
+
+.embla {
+  display: flex;
+overflow: hidden;
+  padding: 1rem;
+}
+
+.embla__container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 500px
+
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+
+/* ---------- */
+/* Animations */
+/* ---------- */
 
 .slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
 .slide-in-bottom-h1{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both}
