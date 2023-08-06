@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="relative w-full h-full bg-gradient-to-bl from-slate-900 to-black-500 bg-no-repeat bg-fixed bg-cover">
+      <body className="relative w-full h-full bg-gradient-to-bl from-slate-700 to-black-500 bg-no-repeat bg-fixed bg-cover">
         {/* <Image
           src="/images/tpsway.png"
           quality={100}

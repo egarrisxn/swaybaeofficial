@@ -20,6 +20,7 @@ export default function Home() {
             </Link>
           </div>
           <CustomButton />
+          <CustomButton />
         </div>
       </main>
     </>
