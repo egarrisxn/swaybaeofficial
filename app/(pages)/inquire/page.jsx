@@ -1,4 +1,4 @@
-import BusinessInquiryContainer from "../../components/BusinessInquiryContainer";
+import BusinessInquiryContainer from "@/components/BusinessInquiryContainer";
 
 export default function Inquire() {
   return (

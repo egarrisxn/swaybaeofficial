@@ -1,4 +1,4 @@
-import { EmblaCarousel } from "../../components/EmblaCarousel";
+import { EmblaCarousel } from "@/components/EmblaCarousel";
 
 export default function FindMe() {
   return (

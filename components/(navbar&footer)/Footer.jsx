@@ -10,7 +10,7 @@
 //   SvgYoutube,
 // } from "../public/icons";
 
-const MyFooter = () => {
+const Footer = () => {
   return (
     <div className="relative bottom-0 xl:px-20 lg:px-12 sm:px-6 px-4 py-4 mt-4">
       <div className="flex flex-col items-center justify-center">
@@ -56,4 +56,4 @@ const MyFooter = () => {
   );
 };
 
-export default MyFooter;
+export default Footer;

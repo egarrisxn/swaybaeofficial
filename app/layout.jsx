@@ -1,12 +1,12 @@
 import { Inter, Roboto_Mono } from "next/font/google";
-import ThemedNavbar from "../components/ThemedNavbar";
 import { Providers } from "./providers";
 import { Suspense } from "react";
-import Loading from "./loading";
-import MyFooter from "../components/MyFooter";
+import Loading from "./(errors&loading)/loading";
+import Navbar from "@/components/(navbar&footer)/Navbar";
+import Footer from "@/components/(navbar&footer)/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../styles/globals.css";
+import "@/styles/globals.css";
 // import Image from "next/image";
 
 const inter = Inter({
@@ -92,10 +92,10 @@ export default function RootLayout({ children }) {
 
         <main className="backdrop-brightness-50">
           <Providers>
-            <ThemedNavbar />
+            <Navbar />
             <Suspense fallback={<Loading />}>{children}</Suspense>
             <ToastContainer />
-            <MyFooter />
+            <Footer />
           </Providers>
         </main>
       </body>

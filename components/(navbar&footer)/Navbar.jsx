@@ -4,7 +4,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import { useTheme, ThemeProvider } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import MyLogo from "../public/images/logowhite.png";
+import MyLogo from "@/public/images/logowhite.png";
 
 const Nav = () => {
   const [isOpen, setOpen] = useState(false);
@@ -28,7 +28,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="navbar rounded-xl lg:shadow-xl py-2 px-6">
+    <nav className="navbar rounded-2xl lg:shadow-2xl py-2 px-6">
       <div className="navbar-start text-secondary">
         <div className="dropdown">
           <button
@@ -86,6 +86,11 @@ const Nav = () => {
                   Business Inquiries
                 </Link>
               </li>
+              <li>
+                <Link href="/subathon" onClick={handleLinkClick}>
+                  Subathon!
+                </Link>
+              </li>
             </ul>
           )}
         </div>
@@ -96,11 +101,11 @@ const Nav = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal space-x-4 px-1 ">
+        <ul className="menu menu-horizontal space-x-4">
           <li>
             <Link
               href="/aboutme"
-              className="bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent"
+              className="bg-gradient-to-l from-primary via-urgent to-secondary bg-clip-text text-transparent"
             >
               About Me!
             </Link>
@@ -135,6 +140,14 @@ const Nav = () => {
               className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
             >
               Business Inquiries
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/subathon"
+              className=" bg-gradient-to-r from-primary via-urgent to-secondary bg-clip-text text-transparent "
+            >
+              Subathon!
             </Link>
           </li>
         </ul>
@@ -185,10 +198,10 @@ const Nav = () => {
   );
 };
 
-const ThemedNavbar = () => (
+const Navbar = () => (
   <ThemeProvider>
     <Nav />
   </ThemeProvider>
 );
 
-export default ThemedNavbar;
+export default Navbar;
