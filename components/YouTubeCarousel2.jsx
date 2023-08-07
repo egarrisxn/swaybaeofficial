@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import YouTubeEmbed2 from "./(embeds)/YouTubeEmbed2";
+import YouTubeEmbed2 from "./YouTubeEmbed2";
 
 export const YouTubeCarousel2 = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({

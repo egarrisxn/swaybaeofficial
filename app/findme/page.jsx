@@ -1,8 +1,8 @@
-import { YouTubeCarousel } from "@/components/YouTubeCarousel";
-import { YouTubeCarousel2 } from "@/components/YouTubeCarousel2";
-import DiscordContainer from "@/components/DiscordContainer";
-import InstagramContainer from "@/components/InstagramContainer";
-import SpotifyContainer from "@/components/SpotifyContainer";
+import { YouTubeCarousel } from "../../components/YouTubeCarousel";
+import { YouTubeCarousel2 } from "../../components/YouTubeCarousel2";
+import DiscordContainer from "../../components/DiscordContainer";
+import InstagramContainer from "../../components/InstagramContainer";
+import SpotifyContainer from "../../components/SpotifyContainer";
 
 export default function FindMe() {
   return (

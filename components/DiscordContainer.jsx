@@ -1,4 +1,4 @@
-import DiscordEmbed from "./(embeds)/DiscordEmbed";
+import DiscordEmbed from "./DiscordEmbed";
 
 export default function DiscordContainer() {
   return (

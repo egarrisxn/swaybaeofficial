@@ -1,4 +1,4 @@
-import InstagramEmbed from "./(embeds)/InstagramEmbed";
+import InstagramEmbed from "./InstagramEmbed";
 
 export default function InstagramContainer() {
   return (

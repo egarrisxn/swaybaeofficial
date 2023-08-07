@@ -1,4 +1,4 @@
-import MediaKitContainer from "@/components/MediaKitContainer";
+import MediaKitContainer from "../../components/MediaKitContainer";
 
 export default function MediaKit() {
   return (
