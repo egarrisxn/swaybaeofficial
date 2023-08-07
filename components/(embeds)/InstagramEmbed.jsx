@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-export default function InstagramEmbed() {
+const InstagramEmbed = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "//www.instagram.com/embed.js";
@@ -14,84 +14,31 @@ export default function InstagramEmbed() {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg-base-100">
       <blockquote
-        className="instagram-media rounded-2xl box-shadow-2xl"
+        className="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/sway_baetv/?utm_source=ig_embed&utm_campaign=loading"
         data-instgrm-version="14"
       >
-        <div style={{ padding: "16px" }}>
+        <div className="p-4 bg-white">
           <a
             href="https://www.instagram.com/sway_baetv/?utm_source=ig_embed&utm_campaign=loading"
-            style={{
-              background: "#FFFFFF",
-              lineHeight: 0,
-              padding: "0 0",
-              textAlign: "center",
-              textDecoration: "none",
-              width: "100%",
-            }}
+            className="block"
             target="_blank"
           >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-              }}
-            >
-              <div
-                style={{
-                  backgroundColor: "#F4F4F4",
-                  borderRadius: "50%",
-                  flexGrow: 0,
-                  height: "40px",
-                  marginRight: "14px",
-                  width: "40px",
-                }}
-              ></div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flexGrow: 1,
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    backgroundColor: "#F4F4F4",
-                    borderRadius: "4px",
-                    flexGrow: 0,
-                    height: "14px",
-                    marginBottom: "6px",
-                    width: "100px",
-                  }}
-                ></div>
-                <div
-                  style={{
-                    backgroundColor: "#F4F4F4",
-                    borderRadius: "4px",
-                    flexGrow: 0,
-                    height: "14px",
-                    width: "60px",
-                  }}
-                ></div>
+            <div className="flex items-center">
+              <div className="bg-gray-400 rounded-full h-10 w-10 mr-4"></div>
+              <div className="flex flex-col flex-grow justify-center">
+                <div className="bg-gray-400 h-2 w-24 mb-1"></div>
+                <div className="bg-gray-400 h-2 w-16"></div>
               </div>
             </div>
           </a>
-          <div style={{ padding: "19% 0" }}></div>
-          <div
-            style={{
-              display: "block",
-              height: "50px",
-              margin: "0 auto 12px",
-              width: "50px",
-            }}
-          >
+          <div className="pt-3"></div>
+          <div className="h-0" style={{ paddingBottom: "100%" }}></div>
+          <div className="flex items-center justify-center mt-3">
             <svg
-              width="50px"
-              height="50px"
+              className="w-10 h-10"
               viewBox="0 0 60 60"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -109,46 +56,16 @@ export default function InstagramEmbed() {
               </g>
             </svg>
           </div>
-          <div style={{ padding: "8px" }}>
-            <div
-              style={{
-                color: "#3897f0",
-                fontFamily: "Arial, sans-serif",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: 550,
-                lineHeight: "18px",
-              }}
-            >
+          <div className="p-2 text-center">
+            <div className="text-blue-500 font-semibold text-sm">
               View this profile on Instagram
             </div>
           </div>
-          <div style={{ padding: "12.5% 0" }}></div>
-          <p
-            style={{
-              color: "#c9c8cd",
-              fontFamily: "Arial, sans-serif",
-              fontSize: "14px",
-              lineHeight: "17px",
-              marginBottom: 0,
-              marginTop: "8px",
-              overflow: "hidden",
-              padding: "8px 0 7px",
-              textAlign: "center",
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap",
-            }}
-          >
+          <div className="pt-3"></div>
+          <p className="text-gray-400 text-sm mb-0 mt-2 text-center overflow-hidden whitespace-nowrap">
             <a
               href="https://www.instagram.com/sway_baetv/?utm_source=ig_embed&utm_campaign=loading"
-              style={{
-                color: "#c9c8cd",
-                fontFamily: "Arial, sans-serif",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: "normal",
-                lineHeight: "17px",
-              }}
+              className="text-gray-400 font-normal"
               target="_blank"
             >
               Sway Bae
@@ -156,14 +73,7 @@ export default function InstagramEmbed() {
             (
             <a
               href="https://www.instagram.com/sway_baetv/?utm_source=ig_embed&utm_campaign=loading"
-              style={{
-                color: "#c9c8cd",
-                fontFamily: "Arial, sans-serif",
-                fontSize: "14px",
-                fontStyle: "normal",
-                fontWeight: "normal",
-                lineHeight: "17px",
-              }}
+              className="text-gray-400 font-normal"
               target="_blank"
             >
               sway_baetv
@@ -174,4 +84,6 @@ export default function InstagramEmbed() {
       </blockquote>
     </div>
   );
-}
+};
+
+export default InstagramEmbed;

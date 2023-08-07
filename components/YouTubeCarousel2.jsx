@@ -1,10 +1,13 @@
 "use client";
 import { useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import YoutubeEmbed from "./(embeds)/YoutubeEmbed";
+import YouTubeEmbed2 from "./(embeds)/YouTubeEmbed2";
 
-export const EmblaCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel();
+export const YouTubeCarousel2 = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "center",
+    draggable: true,
+  });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -21,23 +24,23 @@ export const EmblaCarousel = () => {
   }, [emblaApi]);
 
   return (
-    <div className="embla card bg-base-200 shadow-xl rounded-2xl shadow-purple-500/50 mt-10 mb-16">
+    <div className="embla card flex overflow-hidden p-4 bg-base-100 rounded-xl shadow-xl shadow-purple-500/50">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container space-x-10">
-          <div className="embla__slide">
-            <YoutubeEmbed vnum={0} />
+        <div className="embla__container flex h-full w-360 space-x-10">
+          <div className="embla__slide flex h-full w-full">
+            <YouTubeEmbed2 vnum={0} />
           </div>
-          <div className="embla__slide">
-            <YoutubeEmbed vnum={1} />
+          <div className="embla__slide flex h-full w-full">
+            <YouTubeEmbed2 vnum={1} />
           </div>
-          <div className="embla__slide">
-            <YoutubeEmbed vnum={2} />
+          <div className="embla__slide flex h-full w-full">
+            <YouTubeEmbed2 vnum={2} />
           </div>
-          <div className="embla__slide">
-            <YoutubeEmbed vnum={3} />
+          <div className="embla__slide flex h-full w-full">
+            <YouTubeEmbed2 vnum={3} />
           </div>
-          <div className="embla__slide">
-            <YoutubeEmbed vnum={4} />
+          <div className="embla__slide flex h-full w-full">
+            <YouTubeEmbed2 vnum={4} />
           </div>
         </div>
       </div>

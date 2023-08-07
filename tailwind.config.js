@@ -1,56 +1,58 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
   darkMode: "class",
-  
+
   theme: {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
       opacity: {
-        '0': '0',
-        '20': '0.2',
-        '40': '0.4',
-        '60': '0.6',
-        '80': '0.8',
-        '100': '1',
+        0: "0",
+        20: "0.2",
+        40: "0.4",
+        60: "0.6",
+        80: "0.8",
+        100: "1",
       },
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-roboto-mono)'],
+        sans: ["var(--font-inter)"],
+        mono: ["var(--font-roboto-mono)"],
+      },
+      width: {
+        360: "360px",
+        500: "500px",
       },
     },
   },
 
-  plugins: [require("daisyui")
-  ],
+  plugins: [require("daisyui")],
 
   daisyui: {
     themes: [
       {
         mytheme: {
-          "primary": "#00ceff",
-          "secondary": "#b567ad",
-          "accent": "#fff133",
-          "neutral": "#444442",
+          primary: "#00ceff",
+          secondary: "#b567ad",
+          accent: "#fff133",
+          neutral: "#444442",
           "base-100": "#ffffff",
-          "info": "#1a5462",
-          "success": "#81328f",
-          "warning": "#ef8234",
-          "error": "#ea4034",
+          info: "#1a5462",
+          success: "#81328f",
+          warning: "#ef8234",
+          error: "#ea4034",
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
           "--rounded-badge": "2rem", // border radius rounded-badge utility class, used in badges and similar
@@ -65,6 +67,6 @@ module.exports = {
       },
       "dark",
       "light",
-    ]
-  }
-}
+    ],
+  },
+};
