@@ -13,7 +13,7 @@ The official website for professional streamer & content creator, Sway Bae!
 - Sanity
 - Nextjs
 - React
-- Javascript
+- JavaScript
 - TailwindCSS
 - DaisyUI
 
