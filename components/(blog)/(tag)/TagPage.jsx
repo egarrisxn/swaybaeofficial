@@ -18,7 +18,7 @@ export default function TagPage({tag}) {
           <SearchBar placeholder={'Search..'} />
         </header>
         <br />
-        <article className='mx-auto my-4 grid max-w-6xl grid-cols-1 px-2 sm:px-4 lg:mt-12'>
+        <article className='mx-auto mb-4 mt-4 grid max-w-6xl grid-cols-1 sm:px-4 lg:mt-12'>
           <h3 className='mb-2 ml-1 text-3xl font-bold'>
             <span className='mr-1 text-xl text-primary'>&#x2717;</span>
             {title}
@@ -28,10 +28,11 @@ export default function TagPage({tag}) {
               <TagPostCard key={post._id} post={post} />
             ))}
           </div>
-          <hr className='mt-6' />
+          <br />
+          <hr />
           <section className='my-6 flex items-center justify-center max-[300px]:max-w-60 lg:my-10'>
-            <div className='flex flex-row flex-wrap items-center gap-2'>
-              Socials:
+            <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
+              <span className='hidden sm:block'>Socials:</span>
               <SocialButtons />
             </div>
           </section>

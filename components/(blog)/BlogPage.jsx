@@ -20,12 +20,13 @@ export default function BlogPage({blog}) {
           </div>
         </header>
         <br />
-        <article className='mx-auto my-4 max-w-6xl px-2 sm:px-4 lg:mt-12'>
+        <article className='mx-auto mb-4 mt-4 max-w-6xl sm:px-4 lg:mt-12'>
           <AllPosts posts={blog} />
+          <br />
           <hr />
           <section className='my-6 flex items-center justify-center max-[300px]:max-w-60 lg:my-10'>
-            <div className='flex flex-row flex-wrap items-center gap-2'>
-              Socials:
+            <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
+              <span className='hidden sm:block'>Socials:</span>
               <SocialButtons />
             </div>
           </section>

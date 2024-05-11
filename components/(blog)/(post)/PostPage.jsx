@@ -22,11 +22,11 @@ export default function PostPage({post}) {
           <SearchBar placeholder={'Search..'} />
         </header>
         <br />
-        <div className='container mx-auto mt-4 grid max-w-6xl grid-cols-1 px-2 lg:mt-12 lg:grid-cols-12'>
+        <article className='container mx-auto mb-4 mt-4 grid max-w-6xl grid-cols-1 sm:px-4 lg:mt-12 lg:grid-cols-12'>
           <aside className='sticky top-[2rem] col-start-1 col-end-2 hidden h-screen pt-12 lg:block'>
             <TableOfContent headings={headings} />
           </aside>
-          <article className='col-start-2 col-end-13 mx-auto mt-1 grid px-0 py-2 sm:gap-2 sm:px-2 md:px-4'>
+          <div className='col-start-2 col-end-13 mx-auto grid sm:gap-2'>
             <p className='prose-md prose line-clamp-1 w-fit rounded-md bg-slate-700 px-2 tracking-tight text-white drop-shadow-md dark:prose-invert'>
               {new Date(post.publishedAt).toLocaleDateString('en-US', {
                 day: 'numeric',
@@ -61,24 +61,25 @@ export default function PostPage({post}) {
                 <PortableTextComponents content={content} />
               </div>
             </section>
+            <br />
             <hr />
             <section className='my-6 flex flex-col items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-8 lg:flex-row-reverse lg:justify-between'>
-              <div className='flex flex-row flex-wrap items-center gap-2'>
-                Tags:
+              <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
+                <span className='hidden sm:block'>Tags:</span>
                 {tags.map((tag) => (
                   <div key={tag._id}>
                     <TagBadge tag={tag} />
                   </div>
                 ))}
               </div>
-              <div className='flex flex-row flex-wrap items-center gap-2'>
-                Socials:
+              <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
+                <span className='hidden sm:block'>Socials:</span>
                 <SocialButtons />
               </div>
             </section>
-            <hr className='mb-2' />
-          </article>
-        </div>
+            <hr />
+          </div>
+        </article>
       </div>
     </main>
   )
