@@ -1,18 +1,19 @@
 {
   "name": "swaybaeofficial",
   "version": "1.0.0",
-  "license": "MIT",
   "description": "The official site for content creator Sway Bae.",
+  "homepage": "https://swaybae.net",
+  "author": "Ethan G.",
+  "license": "MIT",
   "keywords": [
-    "Sanity.io",
-    "NextJS",
-    "React",
-    "TailwindCSS",
-    "DaisyUI",
-    "Vercel"
+    "sanity",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "daisyui",
+    "vercel"
   ],
   "private": true,
-  "homepage": "https://swaybae.net",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -35,8 +36,6 @@
     "@sanity/react-loader": "^1.8.5",
     "@sanity/vision": "^3.30.1",
     "@sanity/visual-editing": "^1.4.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.10",
     "@vercel/analytics": "^1.1.2",
     "@vercel/og": "^0.6.2",
     "@vercel/speed-insights": "^1.0.9",
@@ -65,6 +64,7 @@
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^3.0.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.17",
     "daisyui": "^4.7.2",

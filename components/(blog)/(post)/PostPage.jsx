@@ -62,7 +62,7 @@ export default function PostPage({post}) {
               </div>
             </section>
             <hr />
-            <section className='my-6 flex flex-col items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-10 lg:flex-row-reverse lg:justify-between'>
+            <section className='my-6 flex flex-col items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-8 lg:flex-row-reverse lg:justify-between'>
               <div className='flex flex-row flex-wrap items-center gap-2'>
                 Tags:
                 {tags.map((tag) => (
@@ -76,7 +76,7 @@ export default function PostPage({post}) {
                 <SocialButtons />
               </div>
             </section>
-            <hr />
+            <hr className='mb-2' />
           </article>
         </div>
       </div>

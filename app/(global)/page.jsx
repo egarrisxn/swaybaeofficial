@@ -14,7 +14,6 @@ export default function Home() {
       <Socials />
       <hr className='m-2 mx-auto w-full border-2 border-purple-800/50 sm:container' />
       <Inquiries />
-      <hr className='m-2 mx-auto w-full border-2 border-purple-800/50 sm:container' />
     </main>
   )
 }
