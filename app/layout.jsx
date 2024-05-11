@@ -58,7 +58,7 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={`${lobster.variable} ${poppins.variable}`}>
         <ThemeProvider attribute='class' defaultTheme='system'>
           {children}
