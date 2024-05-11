@@ -22,7 +22,7 @@ export default function Socials() {
         <section className='mx-auto my-4 px-2 sm:px-4 md:px-8 lg:mb-24 lg:mt-12 lg:px-12 '>
           <SocialsCarousel />
           <div className='mt-6'>
-            <a href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
+            <Link href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
               <div className='flex flex-row items-center justify-center text-sm tracking-tight max-[370px]:text-xs sm:text-lg'>
                 If you'd like to support what I do:
                 <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden '>
@@ -32,7 +32,7 @@ export default function Socials() {
                   <Image src='/throne.jpg' alt='Throne' width={24} height={24} />
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         </section>
         <section className='mx-auto my-8 px-2 sm:px-4 md:px-8 lg:my-16 lg:px-12'>
@@ -42,8 +42,9 @@ export default function Socials() {
             </span>
             Latest
             <Link
-              target='_blank'
               href='https://www.youtube.com/sway_baetv/'
+              target='_blank'
+              rel='noopener noreferrer'
               className='mx-1 bg-gradient-to-b from-navy via-pink to-pink bg-clip-text text-transparent sm:mx-2'
             >
               YoutTube

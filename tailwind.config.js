@@ -5,7 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './sanity/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'selector',
+  darkMode: 'class',
   theme: {
     screens: {
       xs: '360px',

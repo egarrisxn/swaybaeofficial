@@ -14,6 +14,8 @@ export default function ContactSocials({mobileStyle}) {
             <Link
               key={idx}
               href={icon.href}
+              target='_blank'
+              rel='noopener noreferrer'
               className='flex items-center transition duration-200 ease-in hover:text-primary'
             >
               {icon.icon}
@@ -24,7 +26,12 @@ export default function ContactSocials({mobileStyle}) {
         <div className='mb-3 grid grid-cols-2 gap-4 text-sm md:text-base lg:text-lg'>
           {socials.map((icon, idx) => (
             <div key={idx} className='flex items-center'>
-              <Link href={icon.href} className='flex items-center text-secondary'>
+              <Link
+                href={icon.href}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex items-center text-secondary'
+              >
                 {icon.icon}
                 <span className='ml-2 text-dark transition duration-200 ease-in hover:text-primary dark:text-light'>
                   {icon.label}

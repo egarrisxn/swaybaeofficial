@@ -3,17 +3,16 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {presentationTool} from 'sanity/presentation'
 import {media} from 'sanity-plugin-media'
-import {visionTool} from '@sanity/vision'
 import {youtubeInput} from 'sanity-plugin-youtube-input'
-import {path, id, set, apiVersion, youtubeKey} from '@/sanity/lib/api'
+import {path, id, set, youtubeKey} from '@/sanity/lib/api'
 import {schema} from './sanity/schemas/schema'
 import {locate} from './sanity/lib/locate'
 
 export default defineConfig({
   name: 'default',
   title: 'Sway Sanity',
-  basePath: path,
-  projectId: id,
+  basePath: path || '',
+  projectId: id || '',
   dataset: set,
   schema,
   plugins: [
@@ -28,7 +27,6 @@ export default defineConfig({
       },
     }),
     media(),
-    visionTool({defaultApiVersion: apiVersion}),
     youtubeInput({apiKey: youtubeKey}),
   ],
 })
