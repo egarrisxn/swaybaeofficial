@@ -9,7 +9,7 @@ const links = [
   {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
   {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
-  {href: '/blog', label: 'Blog!'},
+  {href: '/blog', label: 'Blog'},
 ]
 
 export default function Navbar() {
@@ -95,9 +95,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={handleLinkClick}
-                      className={`${
-                        link.label === 'Blog!' ? 'text-primary hover:text-secondary' : ''
-                      } relative z-50 bg-clip-text p-4 text-5xl hover:text-secondary hover:underline hover:underline-offset-4`}
+                      className={`${link.label} relative z-50 bg-clip-text p-4 text-5xl hover:text-secondary hover:underline hover:underline-offset-4`}
                     >
                       {link.label}
                     </Link>
@@ -113,9 +111,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`${
-                    link.label === 'Blog!' ? 'text-primary hover:text-secondary' : ''
-                  } relative border-none bg-clip-text transition duration-200 hover:text-secondary hover:underline hover:underline-offset-4 `}
+                  className={`${link.label} relative border-none bg-clip-text transition duration-200 hover:text-secondary hover:underline hover:underline-offset-4 `}
                 >
                   {link.label}
                 </Link>
