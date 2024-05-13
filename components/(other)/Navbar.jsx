@@ -9,7 +9,7 @@ const links = [
   {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
   {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
-  {href: '/blog', label: 'New Blog!'},
+  {href: '/blog', label: 'Blog!'},
 ]
 
 export default function Navbar() {
