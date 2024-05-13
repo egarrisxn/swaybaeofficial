@@ -1,7 +1,7 @@
 import {useCallback, useEffect, useState} from 'react'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
-import {socials} from '@/lib/constants'
+import {socials} from '../../lib/constants'
 
 export default function SocialsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({

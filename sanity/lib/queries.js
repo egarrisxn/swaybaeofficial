@@ -1,6 +1,6 @@
 import {groq} from 'next-sanity'
 
-const commonPostQuery = `
+const commonPostQuery = groq`
   _id,
   _createdAt,
   title,
@@ -17,7 +17,7 @@ const commonPostQuery = `
     color,
   },
 `
-const commonTagQuery = `
+const commonTagQuery = groq`
   _id,
   _createdAt,
   title,

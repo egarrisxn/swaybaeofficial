@@ -20,7 +20,7 @@ export default function TagPage({tag}) {
         <br />
         <article className='mx-auto mb-4 mt-4 grid max-w-6xl grid-cols-1 sm:px-4 lg:mt-12'>
           <h3 className='mb-2 ml-1 text-3xl font-bold'>
-            <span className='mr-1 text-xl text-primary'>&#x2717;</span>
+            <span className='mr-1 text-xl text-primary'>&#9684;</span>
             {title}
           </h3>
           <div className='mt-8 grid grid-cols-1 gap-8 pb-16'>

@@ -5,18 +5,12 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.sanity.io',
-        port: '',
-      },
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-        port: '',
       },
     ],
   },
   logging: {
     fetches: {
-      fullUrl: true,
+      fullUrl: false,
     },
   },
   experimental: {

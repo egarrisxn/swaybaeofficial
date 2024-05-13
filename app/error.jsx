@@ -16,6 +16,7 @@ export default function Error({error, reset}) {
         width={300}
         height={300}
         quality={100}
+        unoptimized
       />
       <p className='py-2 text-center text-lg font-semibold max-[300px]:text-base md:text-xl'>
         <span className='text-primary'>Oh no!</span> Something went wrong.

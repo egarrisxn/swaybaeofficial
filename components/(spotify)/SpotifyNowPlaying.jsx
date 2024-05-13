@@ -2,7 +2,7 @@
 import {useEffect, useState} from 'react'
 import SpotifyLogo from './SpotifyLogo'
 import SpotifyAnimation from './SpotifyAnimation'
-import getNowPlayingItem from '@/lib/spotify'
+import getNowPlayingItem from '../../lib/spotify'
 
 export default function SpotifyNowPlaying(props) {
   const [loading, setLoading] = useState(true)

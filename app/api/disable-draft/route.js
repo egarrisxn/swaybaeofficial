@@ -4,5 +4,5 @@ import {NextResponse} from 'next/server'
 export function GET(request) {
   draftMode().disable()
   const url = new URL(request.nextUrl)
-  return NextResponse.redirect(new URL('/studio', url.origin))
+  return NextResponse.redirect(new URL('/', url.origin))
 }

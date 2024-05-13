@@ -1,11 +1,9 @@
 import AllPosts from './AllPosts'
 import AllTags from './AllTags'
 import TagFilter from './TagFilter'
-import PageName from '@/components/(other)/PageName'
+import PageName from '../(other)/PageName'
 import SearchBar from '../(ui)/SearchBar'
 import SocialButtons from '../(ui)/SocialButtons'
-
-// const revalidate = 30
 
 export default function BlogPage({blog}) {
   return (

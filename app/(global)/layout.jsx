@@ -1,4 +1,3 @@
-import './app.css'
 import ScrollToTop from '@/components/(ui)/ScrollToTop'
 import Navbar from '@/components/(other)/Navbar'
 import Footer from '@/components/(other)/Footer'

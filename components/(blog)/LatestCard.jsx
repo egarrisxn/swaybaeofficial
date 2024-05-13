@@ -26,9 +26,6 @@ export default function LatestCard({post}) {
               alt={coverImage.alt}
               width={800}
               height={450}
-              loading='lazy'
-              placeholder='blur'
-              blurDataURL={urlFor(coverImage.image).width(24).height(24).blur(10).url()}
             />
           </Link>
         </section>
@@ -43,11 +40,11 @@ export default function LatestCard({post}) {
         </section>
         <section className='mt-2 md:ml-1'>
           <Link href={`/blog/post/${post.postSlug}`}>
-            <h3 className='prose prose-base prose-slate line-clamp-1 font-bold md:prose-lg dark:prose-invert hover:underline'>
+            <h3 className='prose prose-base prose-slate line-clamp-1 font-bold dark:prose-invert md:prose-lg hover:underline'>
               {title}
             </h3>
           </Link>
-          <h4 className='prose prose-sm prose-slate line-clamp-2 text-gray-500 md:prose-base dark:prose-invert'>
+          <h4 className='prose prose-sm prose-slate line-clamp-2 text-gray-500 dark:prose-invert md:prose-base'>
             {excerpt}
           </h4>
           <Link href={`/blog/post/${post.postSlug}`}>

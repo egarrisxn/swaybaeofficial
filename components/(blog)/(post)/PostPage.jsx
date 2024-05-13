@@ -22,7 +22,7 @@ export default function PostPage({post}) {
           <SearchBar placeholder={'Search..'} />
         </header>
         <br />
-        <article className='container mx-auto mb-4 mt-4 grid max-w-6xl grid-cols-1 sm:px-4 lg:mt-12 lg:grid-cols-12'>
+        <article className='container mx-auto mb-4 mt-4 grid max-w-7xl grid-cols-1 sm:px-4 lg:mt-12 lg:grid-cols-12'>
           <aside className='sticky top-[2rem] col-start-1 col-end-2 hidden h-screen pt-12 lg:block'>
             <TableOfContent headings={headings} />
           </aside>
@@ -34,8 +34,8 @@ export default function PostPage({post}) {
                 year: 'numeric',
               })}
             </p>
-            <section className='mb-1 mt-8 flex items-center justify-between text-center'>
-              <h3 className='prose prose-lg prose-slate line-clamp-2 font-bold max-[300px]:prose-sm md:prose-xl dark:prose-invert'>
+            <section className='mb-2 mt-8 flex items-center justify-between text-center'>
+              <h3 className='prose prose-2xl prose-slate line-clamp-2 font-bold dark:prose-invert max-[300px]:prose-sm sm:text-4xl md:text-5xl xl:text-6xl'>
                 {title}
               </h3>
               <div className='hidden gap-1 lg:flex lg:justify-end'>
@@ -56,8 +56,8 @@ export default function PostPage({post}) {
                 priority
               />
             </section>
-            <section className='my-6 flex max-[300px]:max-w-60'>
-              <div className='myProse mx-auto xl:prose-xl'>
+            <section className='mb-6 mt-8 flex max-[300px]:max-w-60 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16'>
+              <div className='myProse mx-auto xl:prose-2xl'>
                 <PortableTextComponents content={content} />
               </div>
             </section>

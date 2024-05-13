@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {socials} from '@/lib/constants'
+import {socials} from '../../lib/constants'
 
 export default function ContactSocials({mobileStyle}) {
   return (

@@ -1,9 +1,9 @@
 import imageUrlBuilder from '@sanity/image-url'
-import {id, set} from './api'
+import {projectId, dataset} from './api'
 
 const imageBuilder = imageUrlBuilder({
-  projectId: id || '',
-  dataset: set || '',
+  projectId: projectId || '',
+  dataset: dataset || '',
 })
 
 export function urlFor(source) {

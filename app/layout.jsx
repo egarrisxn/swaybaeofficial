@@ -1,6 +1,6 @@
 import './globals.css'
 import {draftMode} from 'next/headers'
-import LiveVisualEditing from '@/components/(other)/LiveVisualEditing'
+import LiveVisualEditing from '@/sanity/lib/LiveVisualEditing'
 import {Lobster, Poppins} from 'next/font/google'
 import {ThemeProvider} from './providers'
 import {Analytics} from '@vercel/analytics/react'

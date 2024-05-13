@@ -1,14 +1,22 @@
-import {createClient} from '@sanity/client'
-import {id, set, apiVersion} from './api'
+import {createClient} from 'next-sanity'
+import {projectId, dataset, apiVersion, basePath} from './api'
 
 export const client = createClient({
-  projectId: id,
-  dataset: set,
+  projectId: projectId,
+  dataset: dataset,
   apiVersion: apiVersion,
   useCdn: true,
   perspective: 'published',
   stega: {
     enabled: false,
-    studioUrl: '/studio',
+    studioUrl: basePath,
+    logger: console,
+    filter: (props) => {
+      if (props.sourcePath.at(-1) === 'title') {
+        return true
+      }
+
+      return props.filterDefault(props)
+    },
   },
 })

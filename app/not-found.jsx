@@ -11,6 +11,7 @@ export default function NotFound() {
         width={300}
         height={300}
         quality={100}
+        unoptimized
       />
       <p className='py-2 text-center text-xl font-semibold max-[300px]:text-base md:text-2xl'>
         <span className='text-primary'>404</span> | PAGE NOT FOUND

@@ -1,4 +1,3 @@
-// This file is used to store the Sanity API read token. It is used in the server to fetch data from the Sanity API. It is also used to taint the token so that it is not passed to the client.
 import 'server-only'
 import {experimental_taintUniqueValue} from 'react'
 

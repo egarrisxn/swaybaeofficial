@@ -67,9 +67,6 @@ export default function PortableTextComponents({value, className, content}) {
           alt={value.alt || 'No alt text provided for this image.'}
           width={800}
           height={450}
-          loading='lazy'
-          placeholder='blur'
-          blurDataURL={urlFor(value).width(24).height(24).blur(10).url()}
           style={{
             display: isInline ? 'inline-block' : 'block',
           }}
