@@ -96,7 +96,7 @@ export default function Navbar() {
                       href={link.href}
                       onClick={handleLinkClick}
                       className={`${
-                        link.label === 'New Blog!' ? 'text-primary hover:text-secondary' : ''
+                        link.label === 'Blog!' ? 'text-primary hover:text-secondary' : ''
                       } relative z-50 bg-clip-text p-4 text-5xl hover:text-secondary hover:underline hover:underline-offset-4`}
                     >
                       {link.label}
@@ -108,13 +108,13 @@ export default function Navbar() {
           </div>
         </div>
         <div className='navbar-center z-50 mx-auto'>
-          <ul className='menu menu-horizontal mx-auto hidden items-center justify-center text-lg lg:flex xl:space-x-8 2xl:space-x-12'>
+          <ul className='menu menu-horizontal mx-auto hidden items-center justify-center text-lg lg:flex xl:space-x-8 2xl:space-x-12 3xl:space-x-16 3xl:text-xl'>
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={`${
-                    link.label === 'New Blog!' ? 'text-primary hover:text-secondary' : ''
+                    link.label === 'Blog!' ? 'text-primary hover:text-secondary' : ''
                   } relative border-none bg-clip-text transition duration-200 hover:text-secondary hover:underline hover:underline-offset-4 `}
                 >
                   {link.label}
@@ -128,7 +128,7 @@ export default function Navbar() {
             </Link>
           </div>
           <Link href='/'>
-            <p className='ml-1  block bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent lg:hidden'>
+            <p className='ml-1 block bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent lg:hidden'>
               Creator
               <br />
               of Chaos
