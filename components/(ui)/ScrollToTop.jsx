@@ -1,6 +1,5 @@
 'use client'
 import {useState, useEffect} from 'react'
-import {TiArrowUpOutline} from 'react-icons/ti'
 
 export default function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false)
@@ -31,7 +30,11 @@ export default function ScrollToTop() {
   return (
     <div>
       <label className='sr-only'>Scroll To Top</label>
-      <TiArrowUpOutline
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='1em'
+        height='1em'
+        viewBox='0 0 48 48'
         className='scrollToTop z-40 rounded-full border-2 border-primary bg-light font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-light lg:shadow-md dark:bg-dark dark:hover:text-dark'
         onClick={scrollToTop}
         style={{
@@ -44,7 +47,16 @@ export default function ScrollToTop() {
           padding: 5,
           cursor: 'pointer',
         }}
-      />
+      >
+        <path
+          fill='none'
+          stroke='currentColor'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth={4}
+          d='M5 24L24 6l19 18H31v18H17V24z'
+        ></path>
+      </svg>
     </div>
   )
 }

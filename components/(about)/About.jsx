@@ -4,7 +4,7 @@ import AboutCard from './AboutCard'
 
 export default function About() {
   return (
-    <main className='w-full'>
+    <main className='min-h-screen w-full p-0'>
       <label className='sr-only'>About</label>
       <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16'>
         <PageName>About</PageName>

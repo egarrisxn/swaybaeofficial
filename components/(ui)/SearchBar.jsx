@@ -5,7 +5,6 @@ import {SEARCH_QUERY} from '@/sanity/lib/queries'
 import {useSearchParams, usePathname, useRouter} from 'next/navigation'
 import {useDebouncedCallback} from 'use-debounce'
 import {client} from '@/sanity/lib/client'
-import {CiSearch} from 'react-icons/ci'
 
 export default function SearchBar({placeholder}) {
   const searchParams = useSearchParams()
@@ -78,7 +77,22 @@ export default function SearchBar({placeholder}) {
           onChange={handleChange}
           value={searchTerm}
         />
-        <CiSearch className='size-4 flex-none' />
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          className='size-4 flex-none'
+          width='1em'
+          height='1em'
+          viewBox='0 0 24 24'
+        >
+          <path
+            fill='none'
+            stroke='currentColor'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={2}
+            d='M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6'
+          ></path>
+        </svg>
       </div>
       {searchResults.length > 0 && (
         <div className='absolute left-0 top-full z-30 mt-1 max-h-60 w-full overflow-y-auto rounded-md border bg-light p-2 text-sm font-semibold tracking-tight dark:bg-dark'>

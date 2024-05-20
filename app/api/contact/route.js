@@ -24,7 +24,7 @@ export async function POST(request) {
   try {
     const mail = await transporter.sendMail({
       from: name,
-      to: Me,
+      to: User,
       replyTo: email,
       subject: `From Your Website - ${name}: ${subject}`,
       html: `

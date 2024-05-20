@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {socials} from '../../lib/constants'
+import {socialsData} from '../../lib/constants'
 
 export default function ContactSocials({mobileStyle}) {
   return (
@@ -10,7 +10,7 @@ export default function ContactSocials({mobileStyle}) {
       <hr className='my-4 w-full border-secondary' />
       {mobileStyle ? (
         <div className='flex justify-center space-x-4'>
-          {socials.map((icon, idx) => (
+          {socialsData.map((icon, idx) => (
             <Link
               key={idx}
               href={icon.href}
@@ -24,7 +24,7 @@ export default function ContactSocials({mobileStyle}) {
         </div>
       ) : (
         <div className='mb-3 grid grid-cols-2 gap-4 text-sm md:text-base lg:text-lg'>
-          {socials.map((icon, idx) => (
+          {socialsData.map((icon, idx) => (
             <div key={idx} className='flex items-center'>
               <Link
                 href={icon.href}

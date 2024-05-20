@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import {socials} from '@/lib/constants'
+import {socialsData} from '@/lib/constants'
 
 export default function SocialButtons() {
   return (
     <>
-      {socials.map((icon, idx) => (
+      {socialsData.map((icon, idx) => (
         <div key={idx}>
           <Link
             href={icon.href}

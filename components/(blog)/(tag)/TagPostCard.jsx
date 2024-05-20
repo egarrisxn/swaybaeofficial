@@ -20,7 +20,7 @@ export default function TagPostCard({post}) {
           </Link>
         </section>
         <section className='flex flex-col gap-4 lg:mt-2 lg:p-4'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-sm bg-slate-700 px-2 tracking-tight text-white drop-shadow-md dark:prose-invert lg:prose-base'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-sm bg-slate-700 px-2 tracking-tight text-white drop-shadow-md lg:prose-base dark:prose-invert'>
             {new Date(post.publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',
@@ -28,13 +28,13 @@ export default function TagPostCard({post}) {
             })}
           </p>
           <Link href={`/blog/post/${post.postSlug}`}>
-            <h3 className='prose prose-lg prose-slate line-clamp-1 font-bold dark:prose-invert lg:prose-2xl hover:underline lg:line-clamp-2'>
+            <h3 className='prose prose-lg prose-slate line-clamp-1 font-bold lg:prose-2xl dark:prose-invert hover:underline lg:line-clamp-2'>
               {title}
             </h3>
           </Link>
         </section>
         <section className='flex flex-col justify-normal lg:mt-2 lg:justify-between lg:p-4'>
-          <h4 className='prose prose-base prose-slate line-clamp-2 text-gray-500 dark:prose-invert lg:prose-lg lg:line-clamp-3'>
+          <h4 className='prose prose-base prose-slate line-clamp-2 text-gray-500 lg:prose-lg dark:prose-invert lg:line-clamp-3'>
             {excerpt}
           </h4>
           <div className='flex justify-end'>

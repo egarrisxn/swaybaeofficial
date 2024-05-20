@@ -40,11 +40,11 @@ export default function LatestCard({post}) {
         </section>
         <section className='mt-2 md:ml-1'>
           <Link href={`/blog/post/${post.postSlug}`}>
-            <h3 className='prose prose-base prose-slate line-clamp-1 font-bold dark:prose-invert md:prose-lg hover:underline'>
+            <h3 className='prose prose-base prose-slate line-clamp-1 font-bold md:prose-lg dark:prose-invert hover:underline'>
               {title}
             </h3>
           </Link>
-          <h4 className='prose prose-sm prose-slate line-clamp-2 text-gray-500 dark:prose-invert md:prose-base'>
+          <h4 className='prose prose-sm prose-slate line-clamp-2 text-gray-500 md:prose-base dark:prose-invert'>
             {excerpt}
           </h4>
           <Link href={`/blog/post/${post.postSlug}`}>

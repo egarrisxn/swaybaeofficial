@@ -1,7 +1,7 @@
 import {useCallback, useEffect, useState} from 'react'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
-import {socials} from '../../lib/constants'
+import {socialsData} from '@/lib/constants'
 
 export default function SocialsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -74,13 +74,13 @@ export default function SocialsCarousel() {
       </div>
       <div className='overflow-hidden border-b-2 border-t-2' ref={emblaRef}>
         <div className='embla__container flex touch-pan-y'>
-          {socials.map((social, index) => (
+          {socialsData.map((social, index) => (
             <div key={index} className='embla__slide min-w-0'>
               <div className='embla__slide__number flex items-center justify-center text-[1rem] font-bold'>
                 <a href={social.href} target='_blank' rel='noopener noreferrer'>
                   <div className='relative'>
                     <Image
-                      src={social.imageSrc}
+                      src={social.src}
                       alt={social.alt}
                       width='600'
                       height='400'

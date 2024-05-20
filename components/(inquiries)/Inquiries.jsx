@@ -7,7 +7,7 @@ import ContactSocials from './ContactSocials'
 
 export default function Inquiries() {
   return (
-    <main className='w-full'>
+    <main className='min-h-screen w-full p-0'>
       <label className='sr-only'>Inquiries</label>
       <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16'>
         <PageName>Inquiries</PageName>

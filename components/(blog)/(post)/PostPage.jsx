@@ -12,7 +12,7 @@ export default function PostPage({post}) {
   const {title, coverImage, tags, content, headings, meta} = post
 
   return (
-    <main className='mt-5'>
+    <main className='mt-5 min-h-screen w-full p-0'>
       <label className='sr-only'>Post</label>
       <div className='w-full px-4'>
         <header className='mx-auto flex max-w-6xl flex-row items-center justify-between gap-2 pt-4 max-[320px]:flex-col lg:px-4 lg:pt-16 xl:px-0'>
@@ -35,7 +35,7 @@ export default function PostPage({post}) {
               })}
             </p>
             <section className='mb-2 mt-8 flex items-center justify-between text-center'>
-              <h3 className='prose prose-2xl prose-slate line-clamp-2 font-bold dark:prose-invert max-[300px]:prose-sm sm:text-4xl md:text-5xl xl:text-6xl'>
+              <h3 className='prose prose-2xl prose-slate line-clamp-2 font-bold max-[300px]:prose-sm dark:prose-invert sm:text-4xl md:text-5xl xl:text-6xl'>
                 {title}
               </h3>
               <div className='hidden gap-1 lg:flex lg:justify-end'>
@@ -62,24 +62,24 @@ export default function PostPage({post}) {
               </div>
             </section>
             <br />
-            <hr />
-            <section className='my-6 flex flex-col items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-8 lg:flex-row-reverse lg:justify-between'>
-              <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
-                <span className='hidden sm:block'>Tags:</span>
-                {tags.map((tag) => (
-                  <div key={tag._id}>
-                    <TagBadge tag={tag} />
-                  </div>
-                ))}
-              </div>
-              <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
-                <span className='hidden sm:block'>Socials:</span>
-                <SocialButtons />
-              </div>
-            </section>
-            <hr />
           </div>
         </article>
+        <div className='mx-auto mb-4 max-w-6xl sm:px-4'>
+          <hr />
+          <section className='my-6 flex flex-col items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-10 lg:flex-row-reverse lg:justify-between '>
+            <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
+              {tags.map((tag) => (
+                <div key={tag._id}>
+                  <TagBadge tag={tag} />
+                </div>
+              ))}
+            </div>
+            <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
+              <SocialButtons />
+            </div>
+          </section>
+          <hr />
+        </div>
       </div>
     </main>
   )

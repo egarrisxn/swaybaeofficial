@@ -8,7 +8,7 @@ export default function PostPagePreview(props) {
   const {data} = useQuery(POST_QUERY, params, {initial})
 
   if (!data) {
-    return <div className='bg-red-100 text-center'>No data found.</div>
+    return <div className='text-center'>Loading...</div>
   }
 
   return <PostPage post={data} />

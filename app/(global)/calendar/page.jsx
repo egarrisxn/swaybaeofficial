@@ -17,15 +17,16 @@ export default function CalendarPage() {
             <Calendar />
           </div>
           <br />
+        </article>
+        <div className='mx-auto mb-4 max-w-6xl sm:px-4'>
           <hr />
-          <section className='my-6 flex items-center justify-center max-[300px]:max-w-60 lg:my-10'>
+          <section className='my-6 flex items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-10'>
             <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
-              <span className='hidden sm:block'>Socials:</span>
               <SocialButtons />
             </div>
           </section>
           <hr />
-        </article>
+        </div>
       </div>
     </main>
   )

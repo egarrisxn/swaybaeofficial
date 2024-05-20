@@ -4,11 +4,11 @@ import {useQuery} from '@sanity/react-loader'
 import TagPage from './TagPage'
 
 export default function TagPagePreview(props) {
-  const {initial} = props
+  const {params, initial} = props
   const {data} = useQuery(TAG_QUERY, params, {initial})
 
   if (!data) {
-    return <div className='bg-red-100 text-center'>No data found.</div>
+    return <div className='text-center'>Loading...</div>
   }
 
   return <TagPage tag={data} />

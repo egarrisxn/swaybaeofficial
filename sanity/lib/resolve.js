@@ -1,7 +1,7 @@
 import {map} from 'rxjs'
 
 // Pass 'context' as the second argument
-export const locations = (params, context) => {
+export const resolve = (params, context) => {
   // Set up locations for post documents
   if (params.type === 'post') {
     // Subscribe to the latest slug and title

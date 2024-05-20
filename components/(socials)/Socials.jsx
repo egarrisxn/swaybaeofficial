@@ -5,11 +5,10 @@ import PageName from '@/components/(other)/PageName'
 import SpotifyNowPlaying from '@/components/(spotify)/SpotifyNowPlaying'
 import YoutubeEmbed from './YouTubeEmbed'
 import SocialsCarousel from './SocialsCarousel'
-import {FiYoutube} from 'react-icons/fi'
 
 export default function Socials() {
   return (
-    <main className='w-full'>
+    <main className='min-h-screen w-full p-0'>
       <label className='sr-only'>Socials</label>
       <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16'>
         <header className='mt-2 flex flex-row justify-between max-[320px]:flex-col'>
@@ -24,7 +23,7 @@ export default function Socials() {
           <div className='mt-6'>
             <Link href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
               <div className='flex flex-row items-center justify-center text-sm tracking-tight max-[370px]:text-xs sm:text-lg'>
-                If you'd like to support what I do:
+                If you&apos;d like to support what I do:
                 <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden '>
                   THRONE
                 </span>
@@ -38,7 +37,12 @@ export default function Socials() {
         <section className='mx-auto my-8 px-2 sm:px-4 md:px-8 lg:my-16 lg:px-12'>
           <div className='mb-4 mt-8 flex items-center justify-center text-center text-xl sm:text-3xl md:text-4xl'>
             <span className='mr-1 text-primary sm:mr-2'>
-              <FiYoutube />
+              <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
+                <path
+                  fill='currentColor'
+                  d='M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z'
+                ></path>
+              </svg>
             </span>
             Latest
             <Link

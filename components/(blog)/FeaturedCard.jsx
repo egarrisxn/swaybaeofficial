@@ -40,11 +40,11 @@ export default function FeaturedCard({post}) {
           </div>
           <div className='mt-2 space-y-4 lg:ml-1 lg:mt-4'>
             <Link href={`/blog/post/${post.postSlug}`}>
-              <h3 className='prose prose-lg prose-slate line-clamp-2 font-bold dark:prose-invert md:prose-xl hover:underline'>
+              <h3 className='prose prose-lg prose-slate line-clamp-2 font-bold md:prose-xl dark:prose-invert hover:underline'>
                 {title}
               </h3>
             </Link>
-            <h4 className='prose prose-base prose-slate line-clamp-3 text-gray-500 dark:prose-invert md:prose-lg'>
+            <h4 className='prose prose-base prose-slate line-clamp-3 text-gray-500 md:prose-lg dark:prose-invert'>
               {excerpt}
             </h4>
             <Link href={`/blog/post/${post.postSlug}`}>

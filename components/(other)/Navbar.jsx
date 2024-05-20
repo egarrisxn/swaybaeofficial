@@ -8,8 +8,8 @@ import ThemeSwitch from '../(ui)/ThemeSwitch'
 const links = [
   {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
-  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
   {href: '/blog', label: 'Blog'},
+  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
 ]
 
 export default function Navbar() {
@@ -44,7 +44,7 @@ export default function Navbar() {
 
   return (
     <header className='top-0 w-full'>
-      <nav className='navbar relative'>
+      <nav className='navbar relative 3xl:px-20 4xl:px-60'>
         <div className='navbar-start ml-1 lg:ml-2'>
           <div className='mask mask-heart hidden size-9 lg:block'>
             <Link href='/'>

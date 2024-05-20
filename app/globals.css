@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*! App*/
-body {
-  @apply m-0 overflow-x-hidden scroll-smooth bg-white p-0 text-black antialiased transition-colors duration-200 ease-in dark:bg-black dark:text-white;
-}
-main {
-  @apply min-h-screen w-full p-0;
-}
-
 /*! Fonts */
 :root {
   --font-poppins: 'Poppins', sans-serif;
@@ -111,5 +103,5 @@ body {
 
 /*! Prose */
 .myProse {
-  @apply prose prose-slate transition-all duration-200 ease-in dark:prose-invert md:prose-base lg:prose-lg prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary/90 prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal  prose-h4:text-secondary/90 prose-a:text-sky-500 hover:prose-a:text-sky-700 prose-blockquote:border-primary  prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-cyan  prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border prose-img:bg-white prose-img:p-2 prose-img:shadow-md;
+  @apply prose prose-slate transition-all duration-200 ease-in md:prose-base lg:prose-lg dark:prose-invert prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary/90 prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal  prose-h4:text-secondary/90 prose-a:text-sky-500 hover:prose-a:text-sky-700 prose-blockquote:border-primary  prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-cyan  prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border prose-img:bg-white prose-img:p-2 prose-img:shadow-md;
 }
