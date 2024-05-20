@@ -22,7 +22,7 @@ export default function BlogPage({blog}) {
           <AllPosts posts={blog} />
           <br />
         </article>
-        <div className='mx-auto mb-4 sm:px-4 4xl:max-w-screen-3xl'>
+        <div className='mx-auto mb-4 max-w-6xl sm:px-4 4xl:max-w-screen-3xl'>
           <hr />
           <section className='my-6 flex items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-10'>
             <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
