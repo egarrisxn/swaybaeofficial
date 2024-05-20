@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <main className='min-h-dvh w-full p-0 4xl:min-h-fit'>
+    <main className='min-h-screen w-full p-0 4xl:min-h-fit'>
       <label className='sr-only'>Hero</label>
       <section className='z-30 mx-auto flex min-h-[calc(100vh-12rem)] max-w-7xl items-center justify-center'>
         <motion.div

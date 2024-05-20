@@ -18,7 +18,7 @@ export default function AboutCard() {
       ref={contentRef}
       className='mx-auto mt-12 max-w-4xl rounded-3xl border-0 p-2 md:mt-0 md:border-2 md:p-8 md:shadow-md md:shadow-purple-500/80 lg:p-16 4xl:px-24'
     >
-      <div className='myProse'>
+      <div className='prose prose-slate transition-all duration-200 ease-in md:prose-base lg:prose-lg dark:prose-invert prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary/90 prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal  prose-h4:text-secondary/90 prose-a:text-sky-500 hover:prose-a:text-sky-700 prose-blockquote:border-primary  prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-cyan  prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border prose-img:bg-light prose-img:p-2 prose-img:shadow-md'>
         <h1 className='lobster ml-1 text-[3rem] xl:text-[4rem]'>Hello, I'm Sway!</h1>
         <h3>
           I am a Full-Time Content Creator since June of 2021. Currently, I'm partnered with both
@@ -45,7 +45,7 @@ export default function AboutCard() {
               Roguelike games, Platformers, and many more!
             </p>
             <p className='text-secondary'>A few notable accolades include:</p>
-            <ul className='mb-4 ml-8 list-disc'>
+            <ul className='mb-4 list-disc lg:ml-8'>
               <li>
                 3rd place in Blizzard's Hearthstone Battle of the Boars Tournament{' '}
                 <span className='font-semibold'>(May 2021)</span>

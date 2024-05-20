@@ -89,10 +89,10 @@ export default function SocialsCarousel() {
                       height={400}
                       className='rounded-md lg:rounded-lg'
                     />
-                    <div className='overlay-text absolute bottom-0 left-0 flex items-center gap-1 rounded-bl-md rounded-tr-md bg-slate-950/70 p-2 text-center text-white lg:rounded-bl-lg lg:rounded-tr-lg'>
+                    <div className='overlay-text absolute bottom-0 left-0 flex items-center gap-1 rounded-bl-md rounded-tr-md bg-slate-950/70 p-2 text-center text-light lg:rounded-bl-lg lg:rounded-tr-lg'>
                       <div className='text-primary'>{social.icon} </div>
                       <div className='text-sm font-light '>{social.label}: </div>
-                      <div className='text-sm font-normal italic text-white transition-colors duration-200 ease-in hover:text-primary'>
+                      <div className='text-sm font-normal italic text-light transition-colors duration-200 ease-in hover:text-primary'>
                         {social.username}{' '}
                       </div>
                     </div>

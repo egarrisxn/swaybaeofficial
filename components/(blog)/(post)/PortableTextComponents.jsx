@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import {PortableText} from '@portabletext/react'
+import {PortableText} from 'next-sanity'
 import {urlFor} from '@/sanity/lib/image'
 
 export default function PortableTextComponents({value, className, content}) {
@@ -43,7 +42,7 @@ export default function PortableTextComponents({value, className, content}) {
       link: ({children, value}) => {
         const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined
         return (
-          <Link href={value.href} rel={rel}>
+          <Link href={value.href} rel={rel} className='text-blue-500 hover:text-blue-700'>
             {children}
           </Link>
         )
@@ -53,18 +52,19 @@ export default function PortableTextComponents({value, className, content}) {
       em: ({children}) => <em className='italic'>{children}</em>,
       code: ({children}) => <code className='p-1'>{children}</code>,
       underline: ({children}) => <u>{children}</u>,
-      highlight: ({children}) => <span className='bg-yellow-200 px-1 text-black'>{children}</span>,
+      highlight: ({children}) => <span className='bg-yellow-500 px-1'>{children}</span>,
     },
     types: {
       image: ({value, isInline}) => (
-        <Image
-          className='rounded border bg-white object-cover object-center p-2 shadow-md'
+        <img
+          className='rounded border bg-light object-cover object-center p-2 shadow-md'
           src={urlFor(value)
             .width(isInline ? 100 : 800)
             .fit('max')
             .auto('format')
             .url()}
           alt={value.alt || 'No alt text provided for this image.'}
+          loading='lazy'
           width={800}
           height={450}
           style={{

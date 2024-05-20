@@ -4,7 +4,7 @@ import SocialButtons from '@/components/(ui)/SocialButtons'
 
 export default function CalendarPage() {
   return (
-    <main className='mt-5 min-h-dvh w-full p-0'>
+    <main className='mt-5 min-h-screen w-full p-0'>
       <label className='sr-only'>Tag Page</label>
       <div className='w-full px-4'>
         <header className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16 4xl:max-w-screen-3xl'>
@@ -16,17 +16,7 @@ export default function CalendarPage() {
           <div className='pb-16'>
             <Calendar />
           </div>
-          <br />
         </article>
-        <div className='mx-auto mb-4 mt-24 max-w-6xl sm:px-4 4xl:max-w-screen-3xl'>
-          <hr />
-          <section className='my-6 flex items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-10'>
-            <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
-              <SocialButtons />
-            </div>
-          </section>
-          <hr />
-        </div>
       </div>
     </main>
   )

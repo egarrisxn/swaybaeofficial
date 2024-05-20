@@ -8,7 +8,7 @@ import SocialsCarousel from './SocialsCarousel'
 
 export default function Socials() {
   return (
-    <main className='min-h-dvh w-full p-0'>
+    <main className='min-h-screen w-full p-0'>
       <label className='sr-only'>Socials</label>
       <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16 4xl:max-w-screen-3xl'>
         <header className='mt-2 flex flex-row justify-between max-[320px]:flex-col'>
@@ -19,13 +19,13 @@ export default function Socials() {
         </header>
         <br />
         <br className='hidden 4xl:block' />
-        <section className='mx-auto my-4 sm:px-2 md:px-8 lg:mb-24 lg:mt-12 lg:px-12 '>
+        <section className='mx-auto my-4 sm:px-2 md:px-8 lg:mb-24 lg:mt-12 lg:px-12'>
           <SocialsCarousel />
           <div className='mt-6'>
             <Link href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
               <div className='flex flex-row items-center justify-center text-sm tracking-normal max-[370px]:text-xs sm:text-lg sm:tracking-tight'>
                 If you&apos;d like to support what I do:
-                <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden '>
+                <span className='font-dark ml-1 mr-0.5 block uppercase max-[300px]:hidden '>
                   THRONE
                 </span>
                 <div className='mask mask-circle size-5 max-[370px]:ml-1 max-[370px]:size-4 sm:size-6 '>

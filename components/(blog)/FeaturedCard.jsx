@@ -23,7 +23,7 @@ export default function FeaturedCard({post}) {
         </section>
         <section className='flex flex-col gap-4 lg:p-1'>
           <div className='hidden justify-between lg:flex'>
-            <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-800 px-2 tracking-tight text-white drop-shadow-md  dark:prose-invert'>
+            <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-800 px-2 tracking-tight text-light drop-shadow-md  dark:prose-invert'>
               {new Date(post.publishedAt).toLocaleDateString('en-US', {
                 day: 'numeric',
                 month: 'long',

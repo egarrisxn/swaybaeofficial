@@ -5,13 +5,13 @@ import {urlFor} from '@/sanity/lib/image'
 export default function TagPostCard({post}) {
   const {coverImage, title, tags, excerpt} = post
   return (
-    <article>
+    <main>
       <label className='sr-only'>Tag Card</label>
       <div className='grid grid-cols-1 gap-2 rounded-md border-2 p-4 shadow-md md:p-8 lg:grid-cols-3 lg:gap-6 lg:p-2'>
         <section className='hidden drop-shadow-md lg:block lg:p-4'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
-              className='rounded border bg-white object-cover object-center p-2 shadow-md'
+              className='rounded border bg-light object-cover object-center p-2 shadow-md'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt}
               width={600}
@@ -20,7 +20,7 @@ export default function TagPostCard({post}) {
           </Link>
         </section>
         <section className='flex flex-col gap-4 lg:mt-2 lg:p-4'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-sm bg-slate-700 px-2 tracking-tight text-white drop-shadow-md lg:prose-base dark:prose-invert'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-sm bg-slate-700 px-2 tracking-tight text-light drop-shadow-md lg:prose-base dark:prose-invert'>
             {new Date(post.publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',
@@ -44,6 +44,6 @@ export default function TagPostCard({post}) {
           </div>
         </section>
       </div>
-    </article>
+    </main>
   )
 }

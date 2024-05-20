@@ -59,9 +59,11 @@ export const metadata = {
 export default function RootLayout({children}) {
   return (
     <html lang='en' suppressHydrationWarning className='scroll-smooth antialiased'>
-      <body className={`${lobster.variable} ${poppins.variable} m-0 overflow-x-hidden p-0`}>
+      <body
+        className={`${lobster.variable} ${poppins.variable} m-0 overflow-x-hidden overscroll-x-none p-0`}
+      >
         <ThemeProvider attribute='class' defaultTheme='system'>
-          <main className='bg-white text-black transition-colors duration-200 ease-in dark:bg-black dark:text-white'>
+          <main className='bg-light text-dark transition-colors duration-200 ease-in dark:bg-dark dark:text-light'>
             {children}
           </main>
         </ThemeProvider>

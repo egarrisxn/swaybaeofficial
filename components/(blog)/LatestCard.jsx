@@ -10,7 +10,7 @@ export default function LatestCard({post}) {
       <label className='sr-only'>Latest Card</label>
       <div className='grid grid-cols-1 gap-2 md:gap-3'>
         <section className='mb-1 md:mb-0'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-800 px-2 tracking-tight text-white drop-shadow-md dark:prose-invert'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-800 px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
             {new Date(post.publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',

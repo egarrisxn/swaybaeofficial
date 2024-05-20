@@ -16,27 +16,27 @@ export default function AllPosts({posts}) {
   }
 
   return (
-    <section>
+    <main>
       <h3 className='mb-2 ml-1 text-xl font-bold'>Featured Posts</h3>
       {featuredPosts.length > 0 && (
-        <div className='mt-8 grid grid-cols-1 gap-16 pb-16'>
+        <section className='mt-8 grid grid-cols-1 gap-16 pb-16'>
           {featuredPosts.map((post) => (
             <div key={post._id}>
               <FeaturedCard post={post} />
             </div>
           ))}
-        </div>
+        </section>
       )}
       <hr className='mb-8 mt-4 w-full border' />
       <h4 className='mb-4 ml-1 text-xl font-bold'>Latest Posts</h4>
-      <div className='mt-8 grid grid-cols-1 gap-16 pb-12 md:grid-cols-2 xl:grid-cols-3'>
+      <section className='mt-8 grid grid-cols-1 gap-16 pb-12 md:grid-cols-2 xl:grid-cols-3'>
         {[...featuredPosts, ...remainingPosts].slice(0, loadMore).map((post) => (
           <div key={post._id} className='x'>
             <LatestCard post={post} />
           </div>
         ))}
-      </div>
+      </section>
       {posts.length > loadMore && <LoadButton onClick={showMoreArticles} />}
-    </section>
+    </main>
   )
 }
