@@ -8,9 +8,9 @@ import SocialsCarousel from './SocialsCarousel'
 
 export default function Socials() {
   return (
-    <main className='min-h-screen w-full p-0'>
+    <main className='min-h-dvh w-full p-0'>
       <label className='sr-only'>Socials</label>
-      <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16'>
+      <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16 4xl:max-w-screen-3xl'>
         <header className='mt-2 flex flex-row justify-between max-[320px]:flex-col'>
           <PageName>Socials</PageName>
           <div className='mt-0 max-[320px]:mx-auto max-[320px]:mt-8 lg:pr-12'>
@@ -18,11 +18,12 @@ export default function Socials() {
           </div>
         </header>
         <br />
-        <section className='mx-auto my-4 px-2 sm:px-4 md:px-8 lg:mb-24 lg:mt-12 lg:px-12 '>
+        <br className='hidden 4xl:block' />
+        <section className='mx-auto my-4 sm:px-2 md:px-8 lg:mb-24 lg:mt-12 lg:px-12 '>
           <SocialsCarousel />
           <div className='mt-6'>
             <Link href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
-              <div className='flex flex-row items-center justify-center text-sm tracking-tight max-[370px]:text-xs sm:text-lg'>
+              <div className='flex flex-row items-center justify-center text-sm tracking-normal max-[370px]:text-xs sm:text-lg sm:tracking-tight'>
                 If you&apos;d like to support what I do:
                 <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden '>
                   THRONE

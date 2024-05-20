@@ -7,7 +7,7 @@ export default function MyButton({onClick, children, value, type, disabled}) {
         type={type || 'button'}
         onClick={onClick}
         disabled={disabled}
-        className='btn-secondary btn-sm h-12 w-40 rounded-2xl bg-gradient-to-r from-lavender to-pink font-semibold text-light shadow-md transition-all duration-200 ease-in hover:text-dark'
+        className='btn-secondary btn-sm h-10 w-64 rounded-xl bg-gradient-to-r from-lavender to-pink font-semibold text-light shadow-md transition-all duration-200 ease-in hover:text-dark sm:h-12 sm:w-40 sm:rounded-2xl 4xl:h-14 4xl:w-64'
       >
         {content}
       </button>

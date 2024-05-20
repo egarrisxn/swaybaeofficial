@@ -46,17 +46,23 @@ export default function Navbar() {
     <header className='top-0 w-full'>
       <nav className='navbar relative 3xl:px-20 4xl:px-60'>
         <div className='navbar-start ml-1 lg:ml-2'>
-          <div className='mask mask-heart hidden size-9 lg:block'>
-            <Link href='/'>
-              <Image src='/avatar.png' alt='Logo' height={36} width={36} />
-            </Link>
-          </div>
           <Link href='/'>
-            <p className='ml-1 hidden bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent lg:block'>
-              Creator
-              <br />
-              of Chaos
-            </p>
+            <div className='lg-block hidden flex-row items-center lg:flex'>
+              <figure className='mask mask-heart size-9 2xl:size-12 4xl:size-16'>
+                <Image
+                  src='/avatar.png'
+                  alt='Logo'
+                  height={64}
+                  width={64}
+                  className='h-fit w-fit'
+                />
+              </figure>
+              <p className='ml-1 bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent 2xl:text-base 4xl:text-lg'>
+                Creator
+                <br />
+                of Chaos
+              </p>
+            </div>
           </Link>
           <div className='dropdown z-50' style={{position: 'relative'}}>
             <button
@@ -106,7 +112,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className='navbar-center z-50 mx-auto'>
-          <ul className='menu menu-horizontal mx-auto hidden items-center justify-center text-lg lg:flex xl:space-x-8 2xl:space-x-12 3xl:space-x-16 3xl:text-xl'>
+          <ul className='menu menu-horizontal mx-auto hidden items-center justify-center lg:flex lg:space-x-4 lg:pl-4 lg:text-lg xl:space-x-8 xl:pl-6 xl:text-xl 2xl:space-x-12 2xl:pl-8 2xl:text-2xl 3xl:space-x-16 3xl:pl-10 3xl:text-3xl 4xl:pl-12 4xl:text-4xl'>
             {links.map((link) => (
               <li key={link.href}>
                 <Link
@@ -118,17 +124,17 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className='mask mask-heart block size-8 lg:hidden'>
-            <Link href='/'>
-              <Image src='/avatar.png' alt='Logo' height={32} width={32} />
-            </Link>
-          </div>
           <Link href='/'>
-            <p className='ml-1 block bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent lg:hidden'>
-              Creator
-              <br />
-              of Chaos
-            </p>
+            <div className='flex flex-row items-center lg:hidden'>
+              <figure className='mask mask-heart size-8'>
+                <Image src='/avatar.png' alt='Logo' height={32} width={32} />
+              </figure>
+              <p className='ml-1 bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent '>
+                Creator
+                <br />
+                of Chaos
+              </p>
+            </div>
           </Link>
         </div>
         <div className='navbar-end z-50 mr-1 lg:mr-2'>

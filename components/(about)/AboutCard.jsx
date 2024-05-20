@@ -16,7 +16,7 @@ export default function AboutCard() {
   return (
     <section
       ref={contentRef}
-      className='mx-auto mt-12 max-w-4xl rounded-3xl border-0 p-2 md:mt-0 md:border-2 md:p-8 md:shadow-md md:shadow-purple-500/80 lg:p-16'
+      className='mx-auto mt-12 max-w-4xl rounded-3xl border-0 p-2 md:mt-0 md:border-2 md:p-8 md:shadow-md md:shadow-purple-500/80 lg:p-16 4xl:px-24'
     >
       <div className='myProse'>
         <h1 className='lobster ml-1 text-[3rem] xl:text-[4rem]'>Hello, I'm Sway!</h1>

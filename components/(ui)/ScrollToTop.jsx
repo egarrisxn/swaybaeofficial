@@ -3,9 +3,10 @@ import {useState, useEffect} from 'react'
 
 export default function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false)
+  const [isLarge, setIsLarge] = useState(false)
 
   useEffect(() => {
-    const scrollToTop = () => {
+    const handleScroll = () => {
       if (!showScroll && window.scrollY > 400) {
         setShowScroll(true)
       } else if (showScroll && window.scrollY <= 400) {
@@ -13,10 +14,23 @@ export default function ScrollToTop() {
       }
     }
 
-    window.addEventListener('scroll', scrollToTop)
+    const handleResize = () => {
+      if (window.innerWidth >= 1640) {
+        setIsLarge(true)
+      } else {
+        setIsLarge(false)
+      }
+    }
 
-    return function cleanup() {
-      window.removeEventListener('scroll', scrollToTop)
+    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleResize)
+
+    // Initial check
+    handleResize()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
     }
   }, [showScroll])
 
@@ -35,11 +49,9 @@ export default function ScrollToTop() {
         width='1em'
         height='1em'
         viewBox='0 0 48 48'
-        className='scrollToTop z-40 rounded-full border-2 border-primary bg-light font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-light lg:shadow-md dark:bg-dark dark:hover:text-dark'
+        className={`scrollToTop z-40 rounded-full border-2 border-primary bg-light font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-light lg:shadow-md dark:bg-dark dark:hover:text-dark ${isLarge ? 'scrollToTop-large' : ''}`}
         onClick={scrollToTop}
         style={{
-          height: 40,
-          width: 40,
           position: 'fixed',
           right: 20,
           bottom: 20,

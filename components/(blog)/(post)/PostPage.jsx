@@ -12,17 +12,17 @@ export default function PostPage({post}) {
   const {title, coverImage, tags, content, headings, meta} = post
 
   return (
-    <main className='mt-5 min-h-screen w-full p-0'>
+    <main className='mt-5  min-h-dvh  w-full p-0'>
       <label className='sr-only'>Post</label>
       <div className='w-full px-4'>
-        <header className='mx-auto flex max-w-6xl flex-row items-center justify-between gap-2 pt-4 max-[320px]:flex-col lg:px-4 lg:pt-16 xl:px-0'>
+        <header className='mx-auto flex max-w-7xl flex-row items-center justify-between gap-2 pt-4 max-[320px]:flex-col lg:px-4 lg:pt-16 xl:px-0 4xl:max-w-screen-3xl'>
           <Link href='/blog'>
             <PageName>&#8592;Back</PageName>
           </Link>
           <SearchBar placeholder={'Search..'} />
         </header>
         <br />
-        <article className='container mx-auto mb-4 mt-4 grid max-w-7xl grid-cols-1 sm:px-4 lg:mt-12 lg:grid-cols-12'>
+        <article className='container mx-auto mb-4 mt-4 grid max-w-7xl grid-cols-1 sm:px-4 lg:mt-12 lg:grid-cols-12 4xl:max-w-screen-3xl'>
           <aside className='sticky top-[2rem] col-start-1 col-end-2 hidden h-screen pt-12 lg:block'>
             <TableOfContent headings={headings} />
           </aside>
@@ -64,7 +64,7 @@ export default function PostPage({post}) {
             <br />
           </div>
         </article>
-        <div className='mx-auto mb-4 max-w-6xl sm:px-4'>
+        <div className='mx-auto mb-4 max-w-6xl sm:px-4 4xl:max-w-screen-3xl'>
           <hr />
           <section className='my-6 flex flex-col items-center justify-center gap-6 max-[300px]:max-w-60 lg:my-10 lg:flex-row-reverse lg:justify-between '>
             <div className='flex flex-row flex-wrap items-center justify-center gap-2'>

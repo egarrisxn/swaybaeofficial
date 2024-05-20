@@ -37,7 +37,7 @@ export default function SocialsCarousel() {
   }, [emblaApi, onSelect])
 
   return (
-    <section className='embla m-auto max-w-6xl'>
+    <section className='embla m-auto max-w-6xl 4xl:max-w-screen-3xl'>
       <div className='embla__buttons z-10 flex items-center justify-start'>
         <button
           className='embla__button--prev flex size-14 touch-manipulation items-center justify-center'
@@ -72,7 +72,10 @@ export default function SocialsCarousel() {
           </svg>
         </button>
       </div>
-      <div className='overflow-hidden border-b-2 border-t-2' ref={emblaRef}>
+      <div
+        className='overflow-hidden rounded-xl border-2 px-2 shadow-md shadow-purple-500/80 sm:rounded-none sm:border-b-2 sm:border-l-0 sm:border-r-0 sm:border-t-2 sm:shadow-none 4xl:py-4'
+        ref={emblaRef}
+      >
         <div className='embla__container flex touch-pan-y'>
           {socialsData.map((social, index) => (
             <div key={index} className='embla__slide min-w-0'>
@@ -82,8 +85,8 @@ export default function SocialsCarousel() {
                     <Image
                       src={social.src}
                       alt={social.alt}
-                      width='600'
-                      height='400'
+                      width={600}
+                      height={400}
                       className='rounded-md lg:rounded-lg'
                     />
                     <div className='overlay-text absolute bottom-0 left-0 flex items-center gap-1 rounded-bl-md rounded-tr-md bg-slate-950/70 p-2 text-center text-white lg:rounded-bl-lg lg:rounded-tr-lg'>

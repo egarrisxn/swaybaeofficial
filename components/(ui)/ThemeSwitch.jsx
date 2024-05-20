@@ -26,7 +26,7 @@ export default function ThemeSwitch() {
           viewBox='0 0 24 24'
           strokeWidth={2}
           stroke='currentColor'
-          className='size-7 text-primary lg:size-8'
+          className='size-7 text-primary lg:size-8 2xl:size-10 4xl:size-14'
         >
           <path
             strokeLinecap='round'
@@ -41,7 +41,7 @@ export default function ThemeSwitch() {
           viewBox='0 0 24 24'
           strokeWidth={2}
           stroke='currentColor'
-          className='size-7 text-secondary lg:size-8'
+          className='size-7 text-secondary lg:size-8 2xl:size-10 4xl:size-14'
         >
           <path
             strokeLinecap='round'

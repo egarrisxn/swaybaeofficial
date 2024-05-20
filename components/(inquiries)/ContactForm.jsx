@@ -47,14 +47,15 @@ export default function ContactForm() {
 
   return (
     <form
-      className='p-2 sm:shadow-md sm:shadow-purple-500/80 md:rounded-xl md:border-2 md:p-4 md:px-10 lg:rounded-2xl lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20'
+      className='p-2 sm:shadow-md sm:shadow-purple-500/80 md:rounded-xl md:border-2 md:p-4 md:px-10 lg:rounded-2xl lg:px-12 lg:pt-8 xl:px-16 xl:pt-12 2xl:px-20 4xl:px-28 4xl:pb-8 4xl:pt-16'
       onSubmit={handleSubmit}
     >
-      <div className='lobster mb-4 mt-4 text-5xl text-primary lg:mt-2 lg:text-6xl xl:mt-0'>
+      <div className='lobster mb-4 mt-4 text-5xl text-primary lg:mt-2 lg:text-6xl xl:mt-0 4xl:mb-8 4xl:text-7xl'>
         Contact Me
       </div>
       <hr className='hr-lines my-2 border-secondary' />
-      <div className='my-4 flex w-full flex-col'>
+      <br className='hidden 4xl:block' />
+      <div className='my-4 flex w-full flex-col 4xl:mb-8 4xl:mt-4'>
         <label className='font-bold' htmlFor='name'>
           Name
         </label>
@@ -72,7 +73,7 @@ export default function ContactForm() {
           onChange={handleInputChange}
         />
       </div>
-      <div className='my-4 flex w-full flex-col'>
+      <div className='my-4 flex w-full flex-col 4xl:my-8'>
         <label className='font-bold' htmlFor='email'>
           Email
         </label>
@@ -90,7 +91,7 @@ export default function ContactForm() {
           onChange={handleInputChange}
         />
       </div>
-      <div className='my-4 flex w-full flex-col'>
+      <div className='my-4 flex w-full flex-col 4xl:my-8'>
         <label className='font-bold' htmlFor='subject'>
           Subject
         </label>
@@ -126,7 +127,8 @@ export default function ContactForm() {
           onChange={handleInputChange}
         />
       </div>
-      <hr className='my-4 border-secondary lg:my-6' />
+      <br className='hidden 4xl:block' />
+      <hr className='my-4 border-secondary lg:my-6 4xl:mb-10' />
       <div className='my-6 flex justify-center'>
         <MyButton type='submit' value={'Send Message'} />
       </div>

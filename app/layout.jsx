@@ -61,9 +61,9 @@ export default function RootLayout({children}) {
     <html lang='en' suppressHydrationWarning className='scroll-smooth antialiased'>
       <body className={`${lobster.variable} ${poppins.variable} m-0 overflow-x-hidden p-0`}>
         <ThemeProvider attribute='class' defaultTheme='system'>
-          <div className='bg-white text-black transition-colors duration-200 ease-in dark:bg-black dark:text-white'>
+          <main className='bg-white text-black transition-colors duration-200 ease-in dark:bg-black dark:text-white'>
             {children}
-          </div>
+          </main>
         </ThemeProvider>
         {draftMode().isEnabled && <LiveVisualEditing />}
         <Analytics />

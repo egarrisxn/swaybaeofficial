@@ -7,12 +7,13 @@ import ContactSocials from './ContactSocials'
 
 export default function Inquiries() {
   return (
-    <main className='min-h-screen w-full p-0'>
+    <main className='min-h-dvh w-full p-0'>
       <label className='sr-only'>Inquiries</label>
-      <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16'>
+      <div className='mx-auto max-w-7xl px-2 pb-12 pt-4 lg:px-4 lg:pt-16 4xl:max-w-screen-3xl'>
         <PageName>Inquiries</PageName>
         <br />
-        <div className='mx-auto mb-4 mt-4 flex flex-col justify-center px-2 md:flex-row md:space-x-6 md:px-2 lg:mb-8 lg:mt-16 lg:space-x-10 lg:px-8 xl:space-x-12 xl:px-12'>
+        <br className='hidden 4xl:block' />
+        <div className='mx-auto mb-4 mt-4 flex flex-col justify-center sm:px-2 md:flex-row md:space-x-6 md:px-4 lg:mb-8 lg:mt-16 lg:space-x-10 lg:px-8 xl:space-x-12 xl:px-12 4xl:space-x-16'>
           <section className='rounded-xl md:w-3/5 2xl:w-2/3'>
             <ContactForm />
           </section>
@@ -34,7 +35,7 @@ export default function Inquiries() {
               />
             </Link>
           </section>
-          <section className='space-y-4 md:hidden'>
+          <section className='md:hidden'>
             <ContactSocials mobileStyle />
           </section>
         </div>
