@@ -1,4 +1,4 @@
-export default function MyButton({onClick, children, value, type, disabled}) {
+export function MyButton({onClick, children, value, type, disabled}) {
   const content = children || value
 
   return (

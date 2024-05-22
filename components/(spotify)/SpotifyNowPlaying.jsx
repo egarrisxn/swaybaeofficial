@@ -1,6 +1,6 @@
 'use client'
 import {useEffect, useState} from 'react'
-import SpotifyLogo from './SpotifyLogo'
+import {SpotifyLogo} from './SpotifyLogo'
 import SpotifyAnimation from './SpotifyAnimation'
 import getNowPlayingItem from '../../lib/spotify'
 

@@ -1,5 +1,5 @@
 import Calendar from '@/components/(calendar)/Calendar'
-import PageName from '@/components/(other)/PageName'
+import {PageName} from '@/components/(other)/PageName'
 import SocialButtons from '@/components/(ui)/SocialButtons'
 
 export default function CalendarPage() {

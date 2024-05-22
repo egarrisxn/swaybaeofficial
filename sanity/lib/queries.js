@@ -33,7 +33,16 @@ export const POSTS_QUERY = groq`
 export const POST_QUERY = groq`
   *[_type == 'post' && slug.current == $slug] {
     ${commonPostQuery}
-    'content': content[]{...},
+    'content': content[] {
+    ...,
+    markDefs[]{
+      ...,
+      _type == "link" => {
+        ...,
+        internalLink->{_type,slug,title}
+      }
+    }
+  },
     "headings": content[length(style) == 2 && string::startsWith(style, "h")],
   }[0]
 `

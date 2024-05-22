@@ -1,6 +1,15 @@
-import Link from 'next/link'
 import {PortableText} from 'next-sanity'
+import {default as NextLink} from 'next/link'
+import {Link} from 'sanity-plugin-link-field/component'
+import {resolveHref} from '@/sanity/lib/resolveHref'
 import {urlFor} from '@/sanity/lib/image'
+
+const hrefResolver = ({internalLink}) => {
+  if (internalLink) {
+    return resolveHref(internalLink._type, internalLink.slug?.current)
+  }
+  return '#' // Default fallback
+}
 
 export default function PortableTextComponents({value, className, content}) {
   const RichComponents = {
@@ -39,15 +48,17 @@ export default function PortableTextComponents({value, className, content}) {
     ol: ({children}) => <ol className='my-4 ml-8 list-decimal'>{children}</ol>,
     li: ({children}) => <li className='mb-2'>{children}</li>,
     marks: {
-      link: ({children, value}) => {
-        const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined
-        return (
-          <Link href={value.href} rel={rel} className='text-blue-500 hover:text-blue-700'>
-            {children}
-          </Link>
-        )
-      },
-      internalLink: ({children, value}) => {},
+      link: ({children, value}) => (
+        <Link
+          link={value}
+          hrefResolver={hrefResolver}
+          as={NextLink} // This tells the Link component to use Next.js's Link component
+          className='text-blue-500 hover:text-blue-700'
+        >
+          {children}
+        </Link>
+      ),
+      // internalLink: ({children, value}) => {},
       strong: ({children}) => <strong className='font-bold'>{children}</strong>,
       em: ({children}) => <em className='italic'>{children}</em>,
       code: ({children}) => <code className='p-1'>{children}</code>,
@@ -56,29 +67,36 @@ export default function PortableTextComponents({value, className, content}) {
     },
     types: {
       image: ({value, isInline}) => (
-        <img
-          className='rounded border bg-light object-cover object-center p-2 shadow-md'
-          src={urlFor(value)
-            .width(isInline ? 100 : 800)
-            .fit('max')
-            .auto('format')
-            .url()}
-          alt={value.alt || 'No alt text provided for this image.'}
-          loading='lazy'
-          width={800}
-          height={450}
-          style={{
-            display: isInline ? 'inline-block' : 'block',
-          }}
-        />
+        <figure className='mb-1'>
+          <img
+            className='rounded border bg-light object-cover object-center p-2 shadow-md'
+            src={urlFor(value)
+              .width(isInline ? 100 : 800)
+              .fit('max')
+              .auto('format')
+              .url()}
+            alt={value.alt || 'No alt text provided for this image.'}
+            loading='lazy'
+            width={800}
+            height={450}
+            style={{
+              display: isInline ? 'inline-block' : 'block',
+            }}
+          />
+          {value.caption && (
+            <figcaption className='text-sm italic text-gray-500'>{value.caption}</figcaption>
+          )}
+        </figure>
       ),
       youtube: ({value}) => (
-        <iframe
-          src={`https://www.youtube.com/embed/${value.video.id}`}
-          allow='accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          style={{flex: 1, aspectRatio: '16 / 9'}}
-          className='h-full w-full rounded-lg shadow-md'
-        ></iframe>
+        <div className='aspect-h-9 aspect-w-16 flex-1'>
+          <iframe
+            src={`https://www.youtube.com/embed/${value.video.id}`}
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowfullscreen={true}
+            className='h-full w-full rounded border bg-light object-center p-2 shadow-md'
+          ></iframe>
+        </div>
       ),
     },
   }

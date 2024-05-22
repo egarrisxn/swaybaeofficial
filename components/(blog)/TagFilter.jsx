@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function TagFilter({tags}) {
+export function TagFilter({tags}) {
   const allTags = tags.reduce((acc, post) => {
     post.tags.forEach((tag) => {
       const existingTag = acc.find((t) => t._id === tag._id)

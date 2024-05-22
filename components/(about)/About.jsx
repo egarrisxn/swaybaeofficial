@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import PageName from '@/components/(other)/PageName'
-import AboutCard from './AboutCard'
+import {PageName} from '@/components/(other)/PageName'
+import {AboutCard} from './AboutCard'
 
 export default function About() {
   return (

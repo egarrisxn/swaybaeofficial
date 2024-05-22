@@ -5,6 +5,8 @@ export const tag = {
   type: 'document',
   title: 'Tag',
   icon: TagIcon,
+  // Uncomment below to have edits publish automatically as you type
+  // liveEdit: true,
   fields: [
     {
       name: 'title',

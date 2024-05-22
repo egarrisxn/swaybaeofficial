@@ -1,9 +1,7 @@
-import AllPosts from './AllPosts'
-import AllTags from './AllTags'
-import TagFilter from './TagFilter'
-import PageName from '../(other)/PageName'
+import {AllPosts} from './AllPosts'
+import {TagFilter} from './TagFilter'
+import {PageName} from '../(other)/PageName'
 import SearchBar from '../(ui)/SearchBar'
-import SocialButtons from '../(ui)/SocialButtons'
 
 export default function BlogPage({blog}) {
   return (

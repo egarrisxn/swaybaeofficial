@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import PageName from '@/components/(other)/PageName'
+import {PageName} from '@/components/(other)/PageName'
 import ContactForm from './ContactForm'
 import ContactSocials from './ContactSocials'
 

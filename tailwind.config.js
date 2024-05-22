@@ -26,6 +26,9 @@ module.exports = {
       9: '9',
       16: '16',
     },
+    variants: {
+      aspectRatio: ['responsive', 'hover'],
+    },
     corePlugins: {
       aspectRatio: false,
     },

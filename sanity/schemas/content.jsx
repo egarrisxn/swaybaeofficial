@@ -1,4 +1,4 @@
-import {ImageIcon, DocumentVideoIcon, UserIcon} from '@sanity/icons'
+import {ImageIcon, DocumentVideoIcon} from '@sanity/icons'
 
 const HighlightIcon = () => <span style={{fontWeight: 'bold'}}>H</span>
 
@@ -43,33 +43,38 @@ export const blockContent = {
         annotations: [
           {
             name: 'link',
-            type: 'object',
-            title: 'URL',
-            fields: [
-              {
-                name: 'href',
-                type: 'url',
-              },
-              {
-                title: 'Open in new tab',
-                name: 'blank',
-                type: 'boolean',
-              },
-            ],
+            title: 'Link',
+            type: 'link',
           },
-          {
-            name: 'internalLink',
-            type: 'object',
-            title: 'Reference',
-            icon: UserIcon,
-            fields: [
-              {
-                name: 'reference',
-                type: 'reference',
-                to: [{type: 'post'}, {type: 'tag'}],
-              },
-            ],
-          },
+          // {
+          //   name: 'link',
+          //   type: 'object',
+          //   title: 'URL',
+          //   fields: [
+          //     {
+          //       name: 'href',
+          //       type: 'url',
+          //     },
+          //     {
+          //       title: 'Open in new tab',
+          //       name: 'blank',
+          //       type: 'boolean',
+          //     },
+          //   ],
+          // },
+          // {
+          //   name: 'internalLink',
+          //   type: 'object',
+          //   title: 'Reference',
+          //   icon: UserIcon,
+          //   fields: [
+          //     {
+          //       name: 'reference',
+          //       type: 'reference',
+          //       to: [{type: 'post'}, {type: 'tag'}],
+          //     },
+          //   ],
+          // },
         ],
       },
     },
@@ -82,6 +87,11 @@ export const blockContent = {
           type: 'string',
           title: 'Alt Text',
           description: 'Important for SEO and accessiblity.',
+        },
+        {
+          name: 'caption',
+          type: 'string',
+          title: 'Caption',
         },
       ],
       options: {hotspot: true},

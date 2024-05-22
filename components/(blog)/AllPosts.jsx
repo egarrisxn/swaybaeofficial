@@ -4,7 +4,7 @@ import FeaturedCard from './FeaturedCard'
 import LatestCard from './LatestCard'
 import LoadButton from '../(ui)/LoadButton'
 
-export default function AllPosts({posts}) {
+export function AllPosts({posts}) {
   const featuredPosts = posts.filter((post) => post.featured)
   const remainingPosts = posts.filter((post) => !post.featured)
 

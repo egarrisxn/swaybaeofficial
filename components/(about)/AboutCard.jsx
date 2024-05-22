@@ -1,8 +1,8 @@
 'use client'
 import {useRef, useState} from 'react'
-import MyButton from '@/components/(ui)/MyButton'
+import {MyButton} from '@/components/(ui)/MyButton'
 
-export default function AboutCard() {
+export function AboutCard() {
   const [isShowMore, setIsShowMore] = useState(false)
   const contentRef = useRef(null)
   const toggleReadMoreLess = () => {

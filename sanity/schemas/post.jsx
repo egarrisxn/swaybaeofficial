@@ -5,6 +5,8 @@ export const post = {
   type: 'document',
   title: 'Post',
   icon: BookIcon,
+  // Uncomment below to have edits publish automatically as you type
+  // liveEdit: true,
   fields: [
     {
       name: 'title',

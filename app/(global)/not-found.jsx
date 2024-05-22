@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import MyButton from '@/components/(ui)/MyButton'
+import {MyButton} from '@/components/(ui)/MyButton'
 
 export default function NotFound() {
   return (

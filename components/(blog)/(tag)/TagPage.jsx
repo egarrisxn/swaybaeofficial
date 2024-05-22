@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import PageName from '@/components/(other)/PageName'
+import {PageName} from '@/components/(other)/PageName'
 import SearchBar from '@/components/(ui)/SearchBar'
 import SocialButtons from '@/components/(ui)/SocialButtons'
 import TagPostCard from './TagPostCard'

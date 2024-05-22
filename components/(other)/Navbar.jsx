@@ -44,10 +44,10 @@ export default function Navbar() {
 
   return (
     <header className='top-0 w-full'>
-      <nav className='navbar relative 3xl:px-20 4xl:px-60'>
+      <nav className='navbar relative mx-auto px-2 lg:container'>
         <div className='navbar-start ml-1 lg:ml-2'>
           <Link href='/'>
-            <div className='lg-block hidden flex-row items-center lg:flex'>
+            <div className='hidden flex-row items-center lg:flex'>
               <figure className='mask mask-heart size-9 2xl:size-12 4xl:size-16'>
                 <Image
                   src='/avatar.png'

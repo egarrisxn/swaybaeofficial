@@ -1,5 +1,5 @@
-import {useCallback, useEffect, useState} from 'react'
 import Image from 'next/image'
+import {useCallback, useEffect, useState} from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {socialsData} from '@/lib/constants'
 

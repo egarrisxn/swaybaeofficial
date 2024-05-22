@@ -1,3 +1,17 @@
+import '../../../styles/studio.css'
+
 export default function StudioLayout({children}) {
-  return <main>{children}</main>
+  return (
+    <html lang='en'>
+      <body id='app'>{children}</body>
+    </html>
+  )
 }
+
+// #app {
+//   height: 100vh;
+//   max-height: 100dvh;
+//   overscroll-behavior: none;
+//   -webkit-font-smoothing: antialiased;
+//   overflow: auto;
+// }

@@ -1,4 +1,4 @@
-const SpotifyLogo = () => (
+export const SpotifyLogo = () => (
   <svg className='w-4' viewBox='0 0 20 20'>
     <g>
       <g>
@@ -12,4 +12,3 @@ const SpotifyLogo = () => (
     </g>
   </svg>
 )
-export default SpotifyLogo

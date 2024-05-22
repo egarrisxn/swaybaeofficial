@@ -1,10 +1,10 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import PageName from '@/components/(other)/PageName'
-import SpotifyNowPlaying from '@/components/(spotify)/SpotifyNowPlaying'
-import YoutubeEmbed from './YouTubeEmbed'
+import {PageName} from '../(other)/PageName'
+import SpotifyNowPlaying from '../(spotify)/SpotifyNowPlaying'
 import SocialsCarousel from './SocialsCarousel'
+import YoutubeEmbed from './YouTubeEmbed'
 
 export default function Socials() {
   return (

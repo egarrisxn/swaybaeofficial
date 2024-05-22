@@ -1,5 +1,5 @@
 // import Image from 'next/image'
-// import PageName from '@/components/(other)/PageName'
+// import {PageName} from '@/components/(other)/PageName'
 // // import SectionBreak from '@/components/SectionBreak'
 
 // const prose =

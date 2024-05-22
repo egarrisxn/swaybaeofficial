@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PortableTextComponents from './PortableTextComponents'
+import PortableTextComponents from '../PortableTextComponents'
 import TableOfContent from './TableOfContent'
 import TagBadge from '../(tag)/TagBadge'
-import PageName from '@/components/(other)/PageName'
-import SearchBar from '@/components/(ui)/SearchBar'
+import {PageName} from '../../(other)/PageName'
+import SearchBar from '../../(ui)/SearchBar'
 import {urlFor} from '@/sanity/lib/image'
 
 export default function PostPage({post}) {
-  const {title, coverImage, tags, content, headings, meta} = post
+  const {title, coverImage, tags, content, headings} = post
 
   return (
     <main className='mt-5 min-h-screen w-full p-0'>
