@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {PortableText} from 'next-sanity'
 import {default as NextLink} from 'next/link'
 import {Link} from 'sanity-plugin-link-field/component'
@@ -68,7 +69,7 @@ export default function PortableTextComponents({value, className, content}) {
     types: {
       image: ({value, isInline}) => (
         <figure className='mb-1'>
-          <img
+          <Image
             className='rounded border bg-light object-cover object-center p-2 shadow-md'
             src={urlFor(value)
               .width(isInline ? 100 : 800)
