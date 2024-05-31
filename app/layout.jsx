@@ -6,8 +6,8 @@ import {ThemeProvider} from 'next-themes'
 import {Navbar} from '@/components/Navbar'
 import {Footer} from '@/components/Footer'
 import {ScrollToTop} from '@/components/ui/ScrollToTop'
-// import {Analytics} from '@vercel/analytics/react'
-// import {SpeedInsights} from '@vercel/speed-insights/next'
+import {Analytics} from '@vercel/analytics/react'
+import {SpeedInsights} from '@vercel/speed-insights/next'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -72,8 +72,8 @@ export default function RootLayout({children}) {
           <Footer />
         </ThemeProvider>
         {draftMode().isEnabled && <LiveVisualEditing />}
-        {/* <Analytics />
-        <SpeedInsights /> */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
