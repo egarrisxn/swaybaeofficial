@@ -57,12 +57,12 @@ export function About() {
           </div>
           <div className='order-1 lg:order-2'>
             <Image
-              src='/Biff.jpg'
+              src='/biff.jpg'
               alt='Biff'
               width={1440}
               height={1800}
               className='rounded-2xl border-2 shadow-md shadow-purple-500/80'
-              priority
+              loading='lazy'
             />
           </div>
         </section>

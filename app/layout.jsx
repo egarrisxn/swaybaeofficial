@@ -1,11 +1,11 @@
 import './globals.css'
 import {draftMode} from 'next/headers'
-import LiveVisualEditing from '@/components/blog/LiveVisualEditing'
+import LiveVisualEditing from '@/components/blog/LiveVisualEditing.jsx'
 import {Poppins, Sansita} from 'next/font/google'
 import {ThemeProvider} from 'next-themes'
-import {Navbar} from '@/components/Navbar'
-import {Footer} from '@/components/Footer'
-import {ScrollToTop} from '@/components/ui/ScrollToTop'
+import {Navbar} from '@/components/Navbar.jsx'
+import {Footer} from '@/components/Footer.jsx'
+import {ScrollToTop} from '@/components/ui/ScrollToTop.jsx'
 import {Analytics} from '@vercel/analytics/react'
 import {SpeedInsights} from '@vercel/speed-insights/next'
 
@@ -71,9 +71,9 @@ export default function RootLayout({children}) {
           <ScrollToTop />
           <Footer />
         </ThemeProvider>
-        {draftMode().isEnabled && <LiveVisualEditing />}
         <Analytics />
         <SpeedInsights />
+        {draftMode().isEnabled && <LiveVisualEditing />}
       </body>
     </html>
   )

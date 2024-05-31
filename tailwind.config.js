@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'selector',
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -44,19 +43,3 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 }
-
-// animation: {
-//   'infinite-slider': 'infiniteSlider 20s linear infinite',
-//   'text-gradient': 'text 1.5s linear infinite',
-// },
-// keyframes: {
-//   infiniteSlider: {
-//     '0%': {transform: 'translateX(0)'},
-//     '100%': {transform: 'translateX(calc(-250px * 5))'},
-//   },
-//   text: {
-//     to: {
-//       backgroundPosition: '200% center',
-//     },
-//   },
-// },
