@@ -29,6 +29,7 @@ export function Navbar() {
                 height={64}
                 width={64}
                 className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
+                priority
               />
               <p className='ml-1 bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent xl:ml-1.5 xl:text-base 3xl:text-lg'>
                 Creator
@@ -86,7 +87,7 @@ export function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className={`${link.label} z-20 bg-clip-text hover:text-secondary hover:underline hover:underline-offset-4 `}
+                  className={`${link.label} z-20 bg-clip-text hover:text-secondary hover:underline hover:underline-offset-4`}
                 >
                   {link.label}
                 </Link>

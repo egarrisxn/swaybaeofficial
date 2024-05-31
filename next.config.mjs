@@ -26,13 +26,6 @@ const nextConfig = {
   experimental: {
     taint: true,
   },
-  webpack: (config, {dev, isServer}) => {
-    if (!dev) {
-      config.devtool = isServer ? false : 'source-map'
-      console.log(`Setting devtool to ${config.devtool}`)
-    }
-    return config
-  },
 }
 
 export default bundleAnalyzer(nextConfig)
