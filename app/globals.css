@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*! Fonts */
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-sansita: 'Sansita', sans-serif;
+}
+body {
+  font-family: var(--font-poppins);
+}
+.sansita {
+  font-family: var(--font-sansita);
+}
+nav,
+main,
+footer {
+  @apply bg-white transition-colors duration-200 ease-in dark:bg-black;
+}
+
+/*! Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00ceff;
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00ceff;
+}
+
+/*! Table of Content */
+.table-of-content-link {
+  color: #d4d4d8;
+}
+.table-of-content-link.active {
+  color: #00ceff;
+}
+.light .tooltip {
+  --tooltip-color: #0d1117;
+}
+.dark .tooltip {
+  --tooltip-color: #f8fafc;
+}
+
+/*! Carousel */
+.embla {
+  --slide-height: 16rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  --slide-spacing-sm: 1.3rem;
+  --slide-size-sm: 50%;
+  --slide-spacing-lg: 1.5rem;
+  --slide-size-lg: calc(100% / 3);
+}
+.embla__container {
+  backface-visibility: hidden;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+@media (min-width: 750px) {
+  .embla__container {
+    margin-left: calc(var(--slide-spacing-sm) * -1);
+  }
+}
+@media (min-width: 1024px) {
+  .embla__container {
+    margin-left: calc(var(--slide-spacing-lg) * -1);
+  }
+}
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  padding-left: var(--slide-spacing);
+}
+@media (min-width: 750px) {
+  .embla__slide {
+    flex: 0 0 var(--slide-size-sm);
+    padding-left: var(--slide-spacing-sm);
+  }
+}
+@media (min-width: 1024px) {
+  .embla__slide {
+    flex: 0 0 var(--slide-size-lg);
+    padding-left: var(--slide-spacing-lg);
+  }
+}
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  height: var(--slide-height);
+}
+.embla__buttons {
+  margin-left: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__button {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  color: var(--text-body);
+}
+.embla__button:disabled {
+  color: var(--detail-high-contrast);
+}
+
+/*! Scroll-to-top Button */
+.scrollToTop {
+  width: 40px;
+  height: 40px;
+}
+.scrollToTop-large {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+/*! Prose */
+.myProse {
+  @apply prose prose-slate transition-all duration-200 ease-in md:prose-base lg:prose-lg dark:prose-invert prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary/90 prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal  prose-h4:text-secondary/90 prose-a:text-sky-500 hover:prose-a:text-sky-700 prose-blockquote:border-primary  prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-cyan  prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border prose-img:bg-white prose-img:p-2 prose-img:shadow-md;
+}
+
+/* .card {
+  height: 100%;
+  width: 320px;
+  border-radius: 12px;
+  padding: 24px;
+  background: rgb(15 23 42);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card:before {
+  content: '';
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 182px;
+  opacity: 0.12;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  margin-bottom: 1rem;
+  display: inline-flex;
+}
+
+.icon > svg {
+  border-radius: 0.375rem;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  background: #2563eb;
+}
+
+.title {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.description {
+  font-size: 14px;
+  color: rgb(148 163 184);
+} */

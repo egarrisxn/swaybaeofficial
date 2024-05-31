@@ -1,41 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'selector',
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './sanity/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    screens: {
-      xs: '360px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1420px',
-      '3xl': '1600px',
-      '4xl': '1920px',
-    },
-    aspectRatio: {
-      1: '1',
-      2: '2',
-      3: '3',
-      4: '4',
-      5: '5',
-      9: '9',
-      16: '16',
-    },
-    variants: {
-      aspectRatio: ['responsive', 'hover'],
-    },
-    corePlugins: {
-      aspectRatio: false,
+    fontFamily: {
+      sans: ['Poppins', 'system-ui', 'sans-serif'],
     },
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        lobster: ['Lobster', 'cursive'],
+        sansita: ['Sansita', 'sans-serif'],
       },
       colors: {
         light: '#f8fafc',
@@ -48,15 +21,42 @@ module.exports = {
         pink: '#fd509d',
         lavender: '#c085df',
       },
+      screens: {
+        xs: '360px',
+        '3xl': '1920px',
+        '4xl': '2560px',
+      },
+      width: {
+        '8xl': '88rem', // 1408px
+        '9xl': '96rem', // 1536px
+        '10xl': '104rem', // 1662px
+        '11xl': '112rem', // 1792px
+        '12xl': '120rem', // 1920px
+      },
+      maxWidth: {
+        '8xl': '88rem', // 1408px
+        '9xl': '96rem', // 1536px
+        '10xl': '104rem', // 1662px
+        '11xl': '112rem', // 1792px
+        '12xl': '120rem', // 1920px
+      },
     },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/typography'),
-    require('daisyui'),
-  ],
-  daisyui: {
-    themes: [],
-    logs: false,
-  },
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 }
+
+// animation: {
+//   'infinite-slider': 'infiniteSlider 20s linear infinite',
+//   'text-gradient': 'text 1.5s linear infinite',
+// },
+// keyframes: {
+//   infiniteSlider: {
+//     '0%': {transform: 'translateX(0)'},
+//     '100%': {transform: 'translateX(calc(-250px * 5))'},
+//   },
+//   text: {
+//     to: {
+//       backgroundPosition: '200% center',
+//     },
+//   },
+// },
