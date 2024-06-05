@@ -6,7 +6,7 @@
 
 The official website for professional streamer & content creator, Sway Bae!
 
-![swaybaeofficial](https://github.com/egarrisxn/swaybaeofficial/assets/126130230/0a10a842-356d-422d-a37a-7012976c08b7)
+![sway1](https://github.com/egarrisxn/swaybaeofficial/assets/126130230/24a1cf71-bed6-4041-9109-7773ae7378d5)
 
 ## Technologies
 
