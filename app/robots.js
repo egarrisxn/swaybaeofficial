@@ -5,5 +5,6 @@ export default function robots() {
       allow: ['/', '/about', '/blog', '/calendar'],
     },
     sitemap: 'https://swaybae.net/sitemap.xml',
+    host: 'https://swaybae.net',
   }
 }

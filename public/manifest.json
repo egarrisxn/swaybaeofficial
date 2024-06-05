@@ -1,0 +1,30 @@
+{
+  "name": "egxworld",
+  "short_name": "egxworld",
+  "description": "The website/portfolio for Ethan G.",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-icon-180.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/chrome-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/chrome-icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ]
+}
