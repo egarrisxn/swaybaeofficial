@@ -1,15 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import TagBadge from './TagBadge.jsx'
-import {urlFor} from '@/utils/sanity/client.js'
+import { urlFor } from '@/utils/sanity/client.js'
 
-export default function LatestCard({post}) {
-  const {coverImage, title, tags, excerpt} = post
+export default function LatestCard({ post }) {
+  const { coverImage, title, tags, excerpt } = post
   return (
-    <article>
-      <label className='sr-only' aria-label='Latest'>
-        Latest
-      </label>
+    <>
       <div className='grid grid-cols-1 gap-2 md:gap-3'>
         <section className='mb-1 md:mb-0'>
           <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-800 px-2 tracking-tight text-white drop-shadow-md dark:prose-invert'>
@@ -20,7 +17,7 @@ export default function LatestCard({post}) {
             })}
           </p>
         </section>
-        <section className='drop-shadow-md transition-all ease-in-out hover:scale-105'>
+        <figure className='drop-shadow-md transition-all ease-in-out hover:scale-105'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
               className='rounded border bg-white object-cover object-center p-2 shadow-md'
@@ -30,7 +27,7 @@ export default function LatestCard({post}) {
               height={450}
             />
           </Link>
-        </section>
+        </figure>
         <section className='hidden md:block'>
           <div className='flex justify-end gap-1'>
             {tags.map((tag) => (
@@ -54,6 +51,6 @@ export default function LatestCard({post}) {
           </Link>
         </section>
       </div>
-    </article>
+    </>
   )
 }

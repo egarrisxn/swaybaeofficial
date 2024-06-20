@@ -1,8 +1,8 @@
 'use client'
 import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
-import {useCallback, useEffect, useState} from 'react'
-import {socialData} from '@/utils/constants'
+import { useCallback, useEffect, useState } from 'react'
+import { socialData } from '@/utils/constants'
 
 export function SocialCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -15,13 +15,11 @@ export function SocialCarousel() {
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
 
   const onPrevButtonClick = useCallback(() => {
-    if (!emblaApi) return
-    emblaApi.scrollPrev()
+    if (emblaApi) emblaApi.scrollPrev()
   }, [emblaApi])
 
   const onNextButtonClick = useCallback(() => {
-    if (!emblaApi) return
-    emblaApi.scrollNext()
+    if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
 
   const onSelect = useCallback((emblaApi) => {
@@ -30,11 +28,11 @@ export function SocialCarousel() {
   }, [])
 
   useEffect(() => {
-    if (!emblaApi) return
-
-    onSelect(emblaApi)
-    emblaApi.on('reInit', onSelect)
-    emblaApi.on('select', onSelect)
+    if (emblaApi) {
+      onSelect(emblaApi)
+      emblaApi.on('reInit', onSelect)
+      emblaApi.on('select', onSelect)
+    }
   }, [emblaApi, onSelect])
 
   return (
@@ -45,6 +43,7 @@ export function SocialCarousel() {
           type='button'
           onClick={onPrevButtonClick}
           disabled={prevBtnDisabled}
+          aria-label='Previous'
         >
           <svg
             className='h-[35%] w-[35%] transition-colors duration-200 ease-in hover:text-primary'
@@ -61,6 +60,7 @@ export function SocialCarousel() {
           type='button'
           onClick={onNextButtonClick}
           disabled={nextBtnDisabled}
+          aria-label='Next'
         >
           <svg
             className='h-[35%] w-[35%] transition-colors duration-200 ease-in hover:text-primary'
@@ -88,10 +88,10 @@ export function SocialCarousel() {
                       className='rounded-md lg:rounded-lg'
                     />
                     <div className='overlay-text absolute bottom-0 left-0 flex items-center gap-1 rounded-bl-md rounded-tr-md bg-slate-950/70 p-2 text-center text-white lg:rounded-bl-lg lg:rounded-tr-lg'>
-                      <div className='text-primary'>{social.icon} </div>
-                      <div className='font-white text-sm'>{social.label}: </div>
+                      <div className='text-primary'>{social.icon}</div>
+                      <div className='font-white text-sm'>{social.label}:</div>
                       <div className='text-sm font-normal italic text-white transition-colors duration-200 ease-in hover:text-primary'>
-                        {social.username}{' '}
+                        {social.username}
                       </div>
                     </div>
                   </div>

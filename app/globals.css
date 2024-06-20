@@ -7,12 +7,15 @@
   --font-poppins: 'Poppins', sans-serif;
   --font-sansita: 'Sansita', sans-serif;
 }
+
 body {
   font-family: var(--font-poppins);
 }
+
 .sansita {
   font-family: var(--font-sansita);
 }
+
 nav,
 main,
 footer {
@@ -24,11 +27,13 @@ footer {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #00ceff;
   border-radius: 10px;
 }
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #00ceff;
@@ -38,15 +43,11 @@ footer {
 .table-of-content-link {
   color: #d4d4d8;
 }
+
 .table-of-content-link.active {
   color: #00ceff;
 }
-.light .tooltip {
-  --tooltip-color: #0d1117;
-}
-.dark .tooltip {
-  --tooltip-color: #f8fafc;
-}
+
 
 /*! Carousel */
 .embla {
@@ -58,49 +59,59 @@ footer {
   --slide-spacing-lg: 1.5rem;
   --slide-size-lg: calc(100% / 3);
 }
+
 .embla__container {
   backface-visibility: hidden;
   margin-left: calc(var(--slide-spacing) * -1);
 }
+
 @media (min-width: 750px) {
   .embla__container {
     margin-left: calc(var(--slide-spacing-sm) * -1);
   }
 }
+
 @media (min-width: 1024px) {
   .embla__container {
     margin-left: calc(var(--slide-spacing-lg) * -1);
   }
 }
+
 .embla__slide {
   flex: 0 0 var(--slide-size);
   padding-left: var(--slide-spacing);
 }
+
 @media (min-width: 750px) {
   .embla__slide {
     flex: 0 0 var(--slide-size-sm);
     padding-left: var(--slide-spacing-sm);
   }
 }
+
 @media (min-width: 1024px) {
   .embla__slide {
     flex: 0 0 var(--slide-size-lg);
     padding-left: var(--slide-spacing-lg);
   }
 }
+
 .embla__slide__number {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
   height: var(--slide-height);
 }
+
 .embla__buttons {
   margin-left: calc((2.6rem - 1.4rem) / 2 * -1);
 }
+
 .embla__button {
   -webkit-appearance: none;
   appearance: none;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
   color: var(--text-body);
 }
+
 .embla__button:disabled {
   color: var(--detail-high-contrast);
 }
@@ -110,6 +121,7 @@ footer {
   width: 40px;
   height: 40px;
 }
+
 .scrollToTop-large {
   width: 60px !important;
   height: 60px !important;

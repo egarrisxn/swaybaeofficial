@@ -2,18 +2,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import YoutubeEmbed from './ui/YouTubeEmbed'
-import {SpotifyNowPlaying} from './ui/SpotifyNowPlaying'
-import {SocialCarousel} from './ui/SocialCarousel'
+import { SpotifyNowPlaying } from './ui/SpotifyNowPlaying'
+import { SocialCarousel } from './ui/SocialCarousel'
 
 export function Socials() {
   return (
-    <main className='w-full'>
-      <label className='sr-only' aria-label='Socials'>
-        Socials
-      </label>
+    <section className='w-full' aria-labelledby='socials-heading'>
       <header className='mx-auto w-full'>
         <hr className='border-2 border-purple-800/50' />
-        <h1 className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'>
+        <h1 id='socials-heading' className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'>
           Socials
         </h1>
       </header>
@@ -28,11 +25,9 @@ export function Socials() {
           <div className='mb-12 mt-2 sm:mb-6 sm:mt-6'>
             <Link href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
               <div className='flex flex-row items-center justify-center text-sm tracking-tight max-[370px]:text-xs sm:text-lg'>
-                If youd like to support what I do:
-                <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden'>
-                  THRONE
-                </span>
-                <div className='size-5 max-[370px]:ml-1 max-[370px]:size-4 sm:size-6 '>
+                If you'd like to support what I do:
+                <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden'>THRONE</span>
+                <div className='size-5 max-[370px]:ml-1 max-[370px]:size-4 sm:size-6'>
                   <Image src='/throne.jpg' alt='Throne' width={24} height={24} />
                 </div>
               </div>
@@ -57,7 +52,7 @@ export function Socials() {
               rel='noopener noreferrer'
               className='mx-1 bg-gradient-to-b from-navy via-pink to-pink bg-clip-text text-transparent'
             >
-              YoutTube
+              YouTube
             </Link>
             Videos
           </div>
@@ -71,6 +66,6 @@ export function Socials() {
           </div>
         </section>
       </div>
-    </main>
+    </section>
   )
 }

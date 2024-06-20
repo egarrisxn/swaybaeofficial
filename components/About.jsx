@@ -2,13 +2,10 @@ import Image from 'next/image'
 
 export function About() {
   return (
-    <main className='w-full'>
-      <label className='sr-only' aria-label='About'>
-        About
-      </label>
+    <section className='w-full' aria-labelledby='about-heading'>
       <header className='mx-auto w-full'>
         <hr className='border-2 border-purple-800/50' />
-        <h1 className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'>
+        <h1 id='about-heading' className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'>
           About
         </h1>
       </header>
@@ -31,7 +28,7 @@ export function About() {
               <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
                 <span className='font-semibold'>I create</span> family-friendly entertainment
                 centered around the concepts of positive mental attitude in gaming with the mantra
-                of leaving someones day better than I found it. My favorite part of streaming is the
+                of leaving someone’s day better than I found it. My favorite part of streaming is the
                 amazing community. You can find our Discord as you explore the website, but it is a
                 very inclusive and supportive community that we have cultivated and a great place to
                 connect outside of streams!
@@ -47,8 +44,8 @@ export function About() {
                 lifestyle, even five years ago? Nope. Do I love it? Entirely!
               </p>
               <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-                <span className='font-semibold'>If you&rsquo;d like</span> to work with me,
-                I&rsquo;d love to hear from you! You can use the contact form in the business
+                <span className='font-semibold'>If you’d like</span> to work with me,
+                I’d love to hear from you! You can use the contact form in the business
                 inquiries section below! As I often say, thank you for being a part of my journey,
                 and allowing me to be a part of yours!{' '}
                 <span className='font-semibold text-secondary'>&ndash; Sway Bae</span>
@@ -58,7 +55,7 @@ export function About() {
           <div className='order-1 lg:order-2'>
             <Image
               src='/biff.jpg'
-              alt='Biff'
+              alt='Image of Biff'
               width={1440}
               height={1800}
               className='rounded-2xl border-2 shadow-md shadow-purple-500/80'
@@ -104,6 +101,6 @@ export function About() {
           </div>
         </section>
       </div>
-    </main>
+    </section>
   )
 }

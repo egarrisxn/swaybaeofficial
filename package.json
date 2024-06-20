@@ -1,9 +1,9 @@
 {
   "name": "swaybaeofficial",
   "version": "1.0.0",
-  "description": "The official site for content creator Sway Bae.",
+  "description": "The Official Website for Sway Bae & The Bae Squad!",
   "homepage": "https://swaybae.net",
-  "author": "Ethan G. (https://egxworld.net/)",
+  "author": "Ethan G. (https://egxworld.net)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,19 +24,17 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
-    "analyze": "cross-env ANALYZE=true pnpm run build"
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@next/bundle-analyzer": "14.2.3",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-url-secret": "^1.6.17",
-    "@sanity/react-loader": "^1.10.1",
+    "@sanity/react-loader": "^1.10.3",
     "@vercel/analytics": "^1.3.1",
-    "@vercel/speed-insights": "^1.0.11",
-    "embla-carousel-class-names": "^8.1.3",
-    "embla-carousel-react": "^8.1.3",
-    "next": "14.2.3",
+    "@vercel/speed-insights": "^1.0.12",
+    "embla-carousel-class-names": "^8.1.5",
+    "embla-carousel-react": "^8.1.5",
+    "next": "14.2.4",
     "next-sanity": "^9.3.10",
     "next-themes": "^0.3.0",
     "nodemailer": "^6.9.13",
@@ -50,14 +48,24 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.13",
     "autoprefixer": "^10.4.19",
-    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.3",
+    "eslint-config-next": "^14.2.4",
     "eslint-config-prettier": "^9.1.0",
     "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.6.0",
-    "tailwindcss": "^3.4.3"
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.4"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   },
   "packageManager": "pnpm@9.2.0+sha512.98a80fd11c2e7096747762304106432b3ddc67dcf54b5a8c01c93f68a2cd5e05e6821849522a06fb76284d41a2660d5e334f2ee3bbf29183bf2e739b1dafa771"
 }

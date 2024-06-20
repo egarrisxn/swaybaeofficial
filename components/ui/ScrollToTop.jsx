@@ -1,5 +1,5 @@
 'use client'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 export function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false)
@@ -42,15 +42,13 @@ export function ScrollToTop() {
   }
 
   return (
-    <div>
-      <label className='sr-only'>Scroll To Top</label>
+    <button aria-label='Scroll to Top' onClick={scrollToTop}>
       <svg
-        xmlns='http://www.w3.org/2000/svg'
         width='1em'
         height='1em'
         viewBox='0 0 48 48'
+        xmlns='http://www.w3.org/2000/svg'
         className={`scrollToTop z-40 rounded-full border-2 border-primary bg-white font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-white lg:shadow-md dark:bg-black dark:hover:text-black ${isLarge ? 'scrollToTop-large' : ''}`}
-        onClick={scrollToTop}
         style={{
           position: 'fixed',
           right: 20,
@@ -69,6 +67,6 @@ export function ScrollToTop() {
           d='M5 24L24 6l19 18H31v18H17V24z'
         ></path>
       </svg>
-    </div>
+    </button>
   )
 }

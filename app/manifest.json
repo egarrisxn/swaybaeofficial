@@ -1,7 +1,7 @@
 {
-  "name": "egxworld",
-  "short_name": "egxworld",
-  "description": "The website/portfolio for Ethan G.",
+  "name": "Sway Bae Official",
+  "short_name": "Sway Bae",
+  "description": "The Official Website for Sway Bae & The Bae Squad!",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#fff",
@@ -13,7 +13,7 @@
     },
     {
       "src": "/apple-icon-180.png",
-      "sizes": "192x192",
+      "sizes": "180x180",
       "type": "image/png"
     },
     {

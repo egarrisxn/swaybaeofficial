@@ -1,17 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import TagBadge from './TagBadge.jsx'
-import {urlFor} from '@/utils/sanity/client.js'
+import { urlFor } from '@/utils/sanity/client.js'
 
-export default function FeaturedCard({post}) {
-  const {coverImage, title, tags, excerpt} = post
+export default function FeaturedCard({ post }) {
+  const { coverImage, title, tags, excerpt } = post
   return (
-    <article>
-      <label className='sr-only' aria-label='Featured'>
-        Featured
-      </label>
+    <>
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8'>
-        <section className='drop-shadow-md transition-all ease-in-out hover:scale-105'>
+        <figure className='drop-shadow-md transition-all ease-in-out hover:scale-105'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
               className='rounded border bg-white object-cover object-center p-2 shadow-md'
@@ -21,7 +18,7 @@ export default function FeaturedCard({post}) {
               height={400}
             />
           </Link>
-        </section>
+        </figure>
         <section className='flex flex-col gap-4 lg:p-1'>
           <div className='hidden justify-between lg:flex'>
             <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-800 px-2 tracking-tight text-white drop-shadow-md dark:prose-invert'>
@@ -54,6 +51,6 @@ export default function FeaturedCard({post}) {
           </div>
         </section>
       </div>
-    </article>
+    </>
   )
 }

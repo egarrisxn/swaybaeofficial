@@ -1,27 +1,37 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import {useState, useEffect} from 'react'
-import {useTheme} from 'next-themes'
-import {navLinks} from '@/utils/constants'
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/calendar', label: 'Calendar' },
+  { href: '/blog', label: 'Blog' },
+  { href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store' },
+]
 
 export function Navbar() {
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false)
-  const {resolvedTheme, setTheme} = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  const themeTogglePlaceholder = (
+    <div className='inline-flex items-center rounded-lg p-1 text-sm text-secondary md:inline-flex dark:text-primary'>
+      {/* Adjust the placeholder size to match the actual button size */}
+      <div className='w-9 h-9 md:w-10 md:h-10 3xl:w-11 3xl:h-11 bg-gray-200 animate-pulse'></div>
+    </div>
+  )
+
   return (
     <header className='w-full'>
-      <label className='sr-only' aria-label='Navbar'>
-        Navbar
-      </label>
-      <nav className='z-20 p-2 sm:p-4 3xl:p-6'>
+      <nav className='z-20 p-2 sm:p-4 3xl:p-6' aria-label='Main navigation'>
         <div className='mx-auto flex flex-row flex-wrap items-center justify-between md:px-2 2xl:px-4 3xl:px-16 4xl:px-24'>
-          <Link href='/'>
+          <Link href='/' aria-label='Home'>
             <div className='flex items-center'>
               <Image
                 src='/avatar.png'
@@ -29,7 +39,6 @@ export function Navbar() {
                 height={64}
                 width={64}
                 className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
-                loading='lazy'
               />
               <p className='ml-1 bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent xl:ml-1.5 xl:text-base 3xl:text-lg'>
                 Creator
@@ -38,11 +47,12 @@ export function Navbar() {
               </p>
             </div>
           </Link>
-          <div
-            data-collapse-toggle='navbar-default'
+          <button
+            data-collapse-toggle='navbar-menu'
             type='button'
             className='inline-flex items-center text-sm text-primary md:hidden dark:text-secondary'
-            aria-controls='navbar-default'
+            aria-controls='navbar-menu'
+            aria-label='Toggle navigation menu'
             aria-expanded={isMobileDropdownOpen}
             onClick={() => {
               setIsMobileDropdownOpen(!isMobileDropdownOpen)
@@ -76,9 +86,11 @@ export function Navbar() {
                 />
               </svg>
             )}
-          </div>
+          </button>
           <ul
+            id='navbar-menu'
             className={`block h-screen w-full flex-grow md:inline md:h-auto md:w-auto md:grow-0 ${isMobileDropdownOpen ? 'block' : 'hidden'}`}
+            aria-label='Primary navigation'
           >
             {navLinks.map((link) => (
               <li
@@ -100,6 +112,7 @@ export function Navbar() {
                     setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
                   }}
                   className='inline-flex items-center rounded-lg px-1 py-2 text-sm text-secondary md:hidden dark:text-primary'
+                  aria-label='Toggle theme'
                 >
                   {resolvedTheme === 'light' ? (
                     <svg
@@ -142,6 +155,7 @@ export function Navbar() {
                 setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
               }}
               className='z-50 hidden items-center rounded-lg p-1 text-sm text-secondary md:inline-flex dark:text-primary'
+              aria-label='Toggle theme'
             >
               {resolvedTheme === 'light' ? (
                 <svg
@@ -176,7 +190,7 @@ export function Navbar() {
               )}
             </button>
           ) : (
-            <div className='hidden items-center rounded-lg border-2 p-1 text-sm md:inline-flex' />
+            <div className='hidden items-center rounded-lg border-2 mr-11 border-light dark:border-dark md:inline-flex' />
           )}
         </div>
       </nav>

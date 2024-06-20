@@ -1,10 +1,10 @@
 'use client'
-import {useState} from 'react'
+import { useState } from 'react'
 import FeaturedCard from './FeaturedCard.jsx'
 import LatestCard from './LatestCard.jsx'
 import LoadButton from './LoadButton.jsx'
 
-export function AllPosts({posts}) {
+export function AllPosts({ posts }) {
   const featuredPosts = posts.filter((post) => post.featured)
   const remainingPosts = posts.filter((post) => !post.featured)
 
@@ -16,7 +16,7 @@ export function AllPosts({posts}) {
   }
 
   return (
-    <main>
+    <section>
       <h3 className='mb-2 ml-1 text-xl font-bold'>Featured Posts</h3>
       {featuredPosts.length > 0 && (
         <section className='mt-8 grid grid-cols-1 gap-16 pb-16'>
@@ -37,6 +37,6 @@ export function AllPosts({posts}) {
         ))}
       </section>
       {posts.length > loadMore && <LoadButton onClick={showMoreArticles} />}
-    </main>
+    </section>
   )
 }

@@ -1,10 +1,3 @@
-export const navLinks = [
-  {href: '/', label: 'Home'},
-  {href: '/calendar', label: 'Calendar'},
-  {href: '/blog', label: 'Blog'},
-  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store'},
-]
-
 export const socialData = [
   {
     src: '/TwitchCard.png',

@@ -1,11 +1,8 @@
-import {socialData} from '@/utils/constants'
+import { socialData } from '@/utils/constants'
 
 export function Footer() {
   return (
     <footer className='w-full'>
-      <label className='sr-only' aria-label='Footer'>
-        Footer
-      </label>
       <hr className='border border-purple-800/50' />
       <section className='my-6 flex items-center justify-center max-[300px]:max-w-60 lg:my-8 xl:my-10 3xl:my-12'>
         <p className='hidden text-lg font-medium md:block md:pr-2 xl:text-xl'>Socials: </p>
@@ -30,7 +27,7 @@ export function Footer() {
       </section>
       <hr className='border border-purple-800/50' />
       <section className='my-4 flex items-center justify-center text-sm max-[300px]:p-0 sm:text-base sm:font-medium md:text-lg lg:my-5 xl:my-6 xl:text-xl 3xl:my-8 3xl:text-2xl'>
-        <div className='x'>© 2024</div>
+        <div className='x'>&copy; 2024</div>
         <div
           className='mx-1 bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text px-1
         font-bold text-transparent max-[300px]:mx-0'
