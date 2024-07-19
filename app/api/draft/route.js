@@ -1,0 +1,18 @@
+import {validatePreviewUrl} from '@sanity/preview-url-secret'
+import {draftMode} from 'next/headers'
+import {redirect} from 'next/navigation'
+import {client} from '@/utils/sanity/client.js'
+import {token} from '@/utils/sanity/token.js'
+
+const clientWithToken = client.withConfig({token})
+
+export async function GET(request) {
+  const {isValid, redirectTo = '/'} = await validatePreviewUrl(clientWithToken, request.url)
+  if (!isValid) {
+    return new Response('Invalid secret', {status: 401})
+  }
+
+  draftMode().enable()
+
+  redirect(redirectTo)
+}
