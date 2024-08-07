@@ -1,34 +1,39 @@
-'use client';
-import { useState, useEffect } from 'react';
+'use client'
+import {useState, useEffect} from 'react'
 
-export default function VideoPlayer({ vnum }) {
-  const [videoId, setVideoId] = useState();
+export default function VideoPlayer({vnum}) {
+  const [videoId, setVideoId] = useState('')
 
   useEffect(() => {
     const loadVideo = async () => {
-      const channelId = 'UCbpQhE5NYQ05pSp_DJJQxCA';
-      const apiKey = process.env.NEXT_PUBLIC_SANITY_YOUTUBE_KEY;
-      const playlistId = 'UUbpQhE5NYQ05pSp_DJJQxCA';
-      const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${vnum + 1}&playlistId=${playlistId}&key=${apiKey}`;
+      const playlistId = 'UUbpQhE5NYQ05pSp_DJJQxCA'
+      const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY // Updated environment variable
+      const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=2&playlistId=${playlistId}&key=${apiKey}`
 
       try {
-        const response = await fetch(playlistUrl);
+        const response = await fetch(playlistUrl)
         if (!response.ok) {
-          throw new Error('Failed to fetch videos');
+          throw new Error('Failed to fetch videos')
         }
-        const data = await response.json();
-        const videoItem = data.items[vnum];
+        const data = await response.json()
+        if (data.items.length === 0) {
+          throw new Error('No videos found in playlist')
+        }
+
+        const videoItem = data.items[vnum]
         if (!videoItem) {
-          throw new Error('Video not found');
+          throw new Error('Video not found')
         }
-        const videoId = videoItem.snippet.resourceId.videoId;
-        setVideoId(videoId);
+
+        const videoId = videoItem.snippet.resourceId.videoId
+        setVideoId(videoId)
       } catch (error) {
-        console.error('Error loading video:', error);
+        console.error('Error loading video:', error)
       }
-    };
-    loadVideo();
-  }, [vnum]);
+    }
+
+    loadVideo()
+  }, [vnum])
 
   return (
     <div className='aspect-h-9 aspect-w-16 rounded-lg'>
@@ -46,6 +51,5 @@ export default function VideoPlayer({ vnum }) {
         ></iframe>
       )}
     </div>
-  );
+  )
 }
-

@@ -1,41 +1,29 @@
-const client_id = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID
-const client_secret = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET
-const refresh_token = process.env.NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN
-
-const basic = btoa(`${client_id}:${client_secret}`)
-const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`
-const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
-
-const getAccessToken = async () => {
-  const response = await fetch(TOKEN_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      Authorization: `Basic ${basic}`,
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
-      grant_type: 'refresh_token',
-      refresh_token,
-    }),
-  })
-  return response.json()
+export async function getAccessToken() {
+  const response = await fetch('/api/spotify', {method: 'POST'})
+  if (!response.ok) {
+    throw new Error('Failed to fetch access token')
+  }
+  return await response.json()
 }
 
-export const getNowPlaying = async () => {
-  const {access_token} = await getAccessToken()
-
-  return fetch(NOW_PLAYING_ENDPOINT, {
+const getNowPlaying = async (accessToken) => {
+  const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
     headers: {
-      Authorization: `Bearer ${access_token}`,
+      Authorization: `Bearer ${accessToken}`,
     },
   })
+  if (!response.ok) {
+    throw new Error(`Failed to fetch now playing data: ${response.statusText}`)
+  }
+  return response
 }
 
-export default async function getNowPlayingItem(client_id, client_secret, refresh_token) {
+export default async function getNowPlayingItem() {
   try {
-    const nowPlayingResponse = await getNowPlaying()
+    const {access_token} = await getAccessToken()
+    const response = await getNowPlaying(access_token)
 
-    if (nowPlayingResponse.status === 204 || nowPlayingResponse.status > 400) {
+    if (response.status === 204 || response.status >= 400) {
       return {
         isPlaying: false,
         albumImageUrl: '',
@@ -45,10 +33,19 @@ export default async function getNowPlayingItem(client_id, client_secret, refres
       }
     }
 
-    const nowPlayingData = await nowPlayingResponse.json()
-
+    const nowPlayingData = await response.json()
     const song = nowPlayingData.item
-    const albumImageUrl = song.album.images[0].url
+    if (!song) {
+      return {
+        isPlaying: false,
+        albumImageUrl: '',
+        artist: '',
+        songUrl: '',
+        title: '',
+      }
+    }
+
+    const albumImageUrl = song.album.images[0]?.url || ''
     const artist = song.artists.map((_artist) => _artist.name).join(', ')
     const isPlaying = nowPlayingData.is_playing
     const songUrl = song.external_urls.spotify

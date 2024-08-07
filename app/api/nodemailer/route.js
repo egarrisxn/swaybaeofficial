@@ -1,11 +1,10 @@
 import {NextResponse, NextRequest} from 'next/server'
-const nodemailer = require('nodemailer')
+import nodemailer from 'nodemailer'
+
+const email_user = process.env.NODEMAILER_USER
+const email_password = process.env.NODEMAILER_PASSWORD
 
 export async function POST(request) {
-  const User = process.env.EMAIL_USER
-  const Pass = process.env.EMAIL_PASS
-  const Me = process.env.EMAIL_ME
-
   const formData = await request.formData()
   const name = formData.get('name')
   const email = formData.get('email')
@@ -13,18 +12,20 @@ export async function POST(request) {
   const message = formData.get('message')
 
   const transporter = nodemailer.createTransport({
+    service: 'gmail',
     host: 'smtp.gmail.com',
     port: 465,
+    secure: true,
     auth: {
-      user: User,
-      pass: Pass,
+      user: email_user,
+      pass: email_password,
     },
   })
 
   try {
     const mail = await transporter.sendMail({
-      from: name,
-      to: User,
+      from: email_user,
+      to: email_user,
       replyTo: email,
       subject: `From Your Website - ${name}: ${subject}`,
       html: `

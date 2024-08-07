@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import {useState} from 'react'
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ export function Contact() {
   })
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target
+    const {name, value} = event.target
     setFormData({
       ...formData,
       [name]: value,
@@ -20,7 +20,7 @@ export function Contact() {
   async function handleSubmit(event) {
     event.preventDefault()
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/nodemailer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -138,7 +138,9 @@ export function Contact() {
             onSubmit={handleSubmit}
             aria-labelledby='contact-heading'
           >
-            <label htmlFor='name' className='sr-only'>Name</label>
+            <label htmlFor='name' className='sr-only'>
+              Name
+            </label>
             <input
               type='text'
               minLength={3}
@@ -152,7 +154,9 @@ export function Contact() {
               value={formData.name}
               onChange={handleInputChange}
             />
-            <label htmlFor='email' className='sr-only'>Email</label>
+            <label htmlFor='email' className='sr-only'>
+              Email
+            </label>
             <input
               type='email'
               minLength={5}
@@ -166,7 +170,9 @@ export function Contact() {
               value={formData.email}
               onChange={handleInputChange}
             />
-            <label htmlFor='subject' className='sr-only'>Subject</label>
+            <label htmlFor='subject' className='sr-only'>
+              Subject
+            </label>
             <input
               type='text'
               minLength={3}
@@ -180,7 +186,9 @@ export function Contact() {
               value={formData.subject}
               onChange={handleInputChange}
             />
-            <label htmlFor='message' className='sr-only'>Message</label>
+            <label htmlFor='message' className='sr-only'>
+              Message
+            </label>
             <textarea
               rows={3}
               required
@@ -195,7 +203,7 @@ export function Contact() {
             />
             <button
               type='submit'
-              className='w-full px-4 py-2.5 text-sm 2xl:py-4 2xl:text-base 3xl:py-5 rounded-md bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary hover:bg-secondary/70 text-white font-bold  3xl:text-lg'
+              className='w-full rounded-md bg-secondary px-4 py-2.5 text-sm font-bold text-white hover:bg-secondary/70 focus:outline-none focus:ring-2 focus:ring-secondary 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
             >
               Send Message
             </button>
