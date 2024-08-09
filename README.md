@@ -11,11 +11,11 @@ The official website for professional streamer & content creator, Sway Bae!
 ## Technologies
 
 - Sanity
-- Nextjs
+- Next.js
 - React
 - JavaScript
-- TailwindCSS
-- DaisyUI
+- Tailwind CSS
+- Daisy UI
 
 ## License
 
