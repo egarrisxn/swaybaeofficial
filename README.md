@@ -4,7 +4,7 @@
 
 ## Overview
 
-The official website for professional streamer & content creator, Sway Bae!
+The official website for a full-time streamer and content creator, Sway Bae. Created exactly as the client visioned by using Next.js Framework, Tailwind CSS, daisyUI, & more.
 
 ![sway1](https://github.com/egarrisxn/swaybaeofficial/assets/126130230/24a1cf71-bed6-4041-9109-7773ae7378d5)
 
