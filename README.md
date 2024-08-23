@@ -1,10 +1,10 @@
 # Sway Bae Official
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/swaybaeofficial)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/swaybaeofficial) ![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/swaybaeofficial)
 
 ## Overview
 
-The official website for a full-time streamer and content creator, Sway Bae. Created exactly as the client visioned by using Next.js, Sanity, Tailwind CSS, daisyUI, & more.
+The official website for a full-time streamer and content creator, @Sway_Bae.
 
 ![sway1](https://github.com/egarrisxn/swaybaeofficial/assets/126130230/24a1cf71-bed6-4041-9109-7773ae7378d5)
 
@@ -16,6 +16,10 @@ The official website for a full-time streamer and content creator, Sway Bae. Cre
 - JavaScript
 - Tailwind CSS
 - Daisy UI
+
+## Disclaimer
+
+_You may clone this repository and do what you want with it, but please DO NOT use any personal images or information from it. Thanks!_
 
 ## License
 
