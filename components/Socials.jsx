@@ -2,20 +2,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import YoutubeEmbed from './ui/YouTubeEmbed'
-import { SpotifyNowPlaying } from './ui/SpotifyNowPlaying'
-import { SocialCarousel } from './ui/SocialCarousel'
+import {SpotifyNowPlaying} from './ui/SpotifyNowPlaying'
+import {SocialCarousel} from './ui/SocialCarousel'
 
 export function Socials() {
   return (
     <section className='w-full' aria-labelledby='socials-heading'>
       <header className='mx-auto w-full'>
         <hr className='border-2 border-purple-800/50' />
-        <h1 id='socials-heading' className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'>
+        <h1
+          id='socials-heading'
+          className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'
+        >
           Socials
         </h1>
       </header>
       {/* ----------Social Body---------- */}
-      <div className='my-16 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-20 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
+      <div className='mb-16 mt-12 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-12 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
         <div className='flex justify-end pb-0 max-[370px]:justify-center max-[370px]:pb-4'>
           <SpotifyNowPlaying />
         </div>
@@ -26,7 +29,9 @@ export function Socials() {
             <Link href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
               <div className='flex flex-row items-center justify-center text-sm tracking-tight max-[370px]:text-xs sm:text-lg'>
                 If you'd like to support what I do:
-                <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden'>THRONE</span>
+                <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden'>
+                  THRONE
+                </span>
                 <div className='size-5 max-[370px]:ml-1 max-[370px]:size-4 sm:size-6'>
                   <Image src='/throne.jpg' alt='Throne' width={24} height={24} />
                 </div>

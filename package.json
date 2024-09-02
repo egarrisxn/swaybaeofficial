@@ -27,6 +27,10 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/google-calendar": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-url-secret": "^1.6.17",
     "@sanity/react-loader": "^1.10.3",

@@ -1,19 +1,21 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { useTheme } from 'next-themes'
+import {usePathname} from 'next/navigation'
+import {useState, useEffect} from 'react'
+import {useTheme} from 'next-themes'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/calendar', label: 'Calendar' },
-  { href: '/blog', label: 'Blog' },
-  { href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store' },
+  {href: '/', label: 'Home'},
+  {href: '/calendar', label: 'Calendar'},
+  {href: '/blog', label: 'Blog'},
+  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store', external: true},
 ]
 
 export function Navbar() {
+  const pathname = usePathname()
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false)
-  const { resolvedTheme, setTheme } = useTheme()
+  const {resolvedTheme, setTheme} = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -22,7 +24,7 @@ export function Navbar() {
 
   const themeTogglePlaceholder = (
     <div className='inline-flex items-center rounded-lg p-1 text-sm text-secondary md:inline-flex dark:text-primary'>
-      <div className='w-9 h-9 md:w-10 md:h-10 3xl:w-11 3xl:h-11 bg-gray-200 animate-pulse'></div>
+      <div className='h-9 w-9 animate-pulse bg-gray-200 md:h-10 md:w-10 3xl:h-11 3xl:w-11'></div>
     </div>
   )
 
@@ -53,9 +55,7 @@ export function Navbar() {
             aria-controls='navbar-menu'
             aria-label='Toggle navigation menu'
             aria-expanded={isMobileDropdownOpen}
-            onClick={() => {
-              setIsMobileDropdownOpen(!isMobileDropdownOpen)
-            }}
+            onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
           >
             <span className='sr-only'>Open main menu</span>
             {isMobileDropdownOpen ? (
@@ -96,20 +96,24 @@ export function Navbar() {
                 key={link.href}
                 className='mx-0.5 my-2.5 block text-6xl sm:my-3.5 md:mx-4 md:my-0 md:inline md:text-lg lg:mx-6 lg:text-2xl xl:mx-12 2xl:mx-14 2xl:text-4xl 3xl:mx-16'
               >
-                <Link
-                  href={link.href}
-                  className={`${link.label} z-20 bg-clip-text hover:text-secondary hover:underline hover:underline-offset-4`}
-                >
-                  {link.label}
-                </Link>
+                {link.external ? (
+                  <a href={link.href} className={`z-20 bg-clip-text`}>
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={`z-20 bg-clip-text transition-all duration-150 ease-in-out ${pathname === link.href ? 'active' : ''}`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
             {mounted && (
               <li className='mt-2 md:hidden'>
                 <button
-                  onClick={() => {
-                    setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
-                  }}
+                  onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
                   className='inline-flex items-center rounded-lg px-1 py-2 text-sm text-secondary md:hidden dark:text-primary'
                   aria-label='Toggle theme'
                 >
@@ -150,9 +154,7 @@ export function Navbar() {
           </ul>
           {mounted ? (
             <button
-              onClick={() => {
-                setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
-              }}
+              onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
               className='z-50 hidden items-center rounded-lg p-1 text-sm text-secondary md:inline-flex dark:text-primary'
               aria-label='Toggle theme'
             >
@@ -189,7 +191,7 @@ export function Navbar() {
               )}
             </button>
           ) : (
-            <div className='hidden items-center rounded-lg border-2 mr-11 border-light dark:border-dark md:inline-flex' />
+            themeTogglePlaceholder
           )}
         </div>
       </nav>

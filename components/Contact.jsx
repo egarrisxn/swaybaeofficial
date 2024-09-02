@@ -58,9 +58,9 @@ export function Contact() {
         </h1>
       </header>
       {/* ----------Contact Body---------- */}
-      <div className='my-16 px-2 sm:px-4 md:px-6 lg:my-24 lg:px-8 xl:px-10 3xl:my-28 3xl:px-16'>
+      <div className='mb-16 mt-12 px-2 sm:mt-16 sm:px-4 md:px-6 lg:my-24 lg:px-8 xl:px-10 3xl:my-28 3xl:px-16'>
         {/* ----------Contact Form---------- */}
-        <section className='mx-auto grid max-w-11xl items-center px-2 sm:grid-cols-2 sm:gap-8 sm:rounded-xl sm:border-2 sm:px-4 sm:py-6 sm:shadow-md sm:shadow-purple-500/80 md:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
+        <section className='mx-auto grid max-w-11xl items-center sm:grid-cols-2 sm:gap-8 sm:rounded-xl sm:border-2 sm:px-4 sm:py-6 sm:shadow-md sm:shadow-purple-500/80 md:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
           {/* ----------Left Side Form---------- */}
           <div className='mb-12 sm:mb-0'>
             <h2 className='sansita text-4xl font-black italic tracking-tight sm:text-3xl md:text-4xl lg:text-5xl 3xl:text-8xl'>
@@ -203,7 +203,7 @@ export function Contact() {
             />
             <button
               type='submit'
-              className='w-full rounded-md bg-secondary px-4 py-2.5 text-sm font-bold text-white hover:bg-secondary/70 focus:outline-none focus:ring-2 focus:ring-secondary 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
+              className='w-full rounded-md bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-all duration-200 ease-in hover:bg-secondary/70 focus:outline-none focus:ring-2 focus:ring-secondary 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
             >
               Send Message
             </button>

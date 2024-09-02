@@ -4,18 +4,21 @@ import SearchBar from './SearchBar.jsx'
 import TableOfContent from './TableOfContent.jsx'
 import TagBadge from './TagBadge.jsx'
 import PortableTextComponents from './PortableTextComponents.jsx'
-import { urlFor } from '@/utils/sanity/client.js'
+import {urlFor} from '@/utils/sanity/client.js'
 
-export default function PostPage({ post }) {
+export default function PostPage({post}) {
   if (!post) return null
 
-  const { title, coverImage, tags, content, headings, publishedAt } = post
+  const {title, coverImage, tags, content, headings, publishedAt} = post
 
   return (
-    <main className='mt-5 min-h-screen w-full px-4'>
+    <main className='mt-5 min-h-screen w-full px-4 sm:mt-0'>
       <header className='mx-auto flex max-w-7xl flex-row items-center justify-between gap-2 pt-4 max-[320px]:flex-col lg:px-4 lg:pt-16 xl:px-0 4xl:max-w-screen-3xl'>
         <Link href='/blog'>
-          <h1 className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent 3xl:ml-3 3xl:mt-6 3xl:text-3xl cursor-pointer' aria-label='Back to Blog'>
+          <h1
+            className='ml-2 mt-4 cursor-pointer bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent 3xl:ml-3 3xl:mt-6 3xl:text-3xl'
+            aria-label='Back to Blog'
+          >
             &#8592; Back
           </h1>
         </Link>
