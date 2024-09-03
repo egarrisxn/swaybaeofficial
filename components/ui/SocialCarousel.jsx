@@ -74,7 +74,7 @@ export function SocialCarousel() {
         </button>
       </div>
       <div
-        className='h-full w-full overflow-hidden border-b-2 border-t-2 bg-light2 bg-opacity-20 bg-clip-padding px-1 backdrop-blur-lg backdrop-filter dark:bg-dark2 dark:backdrop-blur-sm'
+        className='h-full w-full overflow-hidden border-b-2 border-t-2 px-1 sm:bg-light2 sm:bg-opacity-20 sm:bg-clip-padding sm:backdrop-blur-lg sm:backdrop-filter sm:dark:bg-dark2 sm:dark:backdrop-blur-sm'
         ref={emblaRef}
       >
         <div className='embla__container flex touch-pan-y xl:my-2 2xl:my-4 3xl:my-8 4xl:my-14'>
