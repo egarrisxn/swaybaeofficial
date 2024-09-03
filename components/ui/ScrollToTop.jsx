@@ -1,5 +1,6 @@
 'use client'
 import {useState, useEffect} from 'react'
+import Tooltip from './Tooltip'
 
 export function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false)
@@ -7,32 +8,29 @@ export function ScrollToTop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!showScroll && window.scrollY > 400) {
-        setShowScroll(true)
-      } else if (showScroll && window.scrollY <= 400) {
-        setShowScroll(false)
-      }
+      setShowScroll(window.scrollY > 400)
     }
 
     const handleResize = () => {
-      if (window.innerWidth >= 1640) {
-        setIsLarge(true)
-      } else {
-        setIsLarge(false)
-      }
+      setIsLarge(window.innerWidth >= 1640)
+    }
+
+    const checkVisibility = () => {
+      handleScroll()
+      handleResize()
     }
 
     window.addEventListener('scroll', handleScroll)
-    window.addEventListener('resize', handleResize)
+    window.addEventListener('resize', checkVisibility)
 
-    // Initial check
-    handleResize()
+    // Initial check for both scroll position and screen width
+    checkVisibility()
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('resize', checkVisibility)
     }
-  }, [showScroll])
+  }, [])
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -42,31 +40,39 @@ export function ScrollToTop() {
   }
 
   return (
-    <button aria-label='Scroll to Top' onClick={scrollToTop}>
-      <svg
-        width='1em'
-        height='1em'
-        viewBox='0 0 48 48'
-        xmlns='http://www.w3.org/2000/svg'
-        className={`scrollToTop z-40 rounded-full border-2 border-primary bg-light font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-light lg:shadow-md dark:bg-dark dark:hover:text-dark ${isLarge ? 'scrollToTop-large' : ''}`}
-        style={{
-          position: 'fixed',
-          right: 20,
-          bottom: 20,
-          display: showScroll ? 'flex' : 'none',
-          padding: 5,
-          cursor: 'pointer',
-        }}
-      >
-        <path
-          fill='none'
-          stroke='currentColor'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          strokeWidth={4}
-          d='M5 24L24 6l19 18H31v18H17V24z'
-        ></path>
-      </svg>
+    <button
+      aria-label='Scroll to Top'
+      onClick={scrollToTop}
+      style={{
+        position: 'fixed',
+        bottom: 30,
+        left: '50%',
+        transform: 'translateX(-50%)',
+        display: showScroll ? 'flex' : 'none',
+        cursor: 'pointer',
+      }}
+    >
+      <Tooltip text='Scroll2Top' direction='top'>
+        <svg
+          width='0.7em'
+          height='0.7em'
+          viewBox='0 0 48 48'
+          xmlns='http://www.w3.org/2000/svg'
+          className={`scrollToTop rounded-full border-2 border-white bg-primary text-white shadow-[1px_2px_4px_0px_#581d95] transition-all duration-200 ease-in hover:border-primary hover:bg-white hover:text-primary sm:z-40 dark:border-black dark:bg-secondary dark:text-black dark:shadow-[1px_2px_4px_0px_#581d95] dark:hover:border-white dark:hover:bg-black dark:hover:text-white ${isLarge ? 'scrollToTop-large' : ''}`}
+          style={{
+            padding: 4,
+          }}
+        >
+          <path
+            fill='none'
+            stroke='currentColor'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={4}
+            d='M5 24L24 6l19 18H31v18H17V24z'
+          />
+        </svg>
+      </Tooltip>
     </button>
   )
 }

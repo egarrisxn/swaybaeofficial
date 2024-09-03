@@ -140,12 +140,20 @@ footer {
 
 /*! Scroll-to-top Button */
 .scrollToTop {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  display: none; /* Hide by default */
 }
+
 .scrollToTop-large {
-  width: 60px !important;
-  height: 60px !important;
+  width: 50px !important;
+  height: 50px !important;
+}
+
+@media (min-width: 768px) {
+  .scrollToTop {
+    display: inline-block;
+  }
 }
 
 /*! Calendar */

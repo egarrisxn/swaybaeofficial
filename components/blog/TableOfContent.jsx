@@ -1,9 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
+import Tooltip from '../ui/Tooltip'
 
-export default function TableOfContent({ headings }) {
-  const [activeLink] = useState(null)
+export default function TableOfContent({headings}) {
+  const [activeLink, setActiveLink] = useState(null)
 
   useEffect(() => {
     let activeLink = null
@@ -17,6 +18,7 @@ export default function TableOfContent({ headings }) {
           }
           tocLink.classList.add('active')
           activeLink = tocLink
+          setActiveLink(tocLink)
         }
       })
     })
@@ -32,12 +34,16 @@ export default function TableOfContent({ headings }) {
         {headings.map((heading, idx) => (
           <li key={idx} className='my-2.5 flex h-8 w-full items-center justify-center'>
             <Link href={`#${heading._key}`} className='table-of-content-link text-5xl'>
-              <span
-                className={`z-50 hover:text-primary ${activeLink === `.table-of-content-link[href='#${heading._key}']` ? ' active' : ''}`}
-                data-tip={heading.children.map((child) => child.text).join(' ')}
+              <Tooltip
+                text={heading.children.map((child) => child.text).join(' ')}
+                direction='right'
               >
-                &bull;
-              </span>
+                <span
+                  className={`z-50 hover:text-primary ${activeLink === `.table-of-content-link[href='#${heading._key}']` ? 'active' : ''}`}
+                >
+                  &bull;
+                </span>
+              </Tooltip>
             </Link>
           </li>
         ))}

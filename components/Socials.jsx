@@ -34,7 +34,7 @@ export function Socials() {
                   THRONE
                 </span>
                 <div className='size-5 max-[370px]:ml-1 max-[370px]:size-4 sm:size-6'>
-                  <Image src='/throne.jpg' alt='Throne' width={24} height={24} />
+                  <Image src='/Throne.jpg' alt='Throne' width={24} height={24} />
                 </div>
               </div>
             </Link>
