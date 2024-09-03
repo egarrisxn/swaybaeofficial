@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 
 export function ScrollToTop() {
   const [showScroll, setShowScroll] = useState(false)
@@ -48,7 +48,7 @@ export function ScrollToTop() {
         height='1em'
         viewBox='0 0 48 48'
         xmlns='http://www.w3.org/2000/svg'
-        className={`scrollToTop z-40 rounded-full border-2 border-primary bg-white font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-white lg:shadow-md dark:bg-black dark:hover:text-black ${isLarge ? 'scrollToTop-large' : ''}`}
+        className={`scrollToTop z-40 rounded-full border-2 border-primary bg-light font-bold text-primary transition-all duration-200 ease-in hover:border-transparent hover:bg-primary hover:text-light lg:shadow-md dark:bg-dark dark:hover:text-dark ${isLarge ? 'scrollToTop-large' : ''}`}
         style={{
           position: 'fixed',
           right: 20,

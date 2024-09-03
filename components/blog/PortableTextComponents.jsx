@@ -66,7 +66,7 @@ export default function PortableTextComponents({value, className, content}) {
       image: ({value, isInline}) => (
         <figure className='mb-1'>
           <Image
-            className='rounded border bg-white object-cover object-center p-2 shadow-md'
+            className='rounded border bg-light object-cover object-center p-2 shadow-md'
             src={urlFor(value)
               .width(isInline ? 100 : 800)
               .fit('max')
@@ -91,7 +91,7 @@ export default function PortableTextComponents({value, className, content}) {
             src={`https://www.youtube.com/embed/${value.video.id}`}
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             allowfullscreen={true}
-            className='h-full w-full rounded border bg-white object-center p-2 shadow-md'
+            className='h-full w-full rounded border bg-light object-center p-2 shadow-md'
           ></iframe>
         </div>
       ),

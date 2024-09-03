@@ -13,10 +13,10 @@ export default function PostPage({post}) {
 
   return (
     <main className='mt-5 min-h-screen w-full px-4 sm:mt-0'>
-      <header className='mx-auto flex max-w-7xl flex-row items-center justify-between gap-2 pt-4 max-[320px]:flex-col lg:px-4 lg:pt-16 xl:px-0 4xl:max-w-screen-3xl'>
+      <header className='mx-auto flex max-w-7xl flex-row items-center justify-between gap-2 pt-4 max-[360px]:flex-col max-[360px]:justify-center lg:px-4 lg:pt-16 xl:px-0 4xl:max-w-screen-3xl'>
         <Link href='/blog'>
           <h1
-            className='ml-2 mt-4 cursor-pointer bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent 3xl:ml-3 3xl:mt-6 3xl:text-3xl'
+            className='cursor-pointer bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent sm:ml-2 3xl:ml-3 3xl:mt-6 3xl:text-3xl'
             aria-label='Back to Blog'
           >
             &#8592; Back
@@ -30,7 +30,7 @@ export default function PostPage({post}) {
           <TableOfContent headings={headings} />
         </aside>
         <div className='col-start-2 col-end-13 mx-auto grid sm:gap-2'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-700 px-2 tracking-tight text-white drop-shadow-md dark:prose-invert'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-slate-700 px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
             {new Date(publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',
@@ -51,7 +51,7 @@ export default function PostPage({post}) {
           </section>
           <section className='mt-1 flex max-[300px]:max-w-60 min-[300px]:mx-auto'>
             <Image
-              className='w-full rounded border bg-white object-cover object-center p-2 shadow-md'
+              className='w-full rounded border bg-light object-cover object-center p-2 shadow-md'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt || 'Cover Image'}
               width={1000}
@@ -59,7 +59,7 @@ export default function PostPage({post}) {
             />
           </section>
           <section className='mb-6 mt-8 flex max-[300px]:max-w-60 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16'>
-            <div className='prose prose-slate mx-auto transition-all duration-200 ease-in md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary/90 prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal prose-h4:text-secondary/90 prose-a:text-sky-500 hover:prose-a:text-sky-700 prose-blockquote:border-primary prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-cyan prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border prose-img:bg-white prose-img:p-2 prose-img:shadow-md'>
+            <div className='prose prose-slate mx-auto transition-all duration-200 ease-in md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary/90 prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal prose-h4:text-secondary/90 prose-a:text-sky-500 hover:prose-a:text-sky-700 prose-blockquote:border-primary prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-cyan prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border prose-img:bg-light prose-img:p-2 prose-img:shadow-md'>
               <PortableTextComponents content={content} />
             </div>
           </section>

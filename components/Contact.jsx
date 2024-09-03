@@ -11,13 +11,13 @@ export function Contact() {
 
   const handleInputChange = (event) => {
     const {name, value} = event.target
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    })
+    }))
   }
 
-  async function handleSubmit(event) {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     try {
       const response = await fetch('/api/nodemailer', {
@@ -28,8 +28,8 @@ export function Contact() {
         body: JSON.stringify(formData),
       })
       if (!response.ok) {
-        console.log('Failed to send message')
-        throw new Error(`response status: ${response.status}`)
+        console.error('Failed to send message')
+        throw new Error(`Response status: ${response.status}`)
       }
       setFormData({
         name: '',
@@ -60,7 +60,7 @@ export function Contact() {
       {/* ----------Contact Body---------- */}
       <div className='mb-16 mt-12 px-2 sm:mt-16 sm:px-4 md:px-6 lg:my-24 lg:px-8 xl:px-10 3xl:my-28 3xl:px-16'>
         {/* ----------Contact Form---------- */}
-        <section className='mx-auto grid max-w-11xl items-center sm:grid-cols-2 sm:gap-8 sm:rounded-xl sm:border-2 sm:px-4 sm:py-6 sm:shadow-md sm:shadow-purple-500/80 md:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
+        <section className='mx-auto grid max-w-11xl items-center sm:grid-cols-2 sm:gap-2 sm:rounded-xl sm:border-2 sm:border-dark sm:bg-white sm:px-4 sm:py-6 sm:shadow-[2px_3px_6px_0px_#581d95] md:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28 dark:border-light dark:bg-black sm:dark:shadow-[2px_3px_12px_0px_#581d95]'>
           {/* ----------Left Side Form---------- */}
           <div className='mb-12 sm:mb-0'>
             <h2 className='sansita text-4xl font-black italic tracking-tight sm:text-3xl md:text-4xl lg:text-5xl 3xl:text-8xl'>
@@ -81,6 +81,7 @@ export function Contact() {
                       strokeWidth={2}
                       stroke='currentColor'
                       className='size-6 3xl:size-8'
+                      aria-hidden='true'
                     >
                       <path
                         strokeLinecap='round'
@@ -93,6 +94,7 @@ export function Contact() {
                     target='_blank'
                     href='mailto:Sway.Bae9000@gmail.com'
                     className='ml-3 text-sm text-[#007bff]'
+                    aria-label='Email Sway Bae'
                   >
                     <p className='block 3xl:text-2xl'>Mail</p>
                     <p className='text-xs 3xl:text-2xl'>Sway.Bae9000@gmail.com</p>
@@ -112,6 +114,7 @@ export function Contact() {
                       strokeWidth={2}
                       stroke='currentColor'
                       className='size-6 3xl:size-8'
+                      aria-hidden='true'
                     >
                       <path
                         strokeLinecap='round'
@@ -124,6 +127,7 @@ export function Contact() {
                     target='_blank'
                     href='https://beacons.ai/sway_bae/mediakit'
                     className='ml-3 text-sm text-[#007bff]'
+                    aria-label='View Media Kit'
                   >
                     <p className='block 3xl:text-2xl'>Media Kit</p>
                     <p className='text-xs 3xl:text-2xl'>beacons.ai/sway_bae/mediakit</p>
@@ -136,21 +140,17 @@ export function Contact() {
           <form
             className='ml-auto space-y-4 sm:space-y-2 md:space-y-4 lg:space-y-6 3xl:space-y-8'
             onSubmit={handleSubmit}
-            aria-labelledby='contact-heading'
           >
             <label htmlFor='name' className='sr-only'>
               Name
             </label>
             <input
-              type='text'
-              minLength={3}
-              maxLength={150}
-              required
-              placeholder='Name'
-              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-md shadow-purple-500/80 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
-              autoComplete='on'
-              name='name'
               id='name'
+              name='name'
+              type='text'
+              required
+              placeholder='Your Name'
+              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-[2px_3px_6px_0px_#581d95] 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg dark:shadow-[2px_3px_12px_0px_#581d95]'
               value={formData.name}
               onChange={handleInputChange}
             />
@@ -158,15 +158,12 @@ export function Contact() {
               Email
             </label>
             <input
-              type='email'
-              minLength={5}
-              maxLength={150}
-              required
-              placeholder='Email'
-              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-md shadow-purple-500/80 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
-              autoComplete='on'
-              name='email'
               id='email'
+              name='email'
+              type='email'
+              required
+              placeholder='Your Email'
+              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-[2px_3px_6px_0px_#581d95] 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg dark:shadow-[2px_3px_12px_0px_#581d95]'
               value={formData.email}
               onChange={handleInputChange}
             />
@@ -174,15 +171,12 @@ export function Contact() {
               Subject
             </label>
             <input
+              id='subject'
+              name='subject'
               type='text'
-              minLength={3}
-              maxLength={150}
               required
               placeholder='Subject'
-              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-md shadow-purple-500/80 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
-              autoComplete='on'
-              name='subject'
-              id='subject'
+              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-[2px_3px_6px_0px_#581d95] 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg dark:shadow-[2px_3px_12px_0px_#581d95]'
               value={formData.subject}
               onChange={handleInputChange}
             />
@@ -190,20 +184,18 @@ export function Contact() {
               Message
             </label>
             <textarea
-              rows={3}
-              required
-              minLength={10}
-              maxLength={500}
-              placeholder='Message'
-              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-md shadow-purple-500/80 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
-              name='message'
               id='message'
+              name='message'
+              rows='4'
+              required
+              placeholder='Your Message'
+              className='w-full rounded-md border px-4 py-2.5 text-sm shadow-[2px_3px_6px_0px_#581d95] 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg dark:shadow-[2px_3px_12px_0px_#581d95]'
               value={formData.message}
               onChange={handleInputChange}
             />
             <button
               type='submit'
-              className='w-full rounded-md bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-all duration-200 ease-in hover:bg-secondary/70 focus:outline-none focus:ring-2 focus:ring-secondary 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'
+              className='w-full rounded-md border-2 bg-secondary/70 py-2 text-xs font-semibold text-white shadow-[1px_2px_4px_0px_#581d95] transition-all duration-200 ease-in hover:border-secondary2 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-light2 md:px-4 md:py-2.5 md:text-sm 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg dark:shadow-[1px_3px_6px_0px_#581d95]'
             >
               Send Message
             </button>

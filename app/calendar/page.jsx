@@ -10,46 +10,22 @@ export default function CalendarPage() {
       </header>
       <br />
       {/* ----------Calendar Body---------- */}
-      <section className='mx-auto mt-4 max-w-7xl sm:mb-16 sm:px-4 lg:mt-12 4xl:max-w-screen-3xl'>
-        <div className='rounded-b border-b'>
+      <section className='mx-auto mb-16 mt-4 max-w-7xl sm:px-4 lg:mt-12 4xl:max-w-screen-3xl'>
+        <div className='md:rounded md:border-2 md:border-black md:bg-white md:p-2 md:shadow-[2px_3px_6px_0px_#581d95] xl:p-4 md:dark:border-white md:dark:bg-black md:dark:shadow-[2px_3px_12px_0px_#581d95]'>
           <Calendar />
-        </div>
-
-        <div className='mt-4 flex flex-row justify-end'>
-          {/* <button className='rounded border bg-primary p-1 text-light dark:text-dark'> */}
-          <button className='rounded bg-primary px-2 py-1.5 text-xs text-white transition-all duration-200 ease-in hover:bg-primary/70 focus:outline-none focus:ring-2 focus:ring-primary sm:px-4 sm:py-2.5 sm:text-sm sm:font-semibold 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg'>
-            <a
-              href='https://calendar.google.com/calendar/u/0/r?cid=63739436a2ea120a341ec13abffc4b1289f77240a837d12043bed81ce6c78e1c@group.calendar.google.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              + Add to calendar
-            </a>
-          </button>
+          <div className='mt-2 flex flex-row justify-end xl:mt-4'>
+            <button className='rounded border-2 bg-primary/70 px-1.5 py-1 text-xs font-semibold text-white shadow-[1px_2px_4px_0px_#581d95] transition-all duration-200 ease-in hover:border-primary2 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-light2 md:px-4 md:py-2.5 md:text-sm 2xl:px-6 2xl:py-4 2xl:text-base 3xl:text-lg dark:shadow-[1px_3px_6px_0px_#581d95]'>
+              <a
+                href='https://calendar.google.com/calendar/u/0/r?cid=63739436a2ea120a341ec13abffc4b1289f77240a837d12043bed81ce6c78e1c@group.calendar.google.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                + Add to your calendar
+              </a>
+            </button>
+          </div>
         </div>
       </section>
     </main>
   )
-}
-
-{
-  /* <div className='my-16 w-full xl:my-20 3xl:my-24'>
-        <section className='mx-auto max-w-9xl sm:px-4 4xl:max-w-11xl'>
-          <h2 className='mb-4 px-2 text-center sm:text-lg md:text-2xl'>
-            Select an event to see more details.
-          </h2>
-          <div className='pb-16'>
-            <div className='aspect-h-16 aspect-w-9 rounded-md shadow-md shadow-purple-500/80 md:aspect-h-9 md:aspect-w-16 sm:rounded-xl md:mx-auto md:border-2'>
-              <iframe
-                title='Calendar'
-                src='https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showPrint=0&showTitle=0&showNav=1&showDate=1&showCalendars=0&src=NjM3Mzk0MzZhMmVhMTIwYTM0MWVjMTNhYmZmYzRiMTI4OWY3NzI0MGE4MzdkMTIwNDNiZWQ4MWNlNmM3OGUxY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5'
-                width='100%'
-                height='100%'
-                className='rounded-md bg-white p-0.5 sm:p-2'
-                allow='fullscreen'
-              ></iframe>
-            </div>
-          </div>
-        </section>
-      </div> */
 }

@@ -4,12 +4,17 @@
 
 /*! Root */
 :root {
-  --font-poppins: 'Poppins', sans-serif;
-  --font-sansita: 'Sansita', sans-serif;
+  --gradient1: linear-gradient(268.02deg, #c5ecfe 0%, #e5d6e3 100%);
+  --gradient2: linear-gradient(
+    280.97deg,
+    rgba(197, 236, 254, 0.08) 0px,
+    rgba(41, 138, 255, 0.08) 50.81%,
+    rgba(238, 183, 231, 0.08) 100%
+  );
 
   --fc-daygrid-event-dot-width: 6px;
 
-  --fc-today-bg-color: #dedede4e;
+  --fc-today-bg-color: #b2b2b21c;
 
   --fc-button-bg-color: #00ceff;
   --fc-button-border-color: #dededeb9;
@@ -19,7 +24,20 @@
   --fc-button-active-border-color: #dedede4e;
 }
 
-/*! Fonts */
+/*! If you prefer the gradient and instant color change */
+/* body {
+  background-image: var(--gradient1);
+}
+.dark body {
+  background-image: var(--gradient2);
+}
+nav,
+main,
+footer {
+  @apply transition-colors duration-200 ease-in bg-white dark:bg-black text-dark dark:text-light;
+} */
+
+/*! Body */
 body {
   font-family: var(--font-poppins);
 }
@@ -27,11 +45,11 @@ body {
   font-family: var(--font-sansita);
 }
 
-/*! Body */
+/*! Components */
 nav,
 main,
 footer {
-  @apply bg-white transition-colors duration-200 ease-in dark:bg-black;
+  @apply bg-light text-black transition-colors duration-200 ease-in dark:bg-dark dark:text-white;
 }
 
 /*! Scrollbar */

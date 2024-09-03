@@ -23,12 +23,12 @@ export function TagFilter({tags}) {
   return (
     // <div className='dropdown dropdown-end dropdown-bottom dropdown-hover'>
     <div className='x'>
-      {/* className='btn-circle z-30 flex h-10 w-10 items-center justify-center border bg-white p-2
-      text-center dark:bg-black' */}
+      {/* className='btn-circle z-30 flex h-10 w-10 items-center justify-center border bg-light p-2
+      text-center dark:bg-dark' */}
       <div
         tabIndex={0}
         role='button'
-        className='z-30 flex h-10 w-10 items-center justify-center border bg-white p-2 text-center dark:bg-black'
+        className='z-30 flex h-10 w-10 items-center justify-center border bg-light p-2 text-center dark:bg-dark'
       >
         <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'>
           <path
@@ -41,18 +41,18 @@ export function TagFilter({tags}) {
           ></path>
         </svg>
       </div>
-      {/* className='menu dropdown-content z-30 mt-1 w-44 rounded-md border bg-white p-2 text-sm
-      font-semibold tracking-tight dark:bg-black' */}
+      {/* className='menu dropdown-content z-30 mt-1 w-44 rounded-md border bg-light p-2 text-sm
+      font-semibold tracking-tight dark:bg-dark' */}
       <ul
         tabIndex={0}
-        className='z-30 mt-1 w-44 rounded-md border bg-white p-2 text-sm font-semibold tracking-tight dark:bg-black'
+        className='z-30 mt-1 w-44 rounded-md border bg-light p-2 text-sm font-semibold tracking-tight dark:bg-dark'
       >
         Filter by Tag:
         {allTags.map((tag) => (
           <li key={tag._id}>
             <div
               style={{backgroundColor: tag.color}}
-              className='transiton-colors line-clamp-1 inline-flex w-40 items-center justify-start rounded-none border-transparent text-black duration-200 ease-in hover:text-white'
+              className='transiton-colors line-clamp-1 inline-flex w-40 items-center justify-start rounded-none border-transparent text-dark duration-200 ease-in hover:text-light'
             >
               <Link href={`/blog/tag/${tag.tagSlug}`}>{tag.title}</Link>
             </div>

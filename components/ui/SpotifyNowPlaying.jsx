@@ -57,7 +57,7 @@ export function SpotifyNowPlaying(props) {
             )}
           </div>
           {result.isPlaying && (
-            <div className='flex min-w-40 items-center gap-2 rounded-lg bg-white bg-gradient-to-br p-2 shadow-sm shadow-purple-500/80 dark:from-slate-700 dark:via-slate-900 dark:to-slate-950'>
+            <div className='flex min-w-40 items-center gap-2 rounded-lg bg-light bg-gradient-to-br p-2 shadow-sm shadow-purple-500/80 dark:from-slate-700 dark:via-slate-900 dark:to-slate-950'>
               <Image
                 alt={`${result.title} album art`}
                 src={result.albumImageUrl}

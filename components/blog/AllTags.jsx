@@ -25,7 +25,7 @@ export default function AllTags({tags}) {
         <div key={tag._id}>
           <div
             style={{backgroundColor: tag.color}}
-            className='line-clamp-1 inline-flex items-center rounded-full border-transparent px-2 py-1 text-xs font-semibold tracking-tight text-black shadow-md ease-in focus:outline-none'
+            className='line-clamp-1 inline-flex items-center rounded-full border-transparent px-2 py-1 text-xs font-semibold tracking-tight text-dark shadow-md ease-in focus:outline-none'
           >
             <Link href={`/blog/tag/${tag.tagSlug}`}>{tag.title}</Link>
           </div>

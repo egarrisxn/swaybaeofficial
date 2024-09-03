@@ -4,17 +4,14 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import googleCalendarPlugin from '@fullcalendar/google-calendar'
 
-const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY || 'AIzaSyBb6HC-Kho3FKvbE_57ph1ZJTECch95pa8'
-const id =
-  process.env.NEXT_PUBLIC_CALENDAR_ID ||
-  '63739436a2ea120a341ec13abffc4b1289f77240a837d12043bed81ce6c78e1c@group.calendar.google.com'
+const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY
+const id = process.env.NEXT_PUBLIC_CALENDAR_ID
 
 export default function Calendar() {
   const calendarRef = useRef(null)
 
   useEffect(() => {
     if (calendarRef.current) {
-      // Add any additional setup or modifications here if needed
     }
   }, [])
 
@@ -24,7 +21,7 @@ export default function Calendar() {
       googleCalendarApiKey={key}
       events={{
         googleCalendarId: id,
-        textColor: 'white',
+        textColor: '#f8fafc',
         borderColor: '#00ceff',
         backgroundColor: '#b567ad',
       }}

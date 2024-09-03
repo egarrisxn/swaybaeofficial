@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { urlFor } from '@/utils/sanity/client.js'
+import {urlFor} from '@/utils/sanity/client.js'
 
-export default function TagSlugCard({ post }) {
-  const { coverImage, title, tags, excerpt } = post
+export default function TagSlugCard({post}) {
+  const {coverImage, title, tags, excerpt} = post
 
   return (
     <section>
@@ -11,7 +11,7 @@ export default function TagSlugCard({ post }) {
         <figure className='hidden drop-shadow-md lg:block lg:p-4'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
-              className='rounded border bg-white object-cover object-center p-2 shadow-md'
+              className='rounded border bg-light object-cover object-center p-2 shadow-md'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt || 'Post Image'}
               width={600}
@@ -20,7 +20,7 @@ export default function TagSlugCard({ post }) {
           </Link>
         </figure>
         <div className='flex flex-col gap-4 lg:mt-2 lg:p-4'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-sm bg-slate-700 px-2 tracking-tight text-white drop-shadow-md lg:prose-base dark:prose-invert'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-sm bg-slate-700 px-2 tracking-tight text-light drop-shadow-md lg:prose-base dark:prose-invert'>
             {new Date(post.publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',

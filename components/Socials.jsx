@@ -19,6 +19,7 @@ export function Socials() {
       </header>
       {/* ----------Social Body---------- */}
       <div className='mb-16 mt-12 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-12 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
+        {/* Spotify Now Playing */}
         <div className='flex justify-end pb-0 max-[370px]:justify-center max-[370px]:pb-4'>
           <SpotifyNowPlaying />
         </div>
@@ -39,7 +40,7 @@ export function Socials() {
             </Link>
           </div>
         </section>
-        {/* ----------Youtube Videos---------- */}
+        {/* ----------YouTube Videos---------- */}
         <section className='mx-auto my-4 max-w-11xl sm:mb-12 sm:mt-8 md:mb-16 md:mt-12 lg:mb-20'>
           <div className='mb-2 mt-12 flex items-center justify-center text-center text-xl sm:mb-6 sm:mt-6 sm:text-3xl md:text-4xl'>
             <span className='mr-1 text-primary sm:mr-2'>
@@ -62,10 +63,10 @@ export function Socials() {
             Videos
           </div>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-            <div className='rounded-xl border-2 shadow-md shadow-purple-500/80'>
+            <div className='rounded-xl border-2 bg-white shadow-[2px_3px_6px_0px_#581d95] dark:bg-black dark:shadow-[2px_3px_12px_0px_#581d95]'>
               <YoutubeEmbed vnum={0} />
             </div>
-            <div className='rounded-xl border-2 shadow-md shadow-purple-500/80'>
+            <div className='rounded-xl border-2 bg-white shadow-[2px_3px_6px_0px_#581d95] dark:bg-black dark:shadow-[2px_3px_12px_0px_#581d95]'>
               <YoutubeEmbed vnum={1} />
             </div>
           </div>
