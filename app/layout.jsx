@@ -1,11 +1,9 @@
 import './globals.css'
-import {draftMode} from 'next/headers'
-import LiveVisualEditing from '@/components/blog/LiveVisualEditing.jsx'
 import {Poppins, Sansita} from 'next/font/google'
 import {ThemeProvider} from 'next-themes'
 import {Navbar} from '@/components/Navbar.jsx'
 import {Footer} from '@/components/Footer.jsx'
-import {ScrollToTop} from '@/components/ui/ScrollToTop.jsx'
+import {Scroll2Top} from '@/components/ui/Scroll2Top.jsx'
 import {Analytics} from '@vercel/analytics/react'
 import {SpeedInsights} from '@vercel/speed-insights/next'
 
@@ -63,17 +61,23 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <html lang='en' className='scroll-smooth antialiased' suppressHydrationWarning>
-      <body className={`${poppins.variable} ${sansita.variable} flex min-h-dvh flex-col`}>
-        <ThemeProvider enableSystem attribute='class' defaultTheme='system'>
+    <html lang='en' suppressHydrationWarning>
+      <body
+        className={` ${poppins.variable} ${sansita.variable} grid min-h-[100dvh] grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain scroll-smooth bg-cover bg-no-repeat font-sans text-foreground antialiased`}
+      >
+        <ThemeProvider
+          enableSystem
+          disableTransitionOnChange
+          attribute='class'
+          defaultTheme='system'
+        >
           <Navbar />
-          <main className='grow'>{children}</main>
-          <ScrollToTop />
+          {children}
+          <Scroll2Top />
           <Footer />
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
-        {draftMode().isEnabled && <LiveVisualEditing />}
       </body>
     </html>
   )

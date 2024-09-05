@@ -1,8 +1,8 @@
 'use client'
 import {useState, useEffect} from 'react'
-import Tooltip from './Tooltip'
+import {Tooltip} from './Tooltip'
 
-export function ScrollToTop() {
+export function Scroll2Top() {
   const [showScroll, setShowScroll] = useState(false)
   const [isLarge, setIsLarge] = useState(false)
 
@@ -45,20 +45,20 @@ export function ScrollToTop() {
       onClick={scrollToTop}
       style={{
         position: 'fixed',
-        bottom: 30,
+        bottom: 35,
         left: '50%',
         transform: 'translateX(-50%)',
         display: showScroll ? 'flex' : 'none',
         cursor: 'pointer',
       }}
     >
-      <Tooltip text='Scroll2Top' direction='top'>
+      <Tooltip text='Scroll to Top' direction='top'>
         <svg
           width='0.7em'
           height='0.7em'
           viewBox='0 0 48 48'
           xmlns='http://www.w3.org/2000/svg'
-          className={`scrollToTop rounded-full border-2 border-white bg-primary text-white shadow-[1px_2px_4px_0px_#581d95] transition-all duration-200 ease-in hover:border-primary hover:bg-white hover:text-primary sm:z-40 dark:border-black dark:bg-secondary dark:text-black dark:shadow-[1px_2px_4px_0px_#581d95] dark:hover:border-white dark:hover:bg-black dark:hover:text-white ${isLarge ? 'scrollToTop-large' : ''}`}
+          className={`scrollToTop rounded-full border-2 border-background bg-secondary text-background shadow-[1px_2px_4px_0px_gray] transition-all duration-200 ease-in hover:border-foreground hover:bg-background hover:text-foreground sm:z-40 dark:border-primary dark:bg-dark-fade dark:text-primary dark:shadow-[1px_2px_4px_0px_gray] dark:hover:border-foreground dark:hover:bg-black dark:hover:text-foreground ${isLarge ? 'scrollToTop-large' : ''}`}
           style={{
             padding: 4,
           }}

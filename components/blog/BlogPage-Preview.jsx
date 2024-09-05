@@ -1,7 +1,7 @@
 'use client'
 import {useQuery} from '@sanity/react-loader'
-import {POSTS_QUERY, TAGS_QUERY} from '@/utils/sanity/queries.js'
-import BlogPage from './BlogPage.jsx'
+import {POSTS_QUERY, TAGS_QUERY} from '@/utils/sanity/queries'
+import BlogPage from './BlogPage'
 
 export default function BlogPagePreview(props) {
   const {initial} = props

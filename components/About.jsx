@@ -1,18 +1,13 @@
 import Image from 'next/image'
+import {Header} from './Header'
 
 export function About() {
   return (
-    <section className='w-full' aria-labelledby='about-heading'>
-      <header className='mx-auto w-full'>
-        <hr className='border-2 border-purple-800/50' />
-        <h1
-          id='about-heading'
-          className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'
-        >
-          About
-        </h1>
-      </header>
-
+    <section className='w-full'>
+      <Header id='about' showHr={true}>
+        About
+      </Header>
+      {/* ----------About Body---------- */}
       <div className='my-16 px-2 sm:px-4 md:px-6 lg:px-8 xl:my-20 xl:px-10 3xl:my-24 3xl:px-16'>
         <section className='mx-auto grid max-w-11xl grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-12 3xl:gap-x-24'>
           <div className='order-2 max-w-xl lg:order-1 lg:max-w-none'>
@@ -60,13 +55,12 @@ export function About() {
               alt='Image of Biff'
               width={1440}
               height={1800}
-              className='rounded-xl border-2 bg-white shadow-[2px_3px_6px_0px_#581d95] dark:bg-black dark:shadow-[2px_3px_12px_0px_#581d95]'
+              className='rounded-lg border-2 border-white bg-white shadow-[2px_3px_6px_0px_gray] dark:shadow-[2px_3px_12px_0px_gray]'
               loading='lazy'
             />
           </div>
         </section>
         <br />
-
         <section className='mx-auto lg:max-w-11xl'>
           <div className='mt-4 font-semibold sm:text-lg md:text-2xl lg:text-lg xl:text-3xl 3xl:mt-12 3xl:text-4xl'>
             <p className='leading-6 tracking-tight sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
@@ -75,30 +69,32 @@ export function About() {
           </div>
           <div className='mt-6 grid grid-cols-1 gap-y-6 lg:mt-8 lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-6 lg:gap-y-0 lg:text-sm xl:mt-10 xl:grid-cols-3 xl:grid-rows-2 xl:text-base 3xl:mt-12 3xl:gap-x-20 3xl:text-2xl'>
             <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-primary'>&#9864; </span> 3rd place in Blizzard&apos;s
+              <span className='text-sm text-primary'>&#9864; </span> 3rd place in Blizzard&apos;s
               Hearthstone Battle of the Boars Tournament.{' '}
               <span className='font-medium'>(May 2021)</span>
             </p>
             <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-primary'>&#9864; </span> Casting the Gaming Stadium Hearthstone
-              Tournament. <span className='font-medium'>(June 2021)</span>
+              <span className='text-sm text-primary'>&#9864; </span> Casting the Gaming Stadium
+              Hearthstone Tournament. <span className='font-medium'>(June 2021)</span>
             </p>
             <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-primary'>&#9864; </span> Casting and Hosting multiple Dreamhack
-              Community Clash tournaments. <span className='font-medium'>(2021-2022)</span>
+              <span className='text-sm text-primary'>&#9864; </span> Casting and Hosting multiple
+              Dreamhack Community Clash tournaments.{' '}
+              <span className='font-medium'>(2021-2022)</span>
             </p>
             <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-primary'>&#9864; </span> Casting 4 series of Super Girl Gamer
-              Pro Hearthstone Tournaments. <span className='font-medium'>(2021-2023)</span>
+              <span className='text-sm text-primary'>&#9864; </span> Casting 4 series of Super Girl
+              Gamer Pro Hearthstone Tournaments. <span className='font-medium'>(2021-2023)</span>
             </p>
             <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-primary'>&#9864; </span> Multiple Battle.net Launcher Feature
-              events, including featured streams and curated YouTube videos just for Hearthstone.
+              <span className='text-sm text-primary'>&#9864; </span> Multiple Battle.net Launcher
+              Feature events, including featured streams and curated YouTube videos just for
+              Hearthstone.
             </p>
             <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-primary'>&#9864; </span> Producing, hosting, and casting one of
-              the earliest AND largest grassroots tournaments for Hearthstone Battlegrounds, with
-              close to <span className='underline underline-offset-2'>100 participants!</span>
+              <span className='text-sm text-primary'>&#9864; </span> Producing, hosting, and casting
+              one of the earliest AND largest grassroots tournaments for Hearthstone Battlegrounds,
+              with close to <span className='underline underline-offset-2'>100 participants!</span>
             </p>
           </div>
         </section>

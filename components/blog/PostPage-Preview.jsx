@@ -1,7 +1,7 @@
 'use client'
 import {useQuery} from '@sanity/react-loader'
-import {POST_QUERY} from '@/utils/sanity/queries.js'
-import PostPage from './PostPage.jsx'
+import {POST_QUERY} from '@/utils/sanity/queries'
+import PostPage from './PostPage'
 
 export default function PostPagePreview(props) {
   const {params, initial} = props

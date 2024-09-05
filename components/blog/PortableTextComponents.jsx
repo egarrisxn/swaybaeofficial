@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import {Link as NextLink} from 'next/link'
-import {resolveHref} from '@/utils/sanity/resolveHref.js'
-import {urlFor} from '@/utils/sanity/client.js'
+import {Link, NextLink} from 'next/link'
+import {resolveHref} from '@/utils/sanity/resolveHref'
+import {urlFor} from '@/utils/sanity/client'
 import {PortableText} from 'next-sanity'
 
 const hrefResolver = ({internalLink}) => {
@@ -37,7 +37,7 @@ export default function PortableTextComponents({value, className, content}) {
     h4: ({children}) => <h4 className='my-4 text-xl font-bold'>{children}</h4>,
     h5: ({children}) => <h5 className='mx-8 text-lg font-bold'>{children}</h5>,
     blockquote: ({children}) => (
-      <blockquote className='font-white my-4 border-l-4 border-gray-500 pl-4 italic text-gray-500'>
+      <blockquote className='font-white my-4 border-l-4 border-gray pl-4 italic text-gray'>
         {children}
       </blockquote>
     ),
@@ -50,7 +50,7 @@ export default function PortableTextComponents({value, className, content}) {
           link={value}
           hrefResolver={hrefResolver}
           as={NextLink} // This tells the Link component to use Next.js's Link component
-          className='text-blue-500 hover:text-blue-700'
+          className='text-blue hover:text-blue-tint'
         >
           {children}
         </Link>
@@ -60,13 +60,13 @@ export default function PortableTextComponents({value, className, content}) {
       em: ({children}) => <em className='italic'>{children}</em>,
       code: ({children}) => <code className='p-1'>{children}</code>,
       underline: ({children}) => <u>{children}</u>,
-      highlight: ({children}) => <span className='bg-yellow-500 px-1'>{children}</span>,
+      highlight: ({children}) => <span className='bg-yellow px-1'>{children}</span>,
     },
     types: {
       image: ({value, isInline}) => (
         <figure className='mb-1'>
           <Image
-            className='rounded border bg-light object-cover object-center p-2 shadow-md'
+            className='rounded border-2 bg-light object-cover object-center p-2 shadow-md'
             src={urlFor(value)
               .width(isInline ? 100 : 800)
               .fit('max')
@@ -81,7 +81,7 @@ export default function PortableTextComponents({value, className, content}) {
             }}
           />
           {value.caption && (
-            <figcaption className='text-sm italic text-gray-500'>{value.caption}</figcaption>
+            <figcaption className='text-sm italic text-gray'>{value.caption}</figcaption>
           )}
         </figure>
       ),
@@ -89,9 +89,9 @@ export default function PortableTextComponents({value, className, content}) {
         <div className='aspect-h-9 aspect-w-16 flex-1'>
           <iframe
             src={`https://www.youtube.com/embed/${value.video.id}`}
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allow='accelerometer; autoplay; clip2board-write; encrypted-media; gyroscope; picture-in-picture'
             allowfullscreen={true}
-            className='h-full w-full rounded border bg-light object-center p-2 shadow-md'
+            className='size-full rounded border-2 bg-light object-center p-2 shadow-md'
           ></iframe>
         </div>
       ),

@@ -1,10 +1,10 @@
 'use client'
-import { useState } from 'react'
-import FeaturedCard from './FeaturedCard.jsx'
-import LatestCard from './LatestCard.jsx'
-import LoadButton from './LoadButton.jsx'
+import {useState} from 'react'
+import FeaturedCard from './FeaturedCard'
+import LatestCard from './LatestCard'
+import LoadButton from './LoadButton'
 
-export function AllPosts({ posts }) {
+export function AllPosts({posts}) {
   const featuredPosts = posts.filter((post) => post.featured)
   const remainingPosts = posts.filter((post) => !post.featured)
 
@@ -16,8 +16,8 @@ export function AllPosts({ posts }) {
   }
 
   return (
-    <section>
-      <h3 className='mb-2 ml-1 text-xl font-bold'>Featured Posts</h3>
+    <>
+      <h2 className='mb-2 ml-1 text-xl font-bold'>Featured Posts</h2>
       {featuredPosts.length > 0 && (
         <section className='mt-8 grid grid-cols-1 gap-16 pb-16'>
           {featuredPosts.map((post) => (
@@ -27,7 +27,7 @@ export function AllPosts({ posts }) {
           ))}
         </section>
       )}
-      <hr className='mb-8 mt-4 w-full border' />
+      <hr className='mb-8 mt-4 w-full rounded-lg border border-gray-fade' />
       <h4 className='mb-4 ml-1 text-xl font-bold'>Latest Posts</h4>
       <section className='mt-8 grid grid-cols-1 gap-16 pb-12 md:grid-cols-2 xl:grid-cols-3'>
         {[...featuredPosts, ...remainingPosts].slice(0, loadMore).map((post) => (
@@ -37,6 +37,6 @@ export function AllPosts({ posts }) {
         ))}
       </section>
       {posts.length > loadMore && <LoadButton onClick={showMoreArticles} />}
-    </section>
+    </>
   )
 }

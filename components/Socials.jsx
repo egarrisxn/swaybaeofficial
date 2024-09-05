@@ -1,43 +1,44 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import YoutubeEmbed from './ui/YouTubeEmbed'
-import {SpotifyNowPlaying} from './ui/SpotifyNowPlaying'
-import {SocialCarousel} from './ui/SocialCarousel'
+import {Header} from './Header'
+import {Spotify} from './ui/Spotify'
+import {Carousel} from './ui/Carousel'
+import YouTube from './ui/YouTube'
 
 export function Socials() {
   return (
-    <section className='w-full' aria-labelledby='socials-heading'>
-      <header className='mx-auto w-full'>
-        <hr className='border-2 border-purple-800/50' />
-        <h1
-          id='socials-heading'
-          className='ml-2 mt-4 bg-gradient-to-tr from-navy via-pink to-pink bg-clip-text text-xl uppercase tracking-widest text-transparent xl:mt-5 3xl:ml-3 3xl:mt-6 3xl:text-3xl'
-        >
-          Socials
-        </h1>
-      </header>
+    <section className='w-full'>
+      <Header id='socials' showHr={true}>
+        Socials
+      </Header>
       {/* ----------Social Body---------- */}
       <div className='mb-16 mt-12 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-12 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
-        {/* Spotify Now Playing */}
+        {/* -----Spotify Now Playing----- */}
         <div className='flex justify-end pb-0 max-[370px]:justify-center max-[370px]:pb-4'>
-          <SpotifyNowPlaying />
+          <Spotify />
         </div>
         {/* ----------Carousel---------- */}
         <section className='mx-auto my-4 max-w-11xl sm:mb-12 sm:mt-8 md:mb-16 md:mt-12 lg:mb-20 lg:mt-16'>
-          <SocialCarousel />
+          <Carousel />
           <div className='mb-12 mt-2 sm:mb-6 sm:mt-6'>
-            <Link href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
-              <div className='flex flex-row items-center justify-center text-sm tracking-tight max-[370px]:text-xs sm:text-lg'>
-                If you'd like to support what I do:
+            <a href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
+              <div className='flex flex-row items-center justify-center text-sm italic tracking-tight max-[370px]:text-xs sm:text-lg'>
+                If you&apos;d like to support what I do:
                 <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden'>
                   THRONE
                 </span>
-                <div className='size-5 max-[370px]:ml-1 max-[370px]:size-4 sm:size-6'>
-                  <Image src='/Throne.jpg' alt='Throne' width={24} height={24} />
+                <div className='ml-0.5 size-5 overflow-hidden rounded-full max-[370px]:ml-1 max-[370px]:size-4 sm:size-6'>
+                  <Image
+                    src='/Throne.jpg'
+                    alt='Throne'
+                    width={24}
+                    height={24}
+                    className='size-full'
+                  />
                 </div>
               </div>
-            </Link>
+            </a>
           </div>
         </section>
         {/* ----------YouTube Videos---------- */}
@@ -56,18 +57,18 @@ export function Socials() {
               href='https://www.youtube.com/sway_baetv/'
               target='_blank'
               rel='noopener noreferrer'
-              className='mx-1 bg-gradient-to-b from-navy via-pink to-pink bg-clip-text text-transparent'
+              className='mx-1 bg-gradient-to-tl from-purple-fade via-pink-tint to-pink-fade bg-clip-text text-transparent lg:mx-1.5'
             >
               YouTube
             </Link>
             Videos
           </div>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-            <div className='rounded-xl border-2 bg-white shadow-[2px_3px_6px_0px_#581d95] dark:bg-black dark:shadow-[2px_3px_12px_0px_#581d95]'>
-              <YoutubeEmbed vnum={0} />
+            <div className='rounded-lg border-2 border-white bg-white shadow-[2px_3px_6px_0px_gray] dark:shadow-[2px_3px_12px_0px_gray]'>
+              <YouTube vnum={0} />
             </div>
-            <div className='rounded-xl border-2 bg-white shadow-[2px_3px_6px_0px_#581d95] dark:bg-black dark:shadow-[2px_3px_12px_0px_#581d95]'>
-              <YoutubeEmbed vnum={1} />
+            <div className='rounded-lg border-2 border-white bg-white shadow-[2px_3px_6px_0px_gray] dark:shadow-[2px_3px_12px_0px_gray]'>
+              <YouTube vnum={1} />
             </div>
           </div>
         </section>

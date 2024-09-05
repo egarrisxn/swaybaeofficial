@@ -4,7 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import {useCallback, useEffect, useState} from 'react'
 import {socialData} from '@/utils/constants'
 
-export function SocialCarousel() {
+export function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     dragFree: false,
@@ -73,32 +73,26 @@ export function SocialCarousel() {
           </svg>
         </button>
       </div>
-      <div
-        className='h-full w-full overflow-hidden border-b-2 border-t-2 px-1 sm:bg-light2 sm:bg-opacity-20 sm:bg-clip-padding sm:backdrop-blur-lg sm:backdrop-filter sm:dark:bg-dark2 sm:dark:backdrop-blur-sm'
-        ref={emblaRef}
-      >
+      <div className='size-full overflow-hidden px-1 sm:border-b-2 sm:border-t-2' ref={emblaRef}>
         <div className='embla__container flex touch-pan-y xl:my-2 2xl:my-4 3xl:my-8 4xl:my-14'>
           {socialData.map((social, index) => (
             <div key={index} className='embla__slide min-w-0'>
               <div className='embla__slide__number flex items-center justify-center text-[1rem] font-bold'>
-                <a href={social.href} target='_blank' rel='noopener noreferrer'>
-                  <div className='relative'>
+                <div className='relative'>
+                  <a href={social.href} target='_blank' rel='noopener noreferrer'>
                     <Image
                       src={social.src}
                       alt={social.alt}
                       width='600'
                       height='400'
-                      className='rounded-md border-2 bg-white shadow-[2px_3px_6px_0px_#581d95] lg:rounded-lg dark:bg-black dark:shadow-[1px_2px_8px_0px_#581d95]'
+                      className='rounded-lg sm:border-2 sm:border-white sm:bg-white sm:shadow-[2px_3px_6px_0px_gray] sm:dark:shadow-[2px_3px_12px_0px_gray]'
                     />
-                    <div className='overlay-text absolute bottom-0 left-0 flex items-center gap-1 rounded-bl-md rounded-tr-md bg-slate-950/70 p-2 text-center text-light lg:rounded-bl-lg lg:rounded-tr-lg'>
-                      <div className='text-primary'>{social.icon}</div>
-                      <div className='font-white text-sm'>{social.label}:</div>
-                      <div className='text-sm font-normal italic text-light transition-colors duration-200 ease-in hover:text-primary'>
-                        {social.username}
-                      </div>
+                    <div className='overlay-text absolute bottom-0 left-0 flex items-center gap-1 p-2 text-center text-white transition-colors duration-200 ease-in hover:text-primary'>
+                      <div>{social.icon}</div>
+                      <div className='text-sm font-medium italic'>{social.username}</div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
           ))}

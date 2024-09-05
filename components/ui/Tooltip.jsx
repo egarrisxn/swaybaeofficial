@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 
-export default function Tooltip({children, text, direction = 'top', ...otherProps}) {
+export function Tooltip({children, text, direction = 'top', ...otherProps}) {
   const getTooltipClasses = () => {
     let baseClasses =
-      'absolute z-50 opacity-0 pointer-events-none bg-dark dark:bg-light text-white dark:text-black p-2 min-w-max text-xs 2xl:text-sm rounded transition-all duration-100 transform'
+      'absolute z-50 opacity-0 pointer-events-none bg-foreground text-background p-1 sm:p-2 2xl:text-base min-w-max text-xs 2xl:text-sm rounded transition-all duration-100 transform'
 
     switch (direction) {
       case 'left':

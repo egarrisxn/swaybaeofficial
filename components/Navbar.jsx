@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {usePathname} from 'next/navigation'
 import {useState, useEffect, useCallback} from 'react'
 import {useTheme} from 'next-themes'
-import Tooltip from './ui/Tooltip'
+import {Tooltip} from './ui/Tooltip'
 
 const navLinks = [
   {href: '/', label: 'Home'},
@@ -53,7 +53,7 @@ export function Navbar() {
                   width={64}
                   className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
                 />
-                <div className='ml-1 bg-gradient-to-tr from-secondary via-secondary to-primary bg-clip-text text-sm font-bold text-transparent xl:ml-1.5 xl:text-lg 3xl:text-2xl'>
+                <div className='ml-1 bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text text-sm font-bold text-transparent xl:ml-1.5 xl:text-lg 3xl:text-2xl'>
                   <p className='leading-tight tracking-tight'>Creator</p>
                   <p className='leading-tight tracking-tight'>of Chaos</p>
                 </div>
@@ -62,7 +62,7 @@ export function Navbar() {
           </Link>
           <button
             type='button'
-            className='inline-flex items-center text-sm text-primary md:hidden dark:text-secondary'
+            className='inline-flex items-center text-sm text-b2p md:hidden'
             aria-controls='navbar-menu'
             aria-label='Toggle navigation menu'
             aria-expanded={state.isMobileDropdownOpen}
@@ -124,8 +124,8 @@ export function Navbar() {
             {state.mounted && (
               <button
                 onClick={handleToggleTheme}
-                className='inline-flex items-center rounded-lg px-1 py-2 text-sm text-secondary md:hidden dark:text-primary'
-                aria-label='Toggle theme'
+                className='inline-flex items-center rounded-lg px-1 py-2 text-sm text-purple-fade md:hidden dark:text-yellow'
+                aria-label='Switch themes'
               >
                 <Tooltip
                   text={resolvedTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
@@ -169,7 +169,7 @@ export function Navbar() {
           {state.mounted && (
             <button
               onClick={handleToggleTheme}
-              className='z-50 hidden items-center rounded-lg p-1 text-sm text-secondary md:inline-flex dark:text-primary'
+              className='z-50 hidden items-center rounded-lg p-1 text-sm text-purple-fade md:inline-flex dark:text-yellow'
               aria-label='Toggle theme'
             >
               <Tooltip

@@ -1,13 +1,13 @@
 'use client'
 import {useState, useEffect} from 'react'
 
-export default function VideoPlayer({vnum}) {
+export default function YouTube({vnum}) {
   const [videoId, setVideoId] = useState('')
 
   useEffect(() => {
     const loadVideo = async () => {
       const playlistId = 'UUbpQhE5NYQ05pSp_DJJQxCA'
-      const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY // Updated environment variable
+      const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY
       const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=2&playlistId=${playlistId}&key=${apiKey}`
 
       try {
@@ -46,7 +46,7 @@ export default function VideoPlayer({vnum}) {
           width='100%'
           height='100%'
           allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          className='rounded-lg'
+          className='rounded-md'
           aria-label='Embedded YouTube video player'
         ></iframe>
       )}

@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic'
-import { draftMode } from 'next/headers'
-import { notFound } from 'next/navigation'
-import { generateStaticSlugs } from '@/utils/sanity/generateStaticSlugs.js'
-import { loadTag } from '@/utils/sanity/loadQuery.js'
-import TagPage from '@/components/blog/TagPage.jsx'
+import {draftMode} from 'next/headers'
+import {notFound} from 'next/navigation'
+import {generateStaticSlugs} from '@/utils/sanity/generateStaticSlugs'
+import {loadTag} from '@/utils/sanity/loadQuery'
+import TagPage from '@/components/blog/TagPage'
 
 const TagPagePreview = dynamic(() => import('@/components/blog/TagPage-Preview.jsx'))
 
@@ -11,7 +11,7 @@ export function generateStaticParams() {
   return generateStaticSlugs('tag')
 }
 
-export default async function TagSlugPage({ params }) {
+export default async function TagSlugPage({params}) {
   const initial = await loadTag(params.slug)
 
   if (draftMode().isEnabled) {

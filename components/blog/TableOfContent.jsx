@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
-import Tooltip from '../ui/Tooltip'
+import {Tooltip} from '../ui/Tooltip'
 
 export default function TableOfContent({headings}) {
   const [activeLink, setActiveLink] = useState(null)

@@ -3,6 +3,20 @@ import {About} from '@/components/About'
 import {Socials} from '@/components/Socials'
 import {Contact} from '@/components/Contact'
 
+// import {Suspense} from 'react'
+
+// function fetchData() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve('Data loaded')
+//     }, 3000)
+//   })
+// }
+
+// export default async function Home() {
+//   const data = await fetchData()
+//   console.log({data})
+
 export default function Home() {
   return (
     <main className='mx-auto w-full sm:container'>

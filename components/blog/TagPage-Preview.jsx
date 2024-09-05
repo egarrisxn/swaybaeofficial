@@ -1,7 +1,7 @@
 'use client'
 import {useQuery} from '@sanity/react-loader'
 import {TAG_QUERY} from '@/utils/sanity/queries'
-import TagPage from './TagPage.jsx'
+import TagPage from './TagPage'
 
 export default function TagPagePreview(props) {
   const {params, initial} = props
