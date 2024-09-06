@@ -48,7 +48,7 @@ export default function PostPage({post}) {
             />
           </section>
           <section className='mb-6 mt-8 flex max-[300px]:max-w-60 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16'>
-            <div className='prose prose-slate mx-auto transition-all duration-200 ease-in md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal prose-h4:text-secondary prose-a:text-blue hover:prose-a:text-blue-tint prose-blockquote:border-primary prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-blue-tint prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border-2 prose-img:bg-light prose-img:p-2 prose-img:shadow-md'>
+            <div className='prose prose-slate mx-auto transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:font-bold prose-h1:text-primary prose-h2:font-semibold prose-h2:text-primary prose-h3:font-medium prose-h3:text-secondary prose-h4:font-normal prose-h4:text-secondary prose-a:text-blue hover:prose-a:text-blue-tint prose-blockquote:border-primary prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-blue-tint prose-th:text-xl prose-img:w-full prose-img:rounded prose-img:border-2 prose-img:bg-light prose-img:p-2 prose-img:shadow-md'>
               <PortableTextComponents content={content} />
             </div>
           </section>
@@ -56,8 +56,8 @@ export default function PostPage({post}) {
       </article>
       <div className='mb-16 flex max-w-5xl flex-col items-center justify-center max-[300px]:max-w-60 min-[300px]:mx-auto md:flex-row lg:mb-20 3xl:mb-24 4xl:mb-10 4xl:max-w-6xl 4xl:pr-0'>
         <hr className='mb-4 w-full rounded-lg border border-gray-fade md:mb-0' />
-        <p className='pb-2 font-thin md:pb-0 md:pr-2'>Tags:</p>
-        <div className='flex flex-row flex-wrap items-center justify-center gap-2'>
+        <p className='pb-2 font-semibold md:pb-0 md:pr-2'>Tags:</p>
+        <div className='flex items-center justify-center gap-2'>
           {tags.map((tag) => (
             <div key={tag._id}>
               <TagBadge tag={tag} />

@@ -7,7 +7,7 @@ export default function TagPage({tag}) {
   const {title, posts} = tag
 
   return (
-    <section className='w-full'>
+    <>
       <Header id='tags' showSearch={true} showLink={true} linkHref='/blog' linkText='Back' />
       {/* ----------Posts by Tag ---------- */}
       <div className='mx-auto mb-4 mt-12 max-w-7xl sm:px-4 lg:my-20 lg:px-6 xl:px-10 3xl:px-16 4xl:max-w-screen-3xl'>
@@ -21,6 +21,6 @@ export default function TagPage({tag}) {
           ))}
         </div>
       </div>
-    </section>
+    </>
   )
 }

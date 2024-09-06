@@ -100,7 +100,7 @@ export function Search({placeholder}) {
           {searchResults.map((result) => (
             <div
               key={result._id}
-              className='line-clamp-1 inline-flex w-full items-center justify-start p-2 transition-colors duration-200 ease-in hover:text-primary'
+              className='line-clamp-1 inline-flex w-full items-center justify-start p-2 transition ease-in-out hover:text-primary'
             >
               <Link href={`/blog/post/${result.slug.current}`}>{result.title}</Link>
             </div>

@@ -2,9 +2,9 @@ export function Button({type = 'button', className, children}) {
   return (
     <button
       type={type}
-      className={`${className} button cursor-pointer overflow-hidden rounded-[6px] border-2 py-1.5 text-xs font-semibold shadow-[1px_2px_4px_0px_gray] transition-all duration-300 ease-in-out hover:shadow-[1px_2px_5px_0px_gray] focus:outline-none focus:ring-2 md:py-2.5 md:text-sm 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg dark:shadow-[1px_3px_6px_0px_gray] hover:dark:shadow-[1px_3px_7px_0px_gray]`}
+      className={`${className} relative overflow-hidden rounded-lg border-2 py-1.5 text-xs font-semibold shadow-soft transition-transform duration-500 ease-in-out before:absolute before:inset-0 before:z-[-1] before:-translate-x-full before:rounded-[5px] before:bg-gradient-to-r before:from-[var(--b2p-tint)] before:to-[var(--b2p)] before:transition-transform before:duration-500 before:ease-in-out hover:scale-105 hover:shadow-hard hover:before:translate-x-0 focus:outline-none focus:ring-2 active:scale-90 md:py-2.5 md:text-sm 2xl:py-4 2xl:text-base 3xl:py-5 3xl:text-lg`}
     >
-      {children}
+      <span className='relative z-10'>{children}</span>
     </button>
   )
 }

@@ -3,6 +3,14 @@ import Link from 'next/link'
 import {useEffect, useState} from 'react'
 import {Tooltip} from '../ui/Tooltip'
 
+const tocStyle = {
+  color: 'var(--b2w)',
+}
+
+const tocStyleActive = {
+  color: 'var(--p2b)',
+}
+
 export default function TableOfContent({headings}) {
   const [activeLink, setActiveLink] = useState(null)
 
@@ -11,12 +19,12 @@ export default function TableOfContent({headings}) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const id = entry.target.getAttribute('id')
-        const tocLink = document.querySelector(`.table-of-content-link[href='#${id}']`)
+        const tocLink = document.querySelector(`a[href='#${id}']`)
         if (tocLink && entry.intersectionRatio > 0) {
           if (activeLink) {
-            activeLink.classList.remove('active')
+            activeLink.style.color = tocStyle.color
           }
-          tocLink.classList.add('active')
+          tocLink.style.color = tocStyleActive.color
           activeLink = tocLink
           setActiveLink(tocLink)
         }
@@ -33,16 +41,16 @@ export default function TableOfContent({headings}) {
       <ol className='table-of-content'>
         {headings.map((heading, idx) => (
           <li key={idx} className='my-2.5 flex h-8 w-full items-center justify-center'>
-            <Link href={`#${heading._key}`} className='table-of-content-link text-5xl'>
+            <Link
+              href={`#${heading._key}`}
+              style={tocStyle} // Apply base style
+              className={`text-5xl ${activeLink && activeLink.getAttribute('href') === `#${heading._key}` ? 'active' : ''}`}
+            >
               <Tooltip
                 text={heading.children.map((child) => child.text).join(' ')}
                 direction='right'
               >
-                <span
-                  className={`z-50 hover:text-primary ${activeLink === `.table-of-content-link[href='#${heading._key}']` ? 'active' : ''}`}
-                >
-                  &bull;
-                </span>
+                <span className='z-50 hover:text-primary'>&bull;</span>
               </Tooltip>
             </Link>
           </li>

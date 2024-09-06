@@ -2,8 +2,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {Header} from './Header'
-import {Spotify} from './ui/Spotify'
 import {Carousel} from './ui/Carousel'
+import {Spotify} from './ui/Spotify'
 import YouTube from './ui/YouTube'
 
 export function Socials() {
@@ -64,10 +64,10 @@ export function Socials() {
             Videos
           </div>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-            <div className='rounded-lg border-2 border-white bg-white shadow-[2px_3px_6px_0px_gray] dark:shadow-[2px_3px_12px_0px_gray]'>
+            <div className='rounded-lg border-2 border-white bg-white shadow-hard'>
               <YouTube vnum={0} />
             </div>
-            <div className='rounded-lg border-2 border-white bg-white shadow-[2px_3px_6px_0px_gray] dark:shadow-[2px_3px_12px_0px_gray]'>
+            <div className='rounded-lg border-2 border-white bg-white shadow-hard'>
               <YouTube vnum={1} />
             </div>
           </div>

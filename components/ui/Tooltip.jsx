@@ -4,7 +4,7 @@ import React from 'react'
 export function Tooltip({children, text, direction = 'top', ...otherProps}) {
   const getTooltipClasses = () => {
     let baseClasses =
-      'absolute z-50 opacity-0 pointer-events-none bg-foreground text-background p-1 sm:p-2 2xl:text-base min-w-max text-xs 2xl:text-sm rounded transition-all duration-100 transform'
+      'absolute z-50 opacity-0 pointer-events-none bg-foreground text-background p-1 sm:p-2 2xl:text-base min-w-max text-xs 2xl:text-sm rounded transition-all transform'
 
     switch (direction) {
       case 'left':

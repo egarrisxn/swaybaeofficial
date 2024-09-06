@@ -7,7 +7,7 @@ export default function TagSlugCard({post}) {
 
   return (
     <>
-      <div className='grid grid-cols-1 gap-2 rounded-lg border-2 bg-w2b p-4 shadow-[2px_3px_6px_0px_gray] md:p-8 lg:grid-cols-6 lg:p-2 2xl:gap-6 sm:dark:shadow-[2px_3px_12px_0px_gray]'>
+      <div className='grid grid-cols-1 gap-2 rounded-lg border-2 bg-w2b p-4 shadow-hard md:p-8 lg:grid-cols-6 lg:p-2 2xl:gap-6'>
         <div className='hidden drop-shadow-md lg:col-start-1 lg:col-end-3 lg:grid lg:p-4'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
@@ -22,7 +22,7 @@ export default function TagSlugCard({post}) {
         <div className='lg:col-start-3 lg:col-end-6 lg:grid'>
           <div className='flex flex-col gap-2 p-1 lg:gap-4 lg:px-0 lg:py-4 xl:gap-6 2xl:gap-12'>
             <div className='flex flex-row lg:hidden'>
-              <p className='prose prose-sm line-clamp-1 flex w-fit rounded-sm bg-gray-tint px-2 tracking-tight text-light drop-shadow-md lg:prose-base dark:prose-invert lg:hidden'>
+              <p className='prose prose-sm line-clamp-1 flex w-fit rounded-md bg-gray-tint px-2 tracking-tight text-light drop-shadow-md lg:prose-base dark:prose-invert lg:hidden'>
                 {new Date(post.publishedAt).toLocaleDateString('en-US', {
                   day: 'numeric',
                   month: 'long',
@@ -43,7 +43,7 @@ export default function TagSlugCard({post}) {
         <div className='lg:col-span-1 lg:col-end-7 lg:grid'>
           <div className='flex flex-col lg:mt-2 lg:justify-between lg:p-4'>
             <div className='hidden justify-end lg:flex lg:flex-row'>
-              <p className='prose prose-sm line-clamp-1 flex w-fit rounded-sm bg-gray-tint px-2 tracking-tight text-light drop-shadow-md lg:prose-base 2xl:prose-xl dark:prose-invert'>
+              <p className='prose prose-sm line-clamp-1 flex w-fit rounded-md bg-gray-tint px-2 tracking-tight text-light drop-shadow-md lg:prose-base 2xl:prose-xl dark:prose-invert'>
                 {new Date(post.publishedAt).toLocaleDateString('en-US', {
                   day: 'numeric',
                   month: 'long',

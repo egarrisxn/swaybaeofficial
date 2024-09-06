@@ -11,7 +11,7 @@ export function About() {
       <div className='my-16 px-2 sm:px-4 md:px-6 lg:px-8 xl:my-20 xl:px-10 3xl:my-24 3xl:px-16'>
         <section className='mx-auto grid max-w-11xl grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-12 3xl:gap-x-24'>
           <div className='order-2 max-w-xl lg:order-1 lg:max-w-none'>
-            <div className='sansita relative inline-block text-4xl font-black italic tracking-tight sm:text-5xl lg:text-6xl 3xl:text-8xl'>
+            <div className='relative inline-block font-sansita text-4xl font-black italic tracking-tight sm:text-5xl lg:text-6xl 3xl:text-8xl'>
               <span className='absolute bottom-0.5 inline-block h-2 w-full bg-primary sm:h-2.5 md:bottom-0 md:h-3 3xl:h-4'></span>
               <p className='relative pl-1 pr-0.5'>I&apos;m Sway!</p>
             </div>
@@ -55,7 +55,7 @@ export function About() {
               alt='Image of Biff'
               width={1440}
               height={1800}
-              className='rounded-lg border-2 border-white bg-white shadow-[2px_3px_6px_0px_gray] dark:shadow-[2px_3px_12px_0px_gray]'
+              className='rounded-lg border-2 border-white bg-white shadow-hard'
               loading='lazy'
             />
           </div>

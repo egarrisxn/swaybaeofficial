@@ -61,10 +61,10 @@ export function Contact() {
       </Header>
       {/* ----------Contact Body---------- */}
       <div className='mb-16 mt-12 px-2 sm:mt-16 sm:px-4 md:px-6 lg:my-24 lg:px-8 xl:px-10 3xl:my-28 3xl:px-16'>
-        <section className='mx-auto grid max-w-11xl items-center sm:grid-cols-2 sm:gap-2 sm:rounded-lg sm:border-2 sm:bg-w2b sm:px-4 sm:py-6 sm:shadow-[2px_3px_6px_0px_gray] md:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28 sm:dark:shadow-[2px_3px_12px_0px_gray]'>
+        <section className='mx-auto grid max-w-11xl items-center sm:grid-cols-2 sm:gap-2 sm:rounded-lg sm:border-2 sm:bg-w2b sm:px-4 sm:py-6 sm:shadow-hard md:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
           {/* Left Side */}
           <div className='mb-12 sm:mb-0'>
-            <h2 className='sansita text-4xl font-black italic tracking-tight md:text-5xl lg:text-6xl 3xl:text-8xl'>
+            <h2 className='font-sansita text-4xl font-black italic tracking-tight md:text-5xl lg:text-6xl 3xl:text-8xl'>
               Let&apos;s Talk
             </h2>
             <p className='mt-2 text-xl leading-5 text-foreground max-[450px]:text-base sm:text-sm md:text-base xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>

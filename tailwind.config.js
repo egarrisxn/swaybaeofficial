@@ -2,9 +2,6 @@ module.exports = {
   darkMode: 'selector',
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    fontFamily: {
-      sans: ['Poppins', 'system-ui', 'sans-serif'],
-    },
     colors: {
       transparent: 'transparent',
       currentColor: 'currentColor',
@@ -19,6 +16,18 @@ module.exports = {
         tint: 'var(--dark-tint)',
         DEFAULT: 'var(--dark)',
         fade: 'var(--dark-fade)',
+      },
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      primary: {
+        tint: 'var(--primary-tint)',
+        DEFAULT: 'var(--primary)',
+        fade: 'var(--primary-fade)',
+      },
+      secondary: {
+        tint: 'var(--secondary-tint)',
+        DEFAULT: 'var(--secondary)',
+        fade: 'var(--secondary-fade)',
       },
       blue: {
         tint: 'var(--blue-tint)',
@@ -55,18 +64,6 @@ module.exports = {
         DEFAULT: 'var(--yellow)',
         fade: 'var(--yellow-fade)',
       },
-      primary: {
-        tint: 'var(--primary-tint)',
-        DEFAULT: 'var(--primary)',
-        fade: 'var(--primary-fade)',
-      },
-      secondary: {
-        tint: 'var(--secondary-tint)',
-        DEFAULT: 'var(--secondary)',
-        fade: 'var(--secondary-fade)',
-      },
-      background: 'var(--background)',
-      foreground: 'var(--foreground)',
       neutral: 'var(--neutral)',
       accent: 'var(--accent)',
       border: 'var(--border)',
@@ -81,10 +78,17 @@ module.exports = {
         DEFAULT: 'var(--p2b)',
       },
     },
-
     extend: {
       fontFamily: {
-        sansita: ['Sansita', 'sans-serif'],
+        sans: [' var(--font-poppins) '],
+        sansita: [' var(--font-sansita) '],
+      },
+      backgroundImage: {
+        myGradient: 'var(--gradient)',
+      },
+      boxShadow: {
+        soft: 'var(--shadow-soft)',
+        hard: 'var(--shadow-hard)',
       },
       screens: {
         xs: '360px',

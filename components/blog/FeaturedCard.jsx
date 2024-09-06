@@ -8,7 +8,7 @@ export default function FeaturedCard({post}) {
   return (
     <>
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8'>
-        <figure className='drop-shadow-md transition-all ease-in-out hover:scale-105'>
+        <figure className='drop-shadow-md hover:scale-105'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
               className='rounded border-2 bg-light object-cover object-center p-2 shadow-md'

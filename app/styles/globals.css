@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*! Shared Colors */
+    --white: #ffffff;
+    --black: #000000;
+    --light-fade: #f8fafb;
+    --light: #eff4fa;
+    --light-tint: #e9eff5;
+    --dark-fade: #0f172a;
+    --dark: #020617;
+    --dark-tint: #01030d;
+    /*! Light Theme Colors */
+    --background: #e5e6ef;
+    --foreground: #121212;
+    --primary-fade: #64bdf4;
+    --primary: #45aeee;
+    --primary-tint: #2a8cc9;
+    --secondary-fade: #f76aa5;
+    --secondary: #e8488a;
+    --secondary-tint: #cc3675;
+    --blue-fade: #5fa1b1;
+    --blue: #418192;
+    --blue-tint: #3a6e80;
+    --purple-fade: #581d95;
+    --purple: #330f5f;
+    --purple-tint: #290c4c;
+    --pink-fade: #ff65af;
+    --pink: #fd509d;
+    --pink-tint: #ff65af;
+    --gray-fade: #8f97a5;
+    --gray: #6b7280;
+    --gray-tint: #4e545f;
+    --green-fade: #2ace64;
+    --green: #1db954;
+    --green-tint: #15a949;
+    --red-fade: #fc4044;
+    --red: #ff2e33;
+    --red-tint: #eb2124;
+    --yellow-fade: #fbf058;
+    --yellow: #fff232;
+    --yellow-tint: #e2d51b;
+    --neutral: #1a1a1a;
+    --accent: #fff232;
+    --border: #d9dbdb;
+    --b2w: #000000;
+    --w2b: #ffffff;
+    --b2p: #45aeee;
+    --b2p-tint: #2a8cc9;
+    --p2b: #e8488a;
+    --p2b-tint: #cc3675;
+    --gradient: radial-gradient(circle, #ffffff, #ffffff 50%, #b7bfd7 70%, #ffffff 90%);
+    --shadow-soft: 1px 2px 4px 0px #6b7280;
+    --shadow-hard: 2px 3px 6px 0px #6b7280;
+  }
+  .dark {
+    /*! Dark Theme Colors */
+    --background: #0f172a;
+    --foreground: #ebebeb;
+    --primary-fade: #55c6f7;
+    --primary: #38bdf8;
+    --primary-tint: #31b2ea;
+    --secondary-fade: #c877c0;
+    --secondary: #a7549f;
+    --secondary-tint: #9e4996;
+    --background: #0f172a;
+    --foreground: #ebebeb;
+    --blue-fade: #3e6a73;
+    --blue: #2f5861;
+    --blue-tint: #2a4e60;
+    --purple-fade: #3e135d;
+    --purple: #261042;
+    --purple-tint: #1f0836;
+    --pink-fade: #c23d6e;
+    --pink: #b73c6f;
+    --pink-tint: #c23d6e;
+    --gray-fade: #606774;
+    --gray: #3d464e;
+    --gray-tint: #2f3a43;
+    --green-fade: #1a8f4f;
+    --green: #148b3e;
+    --green-tint: #127a35;
+    --red-fade: #d32f2f;
+    --red: #d32f2f;
+    --red-tint: #b71c1c;
+    --yellow-fade: #d1c63a;
+    --yellow: #fbc02d;
+    --yellow-tint: #f9a825;
+    --neutral: #1e293b;
+    --accent: #f471b5;
+    --border: #1c1d21;
+    --b2w: #ffffff;
+    --w2b: #000000;
+    --b2p: #a7549f;
+    --b2p-tint: #9e4996;
+    --p2b: #38bdf8;
+    --p2b-tint: #31b2ea;
+    --gradient: radial-gradient(circle, #000000, #070808 50%, #080d16 70%, #000000 90%);
+    --shadow-soft: 1px 3px 6px 0px #6b7280;
+    --shadow-hard: 2px 3px 12px 0px #6b7280;
+  }
+}
+
+@layer utilities {
+  .hamburger-toggle {
+    @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+  }
+}
+
+a,
+button,
+figure,
+svg {
+  @apply transition ease-in-out;
+}
+
+/*! Scrollbar */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--p2b) var(--background);
+}
+/* Chrome + Others */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--p2b);
+  border-radius: 5px;
+}

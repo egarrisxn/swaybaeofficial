@@ -3,8 +3,6 @@ import {About} from '@/components/About'
 import {Socials} from '@/components/Socials'
 import {Contact} from '@/components/Contact'
 
-// import {Suspense} from 'react'
-
 // function fetchData() {
 //   return new Promise((resolve) => {
 //     setTimeout(() => {

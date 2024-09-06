@@ -25,7 +25,7 @@ export function Navbar() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setState((prevState) => ({...prevState, isVisible: true, mounted: true}))
-    }, 1000)
+    }, 500)
     return () => clearTimeout(timer)
   }, [])
 
@@ -37,9 +37,14 @@ export function Navbar() {
     setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
   }, [resolvedTheme, setTheme])
 
+  const activeStyle = {
+    color: 'var(--p2b)',
+    fontWeight: '500',
+  }
+
   return (
     <header
-      className={`w-full transition-opacity duration-200 ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`w-full transition-opacity ease-out ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <nav className='z-20 p-2 sm:p-4 3xl:p-6' aria-label='Main navigation'>
         <div className='mx-auto flex flex-row flex-wrap items-center justify-between md:px-2 2xl:px-4 3xl:px-16 4xl:px-24'>
@@ -105,16 +110,22 @@ export function Navbar() {
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className='mx-0.5 my-2.5 block text-6xl sm:my-3.5 md:mx-4 md:my-0 md:inline md:text-lg lg:mx-6 lg:text-2xl xl:mx-12 2xl:mx-14 2xl:text-4xl 3xl:mx-16'
+                className='mx-0.5 my-2 block text-5xl hover:text-p2b sm:my-3 md:mx-4 md:my-0 md:inline md:text-lg lg:mx-5 lg:text-2xl xl:mx-12 2xl:mx-14 2xl:text-4xl 3xl:mx-16'
               >
                 {link.external ? (
-                  <a href={link.href} className='z-20 bg-clip-text'>
+                  <a
+                    href={link.href}
+                    target='_blank'
+                    rel='noreferrer noopener'
+                    className='z-20 bg-clip-text'
+                  >
                     {link.label}
                   </a>
                 ) : (
                   <Link
                     href={link.href}
-                    className={`z-20 bg-clip-text transition-all duration-150 ease-in-out ${pathname === link.href ? 'active' : ''}`}
+                    style={pathname === link.href ? activeStyle : {}}
+                    className='z-20 bg-clip-text'
                   >
                     {link.label}
                   </Link>
@@ -124,7 +135,7 @@ export function Navbar() {
             {state.mounted && (
               <button
                 onClick={handleToggleTheme}
-                className='inline-flex items-center rounded-lg px-1 py-2 text-sm text-purple-fade md:hidden dark:text-yellow'
+                className='inline-flex items-end justify-end rounded-lg px-1 py-2 text-sm text-p2b md:hidden'
                 aria-label='Switch themes'
               >
                 <Tooltip
@@ -169,7 +180,7 @@ export function Navbar() {
           {state.mounted && (
             <button
               onClick={handleToggleTheme}
-              className='z-50 hidden items-center rounded-lg p-1 text-sm text-purple-fade md:inline-flex dark:text-yellow'
+              className='z-50 hidden items-center rounded-lg p-1 text-sm text-p2b md:inline-flex'
               aria-label='Toggle theme'
             >
               <Tooltip

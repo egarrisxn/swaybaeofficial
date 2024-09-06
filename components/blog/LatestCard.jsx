@@ -17,7 +17,7 @@ export default function LatestCard({post}) {
             })}
           </p>
         </section>
-        <figure className='drop-shadow-md transition-all ease-in-out hover:scale-105'>
+        <figure className='drop-shadow-md hover:scale-105'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
               className='rounded border-2 bg-light object-cover object-center p-2 shadow-md'

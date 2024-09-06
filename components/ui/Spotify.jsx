@@ -57,7 +57,7 @@ export function Spotify(props) {
             )}
           </div>
           {result.isPlaying && (
-            <div className='flex min-w-44 items-center gap-2 rounded-lg border-2 border-white bg-gradient-to-br from-gray-tint via-light-tint to-light-fade p-2 shadow-[2px_4px_12px_0px_gray]'>
+            <div className='flex min-w-44 items-center gap-2 rounded-lg border-2 border-white bg-gradient-to-br from-gray-tint via-light-tint to-light-fade p-2 shadow-hard'>
               <Image
                 alt={`${result.title} album art`}
                 src={result.albumImageUrl}
@@ -69,7 +69,7 @@ export function Spotify(props) {
                 <a
                   href={result.songUrl}
                   target='_blank'
-                  className='truncate font-bold text-black transition-colors duration-200 ease-in hover:text-green-tint'
+                  className='truncate font-bold text-black hover:text-green-tint'
                 >
                   {result.title}
                 </a>
