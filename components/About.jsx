@@ -55,7 +55,7 @@ export function About() {
               alt='Image of Biff'
               width={1440}
               height={1800}
-              className='rounded-lg border-2 border-white bg-white shadow-hard'
+              className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'
               loading='lazy'
             />
           </div>

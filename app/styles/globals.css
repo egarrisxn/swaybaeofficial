@@ -43,7 +43,7 @@
     --yellow-fade: #fbf058;
     --yellow: #fff232;
     --yellow-tint: #e2d51b;
-    --neutral: #1a1a1a;
+    --neutral: #e2e9f3;
     --accent: #fff232;
     --border: #d9dbdb;
     --b2w: #000000;
@@ -111,8 +111,8 @@
       #090a0c 90%,
       #000000 100%
     );
-    --shadow-soft: 1px 3px 6px 0px #6b7280;
-    --shadow-hard: 2px 3px 12px 0px #6b7280;
+    --shadow-soft: 1px 1px 3px 0px #727272;
+    --shadow-hard: 2px 3px 12px 0px #727272;
   }
 }
 

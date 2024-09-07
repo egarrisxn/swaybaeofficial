@@ -3,9 +3,28 @@ import {useState, useCallback} from 'react'
 import {Header} from './Header'
 import {TextArea} from './ui/TextArea'
 import {Input} from './ui/Input'
-import {ContactInfo} from './ui/ContactInfo'
 import {FunButton} from './ui/FunButton'
+import {Icon} from './ui/Icon'
 import {Mail, Files} from 'lucide-react'
+
+function ContactInfo({title, icon, detail, href, ariaLabel}) {
+  return (
+    <div className='mt-4 sm:mt-2 md:mt-4 xl:mt-6 3xl:mt-8'>
+      <h3 className='text-lg font-extrabold 3xl:text-3xl'>{title}</h3>
+      <ul className='mt-3 sm:mt-1 md:mt-2 xl:mt-3 3xl:mt-4'>
+        <li className='flex items-center'>
+          <Icon href={href}>{icon}</Icon>
+          <a target='_blank' href={href} className='ml-2 xl:ml-3' aria-label={ariaLabel}>
+            <p className='block text-sm xl:text-base 3xl:text-xl'>{title}</p>
+            <p className='text-sm font-semibold text-primary-fade hover:text-primary xl:text-base 2xl:text-lg 3xl:text-xl dark:text-primary-tint dark:hover:text-primary-fade'>
+              {detail}
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  )
+}
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -65,26 +84,26 @@ export function Contact() {
         <section className='mx-auto grid max-w-11xl items-center sm:grid-cols-2 sm:gap-2 sm:rounded-lg sm:border-2 sm:bg-w2b sm:px-4 sm:py-6 sm:shadow-hard md:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
           {/* Left Side */}
           <div className='mb-12 sm:mb-0'>
-            <h2 className='font-sansita text-4xl font-black italic tracking-tight md:text-5xl lg:text-6xl 3xl:text-8xl'>
+            <h2 className='font-sansita text-5xl font-black italic tracking-tight lg:text-6xl 3xl:text-8xl'>
               Let&apos;s Chat!
             </h2>
-            <p className='mt-2 text-xl leading-5 text-gray-fade max-[450px]:text-base sm:text-sm md:text-base xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
-              Interested in working together? Have any questions? Send over an email and I&apos;ll
-              get back to you as soon as I can.
+            <p className='mt-4 text-xl leading-5 text-gray-fade max-[450px]:text-base sm:text-sm md:text-base xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
+              Are you interested in working together? Maybe have a question for me? Send over an
+              email and I&apos;ll get back with you as soon as possible!
             </p>
             <ContactInfo
               title='Email'
               detail='Sway.Bae9000@gmail.com'
               href='mailto:Sway.Bae9000@gmail.com'
               ariaLabel='Email Sway Bae'
-              icon={<Mail />}
+              icon={<Mail width='1em' height='1em' viewBox='0 0 24 24' strokeWidth='2' />}
             />
             <ContactInfo
               title='Media Kit'
               detail='beacons.ai/sway_bae/mediakit'
               href='https://beacons.ai/sway_bae/mediakit'
               ariaLabel='View Media Kit'
-              icon={<Files />}
+              icon={<Files width='1em' height='1em' viewBox='0 0 24 24' strokeWidth='2' />}
             />
           </div>
           {/* Right Side Form */}

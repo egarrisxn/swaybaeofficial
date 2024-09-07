@@ -7,7 +7,7 @@ export default function TagSlugCard({post}) {
 
   return (
     <>
-      <div className='grid grid-cols-1 gap-2 rounded-lg border-2 bg-w2b p-4 shadow-hard md:p-8 lg:grid-cols-6 lg:p-2 2xl:gap-6'>
+      <div className='grid grid-cols-1 gap-2 rounded-lg border-2 bg-w2b p-4 shadow-soft sm:shadow-hard md:p-8 lg:grid-cols-6 lg:p-2 2xl:gap-6'>
         <div className='hidden drop-shadow-md lg:col-start-1 lg:col-end-3 lg:grid lg:p-4'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image

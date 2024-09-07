@@ -49,7 +49,7 @@ export default function PortableTextComponents({value, className, content}) {
         <Link
           link={value}
           hrefResolver={hrefResolver}
-          as={NextLink} // This tells the Link component to use Next.js's Link component
+          as={NextLink}
           className='text-blue hover:text-blue-tint'
         >
           {children}
@@ -86,7 +86,7 @@ export default function PortableTextComponents({value, className, content}) {
         </figure>
       ),
       youtube: ({value}) => (
-        <div className='aspect-h-9 aspect-w-16 flex-1'>
+        <div className='aspect-video flex-1'>
           <iframe
             src={`https://www.youtube.com/embed/${value.video.id}`}
             allow='accelerometer; autoplay; clip2board-write; encrypted-media; gyroscope; picture-in-picture'

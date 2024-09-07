@@ -13,7 +13,7 @@ const SheetPortal = SheetPrimitive.Portal
 const SheetOverlay = React.forwardRef(({className, ...props}, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      'fixed inset-0 z-50 bg-[#000000] bg-opacity-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-[#000000] bg-opacity-50',
       className,
     )}
     {...props}
@@ -23,7 +23,7 @@ const SheetOverlay = React.forwardRef(({className, ...props}, ref) => (
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  'fixed z-50 gap-4 bg-w2b p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500',
+  'fixed z-50 flex bg-w2b p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500',
   {
     variants: {
       side: {
@@ -46,7 +46,7 @@ const SheetContent = React.forwardRef(({side = 'top', className, children, ...pr
     <SheetOverlay />
     <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({side}), className)} {...props}>
       {children}
-      <SheetPrimitive.Close className='absolute right-4 top-4 opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-w2b'>
+      <SheetPrimitive.Close className='absolute right-5 top-[1.5rem] disabled:pointer-events-none data-[state=open]:bg-w2b'>
         <Button variant='ghost' size='icon'>
           <X size={36} strokeWidth={2} />
         </Button>

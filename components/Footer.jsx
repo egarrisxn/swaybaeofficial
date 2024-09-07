@@ -1,22 +1,16 @@
 'use client'
-import {socialData} from '@/utils/constants'
-import {Icon} from './ui/Icon'
-import {Tooltipper} from './ui/Tooltipper'
+import SocialIcons from './ui/SocialsIcons'
 
 export default function Footer() {
   return (
     <footer className='w-full'>
-      <div className='p-2 lg:p-4 3xl:p-6'>
-        <div className='mx-auto flex flex-col items-center justify-between gap-6 px-1 md:flex-row-reverse md:gap-0 2xl:px-4 3xl:px-16 4xl:px-24'>
-          <section className='flex items-center justify-center gap-3 sm:gap-2 xl:gap-3 3xl:gap-6'>
-            {socialData.map((icon, idx) => (
-              <Tooltipper key={idx} text={icon.label}>
-                <Icon href={icon.href}>{icon.icon}</Icon>
-              </Tooltipper>
-            ))}
+      <div className='px-4 py-6 md:px-6'>
+        <div className='mx-auto flex flex-col items-center justify-between gap-8 xl:gap-10 3xl:gap-12'>
+          <section className='flex items-center justify-center gap-4 max-[375px]:gap-2 lg:gap-5 xl:gap-6 2xl:gap-7 3xl:gap-8'>
+            <SocialIcons />
           </section>
           <section className='flex items-center justify-center'>
-            <p className='bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-sm font-semibold tracking-tight text-transparent lg:text-lg 2xl:text-xl 3xl:text-2xl dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
+            <p className='bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text font-semibold tracking-tight text-transparent md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-3xl dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
               <span className='pr-0.5 font-normal text-foreground'>© 2024 </span>
               Sway Bae Official
             </p>

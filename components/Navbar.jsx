@@ -6,6 +6,7 @@ import {Sheet, SheetContent, SheetTrigger} from './ui/Sheet'
 import {Button} from './ui/Button'
 import Logo from './ui/Logo'
 import ThemeToggle from './ui/ThemeToggle'
+import SocialIcons from './ui/SocialsIcons'
 import {Menu} from 'lucide-react'
 
 export default function Navbar() {
@@ -82,31 +83,46 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent>
-            <div className='flex flex-col space-y-2'>
-              <ul className='inline w-full'>
-                {navLinks.map((link) => (
-                  <li
-                    key={link.href}
-                    className='mx-0.5 my-2 block text-5xl hover:text-p2b sm:my-3 md:mx-4 md:my-0 md:inline md:text-lg lg:mx-5 lg:text-2xl xl:mx-12 2xl:mx-14 2xl:text-4xl 3xl:mx-16'
-                  >
-                    {link.external ? (
-                      <a
-                        href={link.href}
-                        target='_blank'
-                        rel='noreferrer noopener'
-                        className='hover:text-p2b'
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
-                      <a replace href={link.href} style={pathname === link.href ? activeStyle : {}}>
-                        {link.label}
-                      </a>
-                    )}
-                  </li>
-                ))}
-              </ul>
-              {state.mounted && <ThemeToggle />}
+            <div className='flex w-full flex-col justify-between'>
+              <section>{state.mounted && <ThemeToggle />}</section>
+              <section className='flex flex-grow'>
+                <ul className='inline space-y-5 pt-6'>
+                  {navLinks.map((link) => (
+                    <li
+                      key={link.href}
+                      className='block text-7xl font-semibold hover:text-p2b max-[375px]:text-5xl'
+                    >
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target='_blank'
+                          rel='noreferrer noopener'
+                          className='hover:text-p2b'
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <a
+                          replace
+                          href={link.href}
+                          style={pathname === link.href ? activeStyle : {}}
+                        >
+                          {link.label}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              <section className='flex h-24 items-center justify-center gap-4 max-[375px]:gap-3'>
+                <SocialIcons />
+              </section>
+              <section className='flex items-center justify-center'>
+                <p className='bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-sm font-semibold tracking-tight text-transparent dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
+                  <span className='pr-0.5 font-normal text-foreground'>© 2024 </span>
+                  Sway Bae Official
+                </p>
+              </section>
             </div>
           </SheetContent>
         </Sheet>

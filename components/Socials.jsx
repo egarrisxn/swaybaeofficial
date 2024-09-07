@@ -15,13 +15,13 @@ export function Socials() {
       {/* ----------Social Body---------- */}
       <div className='mb-16 mt-12 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-12 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
         {/* -----Spotify Now Playing----- */}
-        <div className='flex justify-end pb-0 max-[370px]:justify-center max-[370px]:pb-4'>
+        <div className='flex justify-end sm:pb-4'>
           <Spotify />
         </div>
         {/* ----------Carousel---------- */}
-        <section className='mx-auto my-4 max-w-11xl sm:mb-12 sm:mt-8 md:mb-16 md:mt-12 lg:mb-20 lg:mt-16'>
+        <section className='mx-auto mb-12 mt-4 max-w-11xl sm:mt-8 md:mb-16 md:mt-12 lg:mb-20 lg:mt-16'>
           <Carousel />
-          <div className='mb-12 mt-2 sm:mb-6 sm:mt-6'>
+          <div className='mb-12 mt-2 sm:mb-6 md:mt-6'>
             <a href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
               <div className='flex flex-row items-center justify-center text-sm italic tracking-tight max-[370px]:text-xs sm:text-lg'>
                 If you&apos;d like to support what I do:
@@ -64,10 +64,10 @@ export function Socials() {
             Videos
           </div>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-            <div className='rounded-lg border-2 border-white bg-white shadow-hard'>
+            <div className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'>
               <YouTube vnum={0} />
             </div>
-            <div className='rounded-lg border-2 border-white bg-white shadow-hard'>
+            <div className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'>
               <YouTube vnum={1} />
             </div>
           </div>

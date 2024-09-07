@@ -7,7 +7,7 @@ export function Icon({href, children}) {
         href={href}
         target='_blank'
         rel='noopener noreferrer'
-        className={buttonVariants({variant: 'social', size: 'round'})}
+        className={buttonVariants({variant: 'social', size: 'icon'})}
       >
         {children}
       </a>
