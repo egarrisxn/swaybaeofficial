@@ -73,7 +73,7 @@ export function Search({placeholder}) {
         </label>
         <input
           id='search'
-          className='w-40 appearance-none bg-background outline-none placeholder:text-gray sm:w-auto'
+          className='placeholder:text-gray-light w-40 appearance-none bg-background outline-none sm:w-auto'
           placeholder={placeholder}
           onChange={handleChange}
           value={searchTerm}
@@ -82,25 +82,26 @@ export function Search({placeholder}) {
         <SearchIcon size={16} strokeWidth={2} className='text-foreground' />
       </div>
       {searchResults.length > 0 && (
-        <div className='=tracking-tight absolute left-0 top-full z-30 mt-1 max-h-60 w-full overflow-y-auto rounded-md border bg-background pb-1 text-sm shadow 2xl:text-base'>
+        <div className='absolute left-0 top-full z-30 my-1 w-full overflow-y-auto rounded-md border text-sm tracking-tight shadow 2xl:text-base'>
           <p className='rounded-t bg-[#000000] bg-opacity-80 text-center font-semibold text-w2b dark:bg-[#ffffff]'>
             Search Results
           </p>
           <hr />
-          {searchResults.map((result) => (
-            <div
-              key={result._id}
-              className='inline-flex w-full justify-start transition ease-in-out'
-            >
-              <span className='pl-0.5 pt-[0.35rem] font-medium text-primary'>&#x2022;</span>
-              <Link
-                href={`/blog/post/${result.slug.current}`}
-                className='my-1 ml-0.5 mr-2.5 w-full border-b pb-1.5 pt-0.5 hover:border-foreground hover:text-secondary'
+          <ul className='x'>
+            {searchResults.map((result) => (
+              <li
+                key={result._id}
+                className='inline-flex w-full justify-start transition ease-in-out odd:bg-[#ff2b9c44] even:bg-[#6296ff27] dark:odd:bg-[rgba(250,72,199,0.4)]'
               >
-                {result.title}
-              </Link>
-            </div>
-          ))}
+                <Link
+                  href={`/blog/post/${result.slug.current}`}
+                  className='w-full border-t px-1.5 py-2 hover:border-black hover:text-white dark:hover:border-white dark:hover:text-primary'
+                >
+                  {result.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>

@@ -16,13 +16,13 @@ export function About() {
               <p className='relative pl-1 pr-0.5'>I&apos;m Sway!</p>
             </div>
             <div className='mt-4 text-lg font-medium text-secondary sm:mt-6 lg:mt-4 lg:text-base xl:mt-6 xl:text-xl 2xl:text-3xl 3xl:mt-7 3xl:text-4xl'>
-              <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
+              <p className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
                 I&apos;m a Full-Time Content Creator, currently partnered with Twitch and YouTube,
                 streaming and releasing videos throughout the week.
               </p>
             </div>
             <div className='mt-4 space-y-4 sm:mt-6 lg:mt-4 lg:text-sm xl:mt-6 xl:text-base 2xl:text-2xl 3xl:space-y-6 3xl:text-3xl'>
-              <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
+              <p className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
                 <span className='font-semibold'>I create</span> family-friendly entertainment
                 centered around the concepts of positive mental attitude in gaming with the mantra
                 of leaving someone&apos;s day better than I found it. My favorite part of streaming
@@ -30,17 +30,17 @@ export function About() {
                 it is a very inclusive and supportive community that we have cultivated and a great
                 place to connect outside of streams!
               </p>
-              <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
+              <p className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
                 <span className='font-semibold'>In addition,</span> I am primarily a Hearthstone
                 streamer, with a focus on Battlegrounds. I also enjoy Strategy games in general,
                 Survival games, Indie games, Simulator games, Roguelike games, Platformers, and many
                 more!
               </p>
-              <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
+              <p className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
                 <span className='font-semibold'>Did I ever</span> imagine this would be my
                 lifestyle, even five years ago? Nope. Do I love it? Entirely!
               </p>
-              <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
+              <p className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
                 <span className='font-semibold'>If you&apos;d like</span> to work with me, I&apos;d
                 love to hear from you! You can use the contact form in the business inquiries
                 section below! As I often say, thank you for being a part of my journey, and
@@ -63,38 +63,40 @@ export function About() {
         <br />
         <section className='mx-auto lg:max-w-11xl'>
           <div className='mt-4 font-semibold sm:text-lg md:text-2xl lg:text-lg xl:text-3xl 3xl:mt-12 3xl:text-4xl'>
-            <p className='leading-6 tracking-tight sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
+            <p className='leading-6 tracking-tight sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
               A few notable accolades include:
             </p>
           </div>
-          <div className='mt-6 grid grid-cols-1 gap-y-6 lg:mt-8 lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-6 lg:gap-y-0 lg:text-sm xl:mt-10 xl:grid-cols-3 xl:grid-rows-2 xl:text-base 3xl:mt-12 3xl:gap-x-20 3xl:text-2xl'>
-            <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-sm text-primary'>&#9864; </span> 3rd place in Blizzard&apos;s
-              Hearthstone Battle of the Boars Tournament.{' '}
+          <div className='mt-6 grid grid-cols-1 gap-y-6 lg:mt-8 lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-5 lg:gap-y-5 lg:text-sm xl:mt-10 xl:grid-cols-3 xl:grid-rows-2 xl:text-base 3xl:mt-12 3xl:gap-x-12 3xl:gap-y-12 3xl:text-2xl 4xl:text-3xl'>
+            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+              <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> 3rd place in
+              Blizzard&apos;s Hearthstone Battle of the Boars Tournament.{' '}
               <span className='font-medium'>(May 2021)</span>
             </p>
-            <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-sm text-primary'>&#9864; </span> Casting the Gaming Stadium
-              Hearthstone Tournament. <span className='font-medium'>(June 2021)</span>
+            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+              <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Casting the Gaming
+              Stadium Hearthstone Tournament. <span className='font-medium'>(June 2021)</span>
             </p>
-            <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-sm text-primary'>&#9864; </span> Casting and Hosting multiple
-              Dreamhack Community Clash tournaments.{' '}
+            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+              <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Casting and
+              Hosting multiple Dreamhack Community Clash tournaments.{' '}
               <span className='font-medium'>(2021-2022)</span>
             </p>
-            <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-sm text-primary'>&#9864; </span> Casting 4 series of Super Girl
-              Gamer Pro Hearthstone Tournaments. <span className='font-medium'>(2021-2023)</span>
+            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+              <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Casting 4 series
+              of Super Girl Gamer Pro Hearthstone Tournaments.{' '}
+              <span className='font-medium'>(2021-2023)</span>
             </p>
-            <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-sm text-primary'>&#9864; </span> Multiple Battle.net Launcher
-              Feature events, including featured streams and curated YouTube videos just for
-              Hearthstone.
+            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+              <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Multiple
+              Battle.net Launcher Feature events, including featured streams and curated YouTube
+              videos just for Hearthstone.
             </p>
-            <p className='leading-6 sm:leading-7 lg:leading-5 xl:leading-7 3xl:leading-8'>
-              <span className='text-sm text-primary'>&#9864; </span> Producing, hosting, and casting
-              one of the earliest AND largest grassroots tournaments for Hearthstone Battlegrounds,
-              with close to <span className='underline underline-offset-2'>100 participants!</span>
+            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+              <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Producing,
+              hosting, and casting one of the earliest AND largest grassroots tournaments for
+              Hearthstone Battlegrounds, with close to{' '}
+              <span className='underline underline-offset-2'>100 participants!</span>
             </p>
           </div>
         </section>

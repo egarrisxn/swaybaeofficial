@@ -1,6 +1,6 @@
 import {useCallback} from 'react'
 import {useTheme} from 'next-themes'
-import {Tooltip} from './Tooltip'
+import {Tooltipper} from './Tooltipper'
 import {Button} from './Button'
 import {Sun, MoonStar} from 'lucide-react'
 
@@ -13,16 +13,13 @@ export default function ThemeToggle({direction}) {
 
   return (
     <Button onClick={handleToggleTheme} variant='ghost' size='icon' aria-label='Toggle theme'>
-      <Tooltip
-        text={resolvedTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-        direction={direction}
-      >
+      <Tooltipper text={resolvedTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}>
         {resolvedTheme === 'light' ? (
           <MoonStar size={36} strokeWidth={2} />
         ) : (
           <Sun size={36} strokeWidth={2} />
         )}
-      </Tooltip>
+      </Tooltipper>
     </Button>
   )
 }

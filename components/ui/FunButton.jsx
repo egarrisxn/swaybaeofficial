@@ -1,4 +1,4 @@
-export function OldButton({type = 'button', className, children}) {
+export function FunButton({type = 'button', className, children}) {
   return (
     <button
       type={type}

@@ -19,7 +19,7 @@ export default function PostPage({post}) {
           <TableOfContent headings={headings} />
         </aside>
         <div className='col-start-2 col-end-13 mx-auto grid sm:gap-2'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-gray-tint px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-neutral px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
             {new Date(publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',

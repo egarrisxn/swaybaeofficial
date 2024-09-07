@@ -6,7 +6,7 @@ import {cn} from '@/utils/clsx'
 // 'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center focus-visible:outline-none focus-visible:ring-0 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -14,6 +14,7 @@ const buttonVariants = cva(
         secondary: 'bg-secondary hover:bg-secondary-tint',
         outline: 'border border-border hover:bg-accent',
         ghost: 'bg-w2b text-b2p',
+        scroll: 'cursor-pointer',
         link: 'text-primary underline-offset-4 hover:underline',
         social:
           'border-2 border-light-tint bg-w2b shadow-soft hover:border-light-fade hover:bg-light hover:text-b2w hover:shadow-hard dark:border-gray-fade dark:hover:border-gray-tint dark:hover:bg-dark-fade text-sm font-semibold lg:font-extrabold p-1.5 lg:p-2 2xl:p-2.5 2xl:text-base 3xl:text-2xl',

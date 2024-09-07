@@ -22,7 +22,7 @@ export default function TagSlugCard({post}) {
         <div className='lg:col-start-3 lg:col-end-6 lg:grid'>
           <div className='flex flex-col gap-2 p-1 lg:gap-4 lg:px-0 lg:py-4 xl:gap-6 2xl:gap-12'>
             <div className='flex flex-row lg:hidden'>
-              <p className='prose prose-sm line-clamp-1 flex w-fit rounded-md bg-gray-tint px-2 tracking-tight text-light drop-shadow-md lg:prose-base dark:prose-invert lg:hidden'>
+              <p className='prose prose-sm line-clamp-1 flex w-fit rounded-md bg-neutral px-2 tracking-tight text-light drop-shadow-md lg:prose-base dark:prose-invert lg:hidden'>
                 {new Date(post.publishedAt).toLocaleDateString('en-US', {
                   day: 'numeric',
                   month: 'long',
@@ -31,11 +31,11 @@ export default function TagSlugCard({post}) {
               </p>
             </div>
             <Link href={`/blog/post/${post.postSlug}`}>
-              <h3 className='prose prose-lg prose-slate line-clamp-1 font-bold lg:prose-2xl dark:prose-invert hover:underline lg:line-clamp-2 2xl:text-4xl'>
+              <h3 className='prose prose-lg line-clamp-1 font-bold lg:prose-2xl dark:prose-invert hover:underline lg:line-clamp-2 2xl:text-4xl'>
                 {title}
               </h3>
             </Link>
-            <p className='prose prose-base prose-slate line-clamp-2 text-gray lg:prose-lg xl:prose-xl 2xl:prose-2xl dark:prose-invert lg:line-clamp-3'>
+            <p className='prose prose-base line-clamp-2 text-gray-fade lg:prose-lg xl:prose-xl 2xl:prose-2xl dark:prose-invert lg:line-clamp-3'>
               {excerpt}
             </p>
           </div>

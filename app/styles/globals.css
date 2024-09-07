@@ -52,7 +52,14 @@
     --b2p-tint: #2a8cc9;
     --p2b: #e8488a;
     --p2b-tint: #cc3675;
-    --gradient: radial-gradient(circle, #ffffff, #ffffff 50%, #b7bfd7 70%, #ffffff 90%);
+    --gradient: radial-gradient(
+      circle,
+      #ffffff,
+      #f7fdff 50%,
+      #e2eaff 70%,
+      #fafeff 90%,
+      #ffffff 100%
+    );
     --shadow-soft: 1px 2px 4px 0px #6b7280;
     --shadow-hard: 2px 3px 6px 0px #6b7280;
   }
@@ -96,7 +103,14 @@
     --b2p-tint: #9e4996;
     --p2b: #38bdf8;
     --p2b-tint: #31b2ea;
-    --gradient: radial-gradient(circle, #000000, #070808 50%, #080d16 70%, #000000 90%);
+    --gradient: radial-gradient(
+      circle,
+      #000000,
+      #09090b 50%,
+      #0a0e16 70%,
+      #090a0c 90%,
+      #000000 100%
+    );
     --shadow-soft: 1px 3px 6px 0px #6b7280;
     --shadow-hard: 2px 3px 12px 0px #6b7280;
   }

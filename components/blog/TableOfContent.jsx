@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
-import {Tooltip} from '../ui/Tooltip'
+import {Tooltipper} from '../ui/Tooltipper'
 
 const tocStyle = {
   color: 'var(--b2w)',
@@ -43,15 +43,12 @@ export default function TableOfContent({headings}) {
           <li key={idx} className='my-2.5 flex h-8 w-full items-center justify-center'>
             <Link
               href={`#${heading._key}`}
-              style={tocStyle} // Apply base style
+              style={tocStyle}
               className={`text-5xl ${activeLink && activeLink.getAttribute('href') === `#${heading._key}` ? 'active' : ''}`}
             >
-              <Tooltip
-                text={heading.children.map((child) => child.text).join(' ')}
-                direction='right'
-              >
+              <Tooltipper text={heading.children.map((child) => child.text).join(' ')}>
                 <span className='z-50 hover:text-primary'>&bull;</span>
-              </Tooltip>
+              </Tooltipper>
             </Link>
           </li>
         ))}

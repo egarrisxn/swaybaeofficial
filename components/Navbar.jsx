@@ -38,7 +38,7 @@ export default function Navbar() {
   //! Desktop Navbar
   function DesktopNav() {
     return (
-      <nav className='hidden items-center justify-between border-b p-4 md:flex'>
+      <nav className='hidden items-center justify-between p-4 md:flex'>
         <Logo />
         <div className='flex'>
           <ul className='inline w-full'>
@@ -65,7 +65,7 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-        {state.mounted && <ThemeToggle direction='left' />}
+        {state.mounted && <ThemeToggle />}
       </nav>
     )
   }
@@ -73,7 +73,7 @@ export default function Navbar() {
   //! Mobile Navbar
   function MobileNav() {
     return (
-      <nav className='flex items-center justify-between border-b p-4 md:hidden'>
+      <nav className='flex items-center justify-between p-4 md:hidden'>
         <Logo />
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
@@ -82,7 +82,7 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent>
-            <div className='flex flex-col'>
+            <div className='flex flex-col space-y-2'>
               <ul className='inline w-full'>
                 {navLinks.map((link) => (
                   <li
@@ -106,7 +106,7 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-              {state.mounted && <ThemeToggle direction='right' />}
+              {state.mounted && <ThemeToggle />}
             </div>
           </SheetContent>
         </Sheet>

@@ -9,7 +9,7 @@ export default function LatestCard({post}) {
     <>
       <div className='grid grid-cols-1 gap-2 md:gap-3'>
         <section className='mb-1 md:mb-0'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-dark-fade px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
+          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-neutral px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
             {new Date(post.publishedAt).toLocaleDateString('en-US', {
               day: 'numeric',
               month: 'long',
@@ -39,11 +39,11 @@ export default function LatestCard({post}) {
         </section>
         <section className='mt-2 md:ml-1'>
           <Link href={`/blog/post/${post.postSlug}`}>
-            <h3 className='prose prose-base prose-slate line-clamp-1 font-bold md:prose-lg dark:prose-invert hover:underline'>
+            <h3 className='prose prose-base line-clamp-1 font-bold md:prose-lg dark:prose-invert hover:underline'>
               {title}
             </h3>
           </Link>
-          <h4 className='prose prose-sm prose-slate line-clamp-2 text-gray md:prose-base dark:prose-invert'>
+          <h4 className='prose prose-sm line-clamp-2 text-gray-fade md:prose-base dark:prose-invert'>
             {excerpt}
           </h4>
           <Link href={`/blog/post/${post.postSlug}`}>

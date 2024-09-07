@@ -4,7 +4,7 @@ import {Header} from './Header'
 import {TextArea} from './ui/TextArea'
 import {Input} from './ui/Input'
 import {ContactInfo} from './ui/ContactInfo'
-import {OldButton} from './ui/OldButton'
+import {FunButton} from './ui/FunButton'
 import {Mail, Files} from 'lucide-react'
 
 export function Contact() {
@@ -68,7 +68,7 @@ export function Contact() {
             <h2 className='font-sansita text-4xl font-black italic tracking-tight md:text-5xl lg:text-6xl 3xl:text-8xl'>
               Let&apos;s Chat!
             </h2>
-            <p className='mt-2 text-xl leading-5 text-gray-tint max-[450px]:text-base sm:text-sm md:text-base xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
+            <p className='mt-2 text-xl leading-5 text-gray-fade max-[450px]:text-base sm:text-sm md:text-base xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
               Interested in working together? Have any questions? Send over an email and I&apos;ll
               get back to you as soon as I can.
             </p>
@@ -124,9 +124,9 @@ export function Contact() {
               value={formData.message}
               onChange={handleInputChange}
             />
-            <OldButton type='submit' className='w-full'>
+            <FunButton type='submit' className='w-full'>
               Send Message
-            </OldButton>
+            </FunButton>
           </form>
         </section>
       </div>
