@@ -53,14 +53,14 @@ export function Socials() {
               </svg>
             </span>
             Latest
-            <Link
+            <a
               href='https://www.youtube.com/sway_baetv/'
               target='_blank'
               rel='noopener noreferrer'
               className='mx-1 bg-gradient-to-tl from-purple-fade via-pink-tint to-pink-fade bg-clip-text text-transparent lg:mx-1.5'
             >
               YouTube
-            </Link>
+            </a>
             Videos
           </div>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>

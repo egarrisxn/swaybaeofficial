@@ -1,8 +1,9 @@
 'use client'
 import '../app/styles/index.css'
-import {useRef, useEffect} from 'react'
+import {useRef} from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
+import listPlugin from '@fullcalendar/list'
 import googleCalendarPlugin from '@fullcalendar/google-calendar'
 
 const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY
@@ -11,15 +12,20 @@ const id = process.env.NEXT_PUBLIC_CALENDAR_ID
 export default function Calendar() {
   const calendarRef = useRef(null)
 
-  useEffect(() => {
+  const handleViewChange = (view) => {
     if (calendarRef.current) {
+      const calendarApi = calendarRef.current.getApi()
+      calendarApi.changeView(view)
     }
-  }, [])
+  }
+
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
 
   return (
     <div>
       <FullCalendar
-        plugins={[dayGridPlugin, googleCalendarPlugin]}
+        ref={calendarRef}
+        plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}
         googleCalendarApiKey={key}
         events={{
           googleCalendarId: id,
@@ -31,11 +37,21 @@ export default function Calendar() {
           window.open(arg.event.url, '_blank', 'width=700,height=600')
           arg.jsEvent.preventDefault()
         }}
-        initialView='dayGridMonth'
+        initialView={isMobile ? 'listMonth' : 'dayGridMonth'}
         headerToolbar={{
-          left: 'prev',
+          left: 'prev,next',
           center: 'title',
-          right: 'next',
+          right: 'listMonth,dayGridMonth',
+        }}
+        customButtons={{
+          listMonth: {
+            text: 'List',
+            click: () => handleViewChange('listMonth'),
+          },
+          dayGridMonth: {
+            text: 'Month',
+            click: () => handleViewChange('dayGridMonth'),
+          },
         }}
         buttonText={{
           prev: '←',

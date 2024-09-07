@@ -1,8 +1,11 @@
 'use client'
 import {useState, useEffect} from 'react'
+import {AspectRatio} from './AspectRatio'
+import {Skeleton} from './Skeleton'
 
 export default function YouTube({vnum}) {
   const [videoId, setVideoId] = useState('')
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const loadVideo = async () => {
@@ -27,8 +30,10 @@ export default function YouTube({vnum}) {
 
         const videoId = videoItem.snippet.resourceId.videoId
         setVideoId(videoId)
+        setIsLoading(false)
       } catch (error) {
         console.error('Error loading video:', error)
+        setIsLoading(false)
       }
     }
 
@@ -36,8 +41,10 @@ export default function YouTube({vnum}) {
   }, [vnum])
 
   return (
-    <div className='aspect-h-9 aspect-w-16 rounded-lg'>
-      {videoId && (
+    <AspectRatio ratio={16 / 9}>
+      {isLoading ? (
+        <Skeleton className='h-full w-full' />
+      ) : (
         <iframe
           title='YouTube Video'
           src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&controls=0`}
@@ -46,10 +53,10 @@ export default function YouTube({vnum}) {
           width='100%'
           height='100%'
           allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          className='rounded-md'
+          className='rounded-lg'
           aria-label='Embedded YouTube video player'
         ></iframe>
       )}
-    </div>
+    </AspectRatio>
   )
 }

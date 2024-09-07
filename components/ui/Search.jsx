@@ -66,7 +66,7 @@ export function Search({placeholder}) {
   }
 
   return (
-    <div className='relative'>
+    <div className='relative z-[1000]'>
       <div className='border-gray-light focus:border-3 flex items-center space-x-2 rounded-md border-2 bg-background p-2 shadow'>
         <label htmlFor='search' className='sr-only'>
           Search
@@ -78,24 +78,23 @@ export function Search({placeholder}) {
           onChange={handleChange}
           value={searchTerm}
         />
-
         <SearchIcon size={16} strokeWidth={2} className='text-foreground' />
       </div>
       {searchResults.length > 0 && (
-        <div className='absolute left-0 top-full z-30 my-1 w-full overflow-y-auto rounded-md border text-sm tracking-tight shadow 2xl:text-base'>
+        <div className='absolute left-0 top-full my-1 w-full overflow-y-auto rounded-md border text-sm tracking-tight shadow 2xl:text-base'>
           <p className='rounded-t bg-[#000000] bg-opacity-80 text-center font-semibold text-w2b dark:bg-[#ffffff]'>
             Search Results
           </p>
           <hr />
-          <ul className='x'>
+          <ul>
             {searchResults.map((result) => (
               <li
                 key={result._id}
-                className='inline-flex w-full justify-start transition ease-in-out odd:bg-[#ff2b9c44] even:bg-[#6296ff27] dark:odd:bg-[rgba(250,72,199,0.4)]'
+                className='inline-flex w-full justify-start transition ease-in-out odd:bg-light-tint even:bg-gray-fade dark:odd:bg-dark-fade dark:even:bg-neutral'
               >
                 <Link
                   href={`/blog/post/${result.slug.current}`}
-                  className='w-full border-t px-1.5 py-2 hover:border-black hover:text-white dark:hover:border-white dark:hover:text-primary'
+                  className='w-full border-t px-1.5 py-2 hover:border-black hover:text-primary dark:hover:border-white'
                 >
                   {result.title}
                 </Link>

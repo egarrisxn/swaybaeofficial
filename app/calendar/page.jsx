@@ -5,12 +5,12 @@ import {FunButton} from '@/components/ui/FunButton'
 export default function CalendarPage() {
   return (
     <main className='mx-auto mt-8 w-full sm:container sm:mt-0'>
-      <div className='w-full px-[0.125rem] sm:px-4 3xl:px-20 4xl:px-40'>
+      <div className='w-full px-4 3xl:px-20 4xl:px-40'>
         <Header id='calendar' className='flex px-2 pt-4 lg:px-4 lg:pt-16 xl:px-0'>
           Calendar
         </Header>
         {/* ----------Calendar Body---------- */}
-        <section className='mx-auto mb-16 mt-12 max-w-7xl md:px-2 lg:my-20 lg:px-6 xl:px-10 3xl:my-24 3xl:px-16 4xl:max-w-screen-3xl'>
+        <section className='mx-auto mb-16 mt-12 max-w-7xl sm:px-4 lg:my-20 lg:px-6 xl:px-10 3xl:my-24 3xl:px-16 4xl:max-w-screen-3xl'>
           <div className='rounded-lg border-2 border-b2w bg-w2b p-1 shadow-hard md:p-2 xl:p-4'>
             <Calendar />
             <div className='mb-0.5 mr-0.5 mt-1.5 flex justify-end md:mt-2 xl:mt-4'>

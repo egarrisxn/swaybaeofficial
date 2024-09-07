@@ -63,7 +63,7 @@ export default function RootLayout({children}) {
   return (
     <html lang='en' className='scroll-smooth' suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${sansita.variable} grid min-h-[100dvh] grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain scroll-smooth bg-myGradient bg-cover bg-no-repeat font-sans text-foreground antialiased`}
+        className={`${poppins.variable} ${sansita.variable} grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain scroll-smooth bg-myGradient bg-cover bg-no-repeat font-sans text-foreground antialiased`}
       >
         <ThemeProvider
           enableSystem

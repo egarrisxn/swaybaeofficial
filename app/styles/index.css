@@ -10,17 +10,22 @@
 }
 
 /*! Calendar */
-.fc {
-  margin: 0 auto;
-  font-size: 0.9rem;
+@media (min-width: 769px) {
+  .fc {
+    font-size: 1.1rem;
+    aspect-ratio: 1.35;
+  }
+  .fc-header-toolbar {
+    font-size: 1.1rem;
+  }
 }
 @media (max-width: 768px) {
   .fc {
+    font-size: 0.8rem;
     aspect-ratio: 0.5;
-    font-size: 0.7rem;
   }
   .fc-header-toolbar {
-    font-size: 0.7rem;
+    font-size: 0.8em;
   }
 }
 

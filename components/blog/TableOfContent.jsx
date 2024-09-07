@@ -37,7 +37,7 @@ export default function TableOfContent({headings}) {
   }, [])
 
   return (
-    <section className='z-40 mr-4'>
+    <section className='z-50 mr-4'>
       <ol className='table-of-content'>
         {headings.map((heading, idx) => (
           <li key={idx} className='my-2.5 flex h-8 w-full items-center justify-center'>
