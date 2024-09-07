@@ -1,9 +1,9 @@
 'use client'
+import '../app/styles/index.css'
 import {useRef, useEffect} from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import googleCalendarPlugin from '@fullcalendar/google-calendar'
-import '../app/styles/index.css'
 
 const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY
 const id = process.env.NEXT_PUBLIC_CALENDAR_ID

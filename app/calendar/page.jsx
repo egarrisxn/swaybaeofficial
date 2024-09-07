@@ -1,12 +1,12 @@
 import {Header} from '@/components/Header'
 import Calendar from '@/components/Calendar'
-import {Button} from '@/components/ui/Button'
+import {OldButton} from '@/components/ui/OldButton'
 
 export default function CalendarPage() {
   return (
     <main className='mx-auto mt-8 w-full sm:container sm:mt-0'>
-      <div className='w-full px-2 sm:px-4 3xl:px-20 4xl:px-40'>
-        <Header id='calendar' className='flex pt-4 lg:px-4 lg:pt-16 xl:px-0'>
+      <div className='w-full px-[0.125rem] sm:px-4 3xl:px-20 4xl:px-40'>
+        <Header id='calendar' className='flex px-2 pt-4 lg:px-4 lg:pt-16 xl:px-0'>
           Calendar
         </Header>
         {/* ----------Calendar Body---------- */}
@@ -14,7 +14,7 @@ export default function CalendarPage() {
           <div className='rounded-lg border-2 border-b2w bg-w2b p-1 shadow-hard md:p-2 xl:p-4'>
             <Calendar />
             <div className='mb-0.5 mr-0.5 mt-1.5 flex justify-end md:mt-2 xl:mt-4'>
-              <Button type='button' className='px-2 md:px-8 2xl:px-12'>
+              <OldButton type='button' className='px-2 md:px-8 2xl:px-12'>
                 <a
                   href='https://calendar.google.com/calendar/u/0/r?cid=63739436a2ea120a341ec13abffc4b1289f77240a837d12043bed81ce6c78e1c@group.calendar.google.com'
                   target='_blank'
@@ -22,7 +22,7 @@ export default function CalendarPage() {
                 >
                   Add to Your Calendar
                 </a>
-              </Button>
+              </OldButton>
             </div>
           </div>
         </section>

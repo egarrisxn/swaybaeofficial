@@ -3,7 +3,7 @@ import {socialData} from '@/utils/constants'
 import {Icon} from './ui/Icon'
 import {Tooltip} from './ui/Tooltip'
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className='w-full'>
       <div className='p-2 lg:p-4 3xl:p-6'>

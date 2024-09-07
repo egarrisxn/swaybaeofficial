@@ -14,7 +14,7 @@
     --dark: #020617;
     --dark-tint: #01030d;
     /*! Light Theme Colors */
-    --background: #e5e6ef;
+    --background: #f8f8f8;
     --foreground: #121212;
     --primary-fade: #64bdf4;
     --primary: #45aeee;
@@ -58,7 +58,7 @@
   }
   .dark {
     /*! Dark Theme Colors */
-    --background: #0f172a;
+    --background: #121313;
     --foreground: #ebebeb;
     --primary-fade: #55c6f7;
     --primary: #38bdf8;
@@ -66,8 +66,6 @@
     --secondary-fade: #c877c0;
     --secondary: #a7549f;
     --secondary-tint: #9e4996;
-    --background: #0f172a;
-    --foreground: #ebebeb;
     --blue-fade: #3e6a73;
     --blue: #2f5861;
     --blue-tint: #2a4e60;
@@ -101,12 +99,6 @@
     --gradient: radial-gradient(circle, #000000, #070808 50%, #080d16 70%, #000000 90%);
     --shadow-soft: 1px 3px 6px 0px #6b7280;
     --shadow-hard: 2px 3px 12px 0px #6b7280;
-  }
-}
-
-@layer utilities {
-  .hamburger-toggle {
-    @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
   }
 }
 

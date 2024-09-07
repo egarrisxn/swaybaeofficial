@@ -1,112 +1,47 @@
 'use client'
 import Link from 'next/link'
-import Image from 'next/image'
 import {usePathname} from 'next/navigation'
-import {useState, useEffect, useCallback} from 'react'
-import {useTheme} from 'next-themes'
-import {Tooltip} from './ui/Tooltip'
+import {useState, useEffect} from 'react'
+import {Sheet, SheetContent, SheetTrigger} from './ui/Sheet'
+import {Button} from './ui/Button'
+import Logo from './ui/Logo'
+import ThemeToggle from './ui/ThemeToggle'
+import {Menu} from 'lucide-react'
 
-const navLinks = [
-  {href: '/', label: 'Home'},
-  {href: '/calendar', label: 'Calendar'},
-  {href: '/blog', label: 'Blog'},
-  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store', external: true},
-]
-
-export function Navbar() {
+export default function Navbar() {
   const pathname = usePathname()
-  const {resolvedTheme, setTheme} = useTheme()
+  const [open, setOpen] = useState(false)
   const [state, setState] = useState({
-    isMobileDropdownOpen: false,
     isVisible: false,
     mounted: false,
   })
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setState((prevState) => ({...prevState, isVisible: true, mounted: true}))
+      setState({isVisible: true, mounted: true})
     }, 500)
     return () => clearTimeout(timer)
   }, [])
 
-  const handleToggleMenu = useCallback(() => {
-    setState((prevState) => ({...prevState, isMobileDropdownOpen: !prevState.isMobileDropdownOpen}))
-  }, [])
-
-  const handleToggleTheme = useCallback(() => {
-    setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
-  }, [resolvedTheme, setTheme])
+  const navLinks = [
+    {href: '/', label: 'Home'},
+    {href: '/calendar', label: 'Calendar'},
+    {href: '/blog', label: 'Blog'},
+    {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store', external: true},
+  ]
 
   const activeStyle = {
     color: 'var(--p2b)',
     fontWeight: '500',
   }
 
-  return (
-    <header
-      className={`w-full transition-opacity ease-out ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
-    >
-      <nav className='z-20 p-2 sm:p-4 3xl:p-6' aria-label='Main navigation'>
-        <div className='mx-auto flex flex-row flex-wrap items-center justify-between md:px-2 2xl:px-4 3xl:px-16 4xl:px-24'>
-          <Link href='/' aria-label='Home'>
-            <Tooltip text='Go Home' direction='bottom'>
-              <div className='flex items-center'>
-                <Image
-                  src='/avatar.png'
-                  alt='Logo'
-                  height={64}
-                  width={64}
-                  className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
-                />
-                <div className='ml-1 bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text text-sm font-bold text-transparent xl:ml-1.5 xl:text-lg 3xl:text-2xl'>
-                  <p className='leading-tight tracking-tight'>Creator</p>
-                  <p className='leading-tight tracking-tight'>of Chaos</p>
-                </div>
-              </div>
-            </Tooltip>
-          </Link>
-          <button
-            type='button'
-            className='inline-flex items-center text-sm text-b2p md:hidden'
-            aria-controls='navbar-menu'
-            aria-label='Toggle navigation menu'
-            aria-expanded={state.isMobileDropdownOpen}
-            onClick={handleToggleMenu}
-          >
-            <span className='sr-only'>Open dropdown menu</span>
-            {state.isMobileDropdownOpen ? (
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={2}
-                stroke='currentColor'
-                className='size-9'
-              >
-                <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
-              </svg>
-            ) : (
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 24 24'
-                strokeWidth={2}
-                stroke='currentColor'
-                className='size-9'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
-                />
-              </svg>
-            )}
-          </button>
-          <ul
-            id='navbar-menu'
-            className={`block h-screen w-full flex-grow md:inline md:h-auto md:w-auto md:grow-0 ${state.isMobileDropdownOpen ? 'block' : 'hidden'}`}
-            aria-label='Primary navigation'
-          >
+  //! Desktop Navbar
+  function DesktopNav() {
+    return (
+      <nav className='hidden items-center justify-between border-b p-4 md:flex'>
+        <Logo />
+        <div className='flex'>
+          <ul className='inline w-full'>
             {navLinks.map((link) => (
               <li
                 key={link.href}
@@ -117,112 +52,74 @@ export function Navbar() {
                     href={link.href}
                     target='_blank'
                     rel='noreferrer noopener'
-                    className='z-20 bg-clip-text'
+                    className='hover:text-p2b'
                   >
                     {link.label}
                   </a>
                 ) : (
-                  <Link
-                    href={link.href}
-                    style={pathname === link.href ? activeStyle : {}}
-                    className='z-20 bg-clip-text'
-                  >
+                  <Link href={link.href} style={pathname === link.href ? activeStyle : {}}>
                     {link.label}
                   </Link>
                 )}
               </li>
             ))}
-            {state.mounted && (
-              <button
-                onClick={handleToggleTheme}
-                className='inline-flex items-end justify-end rounded-lg px-1 py-2 text-sm text-p2b md:hidden'
-                aria-label='Switch themes'
-              >
-                <Tooltip
-                  text={resolvedTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-                  direction='right'
-                >
-                  {resolvedTheme === 'light' ? (
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      strokeWidth={2}
-                      stroke='currentColor'
-                      className='size-9'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z'
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      strokeWidth={2}
-                      stroke='currentColor'
-                      className='size-9'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z'
-                      />
-                    </svg>
-                  )}
-                </Tooltip>
-              </button>
-            )}
           </ul>
-          {state.mounted && (
-            <button
-              onClick={handleToggleTheme}
-              className='z-50 hidden items-center rounded-lg p-1 text-sm text-p2b md:inline-flex'
-              aria-label='Toggle theme'
-            >
-              <Tooltip
-                text={resolvedTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-                direction='left'
-              >
-                {resolvedTheme === 'light' ? (
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    strokeWidth={2}
-                    stroke='currentColor'
-                    className='size-9 xl:size-10 3xl:size-11'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      d='M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z'
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    strokeWidth={2}
-                    stroke='currentColor'
-                    className='size-9 xl:size-10 3xl:size-11'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      d='M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z'
-                    />
-                  </svg>
-                )}
-              </Tooltip>
-            </button>
-          )}
         </div>
+        {state.mounted && <ThemeToggle direction='left' />}
       </nav>
+    )
+  }
+
+  //! Mobile Navbar
+  function MobileNav() {
+    return (
+      <nav className='flex items-center justify-between border-b p-4 md:hidden'>
+        <Logo />
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <Button variant='ghost' size='icon'>
+              <Menu size={36} strokeWidth={2} />
+            </Button>
+          </SheetTrigger>
+          <SheetContent>
+            <div className='flex flex-col'>
+              <ul className='inline w-full'>
+                {navLinks.map((link) => (
+                  <li
+                    key={link.href}
+                    className='mx-0.5 my-2 block text-5xl hover:text-p2b sm:my-3 md:mx-4 md:my-0 md:inline md:text-lg lg:mx-5 lg:text-2xl xl:mx-12 2xl:mx-14 2xl:text-4xl 3xl:mx-16'
+                  >
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target='_blank'
+                        rel='noreferrer noopener'
+                        className='hover:text-p2b'
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <a replace href={link.href} style={pathname === link.href ? activeStyle : {}}>
+                        {link.label}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              {state.mounted && <ThemeToggle direction='right' />}
+            </div>
+          </SheetContent>
+        </Sheet>
+      </nav>
+    )
+  }
+
+  return (
+    <header
+      className={`w-full transition-opacity ease-out ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
+    >
+      <DesktopNav />
+      <MobileNav />
     </header>
   )
 }

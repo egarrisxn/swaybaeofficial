@@ -4,7 +4,8 @@ import {Header} from './Header'
 import {TextArea} from './ui/TextArea'
 import {Input} from './ui/Input'
 import {ContactInfo} from './ui/ContactInfo'
-import {Button} from './ui/Button'
+import {OldButton} from './ui/OldButton'
+import {Mail, Files} from 'lucide-react'
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -65,24 +66,25 @@ export function Contact() {
           {/* Left Side */}
           <div className='mb-12 sm:mb-0'>
             <h2 className='font-sansita text-4xl font-black italic tracking-tight md:text-5xl lg:text-6xl 3xl:text-8xl'>
-              Let&apos;s Talk
+              Let&apos;s Chat!
             </h2>
-            <p className='mt-2 text-xl leading-5 text-foreground max-[450px]:text-base sm:text-sm md:text-base xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
-              Interested in working together? Have a question? Go ahead and send me a message!
+            <p className='mt-2 text-xl leading-5 text-gray-tint max-[450px]:text-base sm:text-sm md:text-base xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
+              Interested in working together? Have any questions? Send over an email and I&apos;ll
+              get back to you as soon as I can.
             </p>
             <ContactInfo
               title='Email'
               detail='Sway.Bae9000@gmail.com'
               href='mailto:Sway.Bae9000@gmail.com'
               ariaLabel='Email Sway Bae'
-              iconPath='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75'
+              icon={<Mail />}
             />
             <ContactInfo
               title='Media Kit'
               detail='beacons.ai/sway_bae/mediakit'
               href='https://beacons.ai/sway_bae/mediakit'
               ariaLabel='View Media Kit'
-              iconPath='M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75'
+              icon={<Files />}
             />
           </div>
           {/* Right Side Form */}
@@ -122,9 +124,9 @@ export function Contact() {
               value={formData.message}
               onChange={handleInputChange}
             />
-            <Button type='submit' className='w-full'>
+            <OldButton type='submit' className='w-full'>
               Send Message
-            </Button>
+            </OldButton>
           </form>
         </section>
       </div>
