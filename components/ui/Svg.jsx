@@ -7,20 +7,16 @@ const defaultProps = {
   xmlns: 'http://www.w3.org/2000/svg',
 }
 
-const SVG = ({href, className, path, aria, ...props}) => {
+const Svg = ({href, className, path, aria, ...props}) => {
   const svgElement = (
-    <svg {...defaultProps} {...props}>
-      {path}
-    </svg>
-  )
-
-  return href ? (
-    <a href={href} target='_blank' rel='noopener noreferrer' className={className}>
-      {svgElement}
-    </a>
-  ) : (
-    svgElement
+    <>
+      <a href={href} target='_blank' rel='noopener noreferrer' className={className}>
+        <svg {...defaultProps} {...props}>
+          {path}
+        </svg>
+      </a>
+    </>
   )
 }
 
-export {SVG}
+export {Svg}

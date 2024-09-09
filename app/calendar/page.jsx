@@ -1,4 +1,4 @@
-import Calendar from '@/containers/calendar-page/calendar'
+import Calendar from '@/containers/calendar-page/Calendar'
 
 export default function CalendarPage() {
   return (
