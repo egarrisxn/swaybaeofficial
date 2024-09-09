@@ -1,13 +1,51 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
+import {useTheme} from 'next-themes'
 import {usePathname} from 'next/navigation'
-import {useState, useEffect} from 'react'
-import {Sheet, SheetContent, SheetTrigger} from './ui/Sheet'
-import {Button} from './ui/Button'
-import Logo from './ui/Logo'
-import ThemeToggle from './ui/ThemeToggle'
-import SocialIcons from './ui/SocialsIcons'
-import {Menu} from 'lucide-react'
+import {useState, useEffect, useCallback} from 'react'
+import {Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription} from './ui/sheet'
+import {Button} from './ui/button'
+import Tooltip from './ui/tooltip'
+import SocialIcons from './xx/SocialIcons'
+import Icon from './ui/icon'
+
+function Logo() {
+  return (
+    <Link href='/' aria-label='Home'>
+      <Tooltip direction='bottom' text='Home'>
+        <div className='flex items-center'>
+          <Image
+            src='/avatar.png'
+            alt='Logo'
+            height={64}
+            width={64}
+            className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
+          />
+          <div className='ml-1 bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text text-sm font-bold text-transparent xl:ml-1.5 xl:text-lg 3xl:text-2xl'>
+            <p className='leading-tight tracking-tight'>Creator</p>
+            <p className='leading-tight tracking-tight'>of Chaos</p>
+          </div>
+        </div>
+      </Tooltip>
+    </Link>
+  )
+}
+
+function ThemeToggle() {
+  const {resolvedTheme, setTheme} = useTheme()
+  const handleToggleTheme = useCallback(() => {
+    setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
+  }, [resolvedTheme, setTheme])
+
+  return (
+    <Button onClick={handleToggleTheme} variant='ghost' size='icon' aria-label='Toggle Theme'>
+      <Tooltip direction='bottom' text={resolvedTheme === 'light' ? 'Dark' : 'Light'}>
+        {resolvedTheme === 'light' ? <Icon.MoonStar /> : <Icon.Sun />}
+      </Tooltip>
+    </Button>
+  )
+}
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -32,7 +70,7 @@ export default function Navbar() {
   ]
 
   const activeStyle = {
-    color: 'var(--p2b)',
+    color: 'var(--b2p)',
     fontWeight: '500',
   }
 
@@ -46,7 +84,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className='mx-0.5 my-2 block text-5xl hover:text-p2b sm:my-3 md:mx-4 md:my-0 md:inline md:text-lg lg:mx-5 lg:text-2xl xl:mx-12 2xl:mx-14 2xl:text-4xl 3xl:mx-16'
+                className='mx-0.5 my-2 block text-5xl font-medium transition-all hover:text-b2p sm:my-3 md:mx-4 md:my-0 md:inline md:text-lg lg:mx-5 lg:text-2xl xl:mx-12 2xl:mx-14 2xl:text-4xl 3xl:mx-16'
               >
                 {link.external ? (
                   <a
@@ -79,31 +117,30 @@ export default function Navbar() {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Button variant='ghost' size='icon'>
-              <Menu size={36} strokeWidth={2} />
+              <Tooltip direction='bottom' text='Menu'>
+                <Icon.Menu />
+              </Tooltip>
             </Button>
           </SheetTrigger>
           <SheetContent>
-            <div className='flex w-full flex-col justify-between'>
+            <SheetTitle className='hidden'>Sway Bae</SheetTitle>
+            <SheetDescription className='hidden'>Creator of Chaos</SheetDescription>
+            <div className='flex h-full flex-col justify-between gap-4'>
               <section>{state.mounted && <ThemeToggle />}</section>
-              <section className='flex flex-grow'>
-                <ul className='inline space-y-5 pt-6'>
+              <section className='flex-grow'>
+                <ul className='inline space-y-4'>
                   {navLinks.map((link) => (
                     <li
                       key={link.href}
-                      className='block text-7xl font-semibold hover:text-p2b max-[375px]:text-5xl'
+                      className='semibold block text-6xl font-medium transition-all ease-in hover:text-b2p max-[375px]:text-5xl'
                     >
                       {link.external ? (
-                        <a
-                          href={link.href}
-                          target='_blank'
-                          rel='noreferrer noopener'
-                          className='hover:text-p2b'
-                        >
+                        <a href={link.href} target='_blank' rel='noreferrer noopener'>
                           {link.label}
                         </a>
                       ) : (
                         <a
-                          replace
+                          replace='true'
                           href={link.href}
                           style={pathname === link.href ? activeStyle : {}}
                         >
@@ -114,14 +151,16 @@ export default function Navbar() {
                   ))}
                 </ul>
               </section>
-              <section className='flex h-24 items-center justify-center gap-4 max-[375px]:gap-3'>
-                <SocialIcons />
-              </section>
-              <section className='flex items-center justify-center'>
-                <p className='bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-sm font-semibold tracking-tight text-transparent dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
-                  <span className='pr-0.5 font-normal text-foreground'>© 2024 </span>
-                  Sway Bae Official
-                </p>
+              <section className='space-y-6'>
+                <div className='flex items-center justify-center gap-3 sm:gap-4'>
+                  <SocialIcons />
+                </div>
+                <div className='flex items-center justify-center'>
+                  <p className='bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-sm font-semibold tracking-tight text-transparent dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
+                    <span className='pr-0.5 font-normal text-foreground'>© 2024 </span>
+                    Sway Bae Official
+                  </p>
+                </div>
               </section>
             </div>
           </SheetContent>

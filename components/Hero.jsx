@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export function Hero() {
+export default function Hero() {
   return (
     <section className='w-full'>
       <header id='hero' className='sr-only'>

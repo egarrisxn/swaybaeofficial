@@ -1,26 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import TagBadge from './TagBadge'
+import TagBadge from '../xx/TagBadge'
+import DateBadge from '../xx/DateBadge'
 import {urlFor} from '@/utils/sanity/client'
 
 export default function LatestCard({post}) {
-  const {coverImage, title, tags, excerpt} = post
+  const {coverImage, title, excerpt, tags, publishedAt} = post
   return (
     <>
       <div className='grid grid-cols-1 gap-2 md:gap-3'>
         <section className='mb-1 md:mb-0'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-neutral px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
-            {new Date(post.publishedAt).toLocaleDateString('en-US', {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            })}
-          </p>
+          <DateBadge publishedAt={publishedAt} />
         </section>
-        <figure className='drop-shadow-md hover:scale-105'>
+        <figure className='rounded shadow-soft transition-all duration-300 ease-in-out hover:shadow-hard'>
           <Link href={`/blog/post/${post.postSlug}`}>
             <Image
-              className='rounded border-2 bg-light object-cover object-center p-2 shadow-md'
+              className='rounded border-2 bg-light object-cover object-center p-1 shadow-md'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt}
               width={800}
@@ -39,13 +34,13 @@ export default function LatestCard({post}) {
         </section>
         <section className='mt-2 md:ml-1'>
           <Link href={`/blog/post/${post.postSlug}`}>
-            <h3 className='prose prose-base line-clamp-1 font-bold md:prose-lg dark:prose-invert hover:underline'>
+            <h2 className='line-clamp-1 scroll-m-20 text-lg font-bold tracking-tight hover:underline 3xl:text-xl'>
               {title}
-            </h3>
+            </h2>
           </Link>
-          <h4 className='prose prose-sm line-clamp-2 text-gray-fade md:prose-base dark:prose-invert'>
+          <h3 className='line-clamp-3 scroll-m-20 text-lg leading-tight tracking-tight text-gray-fade 3xl:text-xl'>
             {excerpt}
-          </h4>
+          </h3>
           <Link href={`/blog/post/${post.postSlug}`}>
             <p className='mt-4 font-bold text-primary hover:font-extrabold'>Read Post&#8594;</p>
           </Link>

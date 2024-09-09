@@ -1,14 +1,18 @@
-export function TextArea({id, name, rows, placeholder, value, onChange}) {
+import * as React from 'react'
+import {cn} from '@/utils/clsx'
+
+const Textarea = React.forwardRef(({className, ...props}, ref) => {
   return (
     <textarea
-      id={id}
-      name={name}
-      rows={rows}
-      value={value}
-      placeholder={placeholder}
-      onChange={onChange}
-      required
-      className='border-gray-light focus:border-3 placeholder:text-gray-light w-full rounded-lg border bg-background px-4 py-2 shadow outline-none hover:border-p2b focus:border-b2w sm:border-2 sm:px-2 sm:py-1 sm:text-sm md:px-4 md:py-2 xl:px-5 xl:py-3 xl:text-base 3xl:px-8 3xl:py-4 3xl:text-2xl'
+      className={cn(
+        'border-gray-light placeholder:text-gray-light flex min-h-[80px] w-full rounded-md border bg-background px-3 py-2 text-sm shadow ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:text-base 3xl:text-2xl',
+        className,
+      )}
+      ref={ref}
+      {...props}
     />
   )
-}
+})
+Textarea.displayName = 'Textarea'
+
+export {Textarea}

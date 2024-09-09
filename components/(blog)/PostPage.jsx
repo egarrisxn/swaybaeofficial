@@ -1,14 +1,15 @@
 import Image from 'next/image'
-import {Header} from '../Header'
-import TableOfContent from './TableOfContent'
-import TagBadge from './TagBadge'
+import Header from '../Header'
+import TableOfContent from '../xx/TableOfContent'
+import TagBadge from '../xx/TagBadge'
+import DateBadge from '../xx/DateBadge'
 import PortableTextComponents from './PortableTextComponents'
 import {urlFor} from '@/utils/sanity/client'
 
 export default function PostPage({post}) {
   if (!post) return null
 
-  const {title, coverImage, tags, content, headings, publishedAt} = post
+  const {title, coverImage, content, headings, tags, publishedAt} = post
 
   return (
     <>
@@ -19,17 +20,11 @@ export default function PostPage({post}) {
           <TableOfContent headings={headings} />
         </aside>
         <div className='col-start-2 col-end-13 mx-auto grid sm:gap-2'>
-          <p className='prose prose-sm line-clamp-1 w-fit rounded-md bg-neutral px-2 tracking-tight text-light drop-shadow-md dark:prose-invert'>
-            {new Date(publishedAt).toLocaleDateString('en-US', {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            })}
-          </p>
+          <DateBadge publishedAt={publishedAt} />
           <section className='mb-2 mt-8 flex items-center justify-between text-center 4xl:mb-4'>
-            <h3 className='prose prose-2xl prose-slate line-clamp-3 font-bold max-[300px]:prose-sm dark:prose-invert sm:text-3xl md:text-4xl lg:text-5xl 4xl:pl-20 4xl:pr-12'>
+            <h2 className='scroll-m-20 pb-2 text-xl font-semibold leading-tight tracking-tight first:mt-0 sm:text-3xl md:text-4xl lg:text-5xl lg:font-bold'>
               {title}
-            </h3>
+            </h2>
             <div className='hidden gap-1 lg:flex lg:justify-end'>
               {tags.map((tag) => (
                 <div key={tag._id}>
@@ -40,7 +35,7 @@ export default function PostPage({post}) {
           </section>
           <section className='mt-1 flex max-[300px]:max-w-60 min-[300px]:mx-auto'>
             <Image
-              className='w-full rounded border-2 bg-light object-cover object-center p-2 shadow-md'
+              className='w-full rounded border-2 bg-light object-cover object-center p-1 shadow-soft'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt || 'Cover Image'}
               width={1000}

@@ -1,68 +1,35 @@
-'use client'
-import '../app/styles/index.css'
-import {useRef} from 'react'
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import listPlugin from '@fullcalendar/list'
-import googleCalendarPlugin from '@fullcalendar/google-calendar'
+import GoogleCalendar from './xx/GoogleCalendar'
+import Header from './Header'
+import {buttonVariants} from './ui/button'
 
-const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY
-const id = process.env.NEXT_PUBLIC_CALENDAR_ID
+const CalendarButton = () => {
+  return (
+    <a
+      href='https://calendar.google.com/calendar/u/0/r?cid=63739436a2ea120a341ec13abffc4b1289f77240a837d12043bed81ce6c78e1c@group.calendar.google.com'
+      target='_blank'
+      rel='noopener noreferrer'
+      className={buttonVariants({variant: 'fun', size: 'sm'})}
+    >
+      <span className='relative z-10'>Add to Your Calendar</span>
+    </a>
+  )
+}
 
 export default function Calendar() {
-  const calendarRef = useRef(null)
-
-  const handleViewChange = (view) => {
-    if (calendarRef.current) {
-      const calendarApi = calendarRef.current.getApi()
-      calendarApi.changeView(view)
-    }
-  }
-
-  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
-
   return (
-    <div>
-      <FullCalendar
-        ref={calendarRef}
-        plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}
-        googleCalendarApiKey={key}
-        events={{
-          googleCalendarId: id,
-          textColor: '#f8fafc',
-          borderColor: '#00ceff',
-          backgroundColor: '#b567ad',
-        }}
-        eventClick={(arg) => {
-          window.open(arg.event.url, '_blank', 'width=700,height=600')
-          arg.jsEvent.preventDefault()
-        }}
-        initialView={isMobile ? 'listMonth' : 'dayGridMonth'}
-        headerToolbar={{
-          left: 'prev,next',
-          center: 'title',
-          right: 'listMonth,dayGridMonth',
-        }}
-        customButtons={{
-          listMonth: {
-            text: 'List',
-            click: () => handleViewChange('listMonth'),
-          },
-          dayGridMonth: {
-            text: 'Month',
-            click: () => handleViewChange('dayGridMonth'),
-          },
-        }}
-        buttonText={{
-          prev: '←',
-          next: '→',
-        }}
-        views={{
-          dayGridMonth: {
-            titleFormat: {month: 'long', year: 'numeric'},
-          },
-        }}
-      />
-    </div>
+    <>
+      <Header id='calendar' className='flex px-2 pt-4 lg:px-4 lg:pt-16 xl:px-0'>
+        Calendar
+      </Header>
+      {/* ----------Calendar Body---------- */}
+      <section className='mx-auto mb-16 mt-12 max-w-7xl sm:px-4 lg:my-20 lg:px-6 xl:px-10 3xl:my-24 3xl:px-16 4xl:max-w-screen-3xl'>
+        <div className='rounded-lg border-2 border-b2w bg-w2b p-1 shadow-soft sm:shadow-hard md:p-2 xl:p-4'>
+          <GoogleCalendar />
+          <div className='mb-0.5 mr-0.5 mt-1.5 flex justify-end md:mt-2 xl:mt-4'>
+            <CalendarButton />
+          </div>
+        </div>
+      </section>
+    </>
   )
 }

@@ -1,5 +1,5 @@
-import {Header} from '../Header'
-import TagSlugCard from './TagSlugCard'
+import Header from '../Header'
+import TagCard from '../xx/TagCard'
 
 export default function TagPage({tag}) {
   if (!tag) return null
@@ -17,7 +17,7 @@ export default function TagPage({tag}) {
         </h3>
         <div className='mt-8 grid grid-cols-1 gap-8 pb-16'>
           {posts.map((post) => (
-            <TagSlugCard key={post._id} post={post} />
+            <TagCard key={post._id} post={post} />
           ))}
         </div>
       </div>

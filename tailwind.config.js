@@ -5,6 +5,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       currentColor: 'currentColor',
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
       white: 'var(--white)',
       black: 'var(--black)',
       light: {
@@ -17,8 +19,6 @@ module.exports = {
         DEFAULT: 'var(--dark)',
         fade: 'var(--dark-fade)',
       },
-      background: 'var(--background)',
-      foreground: 'var(--foreground)',
       primary: {
         tint: 'var(--primary-tint)',
         DEFAULT: 'var(--primary)',
@@ -28,11 +28,6 @@ module.exports = {
         tint: 'var(--secondary-tint)',
         DEFAULT: 'var(--secondary)',
         fade: 'var(--secondary-fade)',
-      },
-      blue: {
-        tint: 'var(--blue-tint)',
-        DEFAULT: 'var(--blue)',
-        fade: 'var(--blue-fade)',
       },
       purple: {
         tint: 'var(--purple-tint)',
@@ -54,18 +49,22 @@ module.exports = {
         DEFAULT: 'var(--green)',
         fade: 'var(--green-fade)',
       },
+      blue: {
+        tint: 'var(--blue-tint)',
+        DEFAULT: 'var(--blue)',
+      },
       red: {
         tint: 'var(--red-tint)',
         DEFAULT: 'var(--red)',
-        fade: 'var(--red-fade)',
       },
       yellow: {
         tint: 'var(--yellow-tint)',
         DEFAULT: 'var(--yellow)',
-        fade: 'var(--yellow-fade)',
       },
-      neutral: 'var(--neutral)',
-      accent: 'var(--accent)',
+      neutral: {
+        tint: 'var(--neutral-tint)',
+        DEFAULT: 'var(--neutral)',
+      },
       border: 'var(--border)',
       b2w: 'var(--b2w)',
       w2b: 'var(--w2b)',

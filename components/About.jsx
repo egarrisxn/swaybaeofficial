@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import {Header} from './Header'
+import Header from './Header'
 
-export function About() {
+export default function About() {
   return (
     <section className='w-full'>
       <Header id='about' showHr={true}>
@@ -68,31 +68,31 @@ export function About() {
             </p>
           </div>
           <div className='mt-6 grid grid-cols-1 gap-y-6 lg:mt-8 lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-5 lg:gap-y-5 lg:text-sm xl:mt-10 xl:grid-cols-3 xl:grid-rows-2 xl:text-base 3xl:mt-12 3xl:gap-x-12 3xl:gap-y-12 3xl:text-2xl 4xl:text-3xl'>
-            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
               <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> 3rd place in
               Blizzard&apos;s Hearthstone Battle of the Boars Tournament.{' '}
               <span className='font-medium'>(May 2021)</span>
             </p>
-            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
               <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Casting the Gaming
               Stadium Hearthstone Tournament. <span className='font-medium'>(June 2021)</span>
             </p>
-            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
               <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Casting and
               Hosting multiple Dreamhack Community Clash tournaments.{' '}
               <span className='font-medium'>(2021-2022)</span>
             </p>
-            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
               <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Casting 4 series
               of Super Girl Gamer Pro Hearthstone Tournaments.{' '}
               <span className='font-medium'>(2021-2023)</span>
             </p>
-            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
               <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Multiple
               Battle.net Launcher Feature events, including featured streams and curated YouTube
               videos just for Hearthstone.
             </p>
-            <p className='border-light-tint leading-6 hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-light-fade lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-gray-fade'>
+            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
               <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Producing,
               hosting, and casting one of the earliest AND largest grassroots tournaments for
               Hearthstone Battlegrounds, with close to{' '}

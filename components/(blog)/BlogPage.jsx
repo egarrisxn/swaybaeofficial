@@ -1,5 +1,5 @@
-import {Header} from '../Header'
-import {AllPosts} from './AllPosts'
+import Header from '../Header'
+import {AllPosts} from '../xx/AllPosts'
 
 export default function BlogPage({blog}) {
   return (

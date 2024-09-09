@@ -1,7 +1,7 @@
-import {Hero} from '@/components/Hero'
-import {About} from '@/components/About'
-import {Socials} from '@/components/Socials'
-import {Contact} from '@/components/Contact'
+import Hero from '@/components/Hero'
+import About from '@/components/About'
+import Socials from '@/components/Socials'
+import Contact from '@/components/Contact'
 
 // function fetchData() {
 //   return new Promise((resolve) => {

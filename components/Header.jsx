@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import {Search} from './ui/Search'
+import {Search} from './xx/Search'
 
-export function Header({
+export default function Header({
   id,
   className,
   children,
@@ -26,7 +26,7 @@ export function Header({
             className={`bg-gradient-to-tr from-purple via-pink-tint to-pink-fade bg-clip-text text-xl uppercase tracking-widest text-transparent sm:ml-2 3xl:ml-3 3xl:mt-6 3xl:text-3xl`}
             aria-label={linkText}
           >
-            &#8592; {linkText}
+            &#8678;{linkText}
           </h1>
         </Link>
       )}

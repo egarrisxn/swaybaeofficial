@@ -2,9 +2,9 @@ import dynamic from 'next/dynamic'
 import {draftMode} from 'next/headers'
 import {notFound} from 'next/navigation'
 import {loadBlog} from '@/utils/sanity/loadQuery'
-import BlogPage from '@/components/blog/BlogPage'
+import BlogPage from '@/components/(blog)/BlogPage'
 
-const BlogPagePreview = dynamic(() => import('@/components/blog/BlogPage-Preview.jsx'))
+const BlogPagePreview = dynamic(() => import('@/components/(blog)/BlogPage-Preview.jsx'))
 
 export default async function BlogHomePage({params}) {
   const initial = await loadBlog(params)

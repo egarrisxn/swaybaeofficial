@@ -1,11 +1,33 @@
 'use client'
 import {useState, useCallback} from 'react'
-import {Header} from './Header'
-import {TextArea} from './ui/TextArea'
-import {Input} from './ui/Input'
-import {FunButton} from './ui/FunButton'
-import {Icon} from './ui/Icon'
-import {Mail, Files} from 'lucide-react'
+import Header from './Header'
+import {Button, buttonVariants} from './ui/button'
+import {Input} from './ui/input'
+import {Textarea} from './ui/textarea'
+import Icon from './ui/icon'
+
+function SubmitButton() {
+  return (
+    <Button variant='fun' size='lg' type='submit' className='w-full'>
+      <span className='relative z-10'> Send Message</span>
+    </Button>
+  )
+}
+
+function IconButton({href, children}) {
+  return (
+    <div className='inline'>
+      <a
+        href={href}
+        target='_blank'
+        rel='noopener noreferrer'
+        className={buttonVariants({variant: 'social', size: 'icon'})}
+      >
+        {children}
+      </a>
+    </div>
+  )
+}
 
 function ContactInfo({title, icon, detail, href, ariaLabel}) {
   return (
@@ -13,7 +35,7 @@ function ContactInfo({title, icon, detail, href, ariaLabel}) {
       <h3 className='text-lg font-extrabold 3xl:text-3xl'>{title}</h3>
       <ul className='mt-3 sm:mt-1 md:mt-2 xl:mt-3 3xl:mt-4'>
         <li className='flex items-center'>
-          <Icon href={href}>{icon}</Icon>
+          <IconButton href={href}>{icon}</IconButton>
           <a target='_blank' href={href} className='ml-2 xl:ml-3' aria-label={ariaLabel}>
             <p className='block text-sm xl:text-base 3xl:text-xl'>{title}</p>
             <p className='text-sm font-semibold text-primary-fade hover:text-primary xl:text-base 2xl:text-lg 3xl:text-xl dark:text-primary-tint dark:hover:text-primary-fade'>
@@ -26,7 +48,7 @@ function ContactInfo({title, icon, detail, href, ariaLabel}) {
   )
 }
 
-export function Contact() {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -96,19 +118,19 @@ export function Contact() {
               detail='Sway.Bae9000@gmail.com'
               href='mailto:Sway.Bae9000@gmail.com'
               ariaLabel='Email Sway Bae'
-              icon={<Mail width='1em' height='1em' viewBox='0 0 24 24' strokeWidth='2' />}
+              icon={<Icon.Mail />}
             />
             <ContactInfo
               title='Media Kit'
               detail='beacons.ai/sway_bae/mediakit'
               href='https://beacons.ai/sway_bae/mediakit'
               ariaLabel='View Media Kit'
-              icon={<Files width='1em' height='1em' viewBox='0 0 24 24' strokeWidth='2' />}
+              icon={<Icon.Files />}
             />
           </div>
           {/* Right Side Form */}
           <form
-            className='ml-auto space-y-4 sm:space-y-2 md:space-y-4 lg:space-y-6 3xl:space-y-8'
+            className='ml-auto w-full space-y-4 sm:space-y-2 md:space-y-4 lg:space-y-6 3xl:space-y-8'
             onSubmit={handleSubmit}
           >
             <Input
@@ -135,7 +157,7 @@ export function Contact() {
               value={formData.subject}
               onChange={handleInputChange}
             />
-            <TextArea
+            <Textarea
               id='message'
               name='message'
               rows='4'
@@ -143,9 +165,7 @@ export function Contact() {
               value={formData.message}
               onChange={handleInputChange}
             />
-            <FunButton type='submit' className='w-full'>
-              Send Message
-            </FunButton>
+            <SubmitButton />
           </form>
         </section>
       </div>

@@ -1,92 +1,203 @@
 'use client'
-import '../../app/styles/index.css'
-import Image from 'next/image'
+import * as React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import {useCallback, useEffect, useState} from 'react'
-import {socialData} from '@/utils/constants'
-import {Button} from './Button'
-import {ChevronLeft, ChevronRight} from 'lucide-react'
+import {cn} from '@/utils/clsx'
+import {Button} from './button'
+import Icon from './icon'
 
-export function Carousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: 'start',
-    dragFree: false,
-    loop: true,
-  })
+const CarouselContext = React.createContext(null)
 
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+function useCarousel() {
+  const context = React.useContext(CarouselContext)
 
-  const onPrevButtonClick = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
+  if (!context) {
+    throw new Error('useCarousel must be used within a <Carousel />')
+  }
 
-  const onNextButtonClick = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+  return context
+}
 
-  const onSelect = useCallback((emblaApi) => {
-    setPrevBtnDisabled(!emblaApi.canScrollPrev())
-    setNextBtnDisabled(!emblaApi.canScrollNext())
-  }, [])
+const Carousel = React.forwardRef(
+  ({orientation = 'horizontal', opts, setApi, plugins, className, children, ...props}, ref) => {
+    const [carouselRef, api] = useEmblaCarousel(
+      {
+        ...opts,
+        axis: orientation === 'horizontal' ? 'x' : 'y',
+      },
+      plugins,
+    )
+    const [canScrollPrev, setCanScrollPrev] = React.useState(false)
+    const [canScrollNext, setCanScrollNext] = React.useState(false)
 
-  useEffect(() => {
-    if (emblaApi) {
-      onSelect(emblaApi)
-      emblaApi.on('reInit', onSelect)
-      emblaApi.on('select', onSelect)
-    }
-  }, [emblaApi, onSelect])
+    const onSelect = React.useCallback((api) => {
+      if (!api) {
+        return
+      }
+
+      setCanScrollPrev(api.canScrollPrev())
+      setCanScrollNext(api.canScrollNext())
+    }, [])
+
+    const scrollPrev = React.useCallback(() => {
+      api?.scrollPrev()
+    }, [api])
+
+    const scrollNext = React.useCallback(() => {
+      api?.scrollNext()
+    }, [api])
+
+    const handleKeyDown = React.useCallback(
+      (event) => {
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault()
+          scrollPrev()
+        } else if (event.key === 'ArrowRight') {
+          event.preventDefault()
+          scrollNext()
+        }
+      },
+      [scrollPrev, scrollNext],
+    )
+
+    React.useEffect(() => {
+      if (!api || !setApi) {
+        return
+      }
+
+      setApi(api)
+    }, [api, setApi])
+
+    React.useEffect(() => {
+      if (!api) {
+        return
+      }
+
+      onSelect(api)
+      api.on('reInit', onSelect)
+      api.on('select', onSelect)
+
+      return () => {
+        api?.off('select', onSelect)
+      }
+    }, [api, onSelect])
+
+    return (
+      <CarouselContext.Provider
+        value={{
+          carouselRef,
+          api: api,
+          opts,
+          orientation: orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
+          scrollPrev,
+          scrollNext,
+          canScrollPrev,
+          canScrollNext,
+        }}
+      >
+        <div
+          ref={ref}
+          onKeyDownCapture={handleKeyDown}
+          className={cn('relative', className)}
+          role='region'
+          aria-roledescription='carousel'
+          {...props}
+        >
+          {children}
+        </div>
+      </CarouselContext.Provider>
+    )
+  },
+)
+Carousel.displayName = 'Carousel'
+
+const CarouselContent = React.forwardRef(({className, ...props}, ref) => {
+  const {carouselRef, orientation} = useCarousel()
 
   return (
-    <section className='embla mx-auto'>
-      <div className='z-10 flex items-center justify-start space-x-4'>
-        <Button
-          className='embla__button--prev touch-manipulation appearance-none'
-          variant='ghost'
-          size='icon'
-          onClick={onPrevButtonClick}
-          disabled={prevBtnDisabled}
-          aria-label='Previous'
-        >
-          <ChevronLeft size={36} strokeWidth={2} />
-        </Button>
-        <Button
-          className='embla__button--next touch-manipulation appearance-none'
-          variant='ghost'
-          size='icon'
-          onClick={onNextButtonClick}
-          disabled={nextBtnDisabled}
-          aria-label='Next'
-        >
-          <ChevronRight size={36} strokeWidth={2} />
-        </Button>
-      </div>
-      <div className='h-auto w-full overflow-hidden px-1' ref={emblaRef}>
-        <div className='embla__container flex touch-pan-y xl:my-2 2xl:my-4 3xl:my-8 4xl:my-14'>
-          {socialData.map((social, index) => (
-            <div key={index} className='embla__slide min-w-0 py-2'>
-              <div className='max:h-64 flex items-center justify-center font-bold'>
-                <div className='relative'>
-                  <a href={social.href} target='_blank' rel='noopener noreferrer'>
-                    <Image
-                      src={social.src}
-                      alt={social.alt}
-                      width='600'
-                      height='400'
-                      className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'
-                    />
-                    <div className='overlay-text absolute bottom-0 left-0 flex items-center gap-1 p-2 text-center text-white transition-colors duration-200 ease-in hover:text-primary'>
-                      <div>{social.icon}</div>
-                      <div className='text-sm font-medium italic'>{social.username}</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <div ref={carouselRef} className='overflow-hidden'>
+      <div
+        ref={ref}
+        className={cn('flex', orientation === 'horizontal' ? '-ml-4' : '-mt-4 flex-col', className)}
+        {...props}
+      />
+    </div>
   )
-}
+})
+CarouselContent.displayName = 'CarouselContent'
+
+const CarouselItem = React.forwardRef(({className, ...props}, ref) => {
+  const {orientation} = useCarousel()
+
+  return (
+    <div
+      ref={ref}
+      role='group'
+      aria-roledescription='slide'
+      className={cn(
+        'min-w-0 shrink-0 grow-0 basis-full',
+        orientation === 'horizontal' ? 'pl-4' : 'pt-4',
+        className,
+      )}
+      {...props}
+    />
+  )
+})
+CarouselItem.displayName = 'CarouselItem'
+
+const CarouselPrevious = React.forwardRef(
+  ({className, variant = 'outline', size = 'icon', ...props}, ref) => {
+    const {orientation, scrollPrev, canScrollPrev} = useCarousel()
+
+    return (
+      <Button
+        ref={ref}
+        variant={variant}
+        size={size}
+        className={cn(
+          'absolute h-8 w-8 rounded-full',
+          orientation === 'horizontal'
+            ? '-left-12 top-1/2 -translate-y-1/2'
+            : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
+          className,
+        )}
+        disabled={!canScrollPrev}
+        onClick={scrollPrev}
+        {...props}
+      >
+        <Icon.ArrowLeft />
+        <span className='sr-only'>Previous slide</span>
+      </Button>
+    )
+  },
+)
+CarouselPrevious.displayName = 'CarouselPrevious'
+
+const CarouselNext = React.forwardRef(
+  ({className, variant = 'outline', size = 'icon', ...props}, ref) => {
+    const {orientation, scrollNext, canScrollNext} = useCarousel()
+
+    return (
+      <Button
+        ref={ref}
+        variant={variant}
+        size={size}
+        className={cn(
+          'absolute h-8 w-8 rounded-full',
+          orientation === 'horizontal'
+            ? '-right-12 top-1/2 -translate-y-1/2'
+            : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+          className,
+        )}
+        disabled={!canScrollNext}
+        onClick={scrollNext}
+        {...props}
+      >
+        <Icon.ArrowRight />
+        <span className='sr-only'>Next slide</span>
+      </Button>
+    )
+  },
+)
+CarouselNext.displayName = 'CarouselNext'
+
+export {Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext}
