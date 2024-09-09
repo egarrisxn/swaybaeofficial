@@ -21,7 +21,7 @@ export default function GoogleCalendar() {
   const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
 
   return (
-    <div>
+    <>
       <FullCalendar
         ref={calendarRef}
         plugins={[dayGridPlugin, listPlugin, googleCalendarPlugin]}
@@ -65,6 +65,6 @@ export default function GoogleCalendar() {
           },
         }}
       />
-    </div>
+    </>
   )
 }

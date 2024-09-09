@@ -1,25 +1,21 @@
 'use client'
 import {useState, useEffect} from 'react'
-import {Button} from '../ui/button'
-import Icon from '../ui/icon'
+import {Button} from './ui/Button'
+import {Icon} from './ui/Icon'
 
 const isBrowser = () => typeof window !== 'undefined'
-
-function scrollToTop() {
-  if (!isBrowser()) return
-  window.scrollTo({top: 0, behavior: 'smooth'})
-}
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
 
   const handleScroll = () => {
     if (!isBrowser()) return
-    if (window.scrollY > 400) {
-      setIsVisible(true)
-    } else {
-      setIsVisible(false)
-    }
+    setIsVisible(window.scrollY > 400)
+  }
+
+  const scrollOnClick = () => {
+    if (!isBrowser()) return
+    window.scrollTo({top: 0, behavior: 'smooth'})
   }
 
   useEffect(() => {
@@ -34,7 +30,7 @@ export default function ScrollToTop() {
     <Button
       variant='scroll'
       size='icon'
-      onClick={scrollToTop}
+      onClick={scrollOnClick}
       className={` ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <Icon.CircleArrowUp />

@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import TagBadge from '../xx/TagBadge'
-import DateBadge from '../xx/DateBadge'
+import TagBadge from './TagBadge'
+import DateBadge from './DateBadge'
 import {urlFor} from '@/utils/sanity/client'
 
 export default function LatestCard({post}) {
   const {coverImage, title, excerpt, tags, publishedAt} = post
+
   return (
     <>
       <div className='grid grid-cols-1 gap-2 md:gap-3'>

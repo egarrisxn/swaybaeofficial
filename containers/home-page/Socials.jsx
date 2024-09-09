@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
-import Header from './Header'
-import {Spotify} from './xx/Spotify'
-import {OldCarousel} from './xx/OldCarousel'
-import YouTube from './xx/YouTube'
+import Header from '@/components/Header'
+import {Spotify} from '@/components/Spotify'
+import {SocialCarousel} from '@/components/SocialCarousel'
+import YouTube from '@/components/YouTube'
 
 export default function Socials() {
   return (
@@ -17,9 +17,9 @@ export default function Socials() {
         <div className='flex justify-end sm:pb-4'>
           <Spotify />
         </div>
-        {/* ----------OldCarousel---------- */}
+        {/* ----------Carousel---------- */}
         <section className='mx-auto mb-12 mt-4 max-w-11xl sm:mt-8 md:mb-16 md:mt-12 lg:mb-20 lg:mt-16'>
-          <OldCarousel />
+          <SocialCarousel />
           <div className='mb-12 mt-2 sm:mb-6 md:mt-6'>
             <a href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
               <div className='flex flex-row items-center justify-center text-sm italic tracking-tight max-[370px]:text-xs sm:text-lg'>

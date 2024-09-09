@@ -1,4 +1,4 @@
-import {resolveHref} from './resolveHref.js'
+import {resolveHref} from './resolveHref'
 
 export const mainDocuments = [
   {

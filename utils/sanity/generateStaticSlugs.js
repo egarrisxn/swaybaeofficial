@@ -1,7 +1,7 @@
 import 'server-only'
 import {groq} from 'next-sanity'
-import {client} from './client.js'
-import {token} from './token.js'
+import {client} from './client'
+import {token} from './token'
 
 // Used in `generateStaticParams`
 export function generateStaticSlugs(type) {

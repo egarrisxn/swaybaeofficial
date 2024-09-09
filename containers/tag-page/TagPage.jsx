@@ -1,5 +1,5 @@
-import Header from '../Header'
-import TagCard from '../xx/TagCard'
+import Header from '@/components/Header'
+import TagCard from '@/components/TagCard'
 
 export default function TagPage({tag}) {
   if (!tag) return null

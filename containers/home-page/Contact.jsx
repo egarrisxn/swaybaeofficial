@@ -1,15 +1,15 @@
 'use client'
 import {useState, useCallback} from 'react'
-import Header from './Header'
-import {Button, buttonVariants} from './ui/button'
-import {Input} from './ui/input'
-import {Textarea} from './ui/textarea'
-import Icon from './ui/icon'
+import Header from '@/components/Header'
+import {Button, buttonVariants} from '@/components/ui/Button'
+import {Input} from '@/components/ui/Input'
+import {Textarea} from '@/components/ui/Textarea'
+import {Icon} from '@/components/ui/Icon'
 
 function SubmitButton() {
   return (
     <Button variant='fun' size='lg' type='submit' className='w-full'>
-      <span className='relative z-10'> Send Message</span>
+      Send Message
     </Button>
   )
 }

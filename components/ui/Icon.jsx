@@ -69,4 +69,4 @@ const Icon = {
   X: ({className, ...props}) => <X {...biggerProps} className={className} {...props} />,
 }
 
-export default Icon
+export {Icon}

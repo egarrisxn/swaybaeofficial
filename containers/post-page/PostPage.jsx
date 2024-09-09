@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import Header from '../Header'
-import TableOfContent from '../xx/TableOfContent'
-import TagBadge from '../xx/TagBadge'
-import DateBadge from '../xx/DateBadge'
-import PortableTextComponents from './PortableTextComponents'
+import Header from '@/components/Header'
+import TableOfContent from '@/components/TableOfContent'
+import TagBadge from '@/components/TagBadge'
+import DateBadge from '@/components/DateBadge'
+import PortableTextComponents from '@/components/PortableTextComponents'
 import {urlFor} from '@/utils/sanity/client'
 
 export default function PostPage({post}) {

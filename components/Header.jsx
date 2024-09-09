@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {Search} from './xx/Search'
+import Search from './Search'
 
 export default function Header({
   id,

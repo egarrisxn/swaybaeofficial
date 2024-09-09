@@ -3,9 +3,9 @@ import {draftMode} from 'next/headers'
 import {notFound} from 'next/navigation'
 import {generateStaticSlugs} from '@/utils/sanity/generateStaticSlugs'
 import {loadPost} from '@/utils/sanity/loadQuery'
-import PostPage from '@/components/(blog)/PostPage'
+import PostPage from '@/containers/post-page/PostPage'
 
-const PostPagePreview = dynamic(() => import('@/components/(blog)/PostPage-Preview.jsx'))
+const PostPagePreview = dynamic(() => import('@/containers/post-page/PostPage-Preview.jsx'))
 
 export function generateStaticParams() {
   return generateStaticSlugs('post')

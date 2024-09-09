@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-export default function Tooltip({children, text, direction = 'top', ...otherProps}) {
+const Tooltip = ({children, text, direction = 'top', ...otherProps}) => {
   const getTooltipClasses = () => {
     let baseClasses =
       'absolute z-50 opacity-0 pointer-events-none rounded-md border bg-foreground px-2 py-1 min-w-max text-xs text-background shadow-md 2xl:px-3 2xl:py-1.5 2xl:text-base transition-all duration-100 transform'
@@ -39,10 +39,12 @@ export default function Tooltip({children, text, direction = 'top', ...otherProp
   )
 }
 
+export {Tooltip}
+
 // 'use client'
 // import * as React from 'react'
 // import * as TooltipPrimitive from '@radix-ui/react-tooltip'
-// import {cn} from '@/utils/clsx'
+// import {cn} from '@/utils/cn'
 
 // const TooltipProvider = TooltipPrimitive.Provider
 // const Tooltip = TooltipPrimitive.Root

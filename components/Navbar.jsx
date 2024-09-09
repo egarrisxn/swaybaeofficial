@@ -1,16 +1,16 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import {useTheme} from 'next-themes'
 import {usePathname} from 'next/navigation'
 import {useState, useEffect, useCallback} from 'react'
-import {Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription} from './ui/sheet'
-import {Button} from './ui/button'
-import Tooltip from './ui/tooltip'
-import SocialIcons from './xx/SocialIcons'
-import Icon from './ui/icon'
+import {useTheme} from 'next-themes'
+import {Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription} from './ui/Sheet'
+import {Button} from './ui/Button'
+import {Tooltip} from './ui/Tooltip'
+import {Icon} from './ui/Icon'
+import SocialIcons from './SocialIcons'
 
-function Logo() {
+const Logo = () => {
   return (
     <Link href='/' aria-label='Home'>
       <Tooltip direction='bottom' text='Home'>
@@ -32,12 +32,11 @@ function Logo() {
   )
 }
 
-function ThemeToggle() {
+const ThemeToggle = () => {
   const {resolvedTheme, setTheme} = useTheme()
   const handleToggleTheme = useCallback(() => {
     setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
   }, [resolvedTheme, setTheme])
-
   return (
     <Button onClick={handleToggleTheme} variant='ghost' size='icon' aria-label='Toggle Theme'>
       <Tooltip direction='bottom' text={resolvedTheme === 'light' ? 'Dark' : 'Light'}>

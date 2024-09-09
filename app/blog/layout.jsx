@@ -1,5 +1,5 @@
 import {draftMode} from 'next/headers'
-import LiveVisualEditing from '@/components/(blog)/LiveVisualEditing'
+import LiveVisualEditing from '@/components/LiveVisualEditing'
 
 export default function BlogLayout({children}) {
   return (

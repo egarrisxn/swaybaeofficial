@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import {Link, NextLink} from 'next/link'
+import {PortableText} from 'next-sanity'
 import {resolveHref} from '@/utils/sanity/resolveHref'
 import {urlFor} from '@/utils/sanity/client'
-import {PortableText} from 'next-sanity'
 
 const hrefResolver = ({internalLink}) => {
   return resolveHref(internalLink._type, internalLink.slug?.current)

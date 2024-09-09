@@ -23,4 +23,4 @@ const SVG = ({href, className, path, aria, ...props}) => {
   )
 }
 
-export default SVG
+export {SVG}

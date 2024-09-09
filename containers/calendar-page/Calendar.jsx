@@ -1,6 +1,6 @@
-import GoogleCalendar from './xx/GoogleCalendar'
-import Header from './Header'
-import {buttonVariants} from './ui/button'
+import GoogleCalendar from '@/components/GoogleCalendar'
+import Header from '@/components/Header'
+import {buttonVariants} from '@/components/ui/Button'
 
 const CalendarButton = () => {
   return (
@@ -10,7 +10,7 @@ const CalendarButton = () => {
       rel='noopener noreferrer'
       className={buttonVariants({variant: 'fun', size: 'sm'})}
     >
-      <span className='relative z-10'>Add to Your Calendar</span>
+      Add to Your Calendar
     </a>
   )
 }

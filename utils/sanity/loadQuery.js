@@ -1,9 +1,9 @@
 import 'server-only'
 import * as queryStore from '@sanity/react-loader'
 import {draftMode} from 'next/headers'
-import {client} from './client.js'
-import {token} from './token.js'
-import {POST_QUERY, POSTS_QUERY, TAG_QUERY, TAGS_QUERY} from './queries.js'
+import {client} from './client'
+import {token} from './token'
+import {POST_QUERY, POSTS_QUERY, TAG_QUERY, TAGS_QUERY} from './queries'
 
 const serverClient = client.withConfig({
   token,

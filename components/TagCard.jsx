@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import DateBadge from '../xx/DateBadge'
+import DateBadge from './DateBadge'
 import {urlFor} from '@/utils/sanity/client'
 
 export default function TagCard({post}) {

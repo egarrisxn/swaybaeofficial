@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {cva} from 'class-variance-authority'
-import {cn} from '@/utils/clsx'
+import {cn} from '@/utils/cn'
 
 const badgeVariants = cva(
   'inline-flex drop-shadow-md items-center border whitespace-nowrap px-2 transition-colors focus:outline-none focus:ring-0',
