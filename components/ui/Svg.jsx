@@ -8,7 +8,7 @@ const defaultProps = {
 }
 
 const Svg = ({href, className, path, aria, ...props}) => {
-  const svgElement = (
+  return (
     <>
       <a href={href} target='_blank' rel='noopener noreferrer' className={className}>
         <svg {...defaultProps} {...props}>
