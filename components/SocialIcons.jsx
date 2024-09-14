@@ -11,6 +11,7 @@ const SocialIcons = () => {
           <Svg
             path={svgData[key].path}
             href={svgData[key].href}
+            name={svgData[key].title}
             className={`${buttonVariants({variant: 'social', size: 'icon'})} transition-all ease-in 3xl:size-[3rem]`}
           />
         </Tooltip>

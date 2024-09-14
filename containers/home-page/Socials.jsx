@@ -22,7 +22,7 @@ export default function Socials() {
           <SocialCarousel />
           <div className='mb-12 mt-2 sm:mb-6 md:mt-6'>
             <a href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
-              <div className='flex flex-row items-center justify-center text-sm italic tracking-tight max-[370px]:text-xs sm:text-lg'>
+              <div className='flex flex-row items-center justify-center italic tracking-tight max-[370px]:text-xs sm:text-lg'>
                 If you&apos;d like to support what I do:
                 <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden'>
                   THRONE
@@ -56,7 +56,7 @@ export default function Socials() {
               href='https://www.youtube.com/sway_baetv/'
               target='_blank'
               rel='noopener noreferrer'
-              className='mx-1 bg-gradient-to-tl from-purple-fade via-pink-tint to-pink-fade bg-clip-text text-transparent lg:mx-1.5'
+              className='mx-1 bg-gradient-to-tl from-purple-tint via-pink-tint to-pink-fade bg-clip-text text-transparent lg:mx-1.5'
             >
               YouTube
             </a>

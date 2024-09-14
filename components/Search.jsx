@@ -81,7 +81,7 @@ export default function Search({placeholder}) {
         <Icon.Search />
       </div>
       {searchResults.length > 0 && (
-        <div className='absolute left-0 top-full my-1 w-full overflow-y-auto rounded-md border text-sm tracking-tight shadow 2xl:text-base'>
+        <div className='absolute left-0 top-full my-1 w-full overflow-y-auto rounded-md border tracking-tight shadow 2xl:text-base'>
           <p className='rounded-t bg-[#000000] bg-opacity-80 text-center font-semibold text-w2b dark:bg-[#ffffff]'>
             Search Results
           </p>

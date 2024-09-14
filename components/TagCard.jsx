@@ -20,16 +20,16 @@ export default function TagCard({post}) {
         </Link>
       </div>
       <div className='lg:col-start-3 lg:col-end-6 lg:grid'>
-        <div className='flex flex-col gap-2 p-1 lg:gap-4 lg:px-0 lg:py-4 xl:gap-6 2xl:gap-12'>
+        <div className='flex flex-col gap-2 p-1 lg:gap-3 lg:px-0 lg:py-4 2xl:gap-4'>
           <div className='flex flex-row lg:hidden'>
             <DateBadge publishedAt={publishedAt} />
           </div>
           <Link href={`/blog/post/${postSlug}`}>
-            <h2 className='line-clamp-1 scroll-m-20 font-semibold tracking-tight first:mt-0 hover:underline md:text-lg lg:line-clamp-2 xl:text-2xl 2xl:text-4xl'>
+            <h2 className='line-clamp-1 scroll-m-20 font-semibold tracking-tight first:mt-0 hover:underline md:text-lg lg:line-clamp-2 xl:text-2xl 2xl:text-3xl'>
               {title}
             </h2>
           </Link>
-          <p className='max-[text-sm line-clamp-3 leading-snug text-gray-fade sm:text-base sm:leading-7 md:text-lg xl:text-xl xl:leading-normal 3xl:text-2xl'>
+          <p className='line-clamp-3 leading-snug text-gray-fade sm:text-base sm:leading-7 lg:text-lg xl:text-xl xl:leading-normal 2xl:text-2xl'>
             {excerpt}
           </p>
         </div>

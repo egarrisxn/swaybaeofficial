@@ -28,7 +28,7 @@ export function SocialCarousel() {
                     className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'
                   />
                   <div className='overlay-text absolute bottom-0 left-0 z-50 flex items-center gap-1 p-2 text-center text-white transition-colors duration-200 ease-in hover:text-primary'>
-                    <div className='text-sm font-medium italic'>{carouselData[key].username}</div>
+                    <div className='font-medium italic'>{carouselData[key].username}</div>
                   </div>
                 </a>
               </div>

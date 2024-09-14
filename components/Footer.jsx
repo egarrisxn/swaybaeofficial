@@ -10,7 +10,7 @@ export default function Footer() {
             <SocialIcons />
           </section>
           <section className='flex items-center justify-center'>
-            <p className='bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-base font-semibold tracking-tight text-transparent max-[375px]:text-sm lg:text-lg 2xl:text-2xl 3xl:text-3xl dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
+            <p className='max-[375px]: bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-base font-semibold tracking-tight text-transparent lg:text-lg 2xl:text-2xl 3xl:text-3xl dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
               <span className='pr-0.5 font-normal text-foreground'>© 2024 </span>
               Sway Bae Official
             </p>

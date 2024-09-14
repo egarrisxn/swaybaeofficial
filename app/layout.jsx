@@ -12,7 +12,7 @@ const poppins = Poppins({
   display: 'swap',
   variable: '--font-poppins',
   style: ['normal', 'italic'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
 const sansita = Sansita({
@@ -45,7 +45,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Sway Bae | Streaming, Gaming, & So Much More!',
+    title: 'Sway Bae | Creator of Chaos',
     description: 'The Official Website for Sway Bae & The Bae Squad!',
     url: 'https://swaybae.net',
     siteName: 'Swaybae.net',
@@ -54,16 +54,16 @@ export const metadata = {
     cardType: 'summary_large_image',
     handle: '@sway_baeTV',
     site: '@sway_baeTV',
-    title: 'Sway Bae | Streaming, Gaming, & So Much More!',
+    title: 'Sway Bae | Creator of Chaos',
     description: 'The Official Website for Sway Bae & The Bae Squad!',
   },
 }
 
 export default function RootLayout({children}) {
   return (
-    <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+    <html lang='en' className='scroll-smooth antialiased' suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${sansita.variable} grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain scroll-smooth bg-myGradient bg-cover bg-no-repeat font-sans text-foreground antialiased`}
+        className={`${poppins.variable} ${sansita.variable} grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain bg-myGradient bg-cover bg-no-repeat font-sans text-foreground`}
       >
         <ThemeProvider
           enableSystem

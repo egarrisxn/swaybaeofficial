@@ -80,9 +80,7 @@ export default function PortableTextComponents({value, className, content}) {
               display: isInline ? 'inline-block' : 'block',
             }}
           />
-          {value.caption && (
-            <figcaption className='text-sm italic text-gray'>{value.caption}</figcaption>
-          )}
+          {value.caption && <figcaption className='italic text-gray'>{value.caption}</figcaption>}
         </div>
       ),
       youtube: ({value}) => (

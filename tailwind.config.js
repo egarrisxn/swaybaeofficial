@@ -33,11 +33,6 @@ module.exports = {
         DEFAULT: 'var(--secondary)',
         fade: 'var(--secondary-fade)',
       },
-      purple: {
-        tint: 'var(--purple-tint)',
-        DEFAULT: 'var(--purple)',
-        fade: 'var(--purple-fade)',
-      },
       pink: {
         tint: 'var(--pink-tint)',
         DEFAULT: 'var(--pink)',
@@ -60,6 +55,10 @@ module.exports = {
       red: {
         tint: 'var(--red-tint)',
         DEFAULT: 'var(--red)',
+      },
+      purple: {
+        tint: 'var(--purple-tint)',
+        DEFAULT: 'var(--purple)',
       },
       yellow: {
         tint: 'var(--yellow-tint)',

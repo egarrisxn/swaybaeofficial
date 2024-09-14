@@ -4,6 +4,15 @@
 
 @layer base {
   :root {
+    /*? Calendar Colors */
+    --fc-daygrid-event-dot-width: 6px;
+    --fc-today-bg-color: #b2b2b21c;
+    --fc-button-bg-color: #00ceff;
+    --fc-button-border-color: #dededeb9;
+    --fc-button-hover-bg-color: #b567ad;
+    --fc-button-hover-border-color: #b567ad;
+    --fc-button-active-bg-color: #b567ad;
+    --fc-button-active-border-color: #dedede4e;
     /*! Shared Colors */
     --white: #ffffff;
     --black: #000000;
@@ -22,9 +31,6 @@
     --secondary-fade: #f76aa5;
     --secondary: #e8488a;
     --secondary-tint: #cc3675;
-    --purple-fade: #581d95;
-    --purple: #330f5f;
-    --purple-tint: #290c4c;
     --pink-fade: #ff65af;
     --pink: #fd509d;
     --pink-tint: #ff65af;
@@ -38,6 +44,8 @@
     --blue-tint: #3a6e80;
     --red: #ff2e33;
     --red-tint: #eb2124;
+    --purple: #581d95;
+    --purple-tint: #330f5f;
     --yellow: #fff232;
     --yellow-tint: #e2d51b;
     --neutral: #596579;
@@ -59,16 +67,6 @@
     );
     --shadow-soft: 1px 2px 4px 0px #6b7280;
     --shadow-hard: 2px 3px 6px 0px #6b7280;
-
-    /*? Calendar Colors */
-    --fc-daygrid-event-dot-width: 6px;
-    --fc-today-bg-color: #b2b2b21c;
-    --fc-button-bg-color: #00ceff;
-    --fc-button-border-color: #dededeb9;
-    --fc-button-hover-bg-color: #b567ad;
-    --fc-button-hover-border-color: #b567ad;
-    --fc-button-active-bg-color: #b567ad;
-    --fc-button-active-border-color: #dedede4e;
   }
   .dark {
     /*! Dark Theme Colors */
@@ -80,10 +78,6 @@
     --secondary-fade: #c877c0;
     --secondary: #a7549f;
     --secondary-tint: #9e4996;
-
-    --purple-fade: #3e135d;
-    --purple: #261042;
-    --purple-tint: #1f0836;
     --pink-fade: #c23d6e;
     --pink: #b73c6f;
     --pink-tint: #c23d6e;
@@ -97,6 +91,8 @@
     --blue-tint: #2a4e60;
     --red: #d32f2f;
     --red-tint: #b71c1c;
+    --purple: #3e135d;
+    --purple-tint: #261042;
     --yellow: #d1c63a;
     --yellow-tint: #fbc02d;
     --neutral: #334058;
@@ -120,6 +116,9 @@
     --shadow-hard: 2px 3px 12px 0px #727272;
   }
 }
+html {
+  text-rendering: optimizeLegibility;
+}
 
 /*! Scrollbar */
 /* Firefox */
@@ -134,26 +133,6 @@
 ::-webkit-scrollbar-thumb {
   background: var(--p2b);
   border-radius: 5px;
-}
-
-/*! Calendar */
-@media (min-width: 769px) {
-  .fc {
-    font-size: 1.1rem;
-    aspect-ratio: 1.35;
-  }
-  .fc-header-toolbar {
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 768px) {
-  .fc {
-    font-size: 0.8rem;
-    aspect-ratio: 0.5;
-  }
-  .fc-header-toolbar {
-    font-size: 0.8em;
-  }
 }
 
 /*! Loader */
@@ -181,6 +160,26 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+/*! Calendar */
+@media (min-width: 769px) {
+  .fc {
+    font-size: 1.1rem;
+    aspect-ratio: 1.35;
+  }
+  .fc-header-toolbar {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .fc {
+    font-size: 0.8rem;
+    aspect-ratio: 0.5;
+  }
+  .fc-header-toolbar {
+    font-size: 0.8em;
   }
 }
 

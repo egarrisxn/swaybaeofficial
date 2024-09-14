@@ -81,7 +81,7 @@
 //         </ul>
 //       </section>
 //       <section>
-//         <code className='relative rounded bg-gray px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold'>
+//         <code className='relative rounded bg-gray px-[0.3rem] py-[0.2rem] font-mono  font-semibold'>
 //           @radix-ui/react-alert-dialog
 //         </code>
 //       </section>
@@ -94,10 +94,10 @@
 //         <div className='text-lg font-semibold'>Are you absolutely sure?</div>
 //       </section>
 //       <section>
-//         <small className='text-sm font-medium leading-none'>Email address</small>
+//         <small className=' font-medium leading-none'>Email address</small>
 //       </section>
 //       <section>
-//         <p className='text-gray-light text-sm'>Enter your email address.</p>
+//         <p className='text-gray-light '>Enter your email address.</p>
 //       </section>
 //     </div>
 //   )

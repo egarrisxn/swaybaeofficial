@@ -65,7 +65,7 @@ export function Spotify(props) {
                 width={44}
                 height={44}
               />
-              <div className='mb-1 flex max-w-28 flex-col justify-end text-sm'>
+              <div className='mb-1 flex max-w-28 flex-col justify-end'>
                 <a
                   href={result.songUrl}
                   target='_blank'

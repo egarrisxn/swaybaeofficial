@@ -21,11 +21,11 @@ export default function PostPage({post}) {
         </aside>
         <div className='col-start-2 col-end-13 mx-auto grid sm:gap-2'>
           <DateBadge publishedAt={publishedAt} />
-          <section className='mb-2 mt-8 flex items-center justify-between text-center 4xl:mb-4'>
-            <h2 className='scroll-m-20 pb-2 text-xl font-semibold leading-tight tracking-tight first:mt-0 sm:text-3xl md:text-4xl lg:text-5xl lg:font-bold'>
+          <section className='mb-2 mt-8 flex items-center justify-between text-center 3xl:flex-col'>
+            <h1 className='scroll-m-20 pb-2 text-xl font-semibold leading-tight tracking-tight first:mt-0 sm:text-3xl md:text-4xl lg:text-5xl lg:font-bold 3xl:px-4 3xl:text-6xl'>
               {title}
-            </h2>
-            <div className='hidden gap-1 lg:flex lg:justify-end'>
+            </h1>
+            <div className='hidden gap-1 lg:flex lg:justify-end 3xl:py-2'>
               {tags.map((tag) => (
                 <div key={tag._id}>
                   <TagBadge tag={tag} />
