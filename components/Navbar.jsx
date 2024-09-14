@@ -62,7 +62,7 @@ export default function Navbar() {
               <div className='flex items-center'>
                 <Image
                   src='/avatar.png'
-                  alt='An avatar for Sway Bae'
+                  alt='Avatar of Sway and link to home page'
                   height={64}
                   width={64}
                   className='size-10 xl:size-12 3xl:size-14 4xl:size-16'

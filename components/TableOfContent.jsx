@@ -50,7 +50,7 @@ export default function TableOfContent({headings}) {
                 direction='right'
                 text={heading.children.map((child) => child.text).join(' ')}
               >
-                <span className='z-20 hover:text-primary-fade'>&bull;</span>
+                <span className='z-20 hover:text-primary'>&bull;</span>
               </Tooltip>
             </Link>
           </li>
