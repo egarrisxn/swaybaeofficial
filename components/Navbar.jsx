@@ -17,7 +17,7 @@ const Logo = () => {
         <div className='flex items-center'>
           <Image
             src='/avatar.png'
-            alt='Logo'
+            alt='An avatar for Sway Bae'
             height={64}
             width={64}
             className='size-10 xl:size-12 3xl:size-14 4xl:size-16'

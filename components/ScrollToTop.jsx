@@ -1,6 +1,5 @@
 'use client'
 import {useState, useEffect} from 'react'
-import {Button} from './ui/Button'
 import {Icon} from './ui/Icon'
 
 const isBrowser = () => typeof window !== 'undefined'
@@ -27,13 +26,11 @@ export default function ScrollToTop() {
   }, [])
 
   return (
-    <Button
-      variant='scroll'
-      size='icon'
+    <div
       onClick={scrollOnClick}
-      className={` ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={` ${isVisible ? 'fixed bottom-0 right-0 z-50 mb-14 mr-10 hidden rounded-full bg-secondary p-1 text-white opacity-100 shadow-soft transition-all duration-200 ease-in-out hover:bg-white hover:text-black hover:shadow-hard sm:inline-block dark:bg-black dark:text-primary hover:dark:bg-dark-fade hover:dark:text-white' : 'opacity-0'}`}
     >
       <Icon.CircleArrowUp />
-    </Button>
+    </div>
   )
 }

@@ -4,14 +4,6 @@ import FeaturedCard from './FeaturedCard'
 import LatestCard from './LatestCard'
 import {Button} from './ui/Button'
 
-const LoadButton = ({onClick}) => {
-  return (
-    <Button variant='fun' size='md' type='button' onClick={onClick}>
-      Load more posts
-    </Button>
-  )
-}
-
 export function AllPosts({posts}) {
   const featuredPosts = posts.filter((post) => post.featured)
   const remainingPosts = posts.filter((post) => !post.featured)
@@ -36,7 +28,7 @@ export function AllPosts({posts}) {
         </section>
       )}
       <hr className='mb-8 mt-4 w-full rounded-lg border border-gray-fade' />
-      <h4 className='mb-4 ml-1 text-xl font-bold'>Latest Posts</h4>
+      <h2 className='mb-4 ml-1 text-xl font-bold'>Latest Posts</h2>
       <section className='mt-8 grid grid-cols-1 gap-16 pb-12 md:grid-cols-2 xl:grid-cols-3'>
         {[...featuredPosts, ...remainingPosts].slice(0, loadMore).map((post) => (
           <div key={post._id}>
@@ -46,7 +38,9 @@ export function AllPosts({posts}) {
       </section>
       {posts.length > loadMore && (
         <div className='flex justify-center pb-12 pt-4'>
-          <LoadButton onClick={showMoreArticles} />
+          <Button variant='fun' size='md' type='button' onClick={showMoreArticles}>
+            Load more posts
+          </Button>
         </div>
       )}
     </>

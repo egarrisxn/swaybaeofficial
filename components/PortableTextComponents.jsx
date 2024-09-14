@@ -64,7 +64,7 @@ export default function PortableTextComponents({value, className, content}) {
     },
     types: {
       image: ({value, isInline}) => (
-        <figure className='mb-1'>
+        <div className='mb-1'>
           <Image
             className='rounded border-2 bg-light object-cover object-center p-2 shadow-md'
             src={urlFor(value)
@@ -83,7 +83,7 @@ export default function PortableTextComponents({value, className, content}) {
           {value.caption && (
             <figcaption className='text-sm italic text-gray'>{value.caption}</figcaption>
           )}
-        </figure>
+        </div>
       ),
       youtube: ({value}) => (
         <div className='aspect-video flex-1'>

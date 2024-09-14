@@ -8,7 +8,7 @@ export default function TagCard({post}) {
 
   return (
     <div className='grid grid-cols-1 gap-2 rounded-lg border-2 bg-w2b p-4 shadow-soft sm:shadow-hard md:p-8 lg:grid-cols-6 lg:p-2 2xl:gap-6'>
-      <figure className='hidden lg:col-start-1 lg:col-end-3 lg:grid lg:p-4'>
+      <div className='hidden lg:col-start-1 lg:col-end-3 lg:grid lg:p-4'>
         <Link href={`/blog/post/${postSlug}`}>
           <Image
             className='rounded border-2 bg-light object-cover object-center p-1'
@@ -18,7 +18,7 @@ export default function TagCard({post}) {
             height={200}
           />
         </Link>
-      </figure>
+      </div>
       <div className='lg:col-start-3 lg:col-end-6 lg:grid'>
         <div className='flex flex-col gap-2 p-1 lg:gap-4 lg:px-0 lg:py-4 xl:gap-6 2xl:gap-12'>
           <div className='flex flex-row lg:hidden'>

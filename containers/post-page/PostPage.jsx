@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Header from '@/components/Header'
+import PageHeader from '@/components/PageHeader'
 import TableOfContent from '@/components/TableOfContent'
 import TagBadge from '@/components/TagBadge'
 import DateBadge from '@/components/DateBadge'
@@ -13,7 +13,7 @@ export default function PostPage({post}) {
 
   return (
     <>
-      <Header id='post' showSearch={true} showLink={true} linkHref='/blog' linkText='Back' />
+      <PageHeader id='post' showSearch={true} showLink={true} linkHref='/blog' linkText='Back' />
       {/* ----------Post Body---------- */}
       <article className='mx-auto mb-4 mt-12 grid max-w-7xl grid-cols-1 sm:px-4 lg:mt-20 lg:grid-cols-12 lg:pr-6 xl:pr-10 3xl:pr-16 4xl:max-w-screen-3xl'>
         <aside className='col-start-1 col-end-2 hidden lg:sticky lg:top-[2rem] lg:block lg:h-screen lg:pt-12'>

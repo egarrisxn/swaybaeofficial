@@ -1,25 +1,25 @@
 import Image from 'next/image'
-import Header from '@/components/Header'
+import PageHeader from '@/components/PageHeader'
 
 export default function About() {
   return (
     <section className='w-full'>
-      <Header id='about' showHr={true}>
+      <PageHeader id='about' showHr={true}>
         About
-      </Header>
+      </PageHeader>
       {/* ----------About Body---------- */}
       <div className='my-16 px-2 sm:px-4 md:px-6 lg:px-8 xl:my-20 xl:px-10 3xl:my-24 3xl:px-16'>
         <section className='mx-auto grid max-w-11xl grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-12 3xl:gap-x-24'>
           <div className='order-2 max-w-xl lg:order-1 lg:max-w-none'>
             <div className='relative inline-block font-sansita text-4xl font-black italic tracking-tight sm:text-5xl lg:text-6xl 3xl:text-8xl'>
               <span className='absolute bottom-0.5 inline-block h-2 w-full bg-primary sm:h-2.5 md:bottom-0 md:h-3 3xl:h-4'></span>
-              <p className='relative pl-1 pr-0.5'>I&apos;m Sway!</p>
+              <h2 className='relative pl-1 pr-0.5'>I&apos;m Sway!</h2>
             </div>
             <div className='mt-4 text-lg font-medium text-secondary sm:mt-6 lg:mt-4 lg:text-base xl:mt-6 xl:text-xl 2xl:text-3xl 3xl:mt-7 3xl:text-4xl'>
-              <p className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
+              <h3 className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
                 I&apos;m a Full-Time Content Creator, currently partnered with Twitch and YouTube,
                 streaming and releasing videos throughout the week.
-              </p>
+              </h3>
             </div>
             <div className='mt-4 space-y-4 sm:mt-6 lg:mt-4 lg:text-sm xl:mt-6 xl:text-base 2xl:text-2xl 3xl:space-y-6 3xl:text-3xl'>
               <p className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
@@ -52,11 +52,10 @@ export default function About() {
           <div className='order-1 lg:order-2'>
             <Image
               src='/biff.jpg'
-              alt='Image of Biff'
+              alt='An image of Sway and her puppy Biff'
               width={1440}
               height={1800}
               className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'
-              loading='lazy'
             />
           </div>
         </section>
@@ -95,8 +94,7 @@ export default function About() {
             <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
               <span className='text-sm text-primary 3xl:text-2xl'>&#9864; </span> Producing,
               hosting, and casting one of the earliest AND largest grassroots tournaments for
-              Hearthstone Battlegrounds, with close to{' '}
-              <span className='underline underline-offset-2'>100 participants!</span>
+              Hearthstone Battlegrounds, with close to 100 participants!
             </p>
           </div>
         </section>

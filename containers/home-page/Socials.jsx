@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import Header from '@/components/Header'
+import PageHeader from '@/components/PageHeader'
 import {Spotify} from '@/components/Spotify'
 import {SocialCarousel} from '@/components/SocialCarousel'
 import YouTube from '@/components/YouTube'
@@ -8,17 +8,17 @@ import YouTube from '@/components/YouTube'
 export default function Socials() {
   return (
     <section className='w-full'>
-      <Header id='socials' showHr={true}>
+      <PageHeader id='socials' showHr={true}>
         Socials
-      </Header>
+      </PageHeader>
       {/* ----------Social Body---------- */}
       <div className='mb-16 mt-12 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-12 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
         {/* -----Spotify Now Playing----- */}
-        <div className='flex justify-end sm:pb-4'>
+        <div className='flex justify-end pb-4'>
           <Spotify />
         </div>
         {/* ----------Carousel---------- */}
-        <section className='mx-auto mb-12 mt-4 max-w-11xl sm:mt-8 md:mb-16 md:mt-12 lg:mb-20 lg:mt-16'>
+        <section className='mx-auto mb-12 mt-4 flex flex-col items-center justify-center sm:mt-8 md:mb-16 md:mt-12 lg:mb-20 lg:mt-16'>
           <SocialCarousel />
           <div className='mb-12 mt-2 sm:mb-6 md:mt-6'>
             <a href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>

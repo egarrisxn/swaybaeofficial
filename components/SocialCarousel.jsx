@@ -13,12 +13,11 @@ import {
 export function SocialCarousel() {
   return (
     <Carousel className='embla'>
-      <CarouselPrevious variant='ghost' size='icon' />
-      <CarouselNext variant='ghost' size='icon' />
+      <CarouselPrevious />
       <CarouselContent className='embla__container'>
         {Object.keys(carouselData).map((key) => (
           <CarouselItem key={key} className='embla__slide'>
-            <figure className='flex aspect-video max-h-64 items-center justify-center'>
+            <div className='flex aspect-video max-h-64 items-center justify-center'>
               <div className='relative'>
                 <a href={carouselData[key].href} target='_blank' rel='noopener noreferrer'>
                   <Image
@@ -33,10 +32,11 @@ export function SocialCarousel() {
                   </div>
                 </a>
               </div>
-            </figure>
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
+      <CarouselNext />
     </Carousel>
   )
 }
