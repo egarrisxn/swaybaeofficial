@@ -32,20 +32,20 @@ export default function LatestCard({post}) {
           ))}
         </div>
       </section>
-      <section className='mt-2 md:ml-1'>
+      <section className='mt-2 space-y-2 md:ml-1'>
         <Link href={`/blog/post/${post.postSlug}`}>
-          <h3 className='line-clamp-1 scroll-m-20 text-lg font-bold tracking-tight hover:underline 3xl:text-xl'>
+          <h3 className='line-clamp-1 scroll-m-20 text-xl font-bold leading-tight tracking-tighter hover:underline 3xl:text-2xl'>
             {title}
           </h3>
         </Link>
-        <p className='line-clamp-3 scroll-m-20 text-lg leading-tight tracking-tight text-gray-fade 3xl:text-xl'>
+        <p className='line-clamp-3 scroll-m-20 text-lg tracking-tight text-gray-fade 3xl:text-xl'>
           {excerpt}
         </p>
         <Link
           href={`/blog/post/${post.postSlug}`}
-          className='mt-4 font-bold text-primary hover:font-extrabold'
+          className='font-bold text-primary hover:font-extrabold'
         >
-          Read Post&#8594;
+          <p className='pt-2'>Read Post&#8594;</p>
         </Link>
       </section>
     </div>

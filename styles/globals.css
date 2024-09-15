@@ -68,6 +68,7 @@
     --shadow-soft: 1px 2px 4px 0px #6b7280;
     --shadow-hard: 2px 3px 6px 0px #6b7280;
     --text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --text-shadow1: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
   }
   .dark {
     /*! Dark Theme Colors */
@@ -116,6 +117,7 @@
     --shadow-soft: 1px 1px 3px 0px #727272;
     --shadow-hard: 2px 3px 12px 0px #727272;
     --text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    --text-shadow1: 0 transparent;
   }
 }
 
@@ -123,9 +125,15 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-.prose h1,
-h2 {
+.prose h1 {
   text-shadow: var(--text-shadow);
+}
+.prose h2 {
+  text-shadow: var(--text-shadow);
+}
+
+.textShadow {
+  text-shadow: var(--text-shadow1);
 }
 
 /*! Scrollbar */

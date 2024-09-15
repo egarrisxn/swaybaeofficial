@@ -57,24 +57,24 @@ export default function Navbar() {
     >
       <nav className='flex items-center justify-between p-4 3xl:p-6 4xl:p-8'>
         <section>
-          <Tooltip direction='bottom' text='Home'>
-            <Link href='/' aria-label='Home'>
-              <div className='flex items-center'>
-                <Image
-                  src='/avatar.png'
-                  alt='Avatar of Sway and link to home page'
-                  height={64}
-                  width={64}
-                  className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
-                />
+          <Link href='/' aria-label='Home'>
+            <div className='flex items-center'>
+              <Image
+                src='/avatar.png'
+                alt='Avatar of Sway and link to home page'
+                height={64}
+                width={64}
+                className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
+              />
+              <Tooltip direction='bottom' text='Home'>
                 <p className='ml-0.5 bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text font-bold leading-tight tracking-tighter text-transparent xl:text-xl 3xl:text-2xl'>
                   Creator
                   <br />
                   of Chaos
                 </p>
-              </div>
-            </Link>
-          </Tooltip>
+              </Tooltip>
+            </div>
+          </Link>
         </section>
         <section>
           <ul className='hidden w-full gap-6 sm:inline-flex md:gap-7 lg:gap-9 xl:gap-10 2xl:gap-14 3xl:gap-16'>

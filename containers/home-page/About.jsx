@@ -11,9 +11,9 @@ export default function About() {
       <div className='my-16 px-2 sm:px-4 md:px-6 lg:px-8 xl:my-20 xl:px-10 3xl:my-24 3xl:px-16'>
         <section className='mx-auto grid max-w-11xl grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-12 3xl:gap-x-24'>
           <div className='order-2 max-w-xl lg:order-1 lg:max-w-none'>
-            <div className='relative inline-block font-sansita text-4xl font-black italic tracking-tight sm:text-5xl lg:text-6xl 3xl:text-8xl'>
+            <div className='relative inline-block font-sansita text-4xl font-black italic tracking-tight text-b2w sm:text-5xl lg:text-6xl 3xl:text-8xl'>
               <span className='absolute bottom-0.5 inline-block h-2 w-full bg-primary sm:h-2.5 md:bottom-0 md:h-3 3xl:h-4'></span>
-              <h2 className='relative pl-1 pr-0.5'>I&apos;m Sway!</h2>
+              <h2 className='textShadow relative pl-1 pr-0.5'>I&apos;m Sway!</h2>
             </div>
             <div className='mt-4 text-lg font-medium text-secondary sm:mt-6 lg:mt-4 lg:text-base xl:mt-6 xl:text-xl 2xl:text-3xl 3xl:mt-7 3xl:text-4xl'>
               <h3 className='leading-6 sm:leading-7 lg:leading-6 xl:leading-7 3xl:leading-8'>
@@ -67,31 +67,31 @@ export default function About() {
             </p>
           </div>
           <div className='mt-6 grid grid-cols-1 gap-y-6 lg:mt-8 lg:grid-cols-2 lg:grid-rows-3 lg:gap-x-5 lg:gap-y-5 xl:mt-10 xl:grid-cols-3 xl:grid-rows-2 3xl:mt-12 3xl:gap-x-12 3xl:gap-y-12 3xl:text-2xl 4xl:text-3xl'>
-            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
+            <p className='leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8'>
               <span className='text-primary 3xl:text-2xl'>&#9864; </span> 3rd place in
               Blizzard&apos;s Hearthstone Battle of the Boars Tournament.{' '}
               <span className='font-medium'>(May 2021)</span>
             </p>
-            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
+            <p className='leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8'>
               <span className='text-primary 3xl:text-2xl'>&#9864; </span> Casting the Gaming Stadium
               Hearthstone Tournament. <span className='font-medium'>(June 2021)</span>
             </p>
-            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
+            <p className='leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8'>
               <span className='text-primary 3xl:text-2xl'>&#9864; </span> Casting and Hosting
               multiple Dreamhack Community Clash tournaments.{' '}
               <span className='font-medium'>(2021-2022)</span>
             </p>
-            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
+            <p className='leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8'>
               <span className='text-primary 3xl:text-2xl'>&#9864; </span> Casting 4 series of Super
               Girl Gamer Pro Hearthstone Tournaments.{' '}
               <span className='font-medium'>(2021-2023)</span>
             </p>
-            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
+            <p className='leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8'>
               <span className='text-primary 3xl:text-2xl'>&#9864; </span> Multiple Battle.net
               Launcher Feature events, including featured streams and curated YouTube videos just
               for Hearthstone.
             </p>
-            <p className='border-light-tint leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:border-2 lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:border-w2b lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8 lg:dark:border-dark-fade'>
+            <p className='leading-6 transition-all hover:text-b2w md:leading-7 lg:rounded-lg lg:bg-w2b lg:p-3 lg:leading-6 lg:shadow-soft lg:hover:shadow-hard xl:p-5 xl:leading-7 3xl:p-8 3xl:leading-8'>
               <span className='text-primary 3xl:text-2xl'>&#9864; </span> Producing, hosting, and
               casting one of the earliest AND largest grassroots tournaments for Hearthstone
               Battlegrounds, with close to 100 participants!

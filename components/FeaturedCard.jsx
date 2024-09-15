@@ -31,20 +31,20 @@ export default function FeaturedCard({post}) {
             ))}
           </div>
         </div>
-        <div className='mt-2 space-y-4 lg:ml-1 lg:mt-4'>
+        <div className='mt-2 space-y-2 lg:ml-1 lg:mt-2'>
           <Link href={`/blog/post/${post.postSlug}`}>
-            <h3 className='scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 3xl:text-4xl'>
+            <h3 className='scroll-m-20 text-2xl font-semibold leading-tight tracking-tighter first:mt-0 hover:underline md:text-3xl 3xl:text-4xl'>
               {title}
             </h3>
           </Link>
-          <p className='line-clamp-3 scroll-m-20 text-xl font-medium tracking-tight text-gray-fade 3xl:text-2xl'>
+          <p className='line-clamp-3 scroll-m-20 text-lg font-medium tracking-tight text-gray-fade md:text-xl 3xl:text-2xl'>
             {excerpt}
           </p>
           <Link
             href={`/blog/post/${post.postSlug}`}
-            className='mt-4 font-bold text-primary hover:font-extrabold'
+            className='font-bold text-primary hover:font-extrabold'
           >
-            Read Post&#8594;
+            <p className='pt-2'>Read Post&#8594;</p>
           </Link>
         </div>
       </section>
