@@ -35,7 +35,7 @@ export default function PostPage({post}) {
           </section>
           <section className='mt-1 flex max-[300px]:max-w-60 min-[300px]:mx-auto'>
             <Image
-              className='w-full rounded border-2 bg-white object-cover object-center p-2 shadow-hard'
+              className='w-full rounded border-2 bg-white object-cover object-center p-2 shadow-soft hover:shadow-hard'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt || 'Cover Image'}
               width={1000}
@@ -43,7 +43,7 @@ export default function PostPage({post}) {
             />
           </section>
           <section className='mb-6 mt-8 flex max-[300px]:max-w-60 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16'>
-            <div className='prose prose-slate mx-auto transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:text-primary prose-h2:text-secondary prose-h3:text-primary prose-h4:text-secondary prose-a:text-blue hover:prose-a:text-blue-tint prose-blockquote:border-primary prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-blue-tint prose-th:text-xl prose-img:w-full prose-img:shadow-hard'>
+            <div className='prose prose-slate mx-auto transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:text-primary prose-h2:text-secondary prose-h3:text-primary prose-h4:text-secondary prose-a:text-blue hover:prose-a:text-blue-tint prose-blockquote:border-primary prose-blockquote:text-secondary prose-code:text-pink prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:bg-blue-tint prose-th:text-xl prose-img:w-full prose-img:shadow-soft hover:prose-img:shadow-hard'>
               <PortableTextComponents content={content} />
             </div>
           </section>

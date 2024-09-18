@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Search from './Search'
+import {Icon} from './ui/Icon'
 
 export default function PageHeader({
   id,
@@ -21,13 +22,16 @@ export default function PageHeader({
 
       {showLink && (
         <Link href={linkHref}>
-          <h1
-            id={id}
-            className={`bg-gradient-to-tr from-purple via-pink-tint to-pink-fade bg-clip-text text-xl uppercase tracking-widest text-transparent sm:ml-2 3xl:ml-3 3xl:mt-6 3xl:text-3xl`}
-            aria-label={linkText}
-          >
-            &#8678;{linkText}
-          </h1>
+          <div className='flex flex-row items-center gap-0.5 sm:ml-2 3xl:ml-3 3xl:mt-6 3xl:gap-1'>
+            <Icon.Undo2 />
+            <h1
+              id={id}
+              className={`bg-gradient-to-tr from-purple via-pink-tint to-pink-fade bg-clip-text text-xl uppercase tracking-widest text-transparent 3xl:text-3xl`}
+              aria-label={linkText}
+            >
+              {linkText}
+            </h1>
+          </div>
         </Link>
       )}
 

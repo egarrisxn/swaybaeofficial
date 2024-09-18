@@ -56,7 +56,7 @@ export default function Navbar() {
     <header
       className={`mx-auto w-full max-w-screen-4xl shadow transition-opacity ease-out dark:shadow-gray-tint ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
-      <nav className='flex items-center justify-between p-4 sm:gap-4 lg:gap-8 xl:gap-12 2xl:gap-14 2xl:p-6 3xl:gap-16 3xl:p-8'>
+      <nav className='flex items-center justify-between p-4 2xl:p-6 3xl:p-8'>
         <section>
           <Link href='/' aria-label='Home'>
             <div className='flex items-center'>
@@ -78,12 +78,12 @@ export default function Navbar() {
             </div>
           </Link>
         </section>
-        <section className='flex-1'>
-          <ul className='hidden w-full justify-end gap-4 sm:inline-flex md:gap-6 lg:gap-8 2xl:gap-14 3xl:gap-16'>
+        <section className='flex-1 sm:pr-4 md:pr-6 lg:pr-8 xl:pr-10 2xl:pr-12 3xl:pr-14'>
+          <ul className='hidden w-full justify-end sm:inline-flex sm:gap-4 md:gap-6 lg:gap-8 xl:pr-10 2xl:gap-12 3xl:gap-14'>
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className='text-lg font-medium transition-all hover:text-b2p md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
+                className='text-lg transition-all hover:text-b2p md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
               >
                 {link.external ? (
                   <a

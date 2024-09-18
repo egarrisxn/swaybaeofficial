@@ -4,15 +4,6 @@
 
 @layer base {
   :root {
-    /*? Calendar Colors */
-    --fc-daygrid-event-dot-width: 6px;
-    --fc-today-bg-color: #b2b2b21c;
-    --fc-button-bg-color: #00ceff;
-    --fc-button-border-color: #dededeb9;
-    --fc-button-hover-bg-color: #b567ad;
-    --fc-button-hover-border-color: #b567ad;
-    --fc-button-active-bg-color: #b567ad;
-    --fc-button-active-border-color: #dedede4e;
     /*! Shared Colors */
     --white: #ffffff;
     --black: #000000;
@@ -57,6 +48,10 @@
     --b2p-tint: #2a8cc9;
     --p2b: #e8488a;
     --p2b-tint: #cc3675;
+    --shadow-soft: 1px 2px 4px 0px #6b7280;
+    --shadow-hard: 2px 3px 6px 0px #6b7280;
+    --text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --text-shadow1: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
     --gradient: radial-gradient(
       circle,
       #ffffff,
@@ -65,10 +60,6 @@
       #fafeff 90%,
       #ffffff 100%
     );
-    --shadow-soft: 1px 2px 4px 0px #6b7280;
-    --shadow-hard: 2px 3px 6px 0px #6b7280;
-    --text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    --text-shadow1: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
   }
   .dark {
     /*! Dark Theme Colors */
@@ -106,6 +97,10 @@
     --b2p-tint: #9e4996;
     --p2b: #38bdf8;
     --p2b-tint: #31b2ea;
+    --shadow-soft: 2px 2px 8px 0px #727272;
+    --shadow-hard: 2px 3px 12px 0px #727272;
+    --text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    --text-shadow1: 0 transparent;
     --gradient: radial-gradient(
       circle,
       #000000,
@@ -114,24 +109,19 @@
       #06080d 90%,
       #000000 100%
     );
-    --shadow-soft: 2px 2px 8px 0px #727272;
-    --shadow-hard: 2px 3px 12px 0px #727272;
-    --text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-    --text-shadow1: 0 transparent;
   }
 }
 
+/*! Text */
 html {
   text-rendering: optimizeLegibility;
 }
-
 .prose h1 {
   text-shadow: var(--text-shadow);
 }
 .prose h2 {
   text-shadow: var(--text-shadow);
 }
-
 .textShadow {
   text-shadow: var(--text-shadow1);
 }
@@ -180,22 +170,55 @@ html {
 }
 
 /*! Calendar */
-@media (min-width: 769px) {
+.fc {
+  --fc-border-color: var(--neutral);
+  --fc-event-bg-color: var(--primary);
+  --fc-event-border-color: var(--primary-tint);
+  --fc-event-text-color: var(--b2w);
+  --fc-daygrid-event-dot-width: 7px;
+  --fc-list-event-dot-width: 7px;
+  --fc-list-event-hover-bg-color: var(--secondary-fade);
+  --fc-button-bg-color: var(--primary);
+  --fc-button-border-color: var(--primary-tint);
+  --fc-button-hover-bg-color: var(--secondary-fade);
+  --fc-button-hover-border-color: var(--w2b);
+  --fc-button-active-bg-color: var(--secondary);
+  --fc-button-active-border-color: var(--secondary-tint);
+}
+.fc-col-header-cell-cushion {
+  color: var(--black);
+}
+.fc-list-day-cushion {
+  color: var(--black);
+}
+.fc {
+  font-size: 0.7rem;
+}
+.fc-header-toolbar {
+  font-size: 0.7em;
+}
+@media (min-width: 768px) {
+  .fc {
+    font-size: 0.9rem;
+  }
+  .fc-header-toolbar {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
   .fc {
     font-size: 1.1rem;
-    aspect-ratio: 1.35;
   }
   .fc-header-toolbar {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 1920px) {
   .fc {
-    font-size: 0.8rem;
-    aspect-ratio: 0.5;
+    font-size: 1.3rem;
   }
   .fc-header-toolbar {
-    font-size: 0.8em;
+    font-size: 1.3rem;
   }
 }
 

@@ -1,9 +1,9 @@
 'use client'
-import {useState, useCallback} from 'react'
+import {useState} from 'react'
 import PageHeader from '@/components/PageHeader'
 import {Button} from '@/components/ui/Button'
-import {Input} from '@/components/ui/Input'
-import {Textarea} from '@/components/ui/Textarea'
+// import {Input} from '@/components/ui/Input'
+// import {Textarea} from '@/components/ui/Textarea'
 import {Icon} from '@/components/ui/Icon'
 
 function ContactInfo({title, subtitle, icon, detail, href, ariaLabel}) {
@@ -31,7 +31,7 @@ function ContactInfo({title, subtitle, icon, detail, href, ariaLabel}) {
   )
 }
 
-export default function Contact() {
+export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,28 +39,36 @@ export default function Contact() {
     message: '',
   })
 
-  const handleInputChange = useCallback((event) => {
+  const handleInputChange = (event) => {
     const {name, value} = event.target
-    setFormData((prevData) => ({
-      ...prevData,
+    setFormData({
+      ...formData,
       [name]: value,
-    }))
-  }, [])
+    })
+  }
 
-  const handleSubmit = async (event) => {
+  async function handleSubmit(event) {
     event.preventDefault()
 
+    const encodedFormData = new URLSearchParams({
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    })
+
     try {
-      const response = await fetch('/api/nodemailer', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(formData),
+        body: encodedFormData.toString(),
       })
 
       if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`)
+        console.log('Failed to send message')
+        throw new Error(`response status: ${response.status}`)
       }
 
       setFormData({
@@ -73,12 +81,11 @@ export default function Contact() {
       const responseData = await response.json()
       console.log(responseData.message)
       alert('Message successfully sent!')
-    } catch (error) {
-      console.error('Failed to send message:', error)
+    } catch (err) {
+      console.error(err)
       alert('Error, please try again.')
     }
   }
-
   return (
     <section className='mt-[-8rem] w-full sm:mt-[-6rem] md:mt-[-4rem]'>
       <PageHeader id='contact-header' showHr={true}>
@@ -86,7 +93,7 @@ export default function Contact() {
       </PageHeader>
       {/* ----------Contact Body---------- */}
       <div className='mb-16 mt-12 px-2 md:mt-16 md:px-6 lg:my-24 lg:px-8 xl:px-10 3xl:my-28 3xl:px-16'>
-        <section className='mx-auto grid max-w-11xl items-center hover:shadow-hard active:shadow-hard md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:bg-w2b md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
+        <section className='mx-auto grid max-w-11xl items-center md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:bg-w2b md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
           <div className='mb-8 sm:mb-4 md:mb-0'>
             {/* Contact Info */}
             <h2 className='font-sansita text-5xl font-black italic tracking-tight lg:text-6xl 3xl:text-8xl'>
@@ -121,51 +128,65 @@ export default function Contact() {
             <label htmlFor='name' className='sr-only'>
               Your Name
             </label>
-            <Input
+            <input
+              type='text'
               id='name'
               name='name'
-              type='text'
               placeholder='Your Name'
+              autoComplete='on'
               value={formData.name}
               onChange={handleInputChange}
+              className='w-full rounded-md border bg-background px-3 py-2 shadow ring-offset-background file:flex file:border-0 file:bg-transparent file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:px-5 xl:py-3 xl:text-base 3xl:px-8 3xl:py-4 3xl:text-2xl'
+              required
             />
             <label htmlFor='email' className='sr-only'>
               Your Email
             </label>
-            <Input
+            <input
+              type='email'
               id='email'
               name='email'
-              type='email'
               placeholder='Your Email'
+              autoComplete='on'
               value={formData.email}
               onChange={handleInputChange}
+              className='w-full rounded-md border bg-background px-3 py-2 shadow ring-offset-background file:flex file:border-0 file:bg-transparent file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:px-5 xl:py-3 xl:text-base 3xl:px-8 3xl:py-4 3xl:text-2xl'
+              required
             />
 
             <label htmlFor='subject' className='sr-only'>
               Subject
             </label>
-            <Input
+            <input
+              type='text'
               id='subject'
               name='subject'
-              type='text'
               placeholder='Subject'
+              autoComplete='on'
               value={formData.subject}
               onChange={handleInputChange}
+              className='w-full rounded-md border bg-background px-3 py-2 shadow ring-offset-background file:flex file:border-0 file:bg-transparent file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:px-5 xl:py-3 xl:text-base 3xl:px-8 3xl:py-4 3xl:text-2xl'
+              required
             />
             <label htmlFor='message' className='sr-only'>
               Your Message
             </label>
-            <Textarea
+            <textarea
               id='message'
               name='message'
-              rows='4'
+              rows={4}
               placeholder='Your Message'
               value={formData.message}
               onChange={handleInputChange}
+              className='flex min-h-[80px] w-full rounded-md border bg-background px-3 py-2 shadow ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:text-base 3xl:text-2xl'
+              required
             />
-            <Button variant='fun' size='lg' type='submit'>
+            <button
+              className='relative h-10 w-full overflow-hidden rounded-lg border-2 bg-light-fade shadow-soft transition-transform duration-500 ease-in-out before:absolute before:inset-0 before:z-[-1] before:translate-x-full before:bg-gradient-to-r before:from-primary-tint before:to-primary-fade before:duration-500 hover:scale-105 hover:shadow-hard hover:before:-translate-x-0 active:scale-100 xl:h-12 2xl:text-base 3xl:h-14 3xl:text-lg dark:bg-dark-fade'
+              type='submit'
+            >
               Send Message
-            </Button>
+            </button>
           </form>
         </section>
       </div>

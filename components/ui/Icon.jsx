@@ -9,13 +9,14 @@ import {
   Menu,
   Sun,
   MoonStar,
+  Undo2,
 } from 'lucide-react'
 
-const defaultProps = {
-  size: '1rem',
-  color: 'currentColor',
-  strokeWidth: '1.5',
-}
+// const defaultProps = {
+//   size: '1rem',
+//   color: 'currentColor',
+//   strokeWidth: '1.5',
+// }
 
 const thickerProps = {
   size: '1rem',
@@ -30,8 +31,14 @@ const biggerProps = {
 }
 
 const Icon = {
-  Search: ({className, ...props}) => <Search {...defaultProps} className={className} {...props} />,
-
+  Search: ({className, ...props}) => <Search {...thickerProps} className={className} {...props} />,
+  Undo2: ({className, ...props}) => (
+    <Undo2
+      {...thickerProps}
+      className={`transition-all 3xl:size-[1.75rem] ${className}`}
+      {...props}
+    />
+  ),
   Files: ({className, ...props}) => (
     <Files
       {...thickerProps}

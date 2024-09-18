@@ -56,7 +56,7 @@ export default function About() {
               height={1800}
               quality={100}
               priority={true}
-              className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'
+              className='rounded-lg border-2 border-white bg-white shadow-soft hover:shadow-hard'
             />
           </div>
         </section>
