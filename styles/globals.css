@@ -114,7 +114,7 @@
       #06080d 90%,
       #000000 100%
     );
-    --shadow-soft: 1px 1px 3px 0px #727272;
+    --shadow-soft: 2px 2px 8px 0px #727272;
     --shadow-hard: 2px 3px 12px 0px #727272;
     --text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
     --text-shadow1: 0 transparent;

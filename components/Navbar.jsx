@@ -28,6 +28,7 @@ const navLinks = [
   {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
   {href: '/blog', label: 'Blog'},
+  {href: '/contact', label: 'Contact'},
   {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store', external: true},
 ]
 
@@ -53,22 +54,23 @@ export default function Navbar() {
 
   return (
     <header
-      className={`mx-auto w-full max-w-screen-4xl transition-opacity ease-out ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`mx-auto w-full max-w-screen-4xl shadow transition-opacity ease-out dark:shadow-gray-tint ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
-      <nav className='flex items-center justify-between p-4 3xl:p-6 4xl:p-8'>
+      <nav className='flex items-center justify-between p-4 sm:gap-4 lg:gap-8 xl:gap-12 2xl:gap-14 2xl:p-6 3xl:gap-16 3xl:p-8'>
         <section>
           <Link href='/' aria-label='Home'>
             <div className='flex items-center'>
               <Image
-                src='/avatar.png'
+                // src='/paperavatar.png'
+                src='/avatar2024.png'
                 alt='Avatar of Sway and link to home page'
                 height={64}
                 width={64}
                 className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
               />
               <Tooltip direction='bottom' text='Home'>
-                <p className='ml-0.5 bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text font-bold leading-tight tracking-tighter text-transparent xl:text-xl 3xl:text-2xl'>
-                  Creator
+                <p className='bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text font-extrabold leading-none tracking-tighter text-transparent md:tracking-tight xl:text-lg xl:leading-none 2xl:text-xl 2xl:leading-none 3xl:text-3xl 3xl:leading-none'>
+                  <span className='pl-1'>Creator</span>
                   <br />
                   of Chaos
                 </p>
@@ -76,12 +78,12 @@ export default function Navbar() {
             </div>
           </Link>
         </section>
-        <section>
-          <ul className='hidden w-full gap-6 sm:inline-flex md:gap-7 lg:gap-9 xl:gap-10 2xl:gap-14 3xl:gap-16'>
+        <section className='flex-1'>
+          <ul className='hidden w-full justify-end gap-4 sm:inline-flex md:gap-6 lg:gap-8 2xl:gap-14 3xl:gap-16'>
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className='text-lg font-medium transition-all hover:text-b2p md:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl'
+                className='text-lg font-medium transition-all hover:text-b2p md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
               >
                 {link.external ? (
                   <a
@@ -117,7 +119,7 @@ export default function Navbar() {
                 <div className='flex h-full flex-col justify-between gap-4'>
                   <div>{state.mounted && <ThemeToggle />}</div>
                   <div className='flex-grow'>
-                    <ul className='inline space-y-4'>
+                    <ul className='inline space-y-1'>
                       {navLinks.map((link) => (
                         <li
                           key={link.href}

@@ -7,14 +7,14 @@ import YouTube from '@/components/YouTube'
 
 export default function Socials() {
   return (
-    <section className='w-full'>
+    <section className='mb-32 w-full sm:mb-24 md:mb-16'>
       <PageHeader id='socials' showHr={true}>
         Socials
       </PageHeader>
       {/* ----------Social Body---------- */}
       <div className='mb-16 mt-12 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-12 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
         {/* -----Spotify Now Playing----- */}
-        <div className='flex justify-end pb-4'>
+        <div className='flex justify-end pb-8 sm:pb-4'>
           <Spotify />
         </div>
         {/* ----------Carousel---------- */}
@@ -22,12 +22,12 @@ export default function Socials() {
           <SocialCarousel />
           <div className='mb-12 mt-2 sm:mb-6 md:mt-6'>
             <a href='https://www.throne.com/sway_bae' target='_blank' rel='noreferrer'>
-              <div className='flex flex-row items-center justify-center italic tracking-tight max-[370px]:text-xs sm:text-lg'>
+              <div className='flex flex-row items-center justify-center italic tracking-tight max-[400px]:text-xs sm:text-lg'>
                 If you&apos;d like to support what I do:
                 <span className='ml-1 mr-0.5 block font-black uppercase max-[300px]:hidden'>
                   THRONE
                 </span>
-                <div className='ml-0.5 size-5 overflow-hidden rounded-full max-[370px]:ml-1 max-[370px]:size-4 sm:size-6'>
+                <div className='ml-0.5 size-5 overflow-hidden rounded-full max-[400px]:ml-1 max-[400px]:size-4 sm:size-6'>
                   <Image
                     src='/Throne.jpg'
                     alt='Throne'
@@ -63,10 +63,10 @@ export default function Socials() {
             Videos
           </div>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-            <div className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'>
+            <div className='rounded-lg border-2 border-white bg-white shadow-soft hover:shadow-hard'>
               <YouTube vnum={0} />
             </div>
-            <div className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'>
+            <div className='rounded-lg border-2 border-white bg-white shadow-soft hover:shadow-hard'>
               <YouTube vnum={1} />
             </div>
           </div>

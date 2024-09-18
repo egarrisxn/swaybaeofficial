@@ -14,6 +14,7 @@ export function SocialCarousel() {
   return (
     <Carousel className='embla'>
       <CarouselPrevious />
+      <CarouselNext />
       <CarouselContent className='embla__container'>
         {Object.keys(carouselData).map((key) => (
           <CarouselItem key={key} className='embla__slide'>
@@ -25,7 +26,7 @@ export function SocialCarousel() {
                     alt={carouselData[key].alt}
                     width='600'
                     height='400'
-                    className='rounded-lg border-2 border-white bg-white shadow-soft sm:shadow-hard'
+                    className='rounded-lg border-2 border-white bg-white shadow-soft hover:shadow-hard'
                   />
                   <div className='overlay-text absolute bottom-0 left-0 z-50 flex items-center gap-1 p-2 text-center text-white transition-colors duration-200 ease-in hover:text-primary'>
                     <div className='font-medium italic'>{carouselData[key].username}</div>
@@ -36,7 +37,6 @@ export function SocialCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselNext />
     </Carousel>
   )
 }

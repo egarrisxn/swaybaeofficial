@@ -18,5 +18,11 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 1,
     },
+    {
+      url: 'https://swaybae.net/contact',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
   ]
 }
