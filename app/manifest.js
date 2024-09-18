@@ -8,23 +8,13 @@ export default function manifest() {
     theme_color: '#000000',
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon',
-      },
-      {
-        src: '/apple-icon-180.png',
-        sizes: '180x180',
-        type: 'image/png',
-      },
-      {
-        src: '/chrome-icon-192.png',
+        src: '/android-chrome-192x192.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: '/chrome-icon-384.png',
-        sizes: '384x384',
+        src: '/android-chrome-512x512.png',
+        sizes: '512x512',
         type: 'image/png',
       },
     ],
