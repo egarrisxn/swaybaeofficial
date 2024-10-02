@@ -117,7 +117,10 @@ const CarouselContent = React.forwardRef(({className, ...props}, ref) => {
   const {carouselRef, orientation} = useCarousel()
 
   return (
-    <div ref={carouselRef} className='h-auto w-full overflow-hidden px-2 pt-2 2xl:pt-0'>
+    <div
+      ref={carouselRef}
+      className='mx-auto flex h-auto w-[95%] overflow-hidden px-1 pt-2 sm:pl-2 sm:pr-1.5 xl:w-[97%] xl:px-1 2xl:pt-0'
+    >
       <div
         ref={ref}
         className={cn(
@@ -152,7 +155,7 @@ const CarouselItem = React.forwardRef(({className, ...props}, ref) => {
 CarouselItem.displayName = 'CarouselItem'
 
 const CarouselPrevious = React.forwardRef(
-  ({className, variant = 'ghost', size = 'icon', ...props}, ref) => {
+  ({className, variant = 'fun', size = 'icon', ...props}, ref) => {
     const {orientation, scrollPrev, canScrollPrev} = useCarousel()
 
     return (
@@ -161,9 +164,9 @@ const CarouselPrevious = React.forwardRef(
         variant={variant}
         size={size}
         className={cn(
-          'absolute size-8',
+          'absolute z-10 size-7 p-1 sm:size-8 md:size-9',
           orientation === 'horizontal'
-            ? '-left-0 top-0 -translate-y-1/2'
+            ? '-left-0 top-1/2 -translate-y-1/2'
             : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
           className,
         )}
@@ -181,7 +184,7 @@ const CarouselPrevious = React.forwardRef(
 CarouselPrevious.displayName = 'CarouselPrevious'
 
 const CarouselNext = React.forwardRef(
-  ({className, variant = 'ghost', size = 'icon', ...props}, ref) => {
+  ({className, variant = 'fun', size = 'icon', ...props}, ref) => {
     const {orientation, scrollNext, canScrollNext} = useCarousel()
 
     return (
@@ -190,13 +193,13 @@ const CarouselNext = React.forwardRef(
         variant={variant}
         size={size}
         className={cn(
-          'absolute size-8',
-          // orientation === 'horizontal'
-          //   ? '-right-0 top-0 -translate-y-1/2'
-          //   : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+          'absolute z-10 size-7 p-1 sm:size-8 md:size-9',
           orientation === 'horizontal'
-            ? 'left-24 top-0 -translate-y-1/2'
+            ? '-right-0 top-1/2 -translate-y-1/2'
             : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+          // orientation === 'horizontal'
+          //   ? 'left-24 top-0 -translate-y-1/2'
+          //   : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
           className,
         )}
         disabled={!canScrollNext}

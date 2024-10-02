@@ -3,6 +3,18 @@ import About from '@/containers/home-page/About'
 import Socials from '@/containers/home-page/Socials'
 import {Contact} from '@/containers/home-page/Contact'
 
+// ! Test Loader
+// function loadingPage() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve('Loading...')
+//     }, 3000)
+//   })
+// }
+// export default async function Home() {
+//   const load = await loadingPage()
+//   console.log({load})
+
 export default function Home() {
   return (
     <main className='mx-auto w-full sm:container'>

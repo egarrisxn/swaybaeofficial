@@ -115,6 +115,7 @@
 /*! Text */
 html {
   text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
 }
 .prose h1 {
   text-shadow: var(--text-shadow);
@@ -192,10 +193,10 @@ html {
   color: var(--black);
 }
 .fc {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .fc-header-toolbar {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 @media (min-width: 768px) {
   .fc {
@@ -203,14 +204,6 @@ html {
   }
   .fc-header-toolbar {
     font-size: 0.9rem;
-  }
-}
-@media (min-width: 1024px) {
-  .fc {
-    font-size: 1.1rem;
-  }
-  .fc-header-toolbar {
-    font-size: 1.1rem;
   }
 }
 @media (min-width: 1920px) {
@@ -256,7 +249,7 @@ html {
   flex: 0 0 var(--slide-size);
   padding-left: var(--slide-spacing);
 }
-@media (min-width: 640px) {
+@media (min-width: 500px) {
   .embla__slide {
     flex: 0 0 var(--slide-size-sm);
     padding-left: var(--slide-spacing-sm);
@@ -273,4 +266,17 @@ html {
     flex: 0 0 var(--slide-size-xl);
     padding-left: var(--slide-spacing-xl);
   }
+}
+
+/*! Infinite Scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scroll {
+  animation: scroll 15s linear infinite;
 }

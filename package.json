@@ -5,6 +5,7 @@
   "homepage": "https://swaybae.net",
   "author": "Ethan G. (https://egxworld.net)",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/egarrisxn/swaybaeofficial"
@@ -16,7 +17,6 @@
     "tailwindcss",
     "vercel"
   ],
-  "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",

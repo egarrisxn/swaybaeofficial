@@ -8,7 +8,7 @@ export default function YouTube({vnum}) {
     const loadVideo = async () => {
       const playlistId = 'UUbpQhE5NYQ05pSp_DJJQxCA'
       const apiKey = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY
-      const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=2&playlistId=${playlistId}&key=${apiKey}`
+      const playlistUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=4&playlistId=${playlistId}&key=${apiKey}`
 
       try {
         const response = await fetch(playlistUrl)

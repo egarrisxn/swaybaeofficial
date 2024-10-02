@@ -15,7 +15,6 @@ The official website for a full-time streamer and content creator, @Sway_Bae.
 - React
 - JavaScript
 - Tailwind CSS
-- Daisy UI
 
 ## Disclaimer
 
