@@ -7,7 +7,7 @@ import {Icon} from '@/components/ui/Icon'
 function ContactInfo({title, subtitle, icon, detail, href, ariaLabel}) {
   return (
     <div className='mt-4 sm:mt-2 md:mt-4 xl:mt-6 3xl:mt-8'>
-      <h3 className='text-lg font-extrabold text-black 3xl:text-3xl'>{title}</h3>
+      <h3 className='text-lg font-extrabold 3xl:text-3xl'>{title}</h3>
       <ul className='mt-2 sm:mt-1 lg:mt-2 xl:mt-3 3xl:mt-4'>
         <li className='flex items-center gap-2'>
           <Button asChild variant='social' size='icon'>
@@ -16,7 +16,7 @@ function ContactInfo({title, subtitle, icon, detail, href, ariaLabel}) {
             </a>
           </Button>
           <div>
-            <p className='block text-sm text-neutral xl:text-base 3xl:text-xl'>{subtitle}</p>
+            <p className='block text-sm text-gray xl:text-base 3xl:text-xl'>{subtitle}</p>
             <p className='text-sm font-semibold text-primary-fade hover:text-primary xl:text-base 2xl:text-lg 3xl:text-xl dark:text-primary-tint dark:hover:text-primary-fade'>
               <a target='_blank' rel='noopener noreferrer' href={href} aria-label={ariaLabel}>
                 {detail}
@@ -86,13 +86,13 @@ export function Contact() {
   }
   return (
     <div className='px-2 md:my-16 md:px-4 lg:px-8 xl:px-16 2xl:px-16'>
-      <section className='mx-auto grid max-w-11xl items-center md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:bg-white md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
+      <section className='mx-auto grid max-w-11xl items-center md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
         <div className='mb-8 sm:mb-4 md:mb-0'>
           {/* Contact Info */}
-          <h2 className='font-sansita text-5xl font-black italic tracking-tight text-black lg:text-7xl 3xl:text-8xl'>
+          <h2 className='font-sansita text-5xl font-black italic tracking-tight lg:text-7xl 3xl:text-8xl'>
             Let&apos;s Chat!
           </h2>
-          <p className='mt-4 pr-2 text-base leading-5 text-gray-tint xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
+          <p className='mt-4 pr-2 text-base leading-5 text-gray xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
             Are you interested in working together? Maybe have a question for me? Send over an email
             and I&apos;ll get back with you as soon as possible!
           </p>
