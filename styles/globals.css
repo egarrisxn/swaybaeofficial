@@ -193,10 +193,34 @@ html {
   color: var(--black);
 }
 .fc {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 .fc-header-toolbar {
-  font-size: 0.8em;
+  font-size: 0.5em;
+}
+@media (min-width: 365px) {
+  .fc {
+    font-size: 0.6rem;
+  }
+  .fc-header-toolbar {
+    font-size: 0.6rem;
+  }
+}
+@media (min-width: 425px) {
+  .fc {
+    font-size: 0.7rem;
+  }
+  .fc-header-toolbar {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 640px) {
+  .fc {
+    font-size: 0.8rem;
+  }
+  .fc-header-toolbar {
+    font-size: 0.8rem;
+  }
 }
 @media (min-width: 768px) {
   .fc {
