@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import {Poppins, Sansita} from 'next/font/google'
-import {ThemeProvider} from 'next-themes'
+import {ThemeProvider} from '@/components/ThemeProvider'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
@@ -46,17 +46,41 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     title: 'Sway Bae | Creator of Chaos',
-    description: 'The Official Website for Sway Bae & The Bae Squad!',
     url: 'https://swaybae.net',
     siteName: 'Swaybae.net',
+    images: [
+      {
+        url: `https://swaybae.net/opengraph-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'The official page for Sway Bae & The Bae Squad!',
+      },
+    ],
   },
   twitter: {
     cardType: 'summary_large_image',
-    handle: '@sway_baeTV',
+    creator: '@sway_baeTV',
     site: '@sway_baeTV',
     title: 'Sway Bae | Creator of Chaos',
-    description: 'The Official Website for Sway Bae & The Bae Squad!',
+    images: [
+      {
+        url: `https://swaybae.net/twitter-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'The official page for Sway Bae & The Bae Squad!',
+      },
+    ],
   },
+  icons: {
+    shortcut: 'https://swaybae.net/favicon.ico',
+  },
+}
+
+export const viewport = {
+  themeColor: [
+    {media: '(prefers-color-scheme: light)', color: '#f8f8f8'},
+    {media: '(prefers-color-scheme: dark)', color: '#121313'},
+  ],
 }
 
 export default function RootLayout({children}) {
@@ -65,12 +89,7 @@ export default function RootLayout({children}) {
       <body
         className={`${poppins.variable} ${sansita.variable} grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain bg-myGradient bg-cover bg-no-repeat font-sans text-foreground`}
       >
-        <ThemeProvider
-          enableSystem
-          disableTransitionOnChange
-          attribute='class'
-          defaultTheme='system'
-        >
+        <ThemeProvider>
           <Navbar />
           {children}
           <ScrollToTop />

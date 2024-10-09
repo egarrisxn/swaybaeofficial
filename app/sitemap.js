@@ -1,28 +1,33 @@
-export default function sitemap() {
-  return [
+import sitemapData from '../utils/sanity/sitemap'
+
+export default async function sitemap() {
+  const posts = await sitemapData()
+
+  const baseUrl = 'https://swaybae.net'
+
+  const staticRoutes = [
     {
-      url: 'https://swaybae.net',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      url: `${baseUrl}/`,
+      lastModified: new Date().toISOString(),
     },
     {
-      url: 'https://swaybae.net/calendar',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
+      url: `${baseUrl}/calendar`,
+      lastModified: new Date().toISOString(),
     },
     {
-      url: 'https://swaybae.net/blog',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
+      url: `${baseUrl}/contact`,
+      lastModified: new Date().toISOString(),
     },
     {
-      url: 'https://swaybae.net/contact',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
+      url: `${baseUrl}/blog`,
+      lastModified: new Date().toISOString(),
     },
   ]
+
+  const postRoutes = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post._updatedAt,
+  }))
+
+  return [...staticRoutes, ...postRoutes]
 }
