@@ -21,7 +21,7 @@ export async function POST(request) {
       },
     })
 
-    const mail = await transporter.sendMail({
+    const mail = transporter.sendMail({
       from: name,
       to: process.env.EMAIL_USER,
       replyTo: email,

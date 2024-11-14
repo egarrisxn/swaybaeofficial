@@ -14,7 +14,6 @@ export default function Socials() {
       <div className='mb-16 mt-12 px-2 sm:px-4 md:px-6 lg:mb-24 lg:mt-12 lg:px-8 xl:px-10 3xl:my-24 3xl:px-16'>
         {/* -----Spotify Now Playing----- */}
         <div className='flex justify-end pb-8 sm:pb-4'>
-          {' '}
           <Spotify />
         </div>
         {/* ----------Carousel---------- */}
@@ -62,7 +61,7 @@ export default function Socials() {
             </a>
             Videos
           </div>
-          <div className='mx-auto flex flex-col flex-wrap items-center justify-center gap-8 lg:flex-row'>
+          <div className='mx-auto flex flex-wrap items-center justify-center gap-8'>
             <div className='max-w-[520px] rounded-lg border-2 border-white bg-white shadow-soft hover:shadow-hard'>
               <YouTube vnum={0} />
             </div>
