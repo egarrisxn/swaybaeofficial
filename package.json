@@ -1,0 +1,71 @@
+{
+  "name": "swaybaeofficial",
+  "version": "1.0.0",
+  "description": "The Official Website for Sway Bae & The Bae Squad!",
+  "homepage": "https://swaybae.net",
+  "author": "Ethan G. (https://egxworld.net)",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egarrisxn/swaybaeofficial"
+  },
+  "keywords": [
+    "sanity",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "vercel"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/google-calendar": "^6.1.15",
+    "@fullcalendar/list": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.4",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/preview-url-secret": "^1.6.20",
+    "@sanity/react-loader": "^1.10.6",
+    "@vercel/analytics": "^1.4.0",
+    "@vercel/speed-insights": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "embla-carousel-class-names": "^8.2.1",
+    "embla-carousel-react": "^8.2.1",
+    "lodash.debounce": "^4.0.8",
+    "lucide-react": "^0.456.0",
+    "next": "15.0.3",
+    "next-sanity": "^9.4.7",
+    "next-themes": "^0.4.3",
+    "nodemailer": "^6.9.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-youtube": "^10.1.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.4",
+    "use-debounce": "^10.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.0.3",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8.4.49",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.14"
+  }
+}
