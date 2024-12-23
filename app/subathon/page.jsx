@@ -1,9 +1,9 @@
-import {SubathonHeader} from '@/components/(Subathon)/SubathonHeader'
-import {SubathonDetails} from '@/components/(Subathon)/SubathonDetails'
-import {PointsProgress} from '@/components/(Subathon)/PointsProgress'
-import {PointSystem} from '@/components/(Subathon)/PointSystem'
-import {GoalsList} from '@/components/(Subathon)/GoalsList'
-import {Incentives} from '@/components/(Subathon)/Incentives'
+import {SubathonHeader} from '../../components/SubathonHeader'
+import {SubathonDetails} from '../../components/SubathonDetails'
+import {PointsProgress} from '../../components/PointsProgress'
+import {PointSystem} from '../../components/PointSystem'
+import {GoalsList} from '../../components/GoalsList'
+import {Incentives} from '../../components/Incentives'
 
 export default function SubathonPage() {
   return (
