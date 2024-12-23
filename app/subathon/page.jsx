@@ -7,7 +7,7 @@ import {Incentives} from '../../components/incentives'
 
 export default function SubathonPage() {
   return (
-    <div className='container mx-auto my-12 max-w-7xl space-y-12 px-4 py-8'>
+    <div className='container mx-auto my-12 max-w-7xl space-y-12 px-2.5 py-8 sm:px-4'>
       <SubathonHeader />
       {/* <PointsProgress currentPoints={0} nextGoalPoints={10000} /> */}
       <SubathonDetails />
