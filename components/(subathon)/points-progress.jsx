@@ -1,6 +1,6 @@
 'use client'
-import {Progress} from '@/components/ui/progress'
-import {Card} from '@/components/ui/card'
+import {Progress} from '@/components/ui/Progress'
+import {Card} from '@/components/ui/Card'
 
 export function PointsProgress({currentPoints, nextGoalPoints}) {
   const progress = (currentPoints / nextGoalPoints) * 100

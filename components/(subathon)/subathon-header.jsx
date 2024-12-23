@@ -1,6 +1,6 @@
 'use client'
 import {CalendarDays, Twitch} from 'lucide-react'
-import {Card} from '@/components/ui/card'
+import {Card} from '@/components/ui/Card'
 
 export function SubathonHeader() {
   return (

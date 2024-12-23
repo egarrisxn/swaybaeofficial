@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {Badge} from './ui/badge'
+import {Badge} from './ui/Badge'
 
 export default function TagBadge({tag, clickable = true}) {
   const {title, color} = tag

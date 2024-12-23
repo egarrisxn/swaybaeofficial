@@ -2,7 +2,7 @@
 import {useState} from 'react'
 import FeaturedCard from './FeaturedCard'
 import LatestCard from './LatestCard'
-import {Button} from './ui/button'
+import {Button} from './ui/Button'
 
 export function AllPosts({posts}) {
   const featuredPosts = posts.filter((post) => post.featured)

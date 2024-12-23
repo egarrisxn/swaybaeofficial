@@ -1,7 +1,7 @@
 'use client'
 import {AlertCircle} from 'lucide-react'
-import {Card} from '@/components/ui/card'
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/components/ui/table'
+import {Card} from '@/components/ui/Card'
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/components/ui/Table'
 
 export function PointSystem() {
   return (

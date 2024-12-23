@@ -1,4 +1,4 @@
-import {Card} from '@/components/ui/card'
+import {Card} from '@/components/ui/Card'
 import {Dumbbell, Music, Trophy} from 'lucide-react'
 
 export function Incentives() {
