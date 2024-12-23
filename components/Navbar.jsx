@@ -25,10 +25,10 @@ const ThemeToggle = () => {
 }
 
 const navLinks = [
+  {href: '/', label: 'Home'},
   {href: '/blog', label: 'Blog'},
   {href: '/calendar', label: 'Calendar'},
-  {href: '/community', label: 'Community'},
-  {href: '/subathon', label: 'Subathon'},
+  {href: '/contact', label: 'Contact'},
   {href: 'https://shop.swaybae.net/', label: 'Store', external: true},
 ]
 
