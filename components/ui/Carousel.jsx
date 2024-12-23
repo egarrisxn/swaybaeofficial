@@ -1,7 +1,7 @@
 'use client'
 import * as React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import {cn} from '@/utils/cn'
+import {cn} from '@/lib/utils'
 import {Button} from './Button'
 import {Icon} from './Icon'
 

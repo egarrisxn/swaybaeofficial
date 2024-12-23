@@ -18,6 +18,14 @@ export default async function sitemap() {
       url: `${baseUrl}/calendar`,
       lastModified: new Date().toISOString(),
     },
+    {
+      url: `${baseUrl}/community`,
+      lastModified: new Date().toISOString(),
+    },
+    {
+      url: `${baseUrl}/subathon`,
+      lastModified: new Date().toISOString(),
+    },
   ]
 
   const postRoutes = posts.map((post) => ({

@@ -1,9 +1,13 @@
-'use client'
 import * as React from 'react'
-import {cn} from '@/utils/cn'
+
+import {cn} from '@/lib/utils'
 
 const Card = React.forwardRef(({className, ...props}, ref) => (
-  <div ref={ref} className={cn('rounded-xl border text-foreground shadow', className)} {...props} />
+  <div
+    ref={ref}
+    className={cn('bg-card text-card-foreground rounded-xl border shadow', className)}
+    {...props}
+  />
 ))
 Card.displayName = 'Card'
 
@@ -22,7 +26,7 @@ const CardTitle = React.forwardRef(({className, ...props}, ref) => (
 CardTitle.displayName = 'CardTitle'
 
 const CardDescription = React.forwardRef(({className, ...props}, ref) => (
-  <div ref={ref} className={cn('text-sm text-gray-tint', className)} {...props} />
+  <div ref={ref} className={cn('text-muted-foreground text-sm', className)} {...props} />
 ))
 CardDescription.displayName = 'CardDescription'
 
