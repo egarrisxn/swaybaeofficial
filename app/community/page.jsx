@@ -1,5 +1,5 @@
-import {CommunityHeader} from '@/components/(community)/community-header'
-import TierList from '@/components/(community)/tier-list'
+import {CommunityHeader} from '@/components/(Community)/CommunityHeader'
+import TierList from '@/components/(Community)/TierList'
 
 export default function CommunityPage() {
   return (

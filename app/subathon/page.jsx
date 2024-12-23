@@ -1,13 +1,9 @@
-import {SubathonHeader} from '@/components/(subathon)/subathon-header'
-import {SubathonDetails} from '@/components/(subathon)/subathon-details'
-import {PointsProgress} from '@/components/(subathon)/points-progress'
-import {PointSystem} from '@/components/(subathon)/point-system'
-import {GoalsList} from '@/components/(subathon)/goals-list'
-import {Incentives} from '@/components/(subathon)/incentives'
-
-export const metadata = {
-  title: 'Subathon Page',
-}
+import {SubathonHeader} from '@/components/(Subathon)/SubathonHeader'
+import {SubathonDetails} from '@/components/(Subathon)/SubathonDetails'
+import {PointsProgress} from '@/components/(Subathon)/PointsProgress'
+import {PointSystem} from '@/components/(Subathon)/PointSystem'
+import {GoalsList} from '@/components/(Subathon)/GoalsList'
+import {Incentives} from '@/components/(Subathon)/Incentives'
 
 export default function SubathonPage() {
   return (
