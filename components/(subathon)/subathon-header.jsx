@@ -4,7 +4,7 @@ import {Card} from '@/components/ui/card'
 
 export function SubathonHeader() {
   return (
-    <Card className='space-y-6 bg-white p-8 text-center backdrop-blur-sm dark:bg-black'>
+    <Card className='space-y-6 bg-white p-8 text-center backdrop-blur-sm shadow dark:bg-black'>
       <h1 className='bg-gradient-to-r from-purple to-pink bg-clip-text text-4xl font-bold text-transparent md:text-6xl xl:text-7xl'>
         It&apos;s Subathon Season!
       </h1>

@@ -3,7 +3,7 @@ import {Dumbbell, Music, Trophy} from 'lucide-react'
 
 export function Incentives() {
   return (
-    <Card className='space-y-6 bg-white p-6 backdrop-blur-sm dark:bg-black'>
+    <Card className='space-y-6 bg-white p-6 shadow backdrop-blur-sm dark:bg-black'>
       <h2 className='text-2xl font-bold'>Extra Incentives</h2>
 
       <div className='grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6'>

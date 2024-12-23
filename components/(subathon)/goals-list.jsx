@@ -218,7 +218,7 @@ const goals = [
 
 export function GoalsList() {
   return (
-    <Card className='space-y-6 bg-white p-5 backdrop-blur-sm md:p-6 dark:bg-black'>
+    <Card className='space-y-6 bg-white p-5 backdrop-blur-sm  shadow md:p-6 dark:bg-black'>
       <h2 className='text-xl font-bold md:text-2xl'>Subathon Goals</h2>
 
       <ScrollArea className='h-[700px] pr-4'>

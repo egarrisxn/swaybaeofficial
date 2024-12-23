@@ -76,7 +76,7 @@ export default function TierList() {
         const Icon = tierIcons[tier.tier]
         return (
           <div key={index}>
-            <Card className='bg-white/90 dark:bg-black/90 overflow-hidden backdrop-blur-lg transition-all hover:shadow-lg'>
+            <Card className='bg-white dark:bg-black overflow-hidden backdrop-blur-lg transition-all hover:shadow-lg'>
               <div className='border-purple-100 from-purple-500/10 to-pink-500/10 dark:border-purple-900 border-b bg-gradient-to-r p-6'>
                 <div className='flex items-center gap-2 sm:gap-3'>
                   <Icon className='text-purple-600 dark:text-purple-400 size-5 sm:size-6' />

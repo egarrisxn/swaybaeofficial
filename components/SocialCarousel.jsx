@@ -8,7 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from './ui/Carousel'
+} from './ui/carousel'
 
 export function SocialCarousel() {
   return (

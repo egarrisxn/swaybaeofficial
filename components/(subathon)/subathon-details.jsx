@@ -2,7 +2,7 @@ import {Card} from '@/components/ui/card'
 
 export function SubathonDetails() {
   return (
-    <Card className='bg-white p-5 backdrop-blur-sm md:p-6 dark:bg-black'>
+    <Card className='bg-white p-5 backdrop-blur-sm md:p-6 shadow dark:bg-black'>
       <article className='prose max-w-none sm:prose-lg lg:prose-2xl dark:prose-invert'>
         <h3 className='mb-0 pt-6 text-center text-3xl font-bold text-neutral-tint md:text-5xl xl:text-6xl dark:text-foreground'>
           The Details!

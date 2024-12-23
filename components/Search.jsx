@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 import {useDebouncedCallback} from 'use-debounce'
 import {SEARCH_QUERY} from '@/utils/sanity/queries'
 import {client} from '@/utils/sanity/client'
-import {Icon} from './ui/Icon'
+import {Icon} from './ui/icon'
 
 export default function Search({placeholder}) {
   const searchParams = useSearchParams()

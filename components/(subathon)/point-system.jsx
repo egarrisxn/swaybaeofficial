@@ -5,7 +5,7 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/c
 
 export function PointSystem() {
   return (
-    <Card className='space-y-6 bg-white p-5 backdrop-blur-sm md:p-6 dark:bg-black'>
+    <Card className='space-y-6 bg-white p-5 backdrop-blur-sm shadow md:p-6 dark:bg-black'>
       <h2 className='text-xl font-bold md:text-2xl'>Point System</h2>
 
       <div className='grid grid-cols-1 gap-5 md:gap-6 lg:grid-cols-2'>

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Search from './Search'
-import {Icon} from './ui/Icon'
+import {Icon} from './ui/icon'
 
 export default function PageHeader({
   id,
