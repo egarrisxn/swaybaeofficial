@@ -4,7 +4,7 @@ import {Card} from '@/components/ui/card'
 
 export function SubathonHeader() {
   return (
-    <Card className='space-y-6 bg-white p-8 text-center backdrop-blur-sm shadow dark:bg-black'>
+    <Card className='space-y-6 bg-white p-8 text-center shadow backdrop-blur-sm dark:bg-black'>
       <h1 className='bg-gradient-to-r from-purple to-pink bg-clip-text text-4xl font-bold text-transparent md:text-6xl xl:text-7xl'>
         It&apos;s Subathon Season!
       </h1>
@@ -15,16 +15,16 @@ export function SubathonHeader() {
 
       <div className='flex flex-col items-center justify-center gap-6 md:flex-row md:text-lg'>
         <div className='flex items-center gap-1 md:gap-2'>
-          <CalendarDays className='text-purple-600 size-5 sm:size-6' />
+          <CalendarDays className='size-5 text-purple-600 sm:size-6' />
           <span>Dec. 23rd, 2024 - Jan. 1st, 2025</span>
         </div>
         <a
           href='https://www.twitch.tv/sway_bae'
           target='_blank'
           rel='noopener noreferrer'
-          className='hover:text-purple-700 flex items-center gap-1 transition-colors md:gap-2'
+          className='flex items-center gap-1 transition-colors hover:text-purple-700 md:gap-2'
         >
-          <Twitch className='text-purple-600 size-5 sm:size-6' />
+          <Twitch className='size-5 text-purple-600 sm:size-6' />
           <span>Watch on Twitch</span>
         </a>
       </div>

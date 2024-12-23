@@ -76,16 +76,16 @@ export default function TierList() {
         const Icon = tierIcons[tier.tier]
         return (
           <div key={index}>
-            <Card className='bg-white dark:bg-black overflow-hidden backdrop-blur-lg transition-all hover:shadow-lg'>
-              <div className='border-purple-100 from-purple-500/10 to-pink-500/10 dark:border-purple-900 border-b bg-gradient-to-r p-6'>
+            <Card className='overflow-hidden bg-white backdrop-blur-lg transition-all hover:shadow-lg dark:bg-black'>
+              <div className='border-b border-purple-100 bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 dark:border-purple-900'>
                 <div className='flex items-center gap-2 sm:gap-3'>
-                  <Icon className='text-purple-600 dark:text-purple-400 size-5 sm:size-6' />
-                  <h2 className='text-purple-900 dark:text-purple-100 font-bold tracking-tight sm:text-lg'>
+                  <Icon className='size-5 text-purple-600 sm:size-6 dark:text-purple-400' />
+                  <h2 className='font-bold tracking-tight text-purple-900 sm:text-lg dark:text-purple-100'>
                     {tier.tier}
                   </h2>
                   <Badge
                     variant='secondary'
-                    className='bg-purple-100 text-purple-900 dark:bg-purple-900 dark:text-purple-100 ml-auto'
+                    className='ml-auto bg-purple-100 text-purple-900 dark:bg-purple-900 dark:text-purple-100'
                   >
                     Buy: {tier.buy}
                   </Badge>
@@ -96,7 +96,7 @@ export default function TierList() {
                   {tier.buyers.map((buyer, idx) => (
                     <div
                       key={idx}
-                      className='bg-purple-50 text-purple-900 hover:bg-purple-100 dark:bg-purple-900/30 dark:text-purple-100 dark:hover:bg-purple-800/50 flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors'
+                      className='flex items-center gap-2 rounded-lg bg-purple-50 px-3 py-2 text-sm text-purple-900 transition-colors hover:bg-purple-100 dark:bg-purple-900/30 dark:text-purple-100 dark:hover:bg-purple-800/50'
                     >
                       <div className='size-2 rounded-full bg-primary' />
                       {buyer}

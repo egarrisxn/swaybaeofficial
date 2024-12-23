@@ -9,7 +9,7 @@ export function Incentives() {
       <div className='grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6'>
         <Card className='space-y-3 p-3 md:p-4'>
           <div className='flex items-center gap-2'>
-            <Dumbbell className='text-purple-600 size-4 md:size-5 dark:text-pink' />
+            <Dumbbell className='size-4 text-purple-600 md:size-5 dark:text-pink' />
             <h3 className='font-semibold'>Fitness Goals</h3>
           </div>
           <p className='text-muted-foreground text-sm'>
@@ -21,7 +21,7 @@ export function Incentives() {
 
         <Card className='space-y-3 p-3 md:p-4'>
           <div className='flex items-center gap-2'>
-            <Music className='text-purple-600 size-4 md:size-5 dark:text-pink' />
+            <Music className='size-4 text-purple-600 md:size-5 dark:text-pink' />
             <h3 className='font-semibold'>Song Requests</h3>
           </div>
           <p className='text-muted-foreground text-sm'>
@@ -35,7 +35,7 @@ export function Incentives() {
 
         <Card className='space-y-3 p-3 md:p-4'>
           <div className='flex items-center gap-2'>
-            <Trophy className='text-purple-600 size-4 md:size-5 dark:text-pink' />
+            <Trophy className='size-4 text-purple-600 md:size-5 dark:text-pink' />
             <h3 className='font-semibold'>Top Contributors</h3>
           </div>
           <p className='text-muted-foreground text-sm'>

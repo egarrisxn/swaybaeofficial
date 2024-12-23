@@ -5,14 +5,14 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/c
 
 export function PointSystem() {
   return (
-    <Card className='space-y-6 bg-white p-5 backdrop-blur-sm shadow md:p-6 dark:bg-black'>
+    <Card className='space-y-6 bg-white p-5 shadow backdrop-blur-sm md:p-6 dark:bg-black'>
       <h2 className='text-xl font-bold md:text-2xl'>Point System</h2>
 
       <div className='grid grid-cols-1 gap-5 md:gap-6 lg:grid-cols-2'>
         <div className='space-y-4'>
-          <div className='bg-purple-50 dark:bg-purple-900/20 space-y-3 rounded-lg p-4'>
+          <div className='space-y-3 rounded-lg bg-purple-50 p-4 dark:bg-purple-900/20'>
             <h4 className='flex items-center gap-1 font-semibold md:gap-2'>
-              <AlertCircle className='text-purple-600 size-4' />
+              <AlertCircle className='size-4 text-purple-600' />
               Current Twitch Promotions
             </h4>
             <ul className='list-inside list-disc space-y-1 text-sm'>
@@ -57,7 +57,7 @@ export function PointSystem() {
               href='https://blog.twitch.tv/en/2024/11/21/bonus-round-2024/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-purple-600 hover:text-purple-700 inline-flex items-center gap-1 text-sm transition-colors'
+              className='inline-flex items-center gap-1 text-sm text-purple-600 transition-colors hover:text-purple-700'
             >
               Learn more about the End-of-Year Bonus Round
             </a>
