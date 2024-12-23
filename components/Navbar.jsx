@@ -4,10 +4,10 @@ import Image from 'next/image'
 import {usePathname} from 'next/navigation'
 import {useState, useEffect, useCallback} from 'react'
 import {useTheme} from 'next-themes'
-import {Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription} from './ui/Sheet'
-import {Button} from './ui/Button'
-import {Tooltip} from './ui/Tooltip'
-import {Icon} from './ui/Icon'
+import {Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription} from './ui/sheet'
+import {Button} from './ui/button'
+import {Tooltip} from './ui/tooltip'
+import {Icon} from './ui/icon'
 import SocialIcons from './SocialIcons'
 
 const ThemeToggle = () => {
@@ -26,10 +26,10 @@ const ThemeToggle = () => {
 
 const navLinks = [
   {href: '/', label: 'Home'},
-  {href: '/blog', label: 'Blog'},
   {href: '/calendar', label: 'Calendar'},
+  {href: '/blog', label: 'Blog'},
   {href: '/contact', label: 'Contact'},
-  {href: 'https://shop.swaybae.net/', label: 'Store', external: true},
+  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store', external: true},
 ]
 
 export default function Navbar() {
@@ -83,7 +83,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className='text-lg transition-all hover:text-b2p md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
+                className='text0hover:text-b2p text-lg transition-all md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
               >
                 {link.external ? (
                   <a
@@ -123,7 +123,7 @@ export default function Navbar() {
                       {navLinks.map((link) => (
                         <li
                           key={link.href}
-                          className='text-6xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-5xl max-[350px]:text-4xl'
+                          className='text-7xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-6xl max-[350px]:text-5xl'
                         >
                           {link.external ? (
                             <a href={link.href} target='_blank' rel='noreferrer noopener'>
