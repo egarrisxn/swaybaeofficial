@@ -25,7 +25,7 @@ const ThemeToggle = () => {
 }
 
 const navLinks = [
-  {href: '/', label: 'Home'},
+  {href: '/subathon', label: 'Subathon!'},
   {href: '/calendar', label: 'Calendar'},
   {href: '/blog', label: 'Blog'},
   {href: '/contact', label: 'Contact'},
@@ -123,7 +123,7 @@ export default function Navbar() {
                       {navLinks.map((link) => (
                         <li
                           key={link.href}
-                          className='text-7xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-6xl max-[350px]:text-5xl'
+                          className='text-6xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-6xl max-[350px]:text-5xl'
                         >
                           {link.external ? (
                             <a href={link.href} target='_blank' rel='noreferrer noopener'>
