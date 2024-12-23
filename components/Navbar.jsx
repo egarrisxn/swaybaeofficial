@@ -25,11 +25,11 @@ const ThemeToggle = () => {
 }
 
 const navLinks = [
-  {href: '/', label: 'Home'},
-  {href: '/calendar', label: 'Calendar'},
   {href: '/blog', label: 'Blog'},
-  {href: '/contact', label: 'Contact'},
-  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store', external: true},
+  {href: '/calendar', label: 'Calendar'},
+  {href: '/community', label: 'Community'},
+  {href: '/subathon', label: 'Subathon'},
+  {href: 'https://shop.swaybae.net/', label: 'Store', external: true},
 ]
 
 export default function Navbar() {
@@ -123,7 +123,7 @@ export default function Navbar() {
                       {navLinks.map((link) => (
                         <li
                           key={link.href}
-                          className='text-7xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-6xl max-[350px]:text-5xl'
+                          className='text-6xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-5xl max-[350px]:text-4xl'
                         >
                           {link.external ? (
                             <a href={link.href} target='_blank' rel='noreferrer noopener'>
