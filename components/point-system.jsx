@@ -40,19 +40,19 @@ export function PointSystem() {
                   <TableCell></TableCell>
                   <TableCell></TableCell>
                   <TableCell colSpan={3} className='font-semibold'>
-                    Additional points for new multi-month subscription
+                    Additional Points for New Multi-Month Subscriptions
                   </TableCell>
 
-                  <TableCell colSpan={2} className='font-italic'>
+                  <TableCell colSpan={2} className='italic'>
                     Extra Points for Gifted Subs from Twitch
                   </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell></TableCell>
                   <TableCell></TableCell>
-                  <TableCell>3 months</TableCell>
-                  <TableCell>6 months</TableCell>
-                  <TableCell>12 months</TableCell>
+                  <TableCell className='font-semibold text-[#3eb8ce]'>3 months</TableCell>
+                  <TableCell className='font-semibold text-[#3eb8ce]'>6 months</TableCell>
+                  <TableCell className='font-semibold text-[#3eb8ce]'>12 months</TableCell>
                   <TableCell></TableCell>
                 </TableRow>
                 <TableRow>
@@ -84,18 +84,18 @@ export function PointSystem() {
           </div>
         </div>
         <div className='mx-auto flex flex-col justify-center gap-6 md:flex-row md:gap-12'>
-          <div className='order-2 flex flex-col items-center justify-center space-y-3 rounded-lg bg-purple-50 py-12 md:order-1 md:h-fit md:w-1/3 dark:bg-purple-900/20'>
-            <h4 className='flex items-center gap-1 font-semibold md:gap-2'>
+          <div className='order-2 flex flex-col items-center justify-center space-y-3 rounded-lg bg-purple-50 py-8 md:order-1 md:h-fit md:w-1/3 md:space-y-2 dark:bg-purple-900/30'>
+            <h4 className='flex items-center gap-1 font-semibold md:gap-2 md:text-lg'>
               <AlertCircle className='size-4 text-purple-600' />
               Current Twitch Promotions
             </h4>
-            <ul className='list-inside list-disc space-y-1 text-sm'>
+            <ul className='list-inside list-disc space-y-1 text-sm md:text-base'>
               <li>25% off new 1-month subs</li>
               <li>25% off new 3-month subs</li>
               <li>30% off new 6-month subs</li>
             </ul>
           </div>
-          <div className='order-1 space-y-4 md:order-2 md:w-2/3'>
+          <div className='order-1 space-y-4 shadow md:order-2 md:w-2/3'>
             <Card className='space-y-3 p-3 md:p-4'>
               <h4 className='font-semibold'>Bonus Gift Subs Program</h4>
               <p className='text-muted-foreground text-sm'>
@@ -103,7 +103,7 @@ export function PointSystem() {
                 sub. Additional points will be added based on the tier and number of gifted subs
                 from Twitch.
               </p>
-              <div className='bg-muted rounded-md p-3 text-sm'>
+              <div className='rounded-md bg-purple-50 p-3 text-sm dark:bg-purple-900/70'>
                 <strong>Example:</strong> 5 Tier 1 gifted subs (3,000 points) + 1 bonus gifted sub
                 (600 points) + 100 bonus points = 3,700 total points
               </div>
@@ -162,7 +162,7 @@ export function PointSystem() {
         </Table>
       </div>
 
-      <div className='text-muted-foreground space-y-2 text-sm'>
+      <div className='w-fit space-y-2 rounded bg-neutral-400/10 px-4 py-2 text-sm dark:bg-neutral-700/40'>
         <p>* Additional points for multi-month subscriptions</p>
         <p>** Extra points for gifted subs from Twitch</p>
       </div>

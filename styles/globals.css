@@ -123,6 +123,10 @@ html {
 .prose h2 {
   text-shadow: var(--text-shadow);
 }
+.prose li::marker {
+  color: #3eb8ce;
+  font-weight: bold;
+}
 .textShadow {
   text-shadow: var(--text-shadow1);
 }

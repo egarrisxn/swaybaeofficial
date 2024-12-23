@@ -220,14 +220,15 @@ export function GoalsList() {
   return (
     <Card className='space-y-6 bg-white p-5 shadow backdrop-blur-sm md:p-6 dark:bg-black'>
       <h3 className='mb-4 pt-4 text-xl font-bold md:text-2xl xl:text-3xl'>Sub Goals</h3>
-
       <ScrollArea className='pr-4'>
         <div className='space-y-4'>
           {goals.map((goal, index) => (
             <Card
               key={index}
               className={`p-4 transition-all ${
-                goal.completed ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20' : ''
+                goal.completed
+                  ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
+                  : 'border-slate-200/40 bg-slate-50/20 dark:border-purple-800/40 dark:bg-purple-900/20'
               }`}
             >
               <div className='flex items-start justify-between gap-3 md:gap-4'>
@@ -239,7 +240,7 @@ export function GoalsList() {
                     {goal.completed && <Badge variant='success'>Completed!</Badge>}
                   </div>
                   <h3 className='text-lg font-semibold'>{goal.title}</h3>
-                  <p className='text-muted-foreground'>{goal.description}</p>
+                  <p className='text-slate-600 dark:text-slate-300'>{goal.description}</p>
                 </div>
               </div>
             </Card>
