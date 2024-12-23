@@ -6,7 +6,7 @@ import {ScrollArea} from './ui/scroll-area'
 const goals = [
   {
     points: 10000,
-    title: 'Chat picks our Chicken Wing flavors for dinner',
+    title: 'Chat picks our Pizza toppings for our pizza dinner',
     description: "Chat will vote on the sauces and dips for Ethan and Sway's dinner!",
     completed: false,
     videoLink: null,
@@ -219,9 +219,9 @@ const goals = [
 export function GoalsList() {
   return (
     <Card className='space-y-6 bg-white p-5 shadow backdrop-blur-sm md:p-6 dark:bg-black'>
-      <h2 className='text-xl font-bold md:text-2xl'>Subathon Goals</h2>
+      <h3 className='mb-4 pt-4 text-xl font-bold md:text-2xl xl:text-3xl'>Sub Goals</h3>
 
-      <ScrollArea className='h-[700px] pr-4'>
+      <ScrollArea className='pr-4'>
         <div className='space-y-4'>
           {goals.map((goal, index) => (
             <Card

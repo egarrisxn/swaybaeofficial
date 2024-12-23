@@ -4,22 +4,20 @@ export function SubathonDetails() {
   return (
     <Card className='bg-white p-5 shadow backdrop-blur-sm md:p-6 dark:bg-black'>
       <article className='prose max-w-none sm:prose-lg lg:prose-2xl dark:prose-invert'>
-        <h3 className='mb-0 pt-6 text-center text-3xl font-bold text-neutral-tint md:text-5xl xl:text-6xl dark:text-foreground'>
-          The Details!
-        </h3>
+        <h3 className='mb-4 pt-4 text-2xl font-bold md:text-3xl xl:text-4xl'>The Details</h3>
         <ol>
           <li>
-            First, POINTS! Use these to unlock goals throughout the event. Check the point system
-            guide for all the details, including the point structure, current Twitch promotions, and
-            more!
+            First, we got POINTS! These will be used to accomplished goals throughout our event.
+            Check the point system guide for all the details, including point structure, fun
+            promotions, and more!
           </li>
           <li>
-            Next, GOALS! We didn&apos;t hold back this year—take a look at the list and see what
-            surprises await. Will this be the year Sway finally gets those Crocs? Stay tuned!
+            Next up are the GOALS! Let me just that this year, we didn&apos;t hold back! take a look
+            at the list and see which goals you want to see come to life.
           </li>
           <li>
-            Finally, enjoy exclusive incentives along the way, including activities to keep things
-            lively and engaging!
+            Finally, I set up a few extra incentives throughout our adventure together to keep me
+            active, engergized, and a an easy target for all the laughs!
           </li>
         </ol>
       </article>

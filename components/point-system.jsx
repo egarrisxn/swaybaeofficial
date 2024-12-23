@@ -6,11 +6,86 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from './u
 export function PointSystem() {
   return (
     <Card className='space-y-6 bg-white p-5 shadow backdrop-blur-sm md:p-6 dark:bg-black'>
-      <h2 className='text-xl font-bold md:text-2xl'>Point System</h2>
-
-      <div className='grid grid-cols-1 gap-5 md:gap-6 lg:grid-cols-2'>
+      <h3 className='mb-4 pt-4 text-xl font-bold md:text-2xl xl:text-3xl'>Point System</h3>
+      <div className='grid grid-cols-1 gap-5 md:gap-6'>
         <div className='space-y-4'>
-          <div className='space-y-3 rounded-lg bg-purple-50 p-4 dark:bg-purple-900/20'>
+          <div>
+            <Table>
+              <TableBody>
+                <TableRow>
+                  <TableCell>1 bit</TableCell>
+                  <TableCell className='text-right font-semibold'>1 point</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>$1 tip</TableCell>
+                  <TableCell className='font-semibold'>100 points</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Prime Sub</TableCell>
+                  <TableCell className='font-semibold'>400 points</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className='font-semibold'>
+                    Additional points for new multi-month subscription
+                  </TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className='font-italic'>
+                    Extra Points for Gifted Subs from Twitch
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell>3 months</TableCell>
+                  <TableCell>6 months</TableCell>
+                  <TableCell>12 months</TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Tier 1 Sub</TableCell>
+                  <TableCell className='font-semibold'>600 points</TableCell>
+                  <TableCell>+300 points</TableCell>
+                  <TableCell>+700 points</TableCell>
+                  <TableCell>+1500 points</TableCell>
+                  <TableCell className='font-semibold'>+100 points</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Tier 2 Sub</TableCell>
+                  <TableCell className='font-semibold'>1000 points</TableCell>
+                  <TableCell>+600 points</TableCell>
+                  <TableCell>+1400 points</TableCell>
+                  <TableCell>+3000 points</TableCell>
+                  <TableCell className='font-semibold'>+200 points</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Tier 3 Sub</TableCell>
+                  <TableCell className='text-right font-semibold'>2500 points</TableCell>
+                  <TableCell>+1500 points</TableCell>
+                  <TableCell>+3500 points</TableCell>
+                  <TableCell>+7500 points</TableCell>
+                  <TableCell className='font-semibold'>+500 points</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+        </div>
+        <div className='mx-auto flex flex-col justify-center gap-6 md:flex-row'>
+          <div className='order-2 flex flex-col items-center justify-center space-y-3 rounded-lg bg-purple-50 py-12 md:order-1 md:h-fit md:w-1/3 dark:bg-purple-900/20'>
             <h4 className='flex items-center gap-1 font-semibold md:gap-2'>
               <AlertCircle className='size-4 text-purple-600' />
               Current Twitch Promotions
@@ -21,47 +96,28 @@ export function PointSystem() {
               <li>30% off new 6-month subs</li>
             </ul>
           </div>
-          <div>
-            <h3 className='mb-3 text-lg font-semibold'>Basic Points</h3>
-            <Table>
-              <TableBody>
-                <TableRow>
-                  <TableCell>1 bit</TableCell>
-                  <TableCell className='text-right font-semibold'>1 point</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>$1 tip</TableCell>
-                  <TableCell className='text-right font-semibold'>100 points</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Prime Sub</TableCell>
-                  <TableCell className='text-right font-semibold'>400 points</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+          <div className='order-1 space-y-4 md:order-2 md:w-2/3'>
+            <Card className='space-y-3 p-3 md:p-4'>
+              <h4 className='font-semibold'>Bonus Gift Subs Program</h4>
+              <p className='text-muted-foreground text-sm'>
+                For every five gift subs purchased for a channel, Valorant will add one bonus gift
+                sub. Additional points will be added based on the tier and number of gifted subs
+                from Twitch.
+              </p>
+              <div className='bg-muted rounded-md p-3 text-sm'>
+                <strong>Example:</strong> 5 Tier 1 gifted subs (3,000 points) + 1 bonus gifted sub
+                (600 points) + 100 bonus points = 3,700 total points
+              </div>
+              <a
+                href='https://blog.twitch.tv/en/2024/11/21/bonus-round-2024/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-1 text-sm text-purple-600 transition-colors hover:text-purple-700'
+              >
+                Learn more about the End-of-Year Bonus Round
+              </a>
+            </Card>
           </div>
-        </div>
-        <div className='space-y-4'>
-          <Card className='space-y-3 p-3 md:p-4'>
-            <h4 className='font-semibold'>Bonus Gift Subs Program</h4>
-            <p className='text-muted-foreground text-sm'>
-              For every five gift subs purchased for a channel, Valorant will add one bonus gift
-              sub. Additional points will be added based on the tier and number of gifted subs from
-              Twitch.
-            </p>
-            <div className='bg-muted rounded-md p-3 text-sm'>
-              <strong>Example:</strong> 5 Tier 1 gifted subs (3,000 points) + 1 bonus gifted sub
-              (600 points) + 100 bonus points = 3,700 total points
-            </div>
-            <a
-              href='https://blog.twitch.tv/en/2024/11/21/bonus-round-2024/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='inline-flex items-center gap-1 text-sm text-purple-600 transition-colors hover:text-purple-700'
-            >
-              Learn more about the End-of-Year Bonus Round
-            </a>
-          </Card>
         </div>
       </div>
 
