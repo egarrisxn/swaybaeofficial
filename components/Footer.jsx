@@ -1,5 +1,5 @@
 'use client'
-import SocialIcons from './SocialIcons'
+import SocialIcons from './social-icons'
 
 export default function Footer() {
   return (

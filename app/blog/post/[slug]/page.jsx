@@ -3,11 +3,11 @@ import {notFound} from 'next/navigation'
 import {generateStaticSlugs} from '@/utils/sanity/generateStaticSlugs'
 import {loadPost} from '@/utils/sanity/loadQuery'
 import {urlFor} from '@/utils/sanity/client'
-import PageHeader from '@/components/PageHeader'
-import TableOfContent from '@/components/TableOfContent'
-import TagBadge from '@/components/TagBadge'
-import DateBadge from '@/components/DateBadge'
-import PortableTextComponents from '@/components/PortableTextComponents'
+import PageHeader from '@/components/page-header'
+import TableOfContent from '@/components/toc'
+import TagBadge from '@/components/tag-badge'
+import DateBadge from '@/components/date-badge'
+import PortableTextComponents from '@/components/portable-text'
 
 export function generateStaticParams() {
   return generateStaticSlugs('post')

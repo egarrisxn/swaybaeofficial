@@ -8,7 +8,7 @@ import {Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription} from '.
 import {Button} from './ui/button'
 import {Tooltip} from './ui/tooltip'
 import {Icon} from './ui/icon'
-import SocialIcons from './SocialIcons'
+import SocialIcons from './social-icons'
 
 const ThemeToggle = () => {
   const {resolvedTheme, setTheme} = useTheme()

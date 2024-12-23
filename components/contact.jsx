@@ -1,8 +1,8 @@
 'use client'
 import {useState} from 'react'
-import PageHeader from '@/components/PageHeader'
-import {Button} from '@/components/ui/button'
-import {Icon} from '@/components/ui/icon'
+import PageHeader from './page-header'
+import {Button} from './ui/button'
+import {Icon} from './ui/icon'
 
 function ContactInfo({title, subtitle, icon, detail, href, ariaLabel}) {
   return (

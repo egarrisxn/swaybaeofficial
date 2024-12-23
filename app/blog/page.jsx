@@ -1,7 +1,7 @@
 import {notFound} from 'next/navigation'
 import {loadBlog} from '@/utils/sanity/loadQuery'
-import PageHeader from '@/components/PageHeader'
-import {AllPosts} from '@/components/AllPosts'
+import PageHeader from '@/components/page-header'
+import {AllPosts} from '@/components/all-posts'
 
 export default async function BlogPage(props) {
   const params = await props.params

@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import PageHeader from '@/components/PageHeader'
-import {Spotify} from '@/components/Spotify'
-import {SocialCarousel} from '@/components/SocialCarousel'
-import YouTube from '@/components/YouTube'
+import PageHeader from './page-header'
+import {Spotify} from './spotify'
+import {SocialCarousel} from './social-carousel'
+import YouTube from './youtube'
 
 export default function Socials() {
   return (

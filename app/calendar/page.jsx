@@ -1,4 +1,4 @@
-import Calendar from '@/containers/calendar-page/Calendar'
+import Calendar from '@/components/calendar'
 
 export default function CalendarHomePage() {
   return (

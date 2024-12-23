@@ -1,9 +1,9 @@
 import '../styles/globals.css'
 import {Poppins, Sansita} from 'next/font/google'
-import {ThemeProvider} from '@/components/ThemeProvider'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import ScrollToTop from '@/components/ScrollToTop'
+import {ThemeProvider} from '@/components/theme-provider'
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
+import ScrollToTop from '@/components/scroll-to-top'
 import {Analytics} from '@vercel/analytics/react'
 import {SpeedInsights} from '@vercel/speed-insights/next'
 

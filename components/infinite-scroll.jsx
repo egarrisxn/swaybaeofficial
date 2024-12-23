@@ -1,4 +1,4 @@
-import {InfiniteMovingCards} from './InfiniteMovingCards'
+import {InfiniteMovingCards} from './infinite-moving-cards'
 
 export function InfiniteScroll() {
   const icons = [

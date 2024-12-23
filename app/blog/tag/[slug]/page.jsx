@@ -1,8 +1,8 @@
 import {notFound} from 'next/navigation'
 import {generateStaticSlugs} from '@/utils/sanity/generateStaticSlugs'
 import {loadTag} from '@/utils/sanity/loadQuery'
-import PageHeader from '@/components/PageHeader'
-import TagCard from '@/components/TagCard'
+import PageHeader from '@/components/page-header'
+import TagCard from '@/components/tag-card'
 
 export function generateStaticParams() {
   return generateStaticSlugs('tag')

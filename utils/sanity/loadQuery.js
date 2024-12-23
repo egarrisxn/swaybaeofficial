@@ -45,7 +45,6 @@ export async function loadTag(slug) {
   return loadQuery(TAG_QUERY, {slug}, {next: {tags: [`tag:${slug}`]}})
 }
 
-
 // import 'server-only'
 // import * as queryStore from '@sanity/react-loader'
 // import {draftMode} from 'next/headers'

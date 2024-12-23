@@ -1,7 +1,7 @@
-import Hero from '@/containers/home-page/Hero'
-import About from '@/containers/home-page/About'
-import Socials from '@/containers/home-page/Socials'
-import {Contact} from '@/containers/home-page/Contact'
+import Hero from '@/components/hero'
+import About from '@/components/about'
+import Socials from '@/components/socials'
+import {Contact} from '@/components/contact'
 
 // ! Test Loader
 // function loadingPage() {

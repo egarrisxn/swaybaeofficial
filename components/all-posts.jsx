@@ -1,7 +1,7 @@
 'use client'
 import {useState} from 'react'
-import FeaturedCard from './FeaturedCard'
-import LatestCard from './LatestCard'
+import FeaturedCard from './featured-card'
+import LatestCard from './latest-card'
 import {Button} from './ui/button'
 
 export function AllPosts({posts}) {

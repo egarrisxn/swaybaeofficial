@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import TagBadge from './TagBadge'
-import DateBadge from './DateBadge'
+import TagBadge from './tag-badge'
+import DateBadge from './date-badge'
 import {urlFor} from '@/utils/sanity/client'
 
 export default function FeaturedCard({post}) {
