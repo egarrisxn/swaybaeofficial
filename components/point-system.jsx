@@ -40,11 +40,9 @@ export function PointSystem() {
                 <TableCell></TableCell>
                 <TableCell></TableCell>
                 <TableCell colSpan={3} className='font-semibold'>
-                  Additional Points for New Multi-Month Subscriptions
+                  *Additional Points for New Multi-Month Subscriptions
                 </TableCell>
-                <TableCell colSpan={2} className='italic'>
-                  Extra Points for Gifted Subs from Twitch
-                </TableCell>
+                <TableCell></TableCell>
               </TableRow>
               <TableRow>
                 <TableCell></TableCell>
@@ -52,7 +50,9 @@ export function PointSystem() {
                 <TableCell className='font-semibold text-[#3eb8ce]'>3 months</TableCell>
                 <TableCell className='font-semibold text-[#3eb8ce]'>6 months</TableCell>
                 <TableCell className='font-semibold text-[#3eb8ce]'>12 months</TableCell>
-                <TableCell></TableCell>
+                <TableCell className='font-semibold'>
+                  **Extra Points for Gifted Subs from Twitch
+                </TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>Tier 1 Sub</TableCell>
@@ -83,38 +83,39 @@ export function PointSystem() {
         </div>
 
         {/* Repeat the same for the second table */}
-        <div className='mx-auto flex flex-col justify-center gap-6 md:mt-2 md:flex-row md:gap-12'>
-          <div className='order-2 flex flex-col items-center justify-center space-y-3 rounded-lg bg-purple-50 py-12 md:h-fit md:w-1/3 dark:bg-purple-900/20'>
-            <h4 className='flex items-center gap-1 font-semibold md:gap-2'>
-              <AlertCircle className='size-4 text-purple-600' />
-              Current Twitch Promotions
-            </h4>
-            <ul className='list-inside list-disc space-y-1 text-sm'>
-              <li>25% off new 1-month subs</li>
-              <li>25% off new 3-month subs</li>
-              <li>30% off new 6-month subs</li>
-            </ul>
+        <div className='mx-auto flex flex-col justify-center gap-6 md:mt-2 md:flex-row md:gap-6'>
+          <div className='order-2 space-y-4 md:order-1 md:w-2/5 xl:w-1/3'>
+            <div className='flex flex-col items-start space-y-2 rounded-lg bg-purple-50 px-4 py-6 md:items-center md:px-0 xl:w-fit xl:px-10 xl:py-4 dark:bg-purple-900/20'>
+              <h4 className='flex items-center gap-1 font-semibold md:gap-2 xl:text-lg'>
+                {/* <AlertCircle className='size-4 text-purple-600' /> */}*Current Twitch Promotions
+              </h4>
+              <ul className='list-inside list-disc space-y-1 text-sm xl:text-base'>
+                <li>25% off new 1-month subs</li>
+                <li>25% off new 3-month subs</li>
+                <li>30% off new 6-month subs</li>
+              </ul>
+            </div>
+            <a
+              href='https://blog.twitch.tv/en/2024/11/21/bonus-round-2024/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center gap-1 pl-1 text-base font-semibold text-blue-600 transition-colors hover:text-blue-700 hover:underline hover:underline-offset-4 xl:text-sm'
+            >
+              Learn more about Promotion & End-of-Year Bonus!
+            </a>
           </div>
-          <div className='order-1 space-y-4 md:w-2/3'>
+          <div className='order-1 space-y-4 md:order-2 md:w-3/5 xl:w-2/3'>
             <Card className='space-y-3 p-3 md:p-4'>
-              <h4 className='font-semibold'>Bonus Gift Subs Program</h4>
-              <p className='text-muted-foreground text-sm'>
+              <h4 className='font-semibold xl:text-lg'> **Bonus Gift Subs Program</h4>
+              <p className='text-sm text-slate-700 xl:text-base dark:text-slate-300'>
                 For every five gift subs purchased for a channel, Valorant will add one bonus gift
                 sub. Additional points will be added based on the tier and number of gifted subs
                 from Twitch.
               </p>
-              <div className='bg-muted rounded-md p-3 text-sm'>
-                <strong>Example:</strong> 5 Tier 1 gifted subs (3,000 points) + 1 bonus gifted sub
-                (600 points) + 100 bonus points = 3,700 total points
+              <div className='rounded-md bg-slate-100 p-2 text-sm xl:text-base'>
+                <span className='font-semibold'>Example:</span> 5 Tier 1 gifted subs (3,000 points)
+                + 1 bonus gifted sub (600 points) + 100 bonus points = 3,700 total points
               </div>
-              <a
-                href='https://blog.twitch.tv/en/2024/11/21/bonus-round-2024/'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center gap-1 text-sm text-purple-600 transition-colors hover:text-purple-700'
-              >
-                Learn more about the End-of-Year Bonus Round
-              </a>
             </Card>
           </div>
         </div>
