@@ -8,7 +8,7 @@ const goals = [
     points: 10000,
     title: 'Chat picks our Pizza toppings for our pizza dinner',
     description: "Chat will vote on the sauces and dips for Ethan and Sway's dinner!",
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -16,7 +16,7 @@ const goals = [
     title: 'Bring back the "MOAR CAFFEINE" channel point button',
     description:
       'Instead of "hydrate", we caffeinate! For the rest of the Subathon, Chat can caffeinate Sway! (within reason)',
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -24,7 +24,7 @@ const goals = [
     title: 'Unlock Reaction Test during Gingerbread House Stream',
     description:
       'The 24th will be a Gingerbread baking stream. Whenever a sub/cheer happens, a reaction test will auto start and Sway needs to make it back to her computer and not fail the test, otherwise...uh oh!',
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -32,14 +32,14 @@ const goals = [
     title: 'Solo Duos until first place',
     description:
       "Sway will duo queue with herself on her phone and won't stop until she gets a first!",
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
     points: 40000,
     title: 'No "sway swears" for 1 hour',
     description: 'No "butts", no "heck", and especially no "heckin butts" for a whole hour.',
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -47,7 +47,7 @@ const goals = [
     title: 'Play a Hearthstone Battlegrounds Game with an XBOX controller on high sensitivity',
     description:
       'Exactly what it sounds like. Hearthstone Battlegrounds. Xbox controller. These two things were not meant to be.',
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -55,14 +55,14 @@ const goals = [
     title: 'Give Ethan a Nerf Gun',
     description:
       "Chat gives Ethan a present - it's a nerf gun to randomly surprise Sway. *Thaaaaanks a lot, Chat.*",
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
     points: 70000,
     title: 'Sway plays "Would you Rather" with Chat',
     description: 'Sway has some "Would you Rather" questions to play with Chat!',
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -70,7 +70,7 @@ const goals = [
     title: 'Unlock "Time Out Day"',
     description:
       'Time out day will be put on the calendar! Time out day allows chatters to duel for time outs, but be careful, If you initiate a duel and lose, the consequences are so much worse!',
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -78,7 +78,7 @@ const goals = [
     title: 'Domestic Beer Taste Test Challenge',
     description:
       'Sway has been in the service industry for YEARS, leading to a good knowledge on beer, but is it good enough? She will be blindfolded and taste test common American Domestic beers and do her best!',
-    completed: false,
+    completed: true,
     videoLink: null,
   },
   {
@@ -234,7 +234,7 @@ export function GoalsList() {
               <div className='flex items-start justify-between gap-3 md:gap-4'>
                 <div className='space-y-2'>
                   <div className='flex items-center gap-2'>
-                    <Badge variant={goal.completed ? 'default' : 'secondary'}>
+                    <Badge variant={goal.completed ? 'default' : 'time'}>
                       {goal.points.toLocaleString()} points
                     </Badge>
                     {goal.completed && <Badge variant='success'>Completed!</Badge>}
