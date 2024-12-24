@@ -85,24 +85,23 @@ export function PointSystem() {
           <ScrollBar className='bg-white' orientation='horizontal' />
         </ScrollArea>
 
-        {/* Repeat the same for the second table */}
         <div className='mx-auto flex flex-col justify-center gap-6 md:mt-2 md:flex-row md:gap-6'>
           <div className='order-2 space-y-4 md:order-1 md:w-2/5 xl:w-1/3'>
-            <div className='flex w-full flex-col items-start space-y-2 rounded-lg bg-purple-50 px-4 py-6 sm:w-fit md:w-full md:items-center md:px-0 xl:w-fit xl:px-10 xl:py-4 dark:bg-purple-900/30'>
+            <Card className='flex w-full flex-col items-start space-y-2 rounded-lg border-0 bg-purple-50 px-4 py-6 sm:w-fit md:w-full md:items-center md:border md:px-0 xl:w-fit xl:px-10 xl:py-4 dark:bg-purple-900/30'>
               <h4 className='flex items-center gap-1 font-semibold md:gap-2 xl:text-lg'>
-                {/* <AlertCircle className='size-4 text-purple-600' /> */}*Current Twitch Promotions
+                *Current Twitch Promotions
               </h4>
               <ul className='list-inside list-disc space-y-1 text-sm xl:text-base'>
                 <li>25% off new 1-month subs</li>
                 <li>25% off new 3-month subs</li>
                 <li>30% off new 6-month subs</li>
               </ul>
-            </div>
+            </Card>
             <a
               href='https://blog.twitch.tv/en/2024/11/21/bonus-round-2024/'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-flex items-center gap-1 pl-1 text-base font-semibold text-blue-600 transition-colors hover:text-blue-700 hover:underline hover:underline-offset-4 xl:text-sm'
+              className='inline-flex items-center gap-1 pl-1 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 hover:underline hover:underline-offset-4'
             >
               Learn more about Promotion & End-of-Year Bonus!
             </a>

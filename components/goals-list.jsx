@@ -95,7 +95,7 @@ const goals = [
     points: 100000,
     title: 'Tilt Game (I am Fish)',
     description:
-      'Last year, Sway had a pretty miserable time playing Only Up, and this year, we had to bring back the frustrating games with "I am Fish". Watch her rage! (well, she doesn&apos;t really rage, just gets really sad)',
+      "Last year, Sway had a pretty miserable time playing Only Up, and this year, we had to bring back the frustrating games with I am Fish. Watch her rage! (well, she doesn't really rage, just gets really sad)",
     completed: true,
     videoLink: null,
     date: null,
@@ -104,7 +104,7 @@ const goals = [
     points: 150000,
     title: 'Condiment Tier List',
     description:
-      'Even though IRL Tier Lists are a part of Sway&apos;s schedule this Subathon, this one is particularly awful, so it deemed itself worthy of a point goal. Sway will taste and rate the condiments that are staples to the pantry!',
+      "Even though IRL Tier Lists are a part of Sway's schedule this Subathon, this one is particularly awful, so it deemed itself worthy of a point goal. Sway will taste and rate the condiments that are staples to the pantry!",
     completed: false,
     videoLink: null,
     date: null,

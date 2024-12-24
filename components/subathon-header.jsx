@@ -9,7 +9,7 @@ export function SubathonHeader() {
         Sway&apos;s Subathon Season!
       </h1>
       <p className='text-sm tracking-tighter text-slate-700 sm:tracking-tight md:text-base dark:text-slate-300'>
-        Get ready for 10 days of excitement, surprises, and unforgettable moments with the Bae
+        Get ready for 10 days of excitement, surprises, and unforgettable moments with The Bae
         Squad!
       </p>
       <div className='flex flex-col items-center justify-center gap-6 text-sm md:flex-row md:text-lg'>
