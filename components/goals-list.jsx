@@ -96,7 +96,7 @@ const goals = [
     title: 'Tilt Game (I am Fish)',
     description:
       'Last year, Sway had a pretty miserable time playing Only Up, and this year, we had to bring back the frustrating games with "I am Fish". Watch her rage! (well, she doesn&apos;t really rage, just gets really sad)',
-    completed: false,
+    completed: true,
     videoLink: null,
     date: null,
   },
@@ -260,18 +260,30 @@ export function GoalsList() {
             >
               <div className='flex items-start justify-between gap-3 md:gap-4'>
                 <div className='space-y-2'>
-                  <div className='flex items-center gap-2'>
-                    <Badge variant={goal.completed ? 'default' : 'time'}>
+                  <div className='flex items-center gap-1 sm:gap-2'>
+                    <Badge
+                      className='text-sm sm:text-base'
+                      variant={goal.completed ? 'time' : 'time'}
+                    >
                       {goal.points.toLocaleString()} points
                     </Badge>
-                    {goal.completed && <Badge variant='success'>Completed!</Badge>}
+                    {goal.completed && (
+                      <Badge className='text-sm sm:text-base' variant='default'>
+                        Completed!
+                      </Badge>
+                    )}
+
+                    {goal.date && (
+                      <p className='hidden font-medium md:block xl:text-lg'>| Date: {goal.date}</p>
+                    )}
                   </div>
-                  <h3 className='text-lg font-semibold'>{goal.title}</h3>
-                  <p className='text-slate-600 dark:text-slate-300'>{goal.description}</p>
-                  {/* Conditional rendering for date and videoLink */}
+
                   {goal.date && (
-                    <p className='pt-1 font-medium xl:pt-1.5 xl:text-lg'>Date: {goal.date}</p>
+                    <p className='pt-1 font-medium md:hidden xl:text-lg'>Date: {goal.date}</p>
                   )}
+                  <h3 className='font-semibold sm:text-lg'>{goal.title}</h3>
+                  <p className='text-slate-600 dark:text-slate-300'>{goal.description}</p>
+
                   {goal.videoLink && (
                     <a
                       href={goal.videoLink}
@@ -291,38 +303,3 @@ export function GoalsList() {
     </Card>
   )
 }
-
-// export function GoalsList() {
-//   return (
-//     <Card className='space-y-6 bg-white p-5 shadow backdrop-blur-sm md:p-6 dark:bg-black'>
-//       <h3 className='mb-4 pt-4 text-xl font-bold md:text-2xl xl:text-3xl'>Sub Goals</h3>
-//       <ScrollArea className='pr-4'>
-//         <div className='space-y-4'>
-//           {goals.map((goal, index) => (
-//             <Card
-//               key={index}
-//               className={`p-4 transition-all ${
-//                 goal.completed
-//                   ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
-//                   : 'border-slate-200/40 bg-slate-50/20 dark:border-purple-800/40 dark:bg-purple-900/20'
-//               }`}
-//             >
-//               <div className='flex items-start justify-between gap-3 md:gap-4'>
-//                 <div className='space-y-2'>
-//                   <div className='flex items-center gap-2'>
-//                     <Badge variant={goal.completed ? 'default' : 'time'}>
-//                       {goal.points.toLocaleString()} points
-//                     </Badge>
-//                     {goal.completed && <Badge variant='success'>Completed!</Badge>}
-//                   </div>
-//                   <h3 className='text-lg font-semibold'>{goal.title}</h3>
-//                   <p className='text-slate-600 dark:text-slate-300'>{goal.description}</p>
-//                 </div>
-//               </div>
-//             </Card>
-//           ))}
-//         </div>
-//       </ScrollArea>
-//     </Card>
-//   )
-// }

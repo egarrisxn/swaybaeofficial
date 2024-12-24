@@ -91,7 +91,9 @@ module.exports = {
         hard: 'var(--shadow-hard)',
       },
       screens: {
-        xs: '360px',
+        xs: '375px',
+        small: '475px',
+        midsmall: '575px',
         '3xl': '1920px',
         '4xl': '2560px',
       },
