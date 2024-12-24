@@ -9,7 +9,7 @@ export function PointSystem() {
       <h3 className='mb-4 pt-4 text-xl font-bold md:text-2xl xl:text-3xl'>Point System</h3>
       <div className='flex flex-col gap-4 md:gap-6'>
         {/* Wrapping the table with a scrollable div */}
-        <div className='overflow-x-auto'>
+        <div className='max-w-screen-lg'>
           <Table>
             <TableBody>
               <TableRow>
@@ -50,7 +50,7 @@ export function PointSystem() {
                 <TableCell className='font-semibold text-[#3eb8ce]'>3 months</TableCell>
                 <TableCell className='font-semibold text-[#3eb8ce]'>6 months</TableCell>
                 <TableCell className='font-semibold text-[#3eb8ce]'>12 months</TableCell>
-                <TableCell className='font-semibold'>
+                <TableCell className='text-right font-semibold'>
                   **Extra Points for Gifted Subs from Twitch
                 </TableCell>
               </TableRow>
@@ -60,7 +60,7 @@ export function PointSystem() {
                 <TableCell>+300 points</TableCell>
                 <TableCell>+700 points</TableCell>
                 <TableCell>+1500 points</TableCell>
-                <TableCell className='font-semibold'>+100 points</TableCell>
+                <TableCell className='text-right font-semibold'>+100 points</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>Tier 2 Sub</TableCell>
@@ -68,7 +68,7 @@ export function PointSystem() {
                 <TableCell>+600 points</TableCell>
                 <TableCell>+1400 points</TableCell>
                 <TableCell>+3000 points</TableCell>
-                <TableCell className='font-semibold'>+200 points</TableCell>
+                <TableCell className='text-right font-semibold'>+200 points</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>Tier 3 Sub</TableCell>
@@ -76,7 +76,7 @@ export function PointSystem() {
                 <TableCell>+1500 points</TableCell>
                 <TableCell>+3500 points</TableCell>
                 <TableCell>+7500 points</TableCell>
-                <TableCell className='font-semibold'>+500 points</TableCell>
+                <TableCell className='text-right font-semibold'>+500 points</TableCell>
               </TableRow>
             </TableBody>
           </Table>
@@ -85,7 +85,7 @@ export function PointSystem() {
         {/* Repeat the same for the second table */}
         <div className='mx-auto flex flex-col justify-center gap-6 md:mt-2 md:flex-row md:gap-6'>
           <div className='order-2 space-y-4 md:order-1 md:w-2/5 xl:w-1/3'>
-            <div className='flex flex-col items-start space-y-2 rounded-lg bg-purple-50 px-4 py-6 md:items-center md:px-0 xl:w-fit xl:px-10 xl:py-4 dark:bg-purple-900/20'>
+            <div className='flex flex-col items-start space-y-2 rounded-lg bg-purple-50 px-4 py-6 md:items-center md:px-0 xl:w-fit xl:px-10 xl:py-4 dark:bg-purple-900/30'>
               <h4 className='flex items-center gap-1 font-semibold md:gap-2 xl:text-lg'>
                 {/* <AlertCircle className='size-4 text-purple-600' /> */}*Current Twitch Promotions
               </h4>
@@ -112,7 +112,7 @@ export function PointSystem() {
                 sub. Additional points will be added based on the tier and number of gifted subs
                 from Twitch.
               </p>
-              <div className='rounded-md bg-slate-100 p-2 text-sm xl:text-base'>
+              <div className='rounded-md bg-slate-100 p-2 text-sm xl:text-base dark:bg-slate-800'>
                 <span className='font-semibold'>Example:</span> 5 Tier 1 gifted subs (3,000 points)
                 + 1 bonus gifted sub (600 points) + 100 bonus points = 3,700 total points
               </div>
@@ -120,13 +120,6 @@ export function PointSystem() {
           </div>
         </div>
       </div>
-
-      {/* <div className='space-y-3'>
-        <div className='w-fit space-y-2 rounded bg-neutral-300/10 px-4 py-2 text-sm dark:bg-neutral-700/40'>
-          <p>* Additional points for multi-month subscriptions</p>
-          <p>** Extra points for gifted subs from Twitch</p>
-        </div>
-      </div> */}
     </Card>
   )
 }
