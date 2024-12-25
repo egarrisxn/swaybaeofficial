@@ -14,7 +14,7 @@ const goals = [
     description: "Chat will vote on the sauces and dips for Ethan and Sway's dinner!",
     completed: true,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 20000,
@@ -23,7 +23,7 @@ const goals = [
       'Instead of "hydrate", we caffeinate! For the rest of the Subathon, Chat can caffeinate Sway! (within reason)',
     completed: true,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 25000,
@@ -32,7 +32,7 @@ const goals = [
       'The 24th will be a Gingerbread baking stream. Whenever a sub/cheer happens, a reaction test will auto start and Sway needs to make it back to her computer and not fail the test, otherwise...uh oh!',
     completed: true,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 30000,
@@ -41,7 +41,7 @@ const goals = [
       "Sway will duo queue with herself on her phone and won't stop until she gets a first!",
     completed: true,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 40000,
@@ -49,7 +49,7 @@ const goals = [
     description: 'No "butts", no "heck", and especially no "heckin butts" for a whole hour.',
     completed: true,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 50000,
@@ -58,7 +58,7 @@ const goals = [
       'Exactly what it sounds like. Hearthstone Battlegrounds. Xbox controller. These two things were not meant to be.',
     completed: true,
     videoLink: null,
-    date: 'Thurs. Dec. 26th',
+    date: 'Happening on Thurs. Dec. 26th',
   },
   {
     points: 60000,
@@ -67,7 +67,7 @@ const goals = [
       "Chat gives Ethan a present - it's a nerf gun to randomly surprise Sway. *Thaaaaanks a lot, Chat.*",
     completed: true,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 70000,
@@ -75,7 +75,7 @@ const goals = [
     description: 'Sway has some "Would you Rather" questions to play with Chat!',
     completed: true,
     videoLink: null,
-    date: 'Sat. Dec. 28th',
+    date: 'Happening on Sat. Dec. 28th',
   },
   {
     points: 80000,
@@ -84,7 +84,7 @@ const goals = [
       'Time out day will be put on the calendar! Time out day allows chatters to duel for time outs, but be careful, If you initiate a duel and lose, the consequences are so much worse!',
     completed: true,
     videoLink: null,
-    date: 'Fri. Dec. 27th',
+    date: 'Happening on Fri. Dec. 27th',
   },
   {
     points: 90000,
@@ -93,7 +93,7 @@ const goals = [
       'Sway has been in the service industry for YEARS, leading to a good knowledge on beer, but is it good enough? She will be blindfolded and taste test common American Domestic beers and do her best!',
     completed: true,
     videoLink: null,
-    date: 'Sun. Dec. 29th',
+    date: 'Happening on Sun. Dec. 29th',
   },
   {
     points: 100000,
@@ -102,7 +102,7 @@ const goals = [
       "Last year, Sway had a pretty miserable time playing Only Up, and this year, we had to bring back the frustrating games with I am Fish. Watch her rage! (well, she doesn't really rage, just gets really sad)",
     completed: true,
     videoLink: null,
-    date: null,
+    date: 'Happening on Thurs. Dec. 26th',
   },
   {
     points: 150000,
@@ -111,7 +111,7 @@ const goals = [
       "Even though IRL Tier Lists are a part of Sway's schedule this Subathon, this one is particularly awful, so it deemed itself worthy of a point goal. Sway will taste and rate the condiments that are staples to the pantry!",
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 200000,
@@ -120,7 +120,7 @@ const goals = [
       "Chatters have an opportunity to submit clips that they think will make Sway laugh, and Sway will attempt not to. She did do this last year, but this year there's a twist - she has to keep water in her mouth while trying not to laugh! (RIP computer)",
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 250000,
@@ -128,7 +128,7 @@ const goals = [
     description: 'Sway and Ethan take on Goat Simulator 3!',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 300000,
@@ -136,7 +136,7 @@ const goals = [
     description: 'Sway gives away some Bae Squad merch!',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 350000,
@@ -145,7 +145,7 @@ const goals = [
       "Ethan has done Sway's makeup twice now - this time, he's going to be blindfolded. What could go wrong?",
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 400000,
@@ -154,7 +154,7 @@ const goals = [
       'Evil Sway makes her epic return for some games with the community and some special Holiday Roasting.',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 450000,
@@ -163,7 +163,7 @@ const goals = [
       'Sway and Ethan had a whole lot of spice last Subathon. This time, Sway found the most sour candy she possibly could for them to try to tackle!',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 500000,
@@ -172,7 +172,7 @@ const goals = [
       '**CONTENT WARNING** Sway at Nite returns again! Join Sway for some unexpected cursing and adult themes for one night only!',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 550000,
@@ -181,7 +181,7 @@ const goals = [
       "Sway gets on Biff and Waffles' level and takes her cooking stream to the floor to make some dog treats for them!",
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 600000,
@@ -190,7 +190,7 @@ const goals = [
       "**CONTENT WARNING** Sway at Nite takes on a game of Would you Rather, but MUCH less family friendly this time. This is a bonus goal, so it will only occur if the goal of Sway at Nite hasn't happened before this is achieved!",
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 650000,
@@ -199,7 +199,7 @@ const goals = [
       'Sway transforms herself into her beloved Brann Bronzebeard, bronze beard and all.',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 700000,
@@ -208,7 +208,7 @@ const goals = [
       'Instead of 12pm-12am on January 1st, Sway will stream from 12pm January 1st until 12 pm January 2nd to wrap up the most epic Subathon!',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 750000,
@@ -217,7 +217,7 @@ const goals = [
       "Sway and 1-2 of her friends will compete to recreate a common packaged snack (i.e. Oreos, Goldfish, Twinkies etc) of chat's choosing!",
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 800000,
@@ -226,7 +226,7 @@ const goals = [
       'Sway hates Crocs. Like a lot. Chat will help her design some special custom ones, just for her! She will have to order and wear them!',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 1000000,
@@ -234,7 +234,7 @@ const goals = [
     description: "Chat picks the new color of Sway's hair and Sway will stream the dying process!",
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
   {
     points: 1500000,
@@ -243,7 +243,7 @@ const goals = [
       'Sway gives chat 3 options which they vote on to tattoo on herself, then she will stream herself getting the tattoo!',
     completed: false,
     videoLink: null,
-    date: null,
+    date: '.',
   },
 ]
 
@@ -460,20 +460,19 @@ export default function SubathonPage() {
         </div>
       </Card>
       {/* //! xxx */}
-
       <Card className='space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
         <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Sub Goals</h2>
-        <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3'>
+        <div className='grid gap-4 sm:p-2 md:p-4 xl:p-4'>
           {goals.map((goal, index) => (
             <Card
               key={index}
               className={`rounded-lg border p-4 shadow-md transition-transform hover:scale-105 ${
                 goal.completed
-                  ? 'bg-gradient-to-br from-white to-green-300/20 dark:from-green-600/30 dark:to-green-900/60'
+                  ? 'bg-gradient-to-br from-white to-green-300/20 dark:from-green-800/30 dark:to-black'
                   : 'bg-gradient-to-br from-gray-100 to-white dark:from-slate-900 dark:to-slate-950'
               }`}
             >
-              <div className='flex h-full max-h-96 min-h-40 flex-col justify-between space-y-3'>
+              <div className='flex h-full flex-col space-y-3'>
                 <div className='flex items-center justify-between'>
                   <Badge className='text-sm font-medium dark:text-black'>
                     {goal.points.toLocaleString()} points
@@ -487,20 +486,70 @@ export default function SubathonPage() {
                     </Badge>
                   )}
                 </div>
-                <h4 className='text-lg font-semibold leading-tight text-gray-900 dark:text-gray-200'>
+                <h4 className='text-lg font-semibold leading-tight text-gray-900 xl:text-xl dark:text-gray-200'>
                   {goal.title}
                 </h4>
-                <p className='flex flex-1 text-pretty text-sm leading-snug text-gray-700 dark:text-gray-100'>
+                <p className='flex flex-1 text-pretty text-sm leading-snug text-gray-700 xl:text-base dark:text-gray-100'>
                   {goal.description}
                 </p>
+
                 {goal.date && (
-                  <p className='flex justify-end text-xl font-semibold text-gray-900 dark:text-gray-50'>
-                    Happening on {goal.date}
+                  <p className='flex justify-end text-lg font-semibold text-gray-900 xl:text-xl dark:text-gray-50'>
+                    {goal.date}
                   </p>
                 )}
               </div>
             </Card>
           ))}
+        </div>
+      </Card>
+      {/* //! xxx */}
+      <Card className='space-y-6 bg-gradient-to-bl from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:from-gray-800 dark:to-black'>
+        <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Extra Incentives</h2>
+        <div className='grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6'>
+          <Card className='space-y-3 p-3 md:p-4'>
+            <div className='flex items-center gap-2'>
+              <Dumbbell className='dark:pink-400 size-4 text-purple-600 md:size-5' />
+              <h4 className='text-lg font-semibold leading-tight text-gray-900 dark:text-gray-200'>
+                Fitness Goals
+              </h4>
+            </div>
+            <p className='text-muted-foreground text-sm'>
+              Every <b>5,000 points</b>, Sway will spin the <i>infamous</i> fitness wheel for
+              exercises! The wheel includes 5 crunches, 5 pushups, 5 bicep curls, 5 sqauts, 5
+              burpees, and 1 minute planks.
+            </p>
+          </Card>
+
+          <Card className='space-y-3 p-3 md:p-4'>
+            <div className='flex items-center gap-2'>
+              <Music className='dark:pink-400 size-4 text-purple-600 md:size-5' />
+              <h4 className='text-lg font-semibold leading-tight text-gray-900 dark:text-gray-200'>
+                Song Requests
+              </h4>
+            </div>
+            <p className='text-muted-foreground text-sm'>
+              Every <b>20,000 points</b> unlocks a Song Request power hour!{' '}
+              <i>
+                *Note: Song requests must be family-friendly and will be disabled during Sway at
+                Nite, if it&apos;s reached.*
+              </i>
+            </p>
+          </Card>
+
+          <Card className='space-y-3 p-3 md:p-4'>
+            <div className='flex items-center gap-2'>
+              <Trophy className='dark:pink-400 size-4 text-purple-600 md:size-5' />
+              <h4 className='text-lg font-semibold leading-tight text-gray-900 dark:text-gray-200'>
+                Top Contributors
+              </h4>
+            </div>
+            <p className='text-muted-foreground text-sm'>
+              The <b>Top 5 contributors</b> get a personalized alert for any Twitch event(i.e. subs,
+              gifted subs, bits), along with an on-screen arrival action for their first message
+              sent in stream!
+            </p>
+          </Card>
         </div>
       </Card>
     </div>
