@@ -8,17 +8,16 @@ import {PointSystem} from '@/components/point-system'
 export default function SubathonPage() {
   return (
     <div className='container mx-auto my-12 max-w-7xl space-y-12 px-4 sm:px-6 lg:px-8'>
-      {/* //! xxx */}
       <SubathonHeader />
-      {/* //! xxx */}
-      <PointsProgress currentPoints={123754} nextGoalPoints={150000} />
-      {/* //! xxx */}
+
+      <PointsProgress currentPoints={291354} nextGoalPoints={300000} />
+
       <SubathonDetails />
-      {/* //! xxx */}
+
       <PointSystem />
-      {/* //! xxx */}
+
       <GoalsList />
-      {/* //! xxx */}
+
       <Incentives />
     </div>
   )

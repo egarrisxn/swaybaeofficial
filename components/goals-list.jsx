@@ -54,7 +54,7 @@ const goals = [
       'Exactly what it sounds like. Hearthstone Battlegrounds. Xbox controller. These two things were not meant to be.',
     completed: true,
     videoLink: null,
-    date: 'Happening on Thurs. Dec. 26th',
+    date: 'Happening Thurs. Dec. 26th',
   },
   {
     points: 60000,
@@ -63,7 +63,7 @@ const goals = [
       "Chat gives Ethan a present - it's a nerf gun to randomly surprise Sway. *Thaaaaanks a lot, Chat.*",
     completed: true,
     videoLink: null,
-    date: null,
+    date: 'Happening ALL Subathon',
   },
   {
     points: 70000,
@@ -71,7 +71,7 @@ const goals = [
     description: 'Sway has some "Would you Rather" questions to play with Chat!',
     completed: true,
     videoLink: null,
-    date: 'Happening on Sat. Dec. 28th',
+    date: 'Happening Sat. Dec. 28th',
   },
   {
     points: 80000,
@@ -80,7 +80,7 @@ const goals = [
       'Time out day will be put on the calendar! Time out day allows chatters to duel for time outs, but be careful, If you initiate a duel and lose, the consequences are so much worse!',
     completed: true,
     videoLink: null,
-    date: 'Happening on Fri. Dec. 27th',
+    date: 'Happening Fri. Dec. 27th',
   },
   {
     points: 90000,
@@ -89,7 +89,7 @@ const goals = [
       'Sway has been in the service industry for YEARS, leading to a good knowledge on beer, but is it good enough? She will be blindfolded and taste test common American Domestic beers and do her best!',
     completed: true,
     videoLink: null,
-    date: 'Happening on Sun. Dec. 29th',
+    date: 'Happening Sun. Dec. 29th',
   },
   {
     points: 100000,
@@ -98,33 +98,33 @@ const goals = [
       "Last year, Sway had a pretty miserable time playing Only Up, and this year, we had to bring back the frustrating games with I am Fish. Watch her rage! (well, she doesn't really rage, just gets really sad)",
     completed: true,
     videoLink: null,
-    date: 'Happening on Thurs. Dec. 26th',
+    date: 'Happening Thurs. Dec. 26th',
   },
   {
     points: 150000,
     title: 'Condiment Tier List',
     description:
       "Even though IRL Tier Lists are a part of Sway's schedule this Subathon, this one is particularly awful, so it deemed itself worthy of a point goal. Sway will taste and rate the condiments that are staples to the pantry!",
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Happening Fri. Dec. 27th',
   },
   {
     points: 200000,
     title: "Don't Laugh Challenge (with water in mouth)",
     description:
       "Chatters have an opportunity to submit clips that they think will make Sway laugh, and Sway will attempt not to. She did do this last year, but this year there's a twist - she has to keep water in her mouth while trying not to laugh! (RIP computer)",
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Happening TBD',
   },
   {
     points: 250000,
     title: 'Goat Sim 3 with Ethan',
     description: 'Sway and Ethan take on Goat Simulator 3!',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Happening TBD',
   },
   {
     points: 300000,
@@ -265,7 +265,7 @@ export function GoalsList() {
                 {goal.completed && (
                   <Badge
                     variant='success'
-                    className='border-slate-950/40 font-medium dark:border-slate-50'
+                    className='border-slate-950/40 bg-pink-500 font-medium text-white dark:border-slate-50 dark:text-black'
                   >
                     Completed!
                   </Badge>
