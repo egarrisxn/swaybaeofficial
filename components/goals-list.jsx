@@ -54,7 +54,7 @@ const goals = [
       'Exactly what it sounds like. Hearthstone Battlegrounds. Xbox controller. These two things were not meant to be.',
     completed: true,
     videoLink: null,
-    date: 'Thurs. Dec. 26th',
+    date: 'Happening on Thurs. Dec. 26th',
   },
   {
     points: 60000,
@@ -71,7 +71,7 @@ const goals = [
     description: 'Sway has some "Would you Rather" questions to play with Chat!',
     completed: true,
     videoLink: null,
-    date: 'Sat. Dec. 28th',
+    date: 'Happening on Sat. Dec. 28th',
   },
   {
     points: 80000,
@@ -80,7 +80,7 @@ const goals = [
       'Time out day will be put on the calendar! Time out day allows chatters to duel for time outs, but be careful, If you initiate a duel and lose, the consequences are so much worse!',
     completed: true,
     videoLink: null,
-    date: 'Fri. Dec. 27th',
+    date: 'Happening on Fri. Dec. 27th',
   },
   {
     points: 90000,
@@ -89,7 +89,7 @@ const goals = [
       'Sway has been in the service industry for YEARS, leading to a good knowledge on beer, but is it good enough? She will be blindfolded and taste test common American Domestic beers and do her best!',
     completed: true,
     videoLink: null,
-    date: 'Sun. Dec. 29th',
+    date: 'Happening on Sun. Dec. 29th',
   },
   {
     points: 100000,
@@ -98,7 +98,7 @@ const goals = [
       "Last year, Sway had a pretty miserable time playing Only Up, and this year, we had to bring back the frustrating games with I am Fish. Watch her rage! (well, she doesn't really rage, just gets really sad)",
     completed: true,
     videoLink: null,
-    date: null,
+    date: 'Happening on Thurs. Dec. 26th',
   },
   {
     points: 150000,
@@ -245,61 +245,48 @@ const goals = [
 
 export function GoalsList() {
   return (
-    <Card className='space-y-6 bg-white p-5 shadow backdrop-blur-sm md:p-6 dark:bg-black'>
-      <h3 className='mb-4 pt-4 text-xl font-bold md:text-2xl xl:text-3xl'>Sub Goals</h3>
-      <ScrollArea className='pr-4'>
-        <div className='space-y-4'>
-          {goals.map((goal, index) => (
-            <Card
-              key={index}
-              className={`p-4 transition-all ${
-                goal.completed
-                  ? 'border-purple-300 bg-purple-50 dark:bg-purple-800/20'
-                  : 'border-slate-200/40 bg-slate-50/20 dark:border-purple-800/40 dark:bg-purple-900/20'
-              }`}
-            >
-              <div className='flex items-start justify-between gap-3 md:gap-4'>
-                <div className='space-y-2'>
-                  <div className='flex items-center gap-1 sm:gap-2'>
-                    <Badge
-                      className='text-sm sm:text-base'
-                      variant={goal.completed ? 'time' : 'time'}
-                    >
-                      {goal.points.toLocaleString()} points
-                    </Badge>
-                    {goal.completed && (
-                      <Badge className='text-sm sm:text-base' variant='default'>
-                        Completed!
-                      </Badge>
-                    )}
-
-                    {goal.date && (
-                      <p className='hidden font-medium md:block xl:text-lg'>| Date: {goal.date}</p>
-                    )}
-                  </div>
-
-                  {goal.date && (
-                    <p className='pt-1 font-medium md:hidden xl:text-lg'>Date: {goal.date}</p>
-                  )}
-                  <h3 className='font-semibold sm:text-lg'>{goal.title}</h3>
-                  <p className='text-slate-600 dark:text-slate-300'>{goal.description}</p>
-
-                  {goal.videoLink && (
-                    <a
-                      href={goal.videoLink}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='text-sm text-blue-500 hover:underline dark:text-blue-400'
-                    >
-                      Watch Video
-                    </a>
-                  )}
-                </div>
+    <Card className='space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
+      <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Sub Goals</h2>
+      <div className='grid gap-4 sm:p-2 md:p-4 xl:p-4'>
+        {goals.map((goal, index) => (
+          <Card
+            key={index}
+            className={`rounded-lg border p-4 shadow-md transition-transform hover:scale-105 ${
+              goal.completed
+                ? 'bg-gradient-to-br from-white to-green-300/20 dark:from-green-800/30 dark:to-black'
+                : 'bg-gradient-to-br from-gray-100 to-white dark:from-slate-900 dark:to-slate-950'
+            }`}
+          >
+            <div className='flex h-full flex-col space-y-2 lg:space-y-3'>
+              <div className='flex items-center justify-between'>
+                <Badge className='text-sm font-medium dark:text-black'>
+                  {goal.points.toLocaleString()} points
+                </Badge>
+                {goal.completed && (
+                  <Badge
+                    variant='success'
+                    className='border-slate-950/40 font-medium dark:border-slate-50'
+                  >
+                    Completed!
+                  </Badge>
+                )}
               </div>
-            </Card>
-          ))}
-        </div>
-      </ScrollArea>
+              <h4 className='text-pretty text-sm font-semibold leading-tight text-gray-900 sm:text-lg xl:text-xl dark:text-gray-200'>
+                {goal.title}
+              </h4>
+              <p className='flex flex-1 text-pretty text-xs leading-snug text-gray-700 sm:text-sm xl:text-base dark:text-gray-100'>
+                {goal.description}
+              </p>
+
+              {goal.date && (
+                <p className='flex pt-1 font-bold italic text-gray-900 sm:text-lg md:justify-end lg:pt-0 xl:text-xl dark:text-gray-50'>
+                  {goal.date}
+                </p>
+              )}
+            </div>
+          </Card>
+        ))}
+      </div>
     </Card>
   )
 }

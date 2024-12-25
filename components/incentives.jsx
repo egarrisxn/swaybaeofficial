@@ -3,14 +3,15 @@ import {Dumbbell, Music, Trophy} from 'lucide-react'
 
 export function Incentives() {
   return (
-    <Card className='space-y-6 bg-white p-6 shadow backdrop-blur-sm dark:bg-black'>
-      <h3 className='mb-4 pt-4 text-xl font-bold md:text-2xl xl:text-3xl'>Extra Incentives</h3>
-
+    <Card className='space-y-6 bg-gradient-to-bl from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:from-gray-800 dark:to-black'>
+      <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Extra Incentives</h2>
       <div className='grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6'>
         <Card className='space-y-3 p-3 md:p-4'>
           <div className='flex items-center gap-2'>
-            <Dumbbell className='size-4 text-purple-600 md:size-5 dark:text-pink' />
-            <h3 className='font-semibold'>Fitness Goals</h3>
+            <Dumbbell className='dark:pink-400 size-4 text-purple-600 md:size-5' />
+            <h4 className='text-lg font-semibold leading-tight text-gray-900 dark:text-gray-200'>
+              Fitness Goals
+            </h4>
           </div>
           <p className='text-muted-foreground text-sm'>
             Every <b>5,000 points</b>, Sway will spin the <i>infamous</i> fitness wheel for
@@ -21,8 +22,10 @@ export function Incentives() {
 
         <Card className='space-y-3 p-3 md:p-4'>
           <div className='flex items-center gap-2'>
-            <Music className='size-4 text-purple-600 md:size-5 dark:text-pink' />
-            <h3 className='font-semibold'>Song Requests</h3>
+            <Music className='dark:pink-400 size-4 text-purple-600 md:size-5' />
+            <h4 className='text-lg font-semibold leading-tight text-gray-900 dark:text-gray-200'>
+              Song Requests
+            </h4>
           </div>
           <p className='text-muted-foreground text-sm'>
             Every <b>20,000 points</b> unlocks a Song Request power hour!{' '}
@@ -35,8 +38,10 @@ export function Incentives() {
 
         <Card className='space-y-3 p-3 md:p-4'>
           <div className='flex items-center gap-2'>
-            <Trophy className='size-4 text-purple-600 md:size-5 dark:text-pink' />
-            <h3 className='font-semibold'>Top Contributors</h3>
+            <Trophy className='dark:pink-400 size-4 text-purple-600 md:size-5' />
+            <h4 className='text-lg font-semibold leading-tight text-gray-900 dark:text-gray-200'>
+              Top Contributors
+            </h4>
           </div>
           <p className='text-muted-foreground text-sm'>
             The <b>Top 5 contributors</b> get a personalized alert for any Twitch event(i.e. subs,

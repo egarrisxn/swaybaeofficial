@@ -93,7 +93,7 @@ export function Contact() {
       </PageHeader>
       {/* ----------Contact Body---------- */}
       <div className='my-16 px-2 md:px-4 lg:px-8 xl:my-20 xl:px-16 2xl:px-20 3xl:my-24'>
-        <section className='mx-auto grid max-w-11xl items-center bg-white md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28 dark:bg-black'>
+        <section className='mx-auto grid max-w-11xl items-center md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:bg-white md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28 dark:md:bg-black'>
           <div className='mb-8 sm:mb-4 md:mb-0'>
             {/* Contact Info */}
             <h2 className='font-sansita text-5xl font-black italic tracking-tight lg:text-7xl 3xl:text-8xl'>
