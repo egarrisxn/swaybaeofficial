@@ -25,11 +25,12 @@ const ThemeToggle = () => {
 }
 
 const navLinks = [
-  {href: '/subathon', label: 'Subathon!'},
+  {href: '/', label: 'Home'},
   {href: '/calendar', label: 'Calendar'},
   {href: '/blog', label: 'Blog'},
   {href: '/contact', label: 'Contact'},
-  {href: 'https://sway-bae-shop.fourthwall.com/', label: 'Store', external: true},
+  {href: 'https://shop.swaybae.net/', label: 'Store', external: true},
+  {href: '/subathon', label: 'Subathon!'},
 ]
 
 export default function Navbar() {
@@ -78,12 +79,12 @@ export default function Navbar() {
             </div>
           </Link>
         </section>
-        <section className='flex-1 sm:pr-4 md:pr-6 lg:pr-8 xl:pr-10 2xl:pr-12 3xl:pr-14'>
-          <ul className='hidden w-full justify-end sm:inline-flex sm:gap-4 md:gap-6 lg:gap-8 xl:pr-10 2xl:gap-12 3xl:gap-14'>
+        <section className='flex-1 sm:pr-3.5 md:pr-6 lg:pr-8 xl:pr-10 2xl:pr-12 3xl:pr-14'>
+          <ul className='hidden w-full justify-end sm:inline-flex sm:gap-2.5 md:gap-6 lg:gap-8 xl:pr-10 2xl:gap-12 3xl:gap-14'>
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className='text0hover:text-b2p text-lg transition-all md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
+                className='text-lg transition-all hover:text-b2p md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
               >
                 {link.external ? (
                   <a

@@ -18,7 +18,7 @@ export function SocialCarousel() {
       <CarouselContent className='embla__container'>
         {Object.keys(carouselData).map((key) => (
           <CarouselItem key={key} className='embla__slide'>
-            <div className='flex aspect-video max-h-64 items-center justify-center'>
+            <div className='flex aspect-video max-h-96 items-center justify-center'>
               <div className='relative'>
                 <a href={carouselData[key].href} target='_blank' rel='noopener noreferrer'>
                   <Image

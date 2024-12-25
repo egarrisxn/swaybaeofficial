@@ -16,7 +16,9 @@ function ContactInfo({title, subtitle, icon, detail, href, ariaLabel}) {
             </a>
           </Button>
           <div>
-            <p className='block text-sm text-gray xl:text-base 3xl:text-xl'>{subtitle}</p>
+            <p className='block text-sm text-gray-800 xl:text-base 3xl:text-xl dark:text-gray-300'>
+              {subtitle}
+            </p>
             <p className='text-sm font-semibold text-primary-fade hover:text-primary xl:text-base 2xl:text-lg 3xl:text-xl dark:text-primary-tint dark:hover:text-primary-fade'>
               <a target='_blank' rel='noopener noreferrer' href={href} aria-label={ariaLabel}>
                 {detail}
@@ -91,13 +93,13 @@ export function Contact() {
       </PageHeader>
       {/* ----------Contact Body---------- */}
       <div className='my-16 px-2 md:px-4 lg:px-8 xl:my-20 xl:px-16 2xl:px-20 3xl:my-24'>
-        <section className='mx-auto grid max-w-11xl items-center md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28'>
+        <section className='mx-auto grid max-w-11xl items-center bg-white md:grid-cols-2 md:gap-2 md:rounded-lg md:border-2 md:px-4 md:py-6 md:shadow-soft lg:gap-16 lg:p-12 xl:p-16 2xl:p-20 3xl:p-28 dark:bg-black'>
           <div className='mb-8 sm:mb-4 md:mb-0'>
             {/* Contact Info */}
             <h2 className='font-sansita text-5xl font-black italic tracking-tight lg:text-7xl 3xl:text-8xl'>
               Let&apos;s Chat!
             </h2>
-            <p className='mt-4 pr-2 text-base leading-5 text-gray xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl'>
+            <p className='mt-4 pr-2 text-base leading-5 text-gray-800 xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl dark:text-gray-300'>
               Are you interested in working together? Maybe have a question for me? Send over an
               email and I&apos;ll get back with you as soon as possible!
             </p>
