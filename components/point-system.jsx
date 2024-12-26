@@ -39,7 +39,7 @@ export function PointSystem() {
               <TableBody>
                 <PointTableRow label='1 bit' points='1 point' />
                 <PointTableRow label='$1 tip' points='100 points' />
-                <PointTableRow label='Prime Sub' points='400 points' />
+
                 <TableRow>
                   <TableCell></TableCell>
                   <TableCell></TableCell>
@@ -59,7 +59,7 @@ export function PointSystem() {
                 </TableRow>
                 {[
                   {
-                    label: 'Tier 1 Sub',
+                    label: 'Prime/Tier 1 Sub',
                     points: '600 points',
                     extras: [
                       {value: '+300 points'},

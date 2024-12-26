@@ -9,15 +9,10 @@ export default function SubathonPage() {
   return (
     <div className='container mx-auto my-12 max-w-7xl space-y-12 px-4 sm:px-6 lg:px-8'>
       <SubathonHeader />
-
-      <PointsProgress currentPoints={291354} nextGoalPoints={300000} />
-
+      <PointsProgress currentPoints={293784} nextGoalPoints={300000} />
       <SubathonDetails />
-
       <PointSystem />
-
       <GoalsList />
-
       <Incentives />
     </div>
   )
