@@ -106,7 +106,7 @@ const goals = [
       "Even though IRL Tier Lists are a part of Sway's schedule this Subathon, this one is particularly awful, so it deemed itself worthy of a point goal. Sway will taste and rate the condiments that are staples to the pantry!",
     completed: true,
     videoLink: null,
-    date: 'Fri. Dec. 27th',
+    date: 'Thurs. Dec. 26th',
   },
   {
     points: 200000,
@@ -115,7 +115,7 @@ const goals = [
       "Chatters have an opportunity to submit clips that they think will make Sway laugh, and Sway will attempt not to. She did do this last year, but this year there's a twist - she has to keep water in her mouth while trying not to laugh! (RIP computer)",
     completed: true,
     videoLink: null,
-    date: 'TBD',
+    date: 'Sun. Dec. 29th',
   },
   {
     points: 250000,
@@ -123,7 +123,7 @@ const goals = [
     description: 'Sway and Ethan take on Goat Simulator 3!',
     completed: true,
     videoLink: null,
-    date: 'TBD',
+    date: 'Fri. Dec. 27th',
   },
   {
     points: 300000,
