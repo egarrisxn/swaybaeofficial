@@ -8,7 +8,7 @@ const goals = [
     title: 'Chat picks our Pizza toppings for our pizza dinner',
     description: "Chat will vote on the sauces and dips for Ethan and Sway's dinner!",
     completed: true,
-    videoLink: null,
+    videoLink: 'https://www.twitch.tv/videos/2334293697?t=05h13m04s',
     date: null,
   },
   {
@@ -18,7 +18,7 @@ const goals = [
       'Instead of "hydrate", we caffeinate! For the rest of the Subathon, Chat can caffeinate Sway! (within reason)',
     completed: true,
     videoLink: null,
-    date: 'All Subathon',
+    date: null,
   },
   {
     points: 25000,
@@ -26,7 +26,7 @@ const goals = [
     description:
       'The 24th will be a Gingerbread baking stream. Whenever a sub/cheer happens, a reaction test will auto start and Sway needs to make it back to her computer and not fail the test, otherwise...uh oh!',
     completed: true,
-    videoLink: null,
+    videoLink: 'https://www.twitch.tv/videos/2335104951?t=04h58m41s',
     date: null,
   },
   {
@@ -35,7 +35,7 @@ const goals = [
     description:
       "Sway will duo queue with herself on her phone and won't stop until she gets a first!",
     completed: true,
-    videoLink: null,
+    videoLink: 'https://www.twitch.tv/videos/2334293697?t=01h19m53s',
     date: null,
   },
   {
@@ -52,8 +52,8 @@ const goals = [
     description:
       'Exactly what it sounds like. Hearthstone Battlegrounds. Xbox controller. These two things were not meant to be.',
     completed: true,
-    videoLink: null,
-    date: 'Thurs. Dec. 26th',
+    videoLink: 'https://www.twitch.tv/videos/2337284361',
+    date: null,
   },
   {
     points: 60000,
@@ -61,8 +61,9 @@ const goals = [
     description:
       "Chat gives Ethan a present - it's a nerf gun to randomly surprise Sway. *Thaaaaanks a lot, Chat.*",
     completed: true,
-    videoLink: null,
-    date: 'All Subathon',
+    videoLink:
+      'https://www.twitch.tv/sway_bae/clip/AdorablePolishedHedgehogRalpherZ-x2kJfyysrU0Z2AqK',
+    date: null,
   },
   {
     points: 70000,
@@ -96,8 +97,8 @@ const goals = [
     description:
       "Last year, Sway had a pretty miserable time playing Only Up, and this year, we had to bring back the frustrating games with I am Fish. Watch her rage! (well, she doesn't really rage, just gets really sad)",
     completed: true,
-    videoLink: null,
-    date: 'Thurs. Dec. 26th',
+    videoLink: 'https://www.twitch.tv/videos/2336496967?t=05h53m31s',
+    date: null,
   },
   {
     points: 150000,
@@ -105,8 +106,8 @@ const goals = [
     description:
       "Even though IRL Tier Lists are a part of Sway's schedule this Subathon, this one is particularly awful, so it deemed itself worthy of a point goal. Sway will taste and rate the condiments that are staples to the pantry!",
     completed: true,
-    videoLink: null,
-    date: 'Thurs. Dec. 26th',
+    videoLink: 'https://www.twitch.tv/videos/2337287618',
+    date: null,
   },
   {
     points: 200000,
@@ -131,7 +132,7 @@ const goals = [
     description: 'Sway gives away some Bae Squad merch!',
     completed: true,
     videoLink: null,
-    date: 'TBD',
+    date: 'Soon!',
   },
   {
     points: 350000,
@@ -247,45 +248,117 @@ export function GoalsList() {
     <Card className='space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
       <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Sub Goals</h2>
       <div className='grid gap-4 sm:p-2 md:p-4 xl:p-4'>
-        {goals.map((goal, index) => (
-          <Card
-            key={index}
-            className={`rounded-lg border p-4 shadow-md transition-transform hover:scale-105 ${
-              goal.completed
-                ? 'bg-gradient-to-br from-white to-green-300/20 dark:from-green-800/30 dark:to-black'
-                : 'bg-gradient-to-br from-gray-100 to-white dark:from-slate-900 dark:to-slate-950'
-            }`}
-          >
-            <div className='flex h-full flex-col space-y-2 lg:space-y-3'>
-              <div className='flex items-center justify-between'>
-                <Badge className='text-sm font-medium dark:text-black'>
-                  {goal.points.toLocaleString()} points
-                </Badge>
-                {goal.completed && (
-                  <Badge
-                    variant='success'
-                    className='border-slate-950/40 bg-pink-500 font-medium text-white dark:border-slate-50 dark:text-black'
-                  >
-                    Completed!
+        {goals.map((goal, index) => {
+          const cardContent = (
+            <Card
+              key={index}
+              className={`group rounded-lg border p-4 shadow-md transition-transform hover:scale-105 ${
+                goal.completed
+                  ? 'bg-gradient-to-tl from-white to-green-300/20 dark:from-green-800/30 dark:to-black'
+                  : 'bg-gradient-to-tl from-gray-100 to-white dark:from-slate-900 dark:to-slate-950'
+              }`}
+            >
+              <div className='flex h-full flex-col space-y-2 lg:space-y-3'>
+                <div className='flex items-center justify-between'>
+                  <Badge className='text-sm font-medium dark:text-black'>
+                    {goal.points.toLocaleString()} points
                   </Badge>
-                )}
-              </div>
-              <h4 className='text-pretty text-sm font-semibold leading-tight text-gray-900 sm:text-lg xl:text-xl dark:text-gray-200'>
-                {goal.title}
-              </h4>
-              <p className='flex flex-1 text-pretty text-xs leading-snug text-gray-700 sm:text-sm xl:text-base dark:text-gray-100'>
-                {goal.description}
-              </p>
-
-              {goal.date && (
-                <p className='flex pt-1 font-bold italic text-gray-900 sm:text-lg md:justify-end lg:pt-0 xl:text-xl dark:text-gray-50'>
-                  Happening {goal.date}
+                  {goal.completed && (
+                    <Badge
+                      variant='success'
+                      className='border-slate-950/40 bg-pink-500 font-medium text-white dark:border-slate-50 dark:text-black'
+                    >
+                      Completed!
+                    </Badge>
+                  )}
+                </div>
+                <h4 className='text-pretty text-sm font-semibold leading-tight text-gray-900 sm:text-lg xl:text-xl dark:text-gray-200'>
+                  {goal.title}
+                </h4>
+                <p className='flex flex-1 text-pretty text-xs leading-snug text-gray-700 sm:text-sm xl:text-base dark:text-gray-100'>
+                  {goal.description}
                 </p>
-              )}
-            </div>
-          </Card>
-        ))}
+
+                <div className='flex pt-2 font-semibold drop-shadow sm:text-lg md:justify-end xl:text-xl'>
+                  {goal.videoLink ? (
+                    <span className='text-primary group-hover:text-blue-500 group-hover:underline group-hover:underline-offset-4'>
+                      Watch here!
+                    </span>
+                  ) : (
+                    goal.date && (
+                      <span className='italic text-gray-900 dark:text-gray-50'>
+                        Coming {goal.date}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            </Card>
+          )
+
+          return goal.videoLink ? (
+            <a
+              key={index}
+              href={goal.videoLink}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='block'
+            >
+              {cardContent}
+            </a>
+          ) : (
+            cardContent
+          )
+        })}
       </div>
     </Card>
   )
 }
+
+// export function GoalsList() {
+//   return (
+//     <Card className='space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
+//       <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Sub Goals</h2>
+//       <div className='grid gap-4 sm:p-2 md:p-4 xl:p-4'>
+//         {goals.map((goal, index) => (
+//           <Card
+//             key={index}
+//             className={`rounded-lg border p-4 shadow-md transition-transform hover:scale-105 ${
+//               goal.completed
+//                 ? 'bg-gradient-to-br from-white to-green-300/20 dark:from-green-800/30 dark:to-black'
+//                 : 'bg-gradient-to-br from-gray-100 to-white dark:from-slate-900 dark:to-slate-950'
+//             }`}
+//           >
+//             <div className='flex h-full flex-col space-y-2 lg:space-y-3'>
+//               <div className='flex items-center justify-between'>
+//                 <Badge className='text-sm font-medium dark:text-black'>
+//                   {goal.points.toLocaleString()} points
+//                 </Badge>
+//                 {goal.completed && (
+//                   <Badge
+//                     variant='success'
+//                     className='border-slate-950/40 bg-pink-500 font-medium text-white dark:border-slate-50 dark:text-black'
+//                   >
+//                     Completed!
+//                   </Badge>
+//                 )}
+//               </div>
+//               <h4 className='text-pretty text-sm font-semibold leading-tight text-gray-900 sm:text-lg xl:text-xl dark:text-gray-200'>
+//                 {goal.title}
+//               </h4>
+//               <p className='flex flex-1 text-pretty text-xs leading-snug text-gray-700 sm:text-sm xl:text-base dark:text-gray-100'>
+//                 {goal.description}
+//               </p>
+
+//               {goal.date && (
+//                 <p className='flex pt-1 font-bold italic text-gray-900 sm:text-lg md:justify-end lg:pt-0 xl:text-xl dark:text-gray-50'>
+//                   Happening {goal.date}
+//                 </p>
+//               )}
+//             </div>
+//           </Card>
+//         ))}
+//       </div>
+//     </Card>
+//   )
+// }
