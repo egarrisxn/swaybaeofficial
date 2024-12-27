@@ -129,9 +129,9 @@ const goals = [
     points: 300000,
     title: 'Merch Giveaway',
     description: 'Sway gives away some Bae Squad merch!',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'TBD',
   },
   {
     points: 350000,
