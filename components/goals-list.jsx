@@ -80,7 +80,7 @@ const goals = [
       'Time out day will be put on the calendar! Time out day allows chatters to duel for time outs, but be careful, If you initiate a duel and lose, the consequences are so much worse!',
     completed: true,
     videoLink: null,
-    date: 'Fri. Dec. 27th',
+    date: null,
   },
   {
     points: 90000,
@@ -124,7 +124,7 @@ const goals = [
     description: 'Sway and Ethan take on Goat Simulator 3!',
     completed: true,
     videoLink: null,
-    date: 'Fri. Dec. 27th',
+    date: 'Sun. Dec. 29thth',
   },
   {
     points: 300000,
@@ -139,9 +139,9 @@ const goals = [
     title: 'Ethan Blindfolded Makeup',
     description:
       "Ethan has done Sway's makeup twice now - this time, he's going to be blindfolded. What could go wrong?",
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Soon!',
   },
   {
     points: 400000,
