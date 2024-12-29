@@ -70,8 +70,8 @@ const goals = [
     title: 'Sway plays "Would you Rather" with Chat',
     description: 'Sway has some "Would you Rather" questions to play with Chat!',
     completed: true,
-    videoLink: null,
-    date: 'Sat. Dec. 28th',
+    videoLink: 'https://www.twitch.tv/videos/2338655404',
+    date: null,
   },
   {
     points: 80000,
@@ -132,7 +132,7 @@ const goals = [
     description: 'Sway gives away some Bae Squad merch!',
     completed: true,
     videoLink: null,
-    date: 'Soon!',
+    date: null,
   },
   {
     points: 350000,
@@ -141,7 +141,7 @@ const goals = [
       "Ethan has done Sway's makeup twice now - this time, he's going to be blindfolded. What could go wrong?",
     completed: true,
     videoLink: null,
-    date: 'Soon!',
+    date: 'Mon. Dec. 29th',
   },
   {
     points: 400000,
@@ -150,7 +150,7 @@ const goals = [
       'Evil Sway makes her epic return for some games with the community and some special Holiday Roasting.',
     completed: true,
     videoLink: null,
-    date: 'Soon!',
+    date: 'Mon. Dec. 29th',
   },
   {
     points: 450000,
@@ -314,51 +314,3 @@ export function GoalsList() {
     </Card>
   )
 }
-
-// export function GoalsList() {
-//   return (
-//     <Card className='space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
-//       <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Sub Goals</h2>
-//       <div className='grid gap-4 sm:p-2 md:p-4 xl:p-4'>
-//         {goals.map((goal, index) => (
-//           <Card
-//             key={index}
-//             className={`rounded-lg border p-4 shadow-md transition-transform hover:scale-105 ${
-//               goal.completed
-//                 ? 'bg-gradient-to-br from-white to-green-300/20 dark:from-green-800/30 dark:to-black'
-//                 : 'bg-gradient-to-br from-gray-100 to-white dark:from-slate-900 dark:to-slate-950'
-//             }`}
-//           >
-//             <div className='flex h-full flex-col space-y-2 lg:space-y-3'>
-//               <div className='flex items-center justify-between'>
-//                 <Badge className='text-sm font-medium dark:text-black'>
-//                   {goal.points.toLocaleString()} points
-//                 </Badge>
-//                 {goal.completed && (
-//                   <Badge
-//                     variant='success'
-//                     className='border-slate-950/40 bg-pink-500 font-medium text-white dark:border-slate-50 dark:text-black'
-//                   >
-//                     Completed!
-//                   </Badge>
-//                 )}
-//               </div>
-//               <h4 className='text-pretty text-sm font-semibold leading-tight text-gray-900 sm:text-lg xl:text-xl dark:text-gray-200'>
-//                 {goal.title}
-//               </h4>
-//               <p className='flex flex-1 text-pretty text-xs leading-snug text-gray-700 sm:text-sm xl:text-base dark:text-gray-100'>
-//                 {goal.description}
-//               </p>
-
-//               {goal.date && (
-//                 <p className='flex pt-1 font-bold italic text-gray-900 sm:text-lg md:justify-end lg:pt-0 xl:text-xl dark:text-gray-50'>
-//                   Happening {goal.date}
-//                 </p>
-//               )}
-//             </div>
-//           </Card>
-//         ))}
-//       </div>
-//     </Card>
-//   )
-// }
