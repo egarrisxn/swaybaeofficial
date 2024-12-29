@@ -18,7 +18,7 @@ const goals = [
       'Instead of "hydrate", we caffeinate! For the rest of the Subathon, Chat can caffeinate Sway! (within reason)',
     completed: true,
     videoLink: null,
-    date: null,
+    date: 'Complete!',
   },
   {
     points: 25000,
@@ -44,7 +44,7 @@ const goals = [
     description: 'No "butts", no "heck", and especially no "heckin butts" for a whole hour.',
     completed: true,
     videoLink: null,
-    date: null,
+    date: 'Complete!',
   },
   {
     points: 50000,
@@ -80,7 +80,7 @@ const goals = [
       'Time out day will be put on the calendar! Time out day allows chatters to duel for time outs, but be careful, If you initiate a duel and lose, the consequences are so much worse!',
     completed: true,
     videoLink: null,
-    date: null,
+    date: 'Complete!',
   },
   {
     points: 90000,
@@ -89,7 +89,7 @@ const goals = [
       'Sway has been in the service industry for YEARS, leading to a good knowledge on beer, but is it good enough? She will be blindfolded and taste test common American Domestic beers and do her best!',
     completed: true,
     videoLink: null,
-    date: 'Sun. Dec. 29th',
+    date: 'Happening Today!',
   },
   {
     points: 100000,
@@ -116,7 +116,7 @@ const goals = [
       "Chatters have an opportunity to submit clips that they think will make Sway laugh, and Sway will attempt not to. She did do this last year, but this year there's a twist - she has to keep water in her mouth while trying not to laugh! (RIP computer)",
     completed: true,
     videoLink: null,
-    date: 'Sun. Dec. 29th',
+    date: 'Happening Today!',
   },
   {
     points: 250000,
@@ -124,7 +124,7 @@ const goals = [
     description: 'Sway and Ethan take on Goat Simulator 3!',
     completed: true,
     videoLink: null,
-    date: 'Sun. Dec. 29th',
+    date: 'Happening Today!',
   },
   {
     points: 300000,
@@ -132,7 +132,7 @@ const goals = [
     description: 'Sway gives away some Bae Squad merch!',
     completed: true,
     videoLink: null,
-    date: null,
+    date: 'Complete!',
   },
   {
     points: 350000,
@@ -141,7 +141,7 @@ const goals = [
       "Ethan has done Sway's makeup twice now - this time, he's going to be blindfolded. What could go wrong?",
     completed: true,
     videoLink: null,
-    date: 'Mon. Dec. 29th',
+    date: 'Date: Mon. Dec. 29th',
   },
   {
     points: 400000,
@@ -150,7 +150,7 @@ const goals = [
       'Evil Sway makes her epic return for some games with the community and some special Holiday Roasting.',
     completed: true,
     videoLink: null,
-    date: 'Mon. Dec. 29th',
+    date: 'Date: Mon. Dec. 29th',
   },
   {
     points: 450000,
@@ -286,9 +286,7 @@ export function GoalsList() {
                     </span>
                   ) : (
                     goal.date && (
-                      <span className='italic text-gray-900 dark:text-gray-50'>
-                        Coming {goal.date}
-                      </span>
+                      <span className='italic text-gray-900 dark:text-gray-50'>{goal.date}</span>
                     )
                   )}
                 </div>

@@ -4,7 +4,7 @@ import {SubathonDetails} from '@/components/subathon-details'
 import {PointSystem} from '@/components/point-system'
 import {GoalsList} from '@/components/goals-list'
 import {Incentives} from '@/components/incentives'
-// import {TopContributors} from '@/components/top-contributors'
+import {TopContributors} from '@/components/top-contributors'
 
 export default function SubathonPage() {
   return (
@@ -14,8 +14,10 @@ export default function SubathonPage() {
       <SubathonDetails />
       <PointSystem />
       <GoalsList />
-      <Incentives />
-      {/* <TopContributors /> */}
+      <div className='grid grid-cols-1 lg:grid-cols-2 lg:gap-8 xl:gap-10 2xl:gap-12'>
+        <Incentives />
+        <TopContributors />
+      </div>
     </div>
   )
 }

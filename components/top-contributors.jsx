@@ -1,41 +1,42 @@
+import {Trophy} from 'lucide-react'
 import {Card} from './ui/card'
+
+const contributors = [
+  {name: 'tatsumasa', points: 67800},
+  {name: 'astrotakesgames', points: 33200},
+  {name: 'elle_emenopy', points: 15000},
+  {name: 'IteukkaI', points: 15000},
+  {name: 'darkmek131', points: 13200},
+  {name: 'Dille', points: 12000},
+  {name: 'prof_faridoon', points: 10400},
+  {name: 'comiclzz', points: 9700},
+  {name: 'wolfieeehawk', points: 7200},
+  {name: 'darthkek69', points: 6700},
+  // {name: 'eg', points: 6600},
+  // {name: 'gympy', points: 6600},
+  // {name: 'sinkdb', points: 5882},
+  // {name: 'mae', points: 6000},
+  // {name: 'sirmoses', points: 6000},
+  // {name: 'jawbone', points: 3600},
+  // {name: 'david', points: 3600},
+  // {name: 'tom', points: 3600},
+  // {name: 'ermine', points: 4200},
+  // {name: 'adxn', points: 4200},
+]
 
 export function TopContributors() {
   return (
-    <Card className='space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
+    <Card className='h-fit w-full space-y-6 bg-gradient-to-bl from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
       <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Top Contributors</h2>
-
-      <ol className='list-outside list-decimal space-y-4 px-6 pb-4 text-slate-700 marker:text-purple-600 lg:text-lg xl:space-y-6 xl:pl-8 xl:pr-12 2xl:text-xl dark:text-slate-200 dark:marker:text-pink-400'>
-        <li>
-          eg__xo <span className='text-sm font-semibold lg:text-base'>(4,355,178 points)</span>
-        </li>
-        <li>
-          sinkDB_ <span className='text-sm font-semibold lg:text-base'>(3,340,114 points)</span>
-        </li>
-        <li>
-          MoMoRetta <span className='text-sm font-semibold lg:text-base'>(2,005,698 points)</span>
-        </li>
-        <li>
-          tatsumasa <span className='text-sm font-semibold lg:text-base'>(1,995,998 points)</span>
-        </li>
-        <li>
-          Alpha_PT_ <span className='text-sm font-semibold lg:text-base'>(997,051 points)</span>
-        </li>
-        <li>
-          xya-three <span className='text-sm font-semibold lg:text-base'>(997,040 points)</span>
-        </li>
-        <li>
-          egocentric123 <span className='text-sm font-semibold lg:text-base'>(997,022 points)</span>
-        </li>
-        <li>
-          xoxo1 <span className='text-sm font-semibold lg:text-base'>(997,011 points)</span>
-        </li>
-        <li>
-          eatmyshorts <span className='text-sm font-semibold lg:text-base'>(997,010 points)</span>
-        </li>
-        <li>
-          2rfS525 <span className='text-sm font-semibold lg:text-base'>(997,001 points)</span>
-        </li>
+      <ol className='list-outside list-decimal space-y-4 px-6 pb-4 text-slate-700 marker:text-purple-600 md:text-xl lg:space-y-6 lg:pl-7 xl:pl-8 dark:text-slate-200 dark:marker:text-pink-400'>
+        {contributors.map(({name, points}, index) => (
+          <li key={index}>
+            {name}{' '}
+            <span className='text-sm font-semibold md:text-base'>
+              ({points.toLocaleString()} points)
+            </span>
+          </li>
+        ))}
       </ol>
     </Card>
   )
