@@ -124,7 +124,7 @@ const goals = [
     description: 'Sway and Ethan take on Goat Simulator 3!',
     completed: true,
     videoLink: null,
-    date: 'Sun. Dec. 29thth',
+    date: 'Sun. Dec. 29th',
   },
   {
     points: 300000,
@@ -148,9 +148,9 @@ const goals = [
     title: 'Evil Sway',
     description:
       'Evil Sway makes her epic return for some games with the community and some special Holiday Roasting.',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Soon!',
   },
   {
     points: 450000,
@@ -260,13 +260,13 @@ export function GoalsList() {
             >
               <div className='flex h-full flex-col space-y-2 lg:space-y-3'>
                 <div className='flex items-center justify-between'>
-                  <Badge className='text-sm font-medium dark:text-black'>
+                  <Badge className='bg-primary text-sm font-medium dark:text-black'>
                     {goal.points.toLocaleString()} points
                   </Badge>
                   {goal.completed && (
                     <Badge
                       variant='success'
-                      className='border-slate-950/40 bg-pink-500 font-medium text-white dark:border-slate-50 dark:text-black'
+                      className='border-slate-50 bg-pink-500 font-medium text-white dark:text-black'
                     >
                       Completed!
                     </Badge>

@@ -13,6 +13,7 @@
     --dark-fade: #0f172a;
     --dark: #020617;
     --dark-tint: #01030d;
+    --border-gradient: linear-gradient(90deg, #4158d0, #c850c0, #ffcc70);
     /*! Light Theme Colors */
     --background: #f8f8f8;
     --foreground: #121212;

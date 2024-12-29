@@ -1,7 +1,5 @@
-'use client'
-import * as React from 'react'
 import {Card} from './ui/card'
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from './ui/table'
+import {Table, TableBody, TableCell, TableRow} from './ui/table'
 import {ScrollArea, ScrollBar} from './ui/scroll-area'
 
 const PointTableRow = ({label, points, extras = []}) => (
@@ -33,9 +31,9 @@ export function PointSystem() {
     <Card className='space-y-6 bg-gradient-to-bl from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
       <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Point System</h2>
       <div className='flex flex-col gap-4 md:gap-6'>
-        <ScrollArea className='w-72 whitespace-nowrap rounded-lg border py-1 xs:w-[315px] small:w-[415px] midsmall:w-[515px] md:w-[685px] lg:w-[945px] xl:w-[1200px] xl:border-0 2xl:w-[1460px]'>
+        <ScrollArea className='w-72 whitespace-nowrap rounded-lg border py-1 xs:w-[310px] small:w-[410px] midsmall:w-[510px] md:w-[680px] lg:w-[905px] xl:w-[1200px] xl:border-0 2xl:w-[1460px]'>
           <div className='w-max'>
-            <Table>
+            <Table className='2xl:text-base'>
               <TableBody>
                 <PointTableRow label='1 bit' points='1 point' />
                 <PointTableRow label='$1 tip' points='100 points' />
@@ -50,9 +48,15 @@ export function PointSystem() {
                 <TableRow>
                   <TableCell></TableCell>
                   <TableCell></TableCell>
-                  <TableCell className='font-semibold text-[#3eb8ce]'>3 months</TableCell>
-                  <TableCell className='font-semibold text-[#3eb8ce]'>6 months</TableCell>
-                  <TableCell className='font-semibold text-[#3eb8ce]'>12 months</TableCell>
+                  <TableCell className='font-semibold text-purple-600 dark:text-pink-400'>
+                    3 months
+                  </TableCell>
+                  <TableCell className='font-semibold text-purple-600 dark:text-pink-400'>
+                    6 months
+                  </TableCell>
+                  <TableCell className='font-semibold text-purple-600 dark:text-pink-400'>
+                    12 months
+                  </TableCell>
                   <TableCell className='text-right font-semibold'>
                     **Extra Points for Gifted Subs from Valorant
                   </TableCell>
