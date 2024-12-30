@@ -1,4 +1,3 @@
-import {Trophy} from 'lucide-react'
 import {Card} from './ui/card'
 
 const contributors = [
@@ -12,16 +11,6 @@ const contributors = [
   {name: 'comiclzz', points: 9700},
   {name: 'wolfieeehawk', points: 7200},
   {name: 'darthkek69', points: 6700},
-  // {name: 'eg', points: 6600},
-  // {name: 'gympy', points: 6600},
-  // {name: 'sinkdb', points: 5882},
-  // {name: 'mae', points: 6000},
-  // {name: 'sirmoses', points: 6000},
-  // {name: 'jawbone', points: 3600},
-  // {name: 'david', points: 3600},
-  // {name: 'tom', points: 3600},
-  // {name: 'ermine', points: 4200},
-  // {name: 'adxn', points: 4200},
 ]
 
 export function TopContributors() {
