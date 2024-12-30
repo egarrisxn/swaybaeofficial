@@ -87,8 +87,8 @@ const goals = [
     description:
       'Sway has been in the service industry for YEARS, leading to a good knowledge on beer, but is it good enough? She will be blindfolded and taste test common American Domestic beers and do her best!',
     completed: true,
-    videoLink: null,
-    date: 'Complete!',
+    videoLink: 'https://www.twitch.tv/videos/2339201837?t=05h41m31s',
+    date: null,
   },
   {
     points: 100000,
@@ -114,16 +114,16 @@ const goals = [
     description:
       "Chatters have an opportunity to submit clips that they think will make Sway laugh, and Sway will attempt not to. She did do this last year, but this year there's a twist - she has to keep water in her mouth while trying not to laugh! (RIP computer)",
     completed: true,
-    videoLink: null,
-    date: 'Complete!',
+    videoLink: 'https://www.twitch.tv/videos/2339201837?t=04h53m21s',
+    date: null,
   },
   {
     points: 250000,
     title: 'Goat Sim 3 with Ethan',
     description: 'Sway and Ethan take on Goat Simulator 3!',
     completed: true,
-    videoLink: null,
-    date: 'Complete!',
+    videoLink: 'https://www.twitch.tv/videos/2339201837?t=03h14m41s',
+    date: null,
   },
   {
     points: 300000,
