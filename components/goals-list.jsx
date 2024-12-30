@@ -1,4 +1,3 @@
-'use client'
 import {Card} from './ui/card'
 import {Badge} from './ui/badge'
 
@@ -89,7 +88,7 @@ const goals = [
       'Sway has been in the service industry for YEARS, leading to a good knowledge on beer, but is it good enough? She will be blindfolded and taste test common American Domestic beers and do her best!',
     completed: true,
     videoLink: null,
-    date: 'Happening Today!',
+    date: 'Complete!',
   },
   {
     points: 100000,
@@ -116,7 +115,7 @@ const goals = [
       "Chatters have an opportunity to submit clips that they think will make Sway laugh, and Sway will attempt not to. She did do this last year, but this year there's a twist - she has to keep water in her mouth while trying not to laugh! (RIP computer)",
     completed: true,
     videoLink: null,
-    date: 'Happening Today!',
+    date: 'Complete!',
   },
   {
     points: 250000,
@@ -124,7 +123,7 @@ const goals = [
     description: 'Sway and Ethan take on Goat Simulator 3!',
     completed: true,
     videoLink: null,
-    date: 'Happening Today!',
+    date: 'Complete!',
   },
   {
     points: 300000,
@@ -141,7 +140,7 @@ const goals = [
       "Ethan has done Sway's makeup twice now - this time, he's going to be blindfolded. What could go wrong?",
     completed: true,
     videoLink: null,
-    date: 'Date: Mon. Dec. 29th',
+    date: 'Happening Today!',
   },
   {
     points: 400000,
@@ -150,16 +149,16 @@ const goals = [
       'Evil Sway makes her epic return for some games with the community and some special Holiday Roasting.',
     completed: true,
     videoLink: null,
-    date: 'Date: Mon. Dec. 29th',
+    date: 'Happening Today!',
   },
   {
     points: 450000,
     title: 'Super Sour Candy',
     description:
       'Sway and Ethan had a whole lot of spice last Subathon. This time, Sway found the most sour candy she possibly could for them to try to tackle!',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'TBD',
   },
   {
     points: 500000,
