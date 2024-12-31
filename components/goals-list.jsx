@@ -17,7 +17,7 @@ const goals = [
       'Instead of "hydrate", we caffeinate! For the rest of the Subathon, Chat can caffeinate Sway! (within reason)',
     completed: true,
     videoLink: null,
-    date: 'Complete!',
+    date: null,
   },
   {
     points: 25000,
@@ -43,7 +43,7 @@ const goals = [
     description: 'No "butts", no "heck", and especially no "heckin butts" for a whole hour.',
     completed: true,
     videoLink: null,
-    date: 'Complete!',
+    date: null,
   },
   {
     points: 50000,
@@ -79,7 +79,7 @@ const goals = [
       'Time out day will be put on the calendar! Time out day allows chatters to duel for time outs, but be careful, If you initiate a duel and lose, the consequences are so much worse!',
     completed: true,
     videoLink: null,
-    date: 'Complete!',
+    date: null,
   },
   {
     points: 90000,
@@ -131,7 +131,7 @@ const goals = [
     description: 'Sway gives away some Bae Squad merch!',
     completed: true,
     videoLink: null,
-    date: 'Complete!',
+    date: null,
   },
   {
     points: 350000,
@@ -140,7 +140,7 @@ const goals = [
       "Ethan has done Sway's makeup twice now - this time, he's going to be blindfolded. What could go wrong?",
     completed: true,
     videoLink: null,
-    date: 'Happening Today!',
+    date: null,
   },
   {
     points: 400000,
@@ -149,7 +149,7 @@ const goals = [
       'Evil Sway makes her epic return for some games with the community and some special Holiday Roasting.',
     completed: true,
     videoLink: null,
-    date: 'Happening Today!',
+    date: null,
   },
   {
     points: 450000,
@@ -158,16 +158,16 @@ const goals = [
       'Sway and Ethan had a whole lot of spice last Subathon. This time, Sway found the most sour candy she possibly could for them to try to tackle!',
     completed: true,
     videoLink: null,
-    date: 'TBD',
+    date: 'Date: TBD',
   },
   {
     points: 500000,
     title: 'Sway at Nite',
     description:
       '**CONTENT WARNING** Sway at Nite returns again! Join Sway for some unexpected cursing and adult themes for one night only!',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Date: TBD',
   },
   {
     points: 550000,
@@ -251,9 +251,9 @@ export function GoalsList() {
           const cardContent = (
             <Card
               key={index}
-              className={`group rounded-lg border p-4 shadow-md transition-transform hover:scale-105 ${
+              className={`group rounded-lg border p-4 shadow-md transition-transform ${
                 goal.completed
-                  ? 'bg-gradient-to-tl from-white to-green-300/20 dark:from-green-800/30 dark:to-black'
+                  ? 'bg-gradient-to-tr from-white to-green-300/20 hover:scale-105 dark:from-green-800/40 dark:to-black'
                   : 'bg-gradient-to-tl from-gray-100 to-white dark:from-slate-900 dark:to-slate-950'
               }`}
             >
@@ -271,10 +271,10 @@ export function GoalsList() {
                     </Badge>
                   )}
                 </div>
-                <h4 className='text-pretty text-sm font-semibold leading-tight text-gray-900 sm:text-lg xl:text-xl dark:text-gray-200'>
+                <h4 className='text-sm font-semibold leading-tight text-gray-900 sm:text-lg xl:text-xl 2xl:pl-1 2xl:pt-3 2xl:text-2xl dark:text-gray-200'>
                   {goal.title}
                 </h4>
-                <p className='flex flex-1 text-pretty text-xs leading-snug text-gray-700 sm:text-sm xl:text-base dark:text-gray-100'>
+                <p className='flex max-w-4xl flex-1 text-pretty text-xs leading-snug text-gray-700 sm:text-sm xl:text-base 2xl:pl-1 2xl:text-lg dark:text-gray-100'>
                   {goal.description}
                 </p>
 
