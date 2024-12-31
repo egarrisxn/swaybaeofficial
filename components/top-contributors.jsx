@@ -5,7 +5,7 @@ const contributors = [
   {name: 'astrotakesgames', points: 48800},
   {name: 'elle_emenopy', points: 18000},
   {name: 'Chuckmate360', points: 18000},
-  {name: 'Biscotti', points: 162400},
+  {name: 'Biscotti', points: 16240},
   {name: 'IteukkaI', points: 15000},
   {name: 'darkmek131', points: 13200},
   {name: 'comiclzz', points: 12720},
