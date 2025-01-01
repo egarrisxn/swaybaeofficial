@@ -174,9 +174,9 @@ const goals = [
     title: 'Dog Treat Cooking Stream',
     description:
       "Sway gets on Biff and Waffles' level and takes her cooking stream to the floor to make some dog treats for them!",
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Date: TBD',
   },
   {
     points: 600000,

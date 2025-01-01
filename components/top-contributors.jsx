@@ -1,19 +1,19 @@
 import {Card} from './ui/card'
 
 const contributors = [
-  {name: 'tatsumasa', points: 67800},
-  {name: 'astrotakesgames', points: 48800},
+  {name: 'tatsumasa', points: 73800},
+  {name: 'astrotakesgames', points: 54800},
   {name: 'elle_emenopy', points: 18000},
   {name: 'Chuckmate360', points: 18000},
   {name: 'Biscotti', points: 16240},
   {name: 'IteukkaI', points: 15000},
   {name: 'darkmek131', points: 13200},
   {name: 'comiclzz', points: 12720},
-  {name: 'Dille', points: 12000},
+  {name: 'darthkek69', points: 12700},
   {name: 'TyLenIPhe', points: 12000},
-  // {name: 'prof_faridoon', points: 10800},
-  // {name: 'wolfie', points: 10200},
-  // {name: 'neptune', points: 10000},
+  {name: 'Dille', points: 12000},
+  {name: 'prof_faridoon', points: 10800},
+  {name: 'wolfie', points: 10230},
 ]
 
 export function TopContributors() {
@@ -30,7 +30,7 @@ export function TopContributors() {
           </li>
         ))}
       </ol>
-      <p className='text-sm font-bold italic'>Last Updated: 12.31.2024</p>
+      <p className='text-sm font-bold italic'>Last Updated: 01.01.2025</p>
     </Card>
   )
 }
