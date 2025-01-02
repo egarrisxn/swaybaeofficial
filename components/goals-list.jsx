@@ -158,7 +158,7 @@ const goals = [
       'Sway and Ethan had a whole lot of spice last Subathon. This time, Sway found the most sour candy she possibly could for them to try to tackle!',
     completed: true,
     videoLink: null,
-    date: 'Date: TBD',
+    date: 'Happening today!',
   },
   {
     points: 500000,
@@ -203,7 +203,7 @@ const goals = [
       'Instead of 12pm-12am on January 1st, Sway will stream from 12pm January 1st until 12 pm January 2nd to wrap up the most epic Subathon!',
     completed: true,
     videoLink: null,
-    date: 'Happening right now!',
+    date: 'null',
   },
   {
     points: 750000,

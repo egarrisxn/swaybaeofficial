@@ -1,19 +1,21 @@
 import {Card} from './ui/card'
 
 const contributors = [
+  {name: 'srasosa80', points: 130200},
   {name: 'tatsumasa', points: 73800},
-  {name: 'astrotakesgames', points: 54800},
+  {name: 'astrotakesgames', points: 57800},
+  {name: 'Chuckmate360', points: 57000},
+  {name: 'comiclzz', points: 19720},
+  {name: 'IteukkaI', points: 18600},
+  {name: 'neptune_olympus', points: 18500},
   {name: 'elle_emenopy', points: 18000},
-  {name: 'Chuckmate360', points: 18000},
   {name: 'Biscotti', points: 16240},
-  {name: 'IteukkaI', points: 15000},
+  {name: 'darthkek69', points: 15700},
+  {name: 'prof_faridoon', points: 15000},
   {name: 'darkmek131', points: 13200},
-  {name: 'comiclzz', points: 12720},
-  {name: 'darthkek69', points: 12700},
   {name: 'TyLenIPhe', points: 12000},
   {name: 'Dille', points: 12000},
-  {name: 'prof_faridoon', points: 10800},
-  {name: 'wolfie', points: 10230},
+  {name: 'whitewaterinthemornin', points: 10280},
 ]
 
 export function TopContributors() {
