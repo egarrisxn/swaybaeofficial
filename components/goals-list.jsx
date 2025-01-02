@@ -167,7 +167,7 @@ const goals = [
       '**CONTENT WARNING** Sway at Nite returns again! Join Sway for some unexpected cursing and adult themes for one night only!',
     completed: true,
     videoLink: null,
-    date: 'Date: TBD',
+    date: 'Vote now for the date!',
   },
   {
     points: 550000,
@@ -183,18 +183,18 @@ const goals = [
     title: 'BONUS GOAL: unlock Sway at Nite "Would you Rather" with chat',
     description:
       "**CONTENT WARNING** Sway at Nite takes on a game of Would you Rather, but MUCH less family friendly this time. This is a bonus goal, so it will only occur if the goal of Sway at Nite hasn't happened before this is achieved!",
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Vote now for the date!',
   },
   {
     points: 650000,
     title: 'Brann Genderbend Cosplay',
     description:
       'Sway transforms herself into her beloved Brann Bronzebeard, bronze beard and all.',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Date: TBD',
   },
   {
     points: 700000,
