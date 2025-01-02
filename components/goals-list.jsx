@@ -203,7 +203,7 @@ const goals = [
       'Instead of 12pm-12am on January 1st, Sway will stream from 12pm January 1st until 12 pm January 2nd to wrap up the most epic Subathon!',
     completed: true,
     videoLink: null,
-    date: 'null',
+    date: null,
   },
   {
     points: 750000,

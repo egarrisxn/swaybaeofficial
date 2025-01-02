@@ -32,7 +32,7 @@ export function TopContributors() {
           </li>
         ))}
       </ol>
-      <p className='text-sm font-bold italic'>Last Updated: 01.01.2025</p>
+      <p className='text-sm font-bold italic'>Last Updated: 01.02.2025</p>
     </Card>
   )
 }
