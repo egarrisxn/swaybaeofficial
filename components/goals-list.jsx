@@ -210,18 +210,18 @@ const goals = [
     title: 'Rewrapped Food Competition',
     description:
       "Sway and 1-2 of her friends will compete to recreate a common packaged snack (i.e. Oreos, Goldfish, Twinkies etc) of chat's choosing!",
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Date: TBD',
   },
   {
     points: 800000,
     title: 'Custom Crocs',
     description:
       'Sway hates Crocs. Like a lot. Chat will help her design some special custom ones, just for her! She will have to order and wear them!',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Date: TBD',
   },
   {
     points: 1000000,
