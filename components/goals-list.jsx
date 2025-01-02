@@ -139,7 +139,7 @@ const goals = [
     description:
       "Ethan has done Sway's makeup twice now - this time, he's going to be blindfolded. What could go wrong?",
     completed: true,
-    videoLink: null,
+    videoLink: 'https://www.twitch.tv/videos/2339933031?t=08h26m14s',
     date: null,
   },
   {
@@ -148,7 +148,7 @@ const goals = [
     description:
       'Evil Sway makes her epic return for some games with the community and some special Holiday Roasting.',
     completed: true,
-    videoLink: null,
+    videoLink: 'https://www.twitch.tv/videos/2339933031?t=06h20m30s',
     date: null,
   },
   {
