@@ -201,9 +201,9 @@ const goals = [
     title: 'Last Day becomes a 24 hour stream',
     description:
       'Instead of 12pm-12am on January 1st, Sway will stream from 12pm January 1st until 12 pm January 2nd to wrap up the most epic Subathon!',
-    completed: false,
+    completed: true,
     videoLink: null,
-    date: null,
+    date: 'Happening right now!',
   },
   {
     points: 750000,
