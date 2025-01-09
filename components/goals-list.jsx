@@ -245,7 +245,7 @@ const goals = [
 export function GoalsList() {
   return (
     <Card className='space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800'>
-      <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Sub Goals</h2>
+      <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Sub Goal Recap</h2>
       <div className='grid gap-4 sm:p-2 md:p-4 xl:p-4'>
         {goals.map((goal, index) => {
           const cardContent = (
