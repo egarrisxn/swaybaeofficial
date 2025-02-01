@@ -1,12 +1,12 @@
 # Sway Bae Official
 
+![swaybaeofficial](https://github.com/user-attachments/assets/49ae70c8-0352-49ba-bbc6-6ec713ed5460)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/swaybaeofficial) ![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/swaybaeofficial)
 
 ## Overview
 
 The official website for a full-time streamer and content creator, @Sway_Bae.
-
-![sway1](https://github.com/egarrisxn/swaybaeofficial/assets/126130230/24a1cf71-bed6-4041-9109-7773ae7378d5)
 
 ## Technologies
 
