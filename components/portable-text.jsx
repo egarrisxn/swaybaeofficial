@@ -30,12 +30,22 @@ export default function PortableTextComponents({value, className, content}) {
         return <p>{children}</p>
       }
     },
-    normal: ({children}) => <p className='mx-8 text-base font-normal'>{children}</p>,
-    h1: ({children}) => <h1 className='my-4 text-4xl font-extrabold'>{children}</h1>,
+    normal: ({children}) => (
+      <p className='mx-8 text-base font-normal'>{children}</p>
+    ),
+    h1: ({children}) => (
+      <h1 className='my-4 text-4xl font-extrabold'>{children}</h1>
+    ),
     h2: ({children}) => <h2 className='my-4 text-3xl font-bold'>{children}</h2>,
-    h3: ({children}) => <h3 className='my-4 text-2xl font-medium'>{children}</h3>,
-    h4: ({children}) => <h4 className='my-4 text-xl font-normal'>{children}</h4>,
-    h5: ({children}) => <h5 className='mx-8 text-lg font-medium'>{children}</h5>,
+    h3: ({children}) => (
+      <h3 className='my-4 text-2xl font-medium'>{children}</h3>
+    ),
+    h4: ({children}) => (
+      <h4 className='my-4 text-xl font-normal'>{children}</h4>
+    ),
+    h5: ({children}) => (
+      <h5 className='mx-8 text-lg font-medium'>{children}</h5>
+    ),
     blockquote: ({children}) => (
       <blockquote className='font-white my-4 border-l-4 border-gray pl-4 italic text-gray'>
         {children}
@@ -59,7 +69,9 @@ export default function PortableTextComponents({value, className, content}) {
       em: ({children}) => <em className='italic'>{children}</em>,
       code: ({children}) => <code className='p-1'>{children}</code>,
       underline: ({children}) => <u>{children}</u>,
-      highlight: ({children}) => <span className='bg-yellow px-1'>{children}</span>,
+      highlight: ({children}) => (
+        <span className='bg-yellow px-1'>{children}</span>
+      ),
     },
     types: {
       image: ({value, isInline}) => (
@@ -79,7 +91,9 @@ export default function PortableTextComponents({value, className, content}) {
               display: isInline ? 'inline-block' : 'block',
             }}
           />
-          {value.caption && <p className='text-sm italic text-gray'>{value.caption}</p>}
+          {value.caption && (
+            <p className='text-sm italic text-gray'>{value.caption}</p>
+          )}
         </div>
       ),
       youtube: ({value}) => (

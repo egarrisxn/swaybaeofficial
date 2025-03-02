@@ -6,7 +6,10 @@ export async function POST() {
   const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN
 
   if (!client_id || !client_secret || !refresh_token) {
-    return NextResponse.json({error: 'Missing Spotify credentials'}, {status: 400})
+    return NextResponse.json(
+      {error: 'Missing Spotify credentials'},
+      {status: 400},
+    )
   }
 
   const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64')

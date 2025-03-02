@@ -55,43 +55,43 @@ const svgData = {
 
 const carouselData = {
   Twitch: {
-    src: '/TwitchCard.png',
+    src: '/images/twitch-card.png',
     alt: 'Twitch',
     username: 'Sway_bae',
     href: 'https://www.twitch.tv/sway_bae',
   },
   YouTube: {
-    src: '/YoutubeCard.png',
+    src: '/images/youtube-card.png',
     alt: 'YouTube',
     username: 'SwaybaeTV',
     href: 'https://m.youtube.com/channel/UCbpQhE5NYQ05pSp_DJJQxCA',
   },
   Twitter: {
-    src: '/TwitterCard.png',
+    src: '/images/twitter-card.png',
     alt: 'Twitter',
     username: 'Sway_baeTV',
     href: 'https://twitter.com/sway_baetv',
   },
   Discord: {
-    src: '/DiscordCard.png',
+    src: '/images/discord-card.png',
     alt: 'Discord',
     username: 'Sway_bae',
     href: 'https://discord.com/invite/K73uN9k',
   },
   Spotify: {
-    src: '/SpotifyCard.png',
+    src: '/images/spotify-card.png',
     alt: 'Spotify',
     username: 'Swaybae',
     href: 'https://open.spotify.com/user/31ozjeaf4ddidr2rgqunryvetrmq',
   },
   Instagram: {
-    src: '/InstagramCard.png',
+    src: '/images/instagram-card.png',
     alt: 'Instagram',
     username: 'Sway_baeTV',
     href: 'https://www.instagram.com/sway_baetv',
   },
   TikTok: {
-    src: '/TikTokCard.png',
+    src: '/images/tiktok-card.png',
     alt: 'TikTok',
     username: 'Sway_baeTV',
     href: 'https://www.tiktok.com/@sway_baetv',

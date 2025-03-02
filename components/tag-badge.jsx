@@ -15,5 +15,9 @@ export default function TagBadge({tag, clickable = true}) {
     </Badge>
   )
 
-  return clickable ? <Link href={`/blog/tag/${tag.tagSlug}`}>{tagContent}</Link> : tagContent
+  return clickable ? (
+    <Link href={`/blog/tag/${tag.tagSlug}`}>{tagContent}</Link>
+  ) : (
+    tagContent
+  )
 }

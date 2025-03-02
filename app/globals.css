@@ -51,8 +51,11 @@
     --p2b-tint: #cc3675;
     --shadow-soft: 1px 2px 4px 0px #6b7280;
     --shadow-hard: 2px 3px 6px 0px #6b7280;
-    --text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    --text-shadow1: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    --text-shadow:
+      -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --text-shadow1:
+      -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+      1px 1px 0 #ffffff;
     --gradient: radial-gradient(
       circle,
       #ffffff,
@@ -100,7 +103,9 @@
     --p2b-tint: #31b2ea;
     --shadow-soft: 2px 2px 8px 0px #727272;
     --shadow-hard: 2px 3px 12px 0px #727272;
-    --text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    --text-shadow:
+      -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+      1px 1px 0 #ffffff;
     --text-shadow1: 0 transparent;
     --gradient: radial-gradient(
       circle,
@@ -110,6 +115,15 @@
       #06080d 90%,
       #000000 100%
     );
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain scroll-smooth bg-myGradient bg-cover bg-no-repeat font-sans text-foreground antialiased;
   }
 }
 

@@ -1,6 +1,8 @@
 'use client'
 
 export default function Error({error, reset}) {
+  console.log(error)
+
   return (
     <section className='container mx-auto flex flex-col items-center justify-center text-center'>
       <h1 className='text-7xl font-semibold'>Oops!</h1>
@@ -11,9 +13,6 @@ export default function Error({error, reset}) {
       >
         Try again
       </button>
-      {/* <pre className='mt-6 px-2 max-w-md text-wrap text-center text-xs text-gray-fade'>
-        {error.message}
-      </pre> */}
     </section>
   )
 }

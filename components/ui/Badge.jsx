@@ -7,7 +7,8 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: 'rounded-full border-transparent bg-primary hover:bg-primary-fade',
+        default:
+          'rounded-full border-transparent bg-primary hover:bg-primary-fade',
         time: 'rounded-md  w-fit mt-0.5 border-transparent tracking-tight bg-neutral text-white line-clamp-1',
         tag: 'rounded-full py-0.5 text-black border-transparent min-w-content max-w-full tracking-tighter text-xs font-semibold',
         outline: 'text-foreground',

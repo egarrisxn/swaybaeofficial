@@ -57,7 +57,10 @@ export function PointSystem() {
                       {value: '+300 points'},
                       {value: '+700 points'},
                       {value: '+1500 points'},
-                      {value: '+100 points', className: 'text-right font-semibold'},
+                      {
+                        value: '+100 points',
+                        className: 'text-right font-semibold',
+                      },
                     ],
                   },
                   {
@@ -67,7 +70,10 @@ export function PointSystem() {
                       {value: '+600 points'},
                       {value: '+1400 points'},
                       {value: '+3000 points'},
-                      {value: '+200 points', className: 'text-right font-semibold'},
+                      {
+                        value: '+200 points',
+                        className: 'text-right font-semibold',
+                      },
                     ],
                   },
                   {
@@ -77,7 +83,10 @@ export function PointSystem() {
                       {value: '+1500 points'},
                       {value: '+3500 points'},
                       {value: '+7500 points'},
-                      {value: '+500 points', className: 'text-right font-semibold'},
+                      {
+                        value: '+500 points',
+                        className: 'text-right font-semibold',
+                      },
                     ],
                   },
                 ].map((row, index) => (
@@ -92,7 +101,9 @@ export function PointSystem() {
         <div className='mx-auto mt-2 flex flex-col justify-center gap-6 sm:flex-row'>
           <div className='order-1 flex flex-col space-y-4 sm:w-1/2 sm:items-center md:order-1 md:w-2/5 xl:w-1/3'>
             <Card className='flex w-fit flex-col items-center space-y-2 rounded-lg border-0 bg-purple-50 p-4 sm:w-full dark:bg-purple-900/30'>
-              <h4 className='font-semibold xl:text-lg'>*Current Twitch Promotions</h4>
+              <h4 className='font-semibold xl:text-lg'>
+                *Current Twitch Promotions
+              </h4>
               <ul className='list-inside list-disc space-y-1 text-sm xl:text-base'>
                 <li>25% off new 1-month subs</li>
                 <li>25% off new 3-month subs</li>
@@ -112,15 +123,18 @@ export function PointSystem() {
           </div>
           <div className='order-2 sm:w-1/2 md:order-2 md:w-3/5 xl:w-2/3'>
             <Card className='space-y-3 p-3 md:p-4'>
-              <h4 className='font-semibold xl:text-lg'>**Bonus Gift Subs Program</h4>
+              <h4 className='font-semibold xl:text-lg'>
+                **Bonus Gift Subs Program
+              </h4>
               <p className='text-sm text-slate-700 xl:text-base dark:text-slate-300'>
-                For every five gift subs purchased for a channel, Valorant will add one bonus gift
-                sub. Additional points will be added based on the tier and number of gifted subs
-                from Valorant.
+                For every five gift subs purchased for a channel, Valorant will
+                add one bonus gift sub. Additional points will be added based on
+                the tier and number of gifted subs from Valorant.
               </p>
               <div className='rounded-md bg-slate-100 p-2 text-sm xl:text-base dark:bg-slate-800'>
-                <span className='font-semibold'>Example:</span> 5 Tier 1 gifted subs (3,000 points)
-                + 1 bonus gifted sub (600 points) + 100 bonus points = 3,700 total points
+                <span className='font-semibold'>Example:</span> 5 Tier 1 gifted
+                subs (3,000 points) + 1 bonus gifted sub (600 points) + 100
+                bonus points = 3,700 total points
               </div>
             </Card>
           </div>

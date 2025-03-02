@@ -15,7 +15,9 @@ export default function PageHeader({
   return (
     <div
       className={`mx-auto w-full pt-4 md:pt-12 lg:px-4 lg:pt-16 ${
-        showSearch ? 'flex flex-row items-center justify-between gap-2' : 'block'
+        showSearch
+          ? 'flex flex-row items-center justify-between gap-2'
+          : 'block'
       } ${className} ${showSearch ? 'max-[360px]:flex-col max-[360px]:justify-center' : ''}`}
     >
       {showHr && <hr className='rounded-lg border border-gray-fade' />}

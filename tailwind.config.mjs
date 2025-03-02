@@ -1,4 +1,7 @@
-module.exports = {
+import tailwindcssAnimate from 'tailwindcss-animate'
+import typography from '@tailwindcss/typography'
+
+const config = {
   darkMode: 'selector',
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -113,5 +116,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+  plugins: [tailwindcssAnimate, typography],
 }
+
+export default config

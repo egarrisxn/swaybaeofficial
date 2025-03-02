@@ -4,7 +4,10 @@ import GoogleCalendar from './google-calendar'
 export default function Calendar() {
   return (
     <>
-      <PageHeader id='calendar' className='flex px-2 pt-4 lg:px-4 lg:pt-16 xl:px-0'>
+      <PageHeader
+        id='calendar'
+        className='flex px-2 pt-4 lg:px-4 lg:pt-16 xl:px-0'
+      >
         Calendar
       </PageHeader>
       {/* ----------Calendar Body---------- */}

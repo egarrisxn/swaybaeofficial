@@ -1,19 +1,7 @@
 import Hero from '@/components/hero'
 import About from '@/components/about'
 import Socials from '@/components/socials'
-import {Contact} from '@/components/contact'
-
-// ! Test Loader
-// function loadingPage() {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve('Loading...')
-//     }, 3000)
-//   })
-// }
-// export default async function Home() {
-//   const load = await loadingPage()
-//   console.log({load})
+import Contact from '@/components/contact'
 
 export default function Home() {
   return (

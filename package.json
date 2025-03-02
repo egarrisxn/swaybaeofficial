@@ -1,15 +1,11 @@
 {
   "name": "swaybaeofficial",
   "version": "1.0.0",
-  "description": "The Official Website for Sway Bae & The Bae Squad!",
+  "description": "The Official Page for Sway Bae & The Bae Squad!",
   "homepage": "https://swaybae.net",
   "author": "Ethan G. (https://egxo.dev)",
   "license": "MIT",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/egarrisxn/swaybaeofficial"
-  },
   "keywords": [
     "sanity",
     "nextjs",
@@ -19,12 +15,15 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "prebuild": "pnpm run lint",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "next-lint": "next lint",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.15",
@@ -40,34 +39,45 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/preview-url-secret": "^2.0.5",
     "@sanity/react-loader": "^1.10.31",
-    "@vercel/analytics": "^1.4.1",
-    "@vercel/speed-insights": "^1.1.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "embla-carousel-class-names": "^8.2.1",
-    "embla-carousel-react": "^8.5.1",
+    "embla-carousel-class-names": "^8.5.2",
+    "embla-carousel-react": "^8.5.2",
     "lodash.debounce": "^4.0.8",
-    "lucide-react": "^0.469.0",
+    "lucide-react": "^0.477.0",
     "next": "15.1.2",
     "next-sanity": "^9.8.30",
     "next-themes": "^0.4.4",
     "nodemailer": "^6.9.16",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "server-only": "^0.0.1",
-    "sharp": "^0.33.5",
-    "tailwind-merge": "^2.5.5",
+    "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
-    "use-debounce": "^10.0.3"
+    "use-debounce": "^10.0.4"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.0",
     "@tailwindcss/typography": "^0.5.15",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "15.1.2",
-    "eslint-config-prettier": "^9.1.0",
-    "postcss": "^8.4.49",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "15.2.0",
+    "eslint-config-prettier": "^10.0.2",
+    "postcss": "^8.5.3",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17"
+  },
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "printWidth": 80,
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   }
 }

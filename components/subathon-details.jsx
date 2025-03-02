@@ -18,7 +18,9 @@ const details = [
 export function SubathonDetails() {
   return (
     <Card className='space-y-6 bg-gradient-to-tl from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:from-gray-800 dark:to-black'>
-      <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>Event Details</h2>
+      <h2 className='text-lg font-bold md:text-xl xl:text-2xl'>
+        Event Details
+      </h2>
       <ol className='list-outside list-disc space-y-4 px-6 pb-4 text-slate-700 marker:text-purple-600 lg:space-y-6 lg:pl-7 lg:text-lg xl:pl-8 xl:pr-12 2xl:pl-10 2xl:pr-24 2xl:text-xl dark:text-slate-200 dark:marker:text-pink-400'>
         {details.map(({item}, index) => (
           <li key={index}>{item}</li>

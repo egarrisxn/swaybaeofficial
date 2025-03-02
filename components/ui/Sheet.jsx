@@ -41,28 +41,43 @@ const sheetVariants = cva(
   },
 )
 
-const SheetContent = React.forwardRef(({side = 'top', className, children, ...props}, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
-    <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({side}), className)} {...props}>
-      {children}
-      <SheetPrimitive.Close className='absolute right-5 top-5 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-0 focus:ring-offset-0 disabled:pointer-events-none data-[state=open]:bg-transparent'>
-        <Icon.X />
-        <span className='sr-only'>Close</span>
-      </SheetPrimitive.Close>
-    </SheetPrimitive.Content>
-  </SheetPortal>
-))
+const SheetContent = React.forwardRef(
+  ({side = 'top', className, children, ...props}, ref) => (
+    <SheetPortal>
+      <SheetOverlay />
+      <SheetPrimitive.Content
+        ref={ref}
+        className={cn(sheetVariants({side}), className)}
+        {...props}
+      >
+        {children}
+        <SheetPrimitive.Close className='absolute right-5 top-5 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-0 focus:ring-offset-0 disabled:pointer-events-none data-[state=open]:bg-transparent'>
+          <Icon.X />
+          <span className='sr-only'>Close</span>
+        </SheetPrimitive.Close>
+      </SheetPrimitive.Content>
+    </SheetPortal>
+  ),
+)
 SheetContent.displayName = SheetPrimitive.Content.displayName
 
 const SheetHeader = ({className, ...props}) => (
-  <div className={cn('flex flex-col space-y-2 text-center sm:text-left', className)} {...props} />
+  <div
+    className={cn(
+      'flex flex-col space-y-2 text-center sm:text-left',
+      className,
+    )}
+    {...props}
+  />
 )
 SheetHeader.displayName = 'SheetHeader'
 
 const SheetFooter = ({className, ...props}) => (
   <div
-    className={cn('flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2', className)}
+    className={cn(
+      'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
+      className,
+    )}
     {...props}
   />
 )
@@ -78,7 +93,11 @@ const SheetTitle = React.forwardRef(({className, ...props}, ref) => (
 SheetTitle.displayName = SheetPrimitive.Title.displayName
 
 const SheetDescription = React.forwardRef(({className, ...props}, ref) => (
-  <SheetPrimitive.Description ref={ref} className={cn('text-gray', className)} {...props} />
+  <SheetPrimitive.Description
+    ref={ref}
+    className={cn('text-gray', className)}
+    {...props}
+  />
 ))
 SheetDescription.displayName = SheetPrimitive.Description.displayName
 
