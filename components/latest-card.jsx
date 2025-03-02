@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import TagBadge from './tag-badge'
-import DateBadge from './date-badge'
 import {urlFor} from '@/utils/sanity/client'
+import TagBadge from '@/components/tag-badge'
+import DateBadge from '@/components/date-badge'
 
 export default function LatestCard({post}) {
   const {coverImage, title, excerpt, tags, publishedAt} = post

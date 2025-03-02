@@ -1,5 +1,5 @@
-import PageHeader from './page-header'
-import GoogleCalendar from './google-calendar'
+import PageHeader from '@/components/page-header'
+import GoogleCalendar from '@/components/google-calendar'
 
 export default function Calendar() {
   return (

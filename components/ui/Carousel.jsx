@@ -2,8 +2,8 @@
 import * as React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {cn} from '@/lib/utils'
-import {Button} from './button'
-import {Icon} from './icon'
+import {Button} from '@/components/ui/button'
+import {Icon} from '@/components/ui/icon'
 
 const CarouselContext = React.createContext(null)
 

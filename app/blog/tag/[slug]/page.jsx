@@ -48,22 +48,3 @@ const TagSlug = ({tag}) => {
     </>
   )
 }
-
-// import {notFound} from 'next/navigation'
-// import {generateStaticSlugs} from '@/utils/sanity/generateStaticSlugs'
-// import {loadTag} from '@/utils/sanity/loadQuery'
-// import TagPage from '@/containers/tag-page/TagPage'
-
-// export function generateStaticParams() {
-//   return generateStaticSlugs('tag')
-// }
-
-// export default async function TagSlugPage({params}) {
-//   const initial = await loadTag(params.slug)
-
-//   if (!initial.data) {
-//     notFound()
-//   }
-
-//   return <TagPage tag={initial.data} />
-// }

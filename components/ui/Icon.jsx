@@ -12,12 +12,6 @@ import {
   Undo2,
 } from 'lucide-react'
 
-// const defaultProps = {
-//   size: '1rem',
-//   color: 'currentColor',
-//   strokeWidth: '1.5',
-// }
-
 const thickerProps = {
   size: '1rem',
   color: 'currentColor',

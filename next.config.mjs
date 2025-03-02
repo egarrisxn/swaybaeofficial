@@ -15,11 +15,11 @@ const nextConfig = {
       },
     ],
   },
-  logging: {
-    fetches: {
-      fullUrl: false,
-    },
-  },
+  // logging: {
+  //   fetches: {
+  //     fullUrl: false,
+  //   },
+  // },
   experimental: {
     taint: true,
   },

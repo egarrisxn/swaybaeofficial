@@ -1,8 +1,8 @@
 'use client'
 import {useState} from 'react'
-import FeaturedCard from './featured-card'
-import LatestCard from './latest-card'
-import {Button} from './ui/button'
+import {Button} from '@/components/ui/button'
+import FeaturedCard from '@/components/featured-card'
+import LatestCard from '@/components/latest-card'
 
 export function AllPosts({posts}) {
   const featuredPosts = posts.filter((post) => post.featured)

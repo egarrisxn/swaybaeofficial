@@ -1,7 +1,7 @@
-import {Svg} from './ui/svg'
-import {Tooltip} from './ui/tooltip'
-import {buttonVariants} from './ui/button'
 import {svgData} from '@/utils/data'
+import {Svg} from '@/components/ui/svg'
+import {Tooltip} from '@/components/ui/tooltip'
+import {buttonVariants} from '@/components/ui/button'
 
 const SocialIcons = () => {
   return (

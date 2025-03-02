@@ -10,11 +10,11 @@ import {
   SheetTrigger,
   SheetTitle,
   SheetDescription,
-} from './ui/sheet'
-import {Button} from './ui/button'
-import {Tooltip} from './ui/tooltip'
-import {Icon} from './ui/icon'
-import SocialIcons from './social-icons'
+} from '@/components/ui/sheet'
+import {Button} from '@/components/ui/button'
+import {Tooltip} from '@/components/ui/tooltip'
+import {Icon} from '@/components/ui/icon'
+import SocialIcons from '@/components/social-icons'
 
 const ThemeToggle = () => {
   const {resolvedTheme, setTheme} = useTheme()

@@ -1,5 +1,5 @@
 'use client'
-import SocialIcons from './social-icons'
+import SocialIcons from '@/components/social-icons'
 
 export default function Footer() {
   const date = new Date().getFullYear()

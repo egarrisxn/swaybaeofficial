@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import {useEffect, useState} from 'react'
-import {Tooltip} from './ui/tooltip'
+import {Tooltip} from '@/components/ui/tooltip'
 
 const tocStyle = {
   color: 'var(--b2w)',

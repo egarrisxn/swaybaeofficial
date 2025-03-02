@@ -1,8 +1,8 @@
 'use client'
-import {client} from '@/utils/sanity/client'
-import {useLiveMode} from '@sanity/react-loader'
 import {useEffect} from 'react'
 import {VisualEditing} from 'next-sanity'
+import {useLiveMode} from '@sanity/react-loader'
+import {client} from '@/utils/sanity/client'
 
 const stegaClient = client.withConfig({stega: true})
 

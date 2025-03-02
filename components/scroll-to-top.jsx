@@ -1,6 +1,6 @@
 'use client'
 import {useState, useEffect} from 'react'
-import {Icon} from './ui/icon'
+import {Icon} from '@/components/ui/icon'
 
 const isBrowser = () => typeof window !== 'undefined'
 

@@ -1,6 +1,6 @@
-import {Card} from './ui/card'
-import {Table, TableBody, TableCell, TableRow} from './ui/table'
-import {ScrollArea, ScrollBar} from './ui/scroll-area'
+import {Card} from '@/components/ui/card'
+import {Table, TableBody, TableCell, TableRow} from '@/components/ui/table'
+import {ScrollArea, ScrollBar} from '@/components/ui/scroll-area'
 
 const PointTableRow = ({label, points, extras = []}) => (
   <TableRow>

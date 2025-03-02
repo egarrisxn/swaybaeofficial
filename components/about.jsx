@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import PageHeader from './page-header'
+import PageHeader from '@/components/page-header'
 
 export default function About() {
   return (

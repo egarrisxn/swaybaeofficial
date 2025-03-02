@@ -5,9 +5,9 @@ import {useState, useEffect} from 'react'
 import {useDebouncedCallback} from 'use-debounce'
 import {SEARCH_QUERY} from '@/utils/sanity/queries'
 import {client} from '@/utils/sanity/client'
-import {Icon} from './ui/icon'
+import {Icon} from '@/components/ui/icon'
 
-export default function Search({placeholder}) {
+export function Search({placeholder}) {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const {replace} = useRouter()

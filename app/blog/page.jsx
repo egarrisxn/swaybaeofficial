@@ -23,17 +23,3 @@ export default async function BlogPage(props) {
     </>
   )
 }
-
-// import {notFound} from 'next/navigation'
-// import {loadBlog} from '@/utils/sanity/loadQuery'
-// import BlogPage from '@/containers/blog-page/BlogPage'
-
-// export default async function BlogHomePage({params}) {
-//   const initial = await loadBlog(params)
-
-//   if (!initial.data) {
-//     notFound()
-//   }
-
-//   return <BlogPage blog={initial.data} />
-// }

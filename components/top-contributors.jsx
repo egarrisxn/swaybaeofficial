@@ -1,4 +1,4 @@
-import {Card} from './ui/card'
+import {Card} from '@/components/ui/card'
 
 const contributors = [
   {name: 'srasosa80', points: 130200},
