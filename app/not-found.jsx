@@ -1,6 +1,11 @@
 import Link from 'next/link'
 
-export default function NotFound() {
+export const metadata = {
+  title: 'Not Found',
+  description: '404 Page for Swaybae.',
+}
+
+export default function NotFoundPage() {
   return (
     <section className='container mx-auto flex flex-col items-center justify-center px-2 text-center'>
       <h1 className='text-7xl font-bold text-secondary'>404</h1>

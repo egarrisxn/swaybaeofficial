@@ -9,6 +9,11 @@ import TagBadge from '@/components/tag-badge'
 import DateBadge from '@/components/date-badge'
 import PortableTextComponents from '@/components/portable-text'
 
+export const metadata = {
+  title: 'Blog',
+  description: 'Blog page for Swaybae.',
+}
+
 export function generateStaticParams() {
   return generateStaticSlugs('post')
 }
