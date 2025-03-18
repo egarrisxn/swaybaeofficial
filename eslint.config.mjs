@@ -9,10 +9,15 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 })
 
+/** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = [
   ...compat.config({
-    extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
-    rules: {},
+    extends: ['next/core-web-vitals', 'prettier'],
+    rules: {
+      // "no-unused-vars": "off",
+      // "no-use-before-define": "off",
+      // "no-undef": "off",
+    },
   }),
   {
     ignores: ['**/node_modules/', '.git/', '.vscode/', '.next/', 'public/'],

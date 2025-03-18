@@ -7,6 +7,5 @@ export default function robots() {
       },
     ],
     sitemap: 'https://swaybae.net/sitemap.xml',
-    host: 'https://swaybae.net',
   }
 }

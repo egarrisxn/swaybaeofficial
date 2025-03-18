@@ -4,7 +4,7 @@ export default function Error({error, reset}) {
   console.log(error)
 
   return (
-    <section className='container mx-auto flex flex-col items-center justify-center text-center'>
+    <section className='mx-auto flex flex-col items-center justify-center text-center'>
       <h1 className='text-7xl font-semibold'>Oops!</h1>
       <h2 className='pb-4 text-xl'>Something went wrong.</h2>
       <button
