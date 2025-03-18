@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import {Icon} from '@/components/ui/icon'
-import {Search} from '@/components/search'
+import Link from "next/link";
+import { Icon } from "./ui/icon";
+import { Search } from "./search";
 
 export default function PageHeader({
   id,
@@ -8,23 +8,21 @@ export default function PageHeader({
   children,
   showHr = false,
   showLink = false,
-  linkHref = '',
-  linkText = '',
+  linkHref = "",
+  linkText = "",
   showSearch = false,
 }) {
   return (
     <div
       className={`mx-auto w-full pt-4 md:pt-12 lg:px-4 lg:pt-16 ${
-        showSearch
-          ? 'flex flex-row items-center justify-between gap-2'
-          : 'block'
-      } ${className} ${showSearch ? 'max-[360px]:flex-col max-[360px]:justify-center' : ''}`}
+        showSearch ? "flex flex-row items-center justify-between gap-2" : "block"
+      } ${className} ${showSearch ? "max-[360px]:flex-col max-[360px]:justify-center" : ""}`}
     >
-      {showHr && <hr className='rounded-lg border border-gray-fade' />}
+      {showHr && <hr className="rounded-lg border border-gray-fade" />}
 
       {showLink && (
         <Link href={linkHref}>
-          <div className='flex flex-row items-center gap-0.5 sm:ml-2 3xl:ml-3 3xl:mt-6 3xl:gap-1'>
+          <div className="flex flex-row items-center gap-0.5 sm:ml-2 3xl:ml-3 3xl:mt-6 3xl:gap-1">
             <Icon.Undo2 />
             <h1
               id={id}
@@ -46,7 +44,7 @@ export default function PageHeader({
         </h1>
       )}
 
-      {showSearch && <Search placeholder='Search..' />}
+      {showSearch && <Search placeholder="Search.." />}
     </div>
-  )
+  );
 }

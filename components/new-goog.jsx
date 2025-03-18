@@ -1,10 +1,10 @@
-'use client'
-import FullCalendar from '@fullcalendar/react'
-import listPlugin from '@fullcalendar/list'
-import googleCalendarPlugin from '@fullcalendar/google-calendar'
+"use client";
+import FullCalendar from "@fullcalendar/react";
+import listPlugin from "@fullcalendar/list";
+import googleCalendarPlugin from "@fullcalendar/google-calendar";
 
-const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY
-const id = process.env.NEXT_PUBLIC_CALENDAR_ID
+const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY;
+const id = process.env.NEXT_PUBLIC_CALENDAR_ID;
 
 export default function NewGoog() {
   return (
@@ -15,25 +15,25 @@ export default function NewGoog() {
         googleCalendarId: id,
       }}
       eventClick={(arg) => {
-        window.open(arg.event.url, '_blank', 'width=700,height=600')
-        arg.jsEvent.preventDefault()
+        window.open(arg.event.url, "_blank", "width=700,height=600");
+        arg.jsEvent.preventDefault();
       }}
-      initialView={'listMonth'}
-      contentHeight='400px'
+      initialView={"listMonth"}
+      contentHeight="400px"
       buttonIcons={{
-        prev: 'chevron-left',
-        next: 'chevron-right',
+        prev: "chevron-left",
+        next: "chevron-right",
       }}
       headerToolbar={{
-        left: 'title',
-        center: '',
-        right: 'prev,next',
+        left: "title",
+        center: "",
+        right: "prev,next",
       }}
       views={{
         listMonth: {
-          titleFormat: {month: 'long', year: 'numeric'},
+          titleFormat: { month: "long", year: "numeric" },
         },
       }}
     />
-  )
+  );
 }

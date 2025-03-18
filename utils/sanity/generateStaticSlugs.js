@@ -1,7 +1,7 @@
-import 'server-only'
-import {groq} from 'next-sanity'
-import {client} from './client'
-import {token} from './token'
+import "server-only";
+import { groq } from "next-sanity";
+import { client } from "./client";
+import { token } from "./token";
 
 // Used in `generateStaticParams`
 export function generateStaticSlugs(type) {
@@ -9,17 +9,17 @@ export function generateStaticSlugs(type) {
   return client
     .withConfig({
       token,
-      perspective: 'published',
+      perspective: "published",
       useCdn: false,
       stega: false,
     })
     .fetch(
       groq`*[_type == $type && defined(slug.current)]{"slug": slug.current}`,
-      {type},
+      { type },
       {
         next: {
           tags: [type],
         },
       },
-    )
+    );
 }

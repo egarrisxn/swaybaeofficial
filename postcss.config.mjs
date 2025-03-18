@@ -2,5 +2,5 @@ const config = {
   plugins: {
     tailwindcss: {},
   },
-}
-export default config
+};
+export default config;

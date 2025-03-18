@@ -2,10 +2,10 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: '*',
-        allow: ['/'],
+        userAgent: "*",
+        allow: ["/"],
       },
     ],
-    sitemap: 'https://swaybae.net/sitemap.xml',
-  }
+    sitemap: "https://swaybae.net/sitemap.xml",
+  };
 }

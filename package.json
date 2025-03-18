@@ -79,12 +79,12 @@
     ]
   },
   "prettier": {
-    "semi": false,
+    "semi": true,
     "tabWidth": 2,
-    "printWidth": 80,
-    "bracketSpacing": false,
-    "singleQuote": true,
-    "jsxSingleQuote": true,
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "singleQuote": false,
+    "jsxSingleQuote": false,
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]

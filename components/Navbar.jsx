@@ -1,90 +1,76 @@
-'use client'
-import Link from 'next/link'
-import Image from 'next/image'
-import {usePathname} from 'next/navigation'
-import {useState, useEffect, useCallback} from 'react'
-import {useTheme} from 'next-themes'
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetTitle,
-  SheetDescription,
-} from '@/components/ui/sheet'
-import {Button} from '@/components/ui/button'
-import {Tooltip} from '@/components/ui/tooltip'
-import {Icon} from '@/components/ui/icon'
-import SocialIcons from '@/components/social-icons'
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useState, useEffect, useCallback } from "react";
+import { useTheme } from "next-themes";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "./ui/sheet";
+import { Button } from "./ui/button";
+import { Tooltip } from "./ui/tooltip";
+import { Icon } from "./ui/icon";
+import SocialIcons from "./social-icons";
 
 const ThemeToggle = () => {
-  const {resolvedTheme, setTheme} = useTheme()
+  const { resolvedTheme, setTheme } = useTheme();
   const handleToggleTheme = useCallback(() => {
-    setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
-  }, [resolvedTheme, setTheme])
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
+  }, [resolvedTheme, setTheme]);
   return (
-    <Button
-      onClick={handleToggleTheme}
-      variant='ghost'
-      size='icon'
-      aria-label='Toggle Theme'
-    >
-      <Tooltip
-        direction='bottom'
-        text={resolvedTheme === 'light' ? 'Dark' : 'Light'}
-      >
-        {resolvedTheme === 'light' ? <Icon.MoonStar /> : <Icon.Sun />}
+    <Button onClick={handleToggleTheme} variant="ghost" size="icon" aria-label="Toggle Theme">
+      <Tooltip direction="bottom" text={resolvedTheme === "light" ? "Dark" : "Light"}>
+        {resolvedTheme === "light" ? <Icon.MoonStar /> : <Icon.Sun />}
       </Tooltip>
     </Button>
-  )
-}
+  );
+};
 
 const navLinks = [
-  {href: '/', label: 'Home'},
-  {href: '/calendar', label: 'Calendar'},
-  {href: '/blog', label: 'Blog'},
-  {href: '/#contact', label: 'Contact'},
-  {href: 'https://shop.swaybae.net/', label: 'Store', external: true},
-  {href: '/subathon', label: 'Subathon!'},
-]
+  { href: "/", label: "Home" },
+  { href: "/calendar", label: "Calendar" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
+  { href: "https://shop.swaybae.net/", label: "Store", external: true },
+  { href: "/subathon", label: "Subathon!" },
+];
 
 export default function Navbar() {
-  const pathname = usePathname()
-  const [open, setOpen] = useState(false)
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
   const [state, setState] = useState({
     isVisible: false,
     mounted: false,
-  })
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setState({isVisible: true, mounted: true})
-    }, 500)
-    return () => clearTimeout(timer)
-  }, [])
+      setState({ isVisible: true, mounted: true });
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const activeStyle = {
-    color: 'var(--b2p)',
-    fontWeight: '500',
-  }
+    color: "var(--b2p)",
+    fontWeight: "500",
+  };
 
   return (
     <header
-      className={`mx-auto w-full max-w-screen-4xl shadow transition-opacity ease-out dark:shadow-gray-tint ${state.isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`mx-auto w-full max-w-screen-4xl shadow transition-opacity ease-out dark:shadow-gray-tint ${state.isVisible ? "opacity-100" : "opacity-0"}`}
     >
-      <nav className='flex items-center justify-between p-4 2xl:p-6 3xl:p-8'>
+      <nav className="flex items-center justify-between p-4 2xl:p-6 3xl:p-8">
         <section>
-          <Link href='/' aria-label='Home'>
-            <div className='flex items-center'>
+          <Link href="/" aria-label="Home">
+            <div className="flex items-center">
               <Image
-                src='/images/avatar.png'
+                src="/images/avatar.png"
                 height={64}
                 width={64}
-                alt='Avatar of Sway and link to home page'
-                className='size-10 xl:size-12 3xl:size-14 4xl:size-16'
+                alt="Avatar of Sway and link to home page"
+                className="size-10 xl:size-12 3xl:size-14 4xl:size-16"
               />
-              <Tooltip direction='bottom' text='Home'>
-                <p className='bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text font-extrabold leading-none tracking-tighter text-transparent md:tracking-tight xl:text-lg xl:leading-none 2xl:text-xl 2xl:leading-none 3xl:text-3xl 3xl:leading-none'>
-                  <span className='pl-1'>Creator</span>
+              <Tooltip direction="bottom" text="Home">
+                <p className="bg-gradient-to-tr from-secondary-tint via-secondary to-primary-tint bg-clip-text font-extrabold leading-none tracking-tighter text-transparent md:tracking-tight xl:text-lg xl:leading-none 2xl:text-xl 2xl:leading-none 3xl:text-3xl 3xl:leading-none">
+                  <span className="pl-1">Creator</span>
                   <br />
                   of Chaos
                 </p>
@@ -92,27 +78,24 @@ export default function Navbar() {
             </div>
           </Link>
         </section>
-        <section className='flex-1 sm:pr-3.5 md:pr-6'>
-          <ul className='hidden w-full justify-end sm:inline-flex sm:gap-2.5 md:gap-6 lg:gap-8 xl:pr-10 2xl:gap-12 3xl:gap-14'>
+        <section className="flex-1 sm:pr-3.5 md:pr-6">
+          <ul className="hidden w-full justify-end sm:inline-flex sm:gap-2.5 md:gap-6 lg:gap-8 xl:pr-10 2xl:gap-12 3xl:gap-14">
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className='text-lg transition-all hover:text-b2p md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl'
+                className="text-lg transition-all hover:text-b2p md:text-xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl"
               >
                 {link.external ? (
                   <a
                     href={link.href}
-                    target='_blank'
-                    rel='noreferrer noopener'
-                    className='hover:text-p2b'
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="hover:text-p2b"
                   >
                     {link.label}
                   </a>
                 ) : (
-                  <Link
-                    href={link.href}
-                    style={pathname === link.href ? activeStyle : {}}
-                  >
+                  <Link href={link.href} style={pathname === link.href ? activeStyle : {}}>
                     {link.label}
                   </Link>
                 )}
@@ -121,40 +104,34 @@ export default function Navbar() {
           </ul>
         </section>
         <section>
-          <div className='flex sm:hidden'>
+          <div className="flex sm:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <Button variant='ghost' size='icon' className='sm:hidden'>
-                  <Tooltip direction='bottom' text='Menu'>
+                <Button variant="ghost" size="icon" className="sm:hidden">
+                  <Tooltip direction="bottom" text="Menu">
                     <Icon.Menu />
                   </Tooltip>
                 </Button>
               </SheetTrigger>
               <SheetContent>
-                <SheetTitle className='hidden'>Sway Bae</SheetTitle>
-                <SheetDescription className='hidden'>
-                  Creator of Chaos
-                </SheetDescription>
-                <div className='flex h-full flex-col justify-between gap-4'>
+                <SheetTitle className="hidden">Sway Bae</SheetTitle>
+                <SheetDescription className="hidden">Creator of Chaos</SheetDescription>
+                <div className="flex h-full flex-col justify-between gap-4">
                   <div>{state.mounted && <ThemeToggle />}</div>
-                  <div className='flex-grow'>
-                    <ul className='inline space-y-1'>
+                  <div className="flex-grow">
+                    <ul className="inline space-y-1">
                       {navLinks.map((link) => (
                         <li
                           key={link.href}
-                          className='text-6xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-6xl max-[350px]:text-5xl'
+                          className="text-6xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-6xl max-[350px]:text-5xl"
                         >
                           {link.external ? (
-                            <a
-                              href={link.href}
-                              target='_blank'
-                              rel='noreferrer noopener'
-                            >
+                            <a href={link.href} target="_blank" rel="noreferrer noopener">
                               {link.label}
                             </a>
                           ) : (
                             <a
-                              replace='true'
+                              replace="true"
                               href={link.href}
                               style={pathname === link.href ? activeStyle : {}}
                             >
@@ -165,14 +142,12 @@ export default function Navbar() {
                       ))}
                     </ul>
                   </div>
-                  <div className='space-y-6'>
-                    <div className='mx-auto flex justify-center gap-3 sm:gap-4'>
+                  <div className="space-y-6">
+                    <div className="mx-auto flex justify-center gap-3 sm:gap-4">
                       <SocialIcons />
                     </div>
-                    <p className='bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-center font-semibold tracking-tighter text-transparent dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint'>
-                      <span className='pr-0.5 font-normal text-foreground'>
-                        © 2024{' '}
-                      </span>
+                    <p className="bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-center font-semibold tracking-tighter text-transparent dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint">
+                      <span className="pr-0.5 font-normal text-foreground">© 2024 </span>
                       Sway Bae Official
                     </p>
                   </div>
@@ -180,11 +155,9 @@ export default function Navbar() {
               </SheetContent>
             </Sheet>
           </div>
-          <div className='hidden sm:flex'>
-            {state.mounted && <ThemeToggle />}
-          </div>
+          <div className="hidden sm:flex">{state.mounted && <ThemeToggle />}</div>
         </section>
       </nav>
     </header>
-  )
+  );
 }
