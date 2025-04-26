@@ -19,7 +19,8 @@ export default function YouTube({ vnum }) {
 
         const data = await response.json();
 
-        if (data.items.length === 0) throw new Error("No videos found in playlist");
+        if (data.items.length === 0)
+          throw new Error("No videos found in playlist");
 
         const videoItem = data.items[vnum];
         if (videoItem) {

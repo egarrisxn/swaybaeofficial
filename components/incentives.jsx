@@ -14,9 +14,9 @@ export function Incentives() {
             <ArrowRight className="hidden size-4 text-purple-600 lg:block lg:size-5 dark:text-pink-400" />
           </div>
           <p className="text-sm text-slate-700 2xl:text-base dark:text-slate-300">
-            The <b>Top 5 contributors</b> get a personalized alert for any Twitch event (e.g., subs,
-            gifted subs, bits), along with an on-screen arrival action for their first message sent
-            in stream!
+            The <b>Top 5 contributors</b> get a personalized alert for any
+            Twitch event (e.g., subs, gifted subs, bits), along with an
+            on-screen arrival action for their first message sent in stream!
           </p>
         </div>
       </Card>

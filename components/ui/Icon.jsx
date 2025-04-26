@@ -50,10 +50,18 @@ const Icon = {
     />
   ),
   ChevronLeft: ({ className, ...props }) => (
-    <ChevronLeft {...biggerProps} className={`pr-0.5 3xl:size-[2.7rem] ${className}`} {...props} />
+    <ChevronLeft
+      {...biggerProps}
+      className={`pr-0.5 3xl:size-[2.7rem] ${className}`}
+      {...props}
+    />
   ),
   ChevronRight: ({ className, ...props }) => (
-    <ChevronRight {...biggerProps} className={`pl-0.5 3xl:size-[2.7rem] ${className}`} {...props} />
+    <ChevronRight
+      {...biggerProps}
+      className={`pl-0.5 3xl:size-[2.7rem] ${className}`}
+      {...props}
+    />
   ),
   CircleArrowUp: ({ className, ...props }) => (
     <CircleArrowUp
@@ -63,13 +71,25 @@ const Icon = {
     />
   ),
   MoonStar: ({ className, ...props }) => (
-    <MoonStar {...biggerProps} className={`3xl:size-[2.7rem] ${className}`} {...props} />
+    <MoonStar
+      {...biggerProps}
+      className={`3xl:size-[2.7rem] ${className}`}
+      {...props}
+    />
   ),
   Sun: ({ className, ...props }) => (
-    <Sun {...biggerProps} className={`3xl:size-[2.7rem] ${className}`} {...props} />
+    <Sun
+      {...biggerProps}
+      className={`3xl:size-[2.7rem] ${className}`}
+      {...props}
+    />
   ),
-  Menu: ({ className, ...props }) => <Menu {...biggerProps} className={className} {...props} />,
-  X: ({ className, ...props }) => <X {...biggerProps} className={className} {...props} />,
+  Menu: ({ className, ...props }) => (
+    <Menu {...biggerProps} className={className} {...props} />
+  ),
+  X: ({ className, ...props }) => (
+    <X {...biggerProps} className={className} {...props} />
+  ),
 };
 
 export { Icon };

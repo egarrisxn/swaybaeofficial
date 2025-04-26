@@ -19,11 +19,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "next-lint": "next lint",
     "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "next-lint": "next lint",
+    "next-lint:fix": "next-lint --fix",
+    "format": "prettier --check \"**/*.{js,jsx}\" --cache",
+    "format:fix": "prettier --write \"**/*.{js,jsx}\" --cache"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.15",
@@ -75,18 +75,8 @@
       "esbuild",
       "scrollmirror",
       "sharp",
+      "unrs-resolver",
       "yarn"
-    ]
-  },
-  "prettier": {
-    "semi": true,
-    "tabWidth": 2,
-    "printWidth": 100,
-    "bracketSpacing": true,
-    "singleQuote": false,
-    "jsxSingleQuote": false,
-    "plugins": [
-      "prettier-plugin-tailwindcss"
     ]
   }
 }

@@ -41,7 +41,9 @@ export default function TagCard({ post }) {
           </div>
           <div className="flex justify-end">
             <Link href={`/blog/post/${postSlug}`}>
-              <h5 className="mt-4 font-bold text-primary 2xl:text-xl">Read Post &#8594;</h5>
+              <h5 className="mt-4 font-bold text-primary 2xl:text-xl">
+                Read Post &#8594;
+              </h5>
             </Link>
           </div>
         </div>

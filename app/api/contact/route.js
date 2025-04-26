@@ -34,10 +34,13 @@ export async function POST(request) {
 
     console.log("Message sent:", mail.messageId);
 
-    return new Response(JSON.stringify({ message: "Success: email was sent" }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" },
-    });
+    return new Response(
+      JSON.stringify({ message: "Success: email was sent" }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      },
+    );
   } catch (error) {
     console.log(error);
     return new Response(JSON.stringify({ message: "COULD NOT SEND MESSAGE" }), {

@@ -5,7 +5,10 @@ export default async function sitemapData() {
     const postQuery = `*[_type == "post"]{ "slug": slug.current, _updatedAt }`;
     const tagQuery = `*[_type == "tag"]{ "slug": slug.current, _updatedAt }`;
 
-    const [posts, tags] = await Promise.all([client.fetch(postQuery), client.fetch(tagQuery)]);
+    const [posts, tags] = await Promise.all([
+      client.fetch(postQuery),
+      client.fetch(tagQuery),
+    ]);
 
     return { posts, tags };
   } catch (error) {

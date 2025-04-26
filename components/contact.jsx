@@ -11,7 +11,12 @@ function ContactInfo({ title, subtitle, icon, detail, href, ariaLabel }) {
       <ul className="mt-2 sm:mt-1 lg:mt-2 xl:mt-3 3xl:mt-4">
         <li className="flex items-center gap-2">
           <Button asChild variant="social" size="icon">
-            <a target="_blank" rel="noopener noreferrer" href={href} aria-label={ariaLabel}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={href}
+              aria-label={ariaLabel}
+            >
               {icon}
             </a>
           </Button>
@@ -20,7 +25,12 @@ function ContactInfo({ title, subtitle, icon, detail, href, ariaLabel }) {
               {subtitle}
             </p>
             <p className="text-sm font-semibold text-primary-fade hover:text-primary xl:text-base 2xl:text-lg 3xl:text-xl dark:text-primary-tint dark:hover:text-primary-fade">
-              <a target="_blank" rel="noopener noreferrer" href={href} aria-label={ariaLabel}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={href}
+                aria-label={ariaLabel}
+              >
                 {detail}
               </a>
             </p>
@@ -100,8 +110,9 @@ export default function Contact() {
               Let&apos;s Chat!
             </h2>
             <p className="mt-4 pr-2 text-base leading-5 text-gray-800 xl:text-xl 2xl:text-2xl 3xl:mt-6 3xl:text-3xl dark:text-gray-300">
-              Are you interested in working together? Maybe have a question for me? Send over an
-              email and I&apos;ll get back with you as soon as possible!
+              Are you interested in working together? Maybe have a question for
+              me? Send over an email and I&apos;ll get back with you as soon as
+              possible!
             </p>
             <ContactInfo
               title="Email"

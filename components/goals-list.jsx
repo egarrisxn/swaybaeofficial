@@ -5,7 +5,8 @@ const goals = [
   {
     points: 10000,
     title: "Chat picks our Pizza toppings for our pizza dinner",
-    description: "Chat will vote on the sauces and dips for Ethan and Sway's dinner!",
+    description:
+      "Chat will vote on the sauces and dips for Ethan and Sway's dinner!",
     completed: true,
     videoLink: "https://www.twitch.tv/videos/2334293697?t=05h13m04s",
     date: null,
@@ -40,14 +41,16 @@ const goals = [
   {
     points: 40000,
     title: 'No "sway swears" for 1 hour',
-    description: 'No "butts", no "heck", and especially no "heckin butts" for a whole hour.',
+    description:
+      'No "butts", no "heck", and especially no "heckin butts" for a whole hour.',
     completed: true,
     videoLink: null,
     date: null,
   },
   {
     points: 50000,
-    title: "Play a Hearthstone Battlegrounds Game with an XBOX controller on high sensitivity",
+    title:
+      "Play a Hearthstone Battlegrounds Game with an XBOX controller on high sensitivity",
     description:
       "Exactly what it sounds like. Hearthstone Battlegrounds. Xbox controller. These two things were not meant to be.",
     completed: true,
@@ -67,7 +70,8 @@ const goals = [
   {
     points: 70000,
     title: 'Sway plays "Would you Rather" with Chat',
-    description: 'Sway has some "Would you Rather" questions to play with Chat!',
+    description:
+      'Sway has some "Would you Rather" questions to play with Chat!',
     completed: true,
     videoLink: "https://www.twitch.tv/videos/2338655404",
     date: null,
@@ -226,7 +230,8 @@ const goals = [
   {
     points: 1000000,
     title: "Hair Dye",
-    description: "Chat picks the new color of Sway's hair and Sway will stream the dying process!",
+    description:
+      "Chat picks the new color of Sway's hair and Sway will stream the dying process!",
     completed: false,
     videoLink: null,
     date: null,
@@ -245,7 +250,9 @@ const goals = [
 export function GoalsList() {
   return (
     <Card className="space-y-6 bg-gradient-to-tr from-purple-50 to-white p-4 shadow-lg lg:p-6 dark:bg-black dark:from-gray-800">
-      <h2 className="text-lg font-bold md:text-xl xl:text-2xl">Sub Goal Recap</h2>
+      <h2 className="text-lg font-bold md:text-xl xl:text-2xl">
+        Sub Goal Recap
+      </h2>
       <div className="grid gap-4 sm:p-2 md:p-4 xl:p-4">
         {goals.map((goal, index) => {
           const cardContent = (
@@ -285,7 +292,9 @@ export function GoalsList() {
                     </span>
                   ) : (
                     goal.date && (
-                      <span className="italic text-gray-900 dark:text-gray-50">{goal.date}</span>
+                      <span className="italic text-gray-900 dark:text-gray-50">
+                        {goal.date}
+                      </span>
                     )
                   )}
                 </div>

@@ -30,9 +30,11 @@ export default function TableOfContent({ headings }) {
         }
       });
     });
-    document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id]").forEach((header) => {
-      observer.observe(header);
-    });
+    document
+      .querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id]")
+      .forEach((header) => {
+        observer.observe(header);
+      });
     return () => observer.disconnect();
   }, []);
 
@@ -40,7 +42,10 @@ export default function TableOfContent({ headings }) {
     <section className="z-20 mr-4">
       <ol className="table-of-content">
         {headings.map((heading, idx) => (
-          <li key={idx} className="my-2.5 flex h-8 w-full items-center justify-center">
+          <li
+            key={idx}
+            className="my-2.5 flex h-8 w-full items-center justify-center"
+          >
             <Link
               href={`#${heading._key}`}
               style={tocStyle}

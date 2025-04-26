@@ -38,12 +38,12 @@ export const metadata = {
     "swaybae, sway_bae, swaybaetv, sway, bae, swaybaenet, swaybaecom, thebaesquad, the-bae-squad, baesquad, bae_squad, swaybae-twitch, swaybae-twitter, swaybae-youtube, swaybae-discord, swaybae-instagram, swaybae-tiktok, swaybae-merch, swaybae-store, swaybae-shop, swaybae-gaming, hearthstone, blizzard, streamer, stream, twitch, twitch-streamer, twitchtv, blog, swaybae-blog",
   ],
   openGraph: {
+    locale: "en_US",
+    type: "website",
     title: site.name,
     description: site.description,
     url: site.url,
-    siteName: "Swaybae.net",
-    type: "website",
-    locale: "en_US",
+    siteName: site.name,
   },
   twitter: {
     card: "summary_large_image",
@@ -52,20 +52,24 @@ export const metadata = {
     creator: site.social,
     site: site.social,
   },
-  appleWebApp: {
-    capable: true,
-    title: site.name,
-    startupImage: site.ogImage,
-    statusBarStyle: "black-translucent",
+  icons: {
+    icon: {
+      url: "/icons/icon.png",
+      sizes: "192x192",
+      type: "image/png",
+    },
+    apple: {
+      url: "/icons/apple-icon.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
+    other: {
+      rel: "icon",
+      url: "/icons/icon.svg",
+      type: "image/svg+xml",
+    },
   },
-  formatDetection: {
-    telephone: true,
-    date: true,
-    address: true,
-    email: true,
-    url: true,
-  },
-  appLinks: {},
+  verification: {},
 };
 
 export const viewport = {
@@ -77,8 +81,10 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} ${sansita.variable}`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body
+        className={`${poppins.variable} ${sansita.variable} grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain scroll-smooth bg-myGradient bg-cover bg-no-repeat font-sans antialiased`}
+      >
         <ThemeProvider>
           <Navbar />
           {children}

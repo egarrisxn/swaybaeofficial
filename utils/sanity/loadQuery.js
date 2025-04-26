@@ -34,7 +34,12 @@ export const loadQuery = async (query, params = {}, options = {}) => {
 
 // Loaders used in multiple places
 export async function loadBlog() {
-  return loadQuery(POSTS_QUERY, TAGS_QUERY, {}, { next: { tags: ["post", "tag"] } });
+  return loadQuery(
+    POSTS_QUERY,
+    TAGS_QUERY,
+    {},
+    { next: { tags: ["post", "tag"] } },
+  );
 }
 
 export async function loadPost(slug) {

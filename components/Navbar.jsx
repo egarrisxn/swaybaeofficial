@@ -4,7 +4,13 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { useTheme } from "next-themes";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+  SheetDescription,
+} from "./ui/sheet";
 import { Button } from "./ui/button";
 import { Tooltip } from "./ui/tooltip";
 import { Icon } from "./ui/icon";
@@ -16,8 +22,16 @@ const ThemeToggle = () => {
     setTheme(resolvedTheme === "light" ? "dark" : "light");
   }, [resolvedTheme, setTheme]);
   return (
-    <Button onClick={handleToggleTheme} variant="ghost" size="icon" aria-label="Toggle Theme">
-      <Tooltip direction="bottom" text={resolvedTheme === "light" ? "Dark" : "Light"}>
+    <Button
+      onClick={handleToggleTheme}
+      variant="ghost"
+      size="icon"
+      aria-label="Toggle Theme"
+    >
+      <Tooltip
+        direction="bottom"
+        text={resolvedTheme === "light" ? "Dark" : "Light"}
+      >
         {resolvedTheme === "light" ? <Icon.MoonStar /> : <Icon.Sun />}
       </Tooltip>
     </Button>
@@ -95,7 +109,10 @@ export default function Navbar() {
                     {link.label}
                   </a>
                 ) : (
-                  <Link href={link.href} style={pathname === link.href ? activeStyle : {}}>
+                  <Link
+                    href={link.href}
+                    style={pathname === link.href ? activeStyle : {}}
+                  >
                     {link.label}
                   </Link>
                 )}
@@ -115,7 +132,9 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent>
                 <SheetTitle className="hidden">Sway Bae</SheetTitle>
-                <SheetDescription className="hidden">Creator of Chaos</SheetDescription>
+                <SheetDescription className="hidden">
+                  Creator of Chaos
+                </SheetDescription>
                 <div className="flex h-full flex-col justify-between gap-4">
                   <div>{state.mounted && <ThemeToggle />}</div>
                   <div className="flex-grow">
@@ -126,7 +145,11 @@ export default function Navbar() {
                           className="text-6xl font-medium transition-all ease-in hover:text-b2p max-[400px]:text-6xl max-[350px]:text-5xl"
                         >
                           {link.external ? (
-                            <a href={link.href} target="_blank" rel="noreferrer noopener">
+                            <a
+                              href={link.href}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
                               {link.label}
                             </a>
                           ) : (
@@ -147,7 +170,9 @@ export default function Navbar() {
                       <SocialIcons />
                     </div>
                     <p className="bg-gradient-to-bl from-primary-tint via-secondary-tint to-dark bg-clip-text text-center font-semibold tracking-tighter text-transparent dark:bg-gradient-to-tl dark:from-primary-fade dark:via-secondary-fade dark:to-primary-tint">
-                      <span className="pr-0.5 font-normal text-foreground">© 2024 </span>
+                      <span className="pr-0.5 font-normal text-foreground">
+                        © 2024{" "}
+                      </span>
                       Sway Bae Official
                     </p>
                   </div>
@@ -155,7 +180,9 @@ export default function Navbar() {
               </SheetContent>
             </Sheet>
           </div>
-          <div className="hidden sm:flex">{state.mounted && <ThemeToggle />}</div>
+          <div className="hidden sm:flex">
+            {state.mounted && <ThemeToggle />}
+          </div>
         </section>
       </nav>
     </header>

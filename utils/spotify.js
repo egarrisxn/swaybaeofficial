@@ -7,11 +7,14 @@ export async function getAccessToken() {
 }
 
 const getNowPlaying = async (accessToken) => {
-  const response = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
+  const response = await fetch(
+    "https://api.spotify.com/v1/me/player/currently-playing",
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
     },
-  });
+  );
   if (!response.ok) {
     throw new Error(`Failed to fetch now playing data: ${response.statusText}`);
   }

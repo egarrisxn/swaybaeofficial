@@ -30,7 +30,10 @@ const Tooltip = ({ children, text, direction = "top", ...otherProps }) => {
           }),
       )}
       <span
-        className={getTooltipClasses() + " group-hover:pointer-events-auto group-hover:opacity-100"}
+        className={
+          getTooltipClasses() +
+          " group-hover:pointer-events-auto group-hover:opacity-100"
+        }
         data-label={text}
       >
         {text}

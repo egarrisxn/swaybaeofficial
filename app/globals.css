@@ -118,7 +118,7 @@
     @apply border-border;
   }
   body {
-    @apply grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overflow-x-hidden overscroll-contain scroll-smooth bg-myGradient bg-cover bg-no-repeat font-sans text-foreground antialiased;
+    @apply bg-foreground text-foreground;
   }
 }
 

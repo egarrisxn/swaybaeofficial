@@ -9,13 +9,15 @@ export function SubathonHeader() {
         Sway&apos;s Subathon Season!
       </h1>
       <p className="text-sm text-gray-700 dark:text-gray-300">
-        Get ready for 10 days of excitement, surprises, and unforgettable moments with The Bae
-        Squad!
+        Get ready for 10 days of excitement, surprises, and unforgettable
+        moments with The Bae Squad!
       </p>
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <div className="flex items-center gap-2">
           <CalendarDays className="text-purple-600 dark:text-pink-400" />
-          <span className="text-gray-800 dark:text-gray-200">Dec. 23rd, 2024 - Jan. 1st, 2025</span>
+          <span className="text-gray-800 dark:text-gray-200">
+            Dec. 23rd, 2024 - Jan. 1st, 2025
+          </span>
         </div>
         <a
           href="https://www.twitch.tv/sway_bae"
